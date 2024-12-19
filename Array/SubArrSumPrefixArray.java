@@ -16,7 +16,14 @@ public class SubArraySumPreifxArray{
 				   curr_sum  =	Prefix_array[end];
 				}
 				else{
-					curr_sum = (i == 0) ? Prefix_array[j] : Prefix_array[j] - Prefix_array[i - 1];
+					if (i ==0) {
+						curr_sum=Prefix_array[j] ;
+					 	
+					 } 
+					 else{
+					 	curr_sum = Prefix_array[j] - Prefix_array[i - 1];
+					 	System.out.println("Prefix_array [i-1] :"+Prefix_array[i - 1]);
+					 }
 
 				}
 
@@ -31,7 +38,7 @@ public class SubArraySumPreifxArray{
 	}
 	public static void main (String args[]){
 		System.out.println(" Problem :- Max Sum of Sub array  Useing Preifx method :)\n ");
-		int arr[]={1,2,3};
+		int arr[]={4,5,6,7,8};
 		Max_Sum_sub_Array(arr);
 
 	}
