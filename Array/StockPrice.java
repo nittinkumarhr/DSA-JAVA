@@ -14,7 +14,7 @@ public class StockPrice{
 
 			}
 
-		}
+		}d
 		return MaxProfit;
 	}
 	public static void main(String args[]){
