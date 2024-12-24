@@ -4,6 +4,7 @@ public class StockPrice{
 		int buyPrice=Integer.MAX_VALUE;
 		int MaxProfit=0;
 		for(int i=0;i<prices.length;i++){//profit
+			System.out.println(i);
 			if (buyPrice<prices[i]) {
 				int profit=prices[i] - buyPrice;// Today's Profit 
 
@@ -14,12 +15,12 @@ public class StockPrice{
 
 			}
 
-		}d
+		}
 		return MaxProfit;
 	}
 	public static void main(String args[]){
 		System.out.println("Problem :- Buy and Shell Stocks  calculate TOtal profit :)\n");
-		int  arr[]={7,1,5,3,6,4};
+		int  arr[]={4,1,3,2};
 		System.out.println("Total Profit :) "+StockProfit(arr));
 	}
 }
