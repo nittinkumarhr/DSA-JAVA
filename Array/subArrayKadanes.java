@@ -44,7 +44,7 @@ public class subArrayKadanes{
 
 	public static void main (String args[]){
 		System.out.println("Problem :- Find the Max sum of sub array  useing Kadanes Algorthims :)\n");
-		int arr[]={-1,-2,-3,-4};
+		int arr[]={12,21,44,21};
 		KadanesNegative(arr);
 		
 	}

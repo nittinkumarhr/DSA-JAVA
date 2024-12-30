@@ -1,5 +1,6 @@
  public  class subarray{
 
+
  	public static void SubArray(int arr[]){
  		int total_sub_array=0;
  		for (int i=0;i<=arr.length;i++ ) {
