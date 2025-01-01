@@ -37,7 +37,7 @@ public  class Darray{
 			for (int j=0;j<n ;j++ ) {
 				if (matrix[i][j] == item){
 					return (" Item is found at ("+i +","+j+") Location" );
-					0
+					
 				}
 			}
 			System.out.print("\n");
