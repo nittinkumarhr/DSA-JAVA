@@ -6,7 +6,7 @@ public  class countingsort{
 		for (int i=0;i<arr.length ;i++ ) {
 			largest= Math.max(largest,arr[i]);
 		}
-		// make a count (size - largest elemnts of array )  and count the frequnce of elemnts  in the array 
+		// make a count  arrray (size - largest elemnts of array )  and count the frequnce of elemnts  in the array 
 		int count[]=new int [largest+1];
 		for (int i=0;i<arr.length ;i++ ) {
 			count[arr[i]]++;
