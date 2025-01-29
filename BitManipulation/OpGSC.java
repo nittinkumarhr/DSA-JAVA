@@ -36,6 +36,20 @@ public class OpGSC{
 		System.out.println(n & bitmask);
 	}
 
+	public static void UpdateiTH(int n , int i, Scanner sc){
+
+		System.out.println("Enter the Bit You want to Update :");
+
+		int newbit = sc.nextInt();
+
+		if(newbit == 0){
+
+			CleariTH(n,i);
+		}
+		else{
+			SetiTH(n,i);
+		}
+	}
 
 
 
@@ -58,6 +72,8 @@ public class OpGSC{
 		SetiTH(n,i);
 
 		CleariTH(n,i);
+
+		UpdateiTH(n,i,sc);
 
 
 
