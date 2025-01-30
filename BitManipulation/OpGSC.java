@@ -6,7 +6,7 @@ public class OpGSC{
 
 		System.out.println("Get ith Value ");
 
-		int bitmask = i<<i;
+		int bitmask = 1<<i;
 
 		if ((n & bitmask) == 0) {
 
@@ -53,6 +53,16 @@ public class OpGSC{
 
 
 
+
+	public static void ClearLastIthbit(int n , int i){
+
+
+		System.out.println("Clear the last ith postion bit :)");
+		int bitmask = (~0)<<i;
+
+		System.out.println(n & bitmask);
+	}
+
 	public static void main (String args[]){
 
 		System.out.println("Get,Set, Clear Operation  in Bit Manupluation");
@@ -70,10 +80,10 @@ public class OpGSC{
 		GetiTH(n,i);
 
 		SetiTH(n,i);
-
 		CleariTH(n,i);
 
 		UpdateiTH(n,i,sc);
+		ClearLastIthbit(n,i);
 
 
 
