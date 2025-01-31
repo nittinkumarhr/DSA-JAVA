@@ -21,7 +21,6 @@ public class conditions{
 		if ((income>=500000) && (income<=100000)){
 			tax=(int)(income*0.2);
 		}
-		ss
 		else if (income<500000) {
 			tax=0;
 		}

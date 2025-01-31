@@ -62,6 +62,44 @@ public class OpGSC{
 
 		System.out.println(n & bitmask);
 	}
+	public  static  void  CheckNumberPower2(int n){
+		System.out.println("Check the number Power of 2 or not  -:" + n);
+		if ((n & (n - 1))== 0){
+			System.out.println("Yes");
+		}
+		else{
+			System.out.println("No");
+		}
+	}
+	public  static  void CountSetBit(int n){
+		System.out.println("Count the Set bit in number :)");
+		int c=0;
+		int num = n;
+		while (n>0){
+			if ((n&1) !=0){
+				c++;
+			}
+			n= (n>>1);
+		}
+		System.out.println(num +"Total  Set bit in this number "+c);
+	}
+	public  static  void  ClearRange(int n  ,Scanner sc){
+		System.out.println("Clear the bit given range ");
+		System.out.println("Enter the First range :)");
+		int i = sc.nextInt();
+		System.out.println("Enter the Second  range :) ");
+		int j = sc.nextInt();
+
+		int a = (~0)<<(j+1);
+		int b  = (1<<i)-1;
+		int bitmask =a|b;
+
+		System.out.println(n&bitmask);
+		CheckNumberPower2(n);
+
+
+
+	}
 
 	public static void main (String args[]){
 
@@ -81,9 +119,12 @@ public class OpGSC{
 
 		SetiTH(n,i);
 		CleariTH(n,i);
+		CountSetBit(n);
 
 		UpdateiTH(n,i,sc);
 		ClearLastIthbit(n,i);
+
+		ClearRange(n,sc);
 
 
 

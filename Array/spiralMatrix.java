@@ -37,7 +37,7 @@ class  spiralMatrix{
 			st_col++;
 			en_col--;
 			en_row--;
-		}\
+		}
 
 	}
 

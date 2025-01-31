@@ -1,6 +1,6 @@
 import  java.util.*;
 
-public  class Darray{
+class Darray{
 	public static void twoDMatrix(int matrix[][], Scanner sc){
 
 		int m= matrix.length;

@@ -1,5 +1,5 @@
 import  java.util.*;
-public  class diagonalsum {
+class diagonalsum {
 	public static int DiagonalSum(int arr[][]){
 		int n=arr.length;
 		int sum=0;
