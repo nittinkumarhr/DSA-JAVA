@@ -3,7 +3,7 @@ public class insertionclass{
 		int n=arr.length;
 		int i,j,temp;
 		for (i=1;i<n;i++ ) {
-			 temp =arr[i];
+			 temp =arr[i]
 			for (j=i-1;j>=0;j--) {
 				if (arr[j]>temp) {
 					arr[j+1]=arr[j];
