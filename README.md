@@ -15,7 +15,7 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 
 | Topic | Solved |
 |-------|--------|
-| Arrays | 1 |
+| Dynamic Programming | 1 |
 
 ## Structure
 
