@@ -9,13 +9,14 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 | 🟢 Easy    | 0 |
 | 🟡 Medium  | 0 |
 | 🔴 Hard    | 0 |
-| **Total**  | **1** |
+| **Total**  | **2** |
 
 ## By Topic
 
 | Topic | Solved |
 |-------|--------|
 | Dynamic Programming | 1 |
+| Arrays | 1 |
 
 ## Structure
 
@@ -41,4 +42,4 @@ leetcode-solutions/
 └── Other/
 ```
 
-*Last updated: 2026-06-27*
+*Last updated: 2026-06-28*
