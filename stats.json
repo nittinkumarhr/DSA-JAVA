@@ -1,11 +1,10 @@
 {
-  "byTopic": {
-    "Dynamic_Programming": 1,
-    "Arrays": 1
-  },
+  "total": 1,
   "easy": 0,
-  "hard": 0,
-  "lastSynced": "2026-06-28T17:18:16.530Z",
   "medium": 0,
-  "total": 2
+  "hard": 0,
+  "byTopic": {
+    "Hashing": 1
+  },
+  "lastSynced": "2026-06-29T17:31:04.476Z"
 }
