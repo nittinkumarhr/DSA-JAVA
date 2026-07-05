@@ -8,15 +8,13 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 |------------|-------|
 | 🟢 Easy    | 0 |
 | 🟡 Medium  | 0 |
-| 🔴 Hard    | 0 |
-| **Total**  | **3** |
+| 🔴 Hard    | 1 |
+| **Total**  | **1** |
 
 ## By Topic
 
 | Topic | Solved |
 |-------|--------|
-| Hashing | 1 |
-| Linked List | 1 |
 | Arrays | 1 |
 
 ## Structure
@@ -43,4 +41,4 @@ leetcode-solutions/
 └── Other/
 ```
 
-*Last updated: 30 Jun 2026*
+*Last updated: 05 Jul 2026*
