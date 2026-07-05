@@ -65,3 +65,65 @@ _Add your key insight here._
 
 =====================================================
 
+# 0523. Continuous Subarray Sum
+
+> 🔗 [LeetCode](https://leetcode.com/problems/continuous-subarray-sum/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 05 Jul 2026
+
+---
+
+## Problem Summary
+
+Problem #523 — Continuous Subarray Sum. Difficulty: Medium.
+
+---
+
+## AI-Powered Solution Explanation
+
+- Review the solution code and add your explanation here.
+
+---
+
+## AI Complexity Analysis
+
+### Time Complexity
+
+`O(?)`
+
+### Space Complexity
+
+`O(?)`
+
+---
+
+## AI Learning Insights
+
+### Pattern
+
+- array
+- hash-table
+- math
+- prefix-sum
+
+### Key Observation
+
+_Add your key insight here._
+
+### Similar Problems
+
+- N/A
+
+### Common Mistakes
+
+- N/A
+
+---
+
+## Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
