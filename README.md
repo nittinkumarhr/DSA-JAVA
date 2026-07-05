@@ -7,8 +7,8 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 | Difficulty | Count |
 |------------|-------|
 | 🟢 Easy    | 0 |
-| 🟡 Medium  | 0 |
-| 🔴 Hard    | 1 |
+| 🟡 Medium  | 1 |
+| 🔴 Hard    | 0 |
 | **Total**  | **1** |
 
 ## By Topic
