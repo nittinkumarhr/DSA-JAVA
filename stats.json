@@ -1,10 +1,10 @@
 {
-  "total": 1,
-  "easy": 0,
-  "medium": 1,
-  "hard": 0,
   "byTopic": {
-    "Arrays": 1
+    "Arrays": 2
   },
-  "lastSynced": "2026-07-05T18:07:12.245Z"
+  "easy": 0,
+  "hard": 0,
+  "lastSynced": "2026-07-05T18:25:30.802Z",
+  "medium": 2,
+  "total": 2
 }
