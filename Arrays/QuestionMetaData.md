@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 1
+- **Total Problems** : 2
 - **Easy** : 0
 - **Medium** : 0
-- **Hard** : 0
+- **Hard** : 1
 
 **Last Updated**
 
-30 Jun 2026
+05 Jul 2026
 
 ---
 
@@ -17,4 +17,5 @@
 
 | ID | Problem | Difficulty | Language | Runtime | Memory | Date | Solution |
 |----|---------|------------|----------|---------|--------|------|----------|
+| 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | Java | N/A | N/A | 05 Jul 2026 | `Arrays/0239_Sliding_Window_Maximum.java` |
 | 260 | [Single Number - LeetCode](https://leetcode.com/problems/single-number-leetcode/) | Unknown | java | 1 ms | 46.80 MB | 30 Jun 2026 | `0260_Single_Number_LeetCode.java` |
