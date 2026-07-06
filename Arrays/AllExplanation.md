@@ -188,3 +188,63 @@ _Add your key insight here._
 
 =====================================================
 
+# 0119. Pascal's Triangle II
+
+> 🔗 [LeetCode](https://leetcode.com/problems/pascals-triangle-ii/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 06 Jul 2026
+
+---
+
+## Problem Summary
+
+Problem #119 — Pascal's Triangle II. Difficulty: Easy.
+
+---
+
+## AI-Powered Solution Explanation
+
+- Review the solution code and add your explanation here.
+
+---
+
+## AI Complexity Analysis
+
+### Time Complexity
+
+`O(?)`
+
+### Space Complexity
+
+`O(?)`
+
+---
+
+## AI Learning Insights
+
+### Pattern
+
+- array
+- dynamic-programming
+
+### Key Observation
+
+_Add your key insight here._
+
+### Similar Problems
+
+- N/A
+
+### Common Mistakes
+
+- N/A
+
+---
+
+## Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
