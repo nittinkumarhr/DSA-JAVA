@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 6
+- **Total Problems** : 7
 - **Easy** : 1
-- **Medium** : 3
+- **Medium** : 4
 - **Hard** : 1
 
 **Last Updated**
 
-07 Jul 2026
+08 Jul 2026
 
 ---
 
@@ -23,3 +23,4 @@
 | 523 | [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) | Medium | Java | 24 ms | 139.8 MB | 05 Jul 2026 | `Arrays/0523_Continuous_Subarray_Sum.java` |
 | 560 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | Medium | Java | 25 ms | 48.8 MB | 07 Jul 2026 | `Arrays/0560_Subarray_Sum_Equals_K.java` |
 | 2240 | [Intervals Between Identical Elements](https://leetcode.com/problems/intervals-between-identical-elements/) | Medium | Java | 170 ms | 189.3 MB | 05 Jul 2026 | `Arrays/2240_Intervals_Between_Identical_Elements.java` |
+| 2878 | [Apply Operations to Make All Array Elements Equal to Zero](https://leetcode.com/problems/apply-operations-to-make-all-array-elements-equal-to-zero/) | Medium | Java | 1 ms | 109.3 MB | 08 Jul 2026 | `Arrays/2878_Apply_Operations_to_Make_All_Array_Elements_Equal_to_Zero.java` |
