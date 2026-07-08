@@ -309,3 +309,63 @@ _Add your key insight here._
 
 =====================================================
 
+# 2878. Apply Operations to Make All Array Elements Equal to Zero
+
+> 🔗 [LeetCode](https://leetcode.com/problems/apply-operations-to-make-all-array-elements-equal-to-zero/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 08 Jul 2026
+
+---
+
+## Problem Summary
+
+Problem #2878 — Apply Operations to Make All Array Elements Equal to Zero. Difficulty: Medium.
+
+---
+
+## AI-Powered Solution Explanation
+
+- Review the solution code and add your explanation here.
+
+---
+
+## AI Complexity Analysis
+
+### Time Complexity
+
+`O(?)`
+
+### Space Complexity
+
+`O(?)`
+
+---
+
+## AI Learning Insights
+
+### Pattern
+
+- array
+- prefix-sum
+
+### Key Observation
+
+_Add your key insight here._
+
+### Similar Problems
+
+- N/A
+
+### Common Mistakes
+
+- N/A
+
+---
+
+## Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
