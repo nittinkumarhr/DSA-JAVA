@@ -1,11 +1,11 @@
 {
   "byTopic": {
-    "Hashing": 1,
-    "Arrays": 1
+    "Arrays": 2,
+    "Hashing": 1
   },
   "easy": 0,
   "hard": 0,
-  "lastSynced": "2026-07-08T18:05:07.843Z",
-  "medium": 2,
-  "total": 2
+  "lastSynced": "2026-07-08T18:19:27.400Z",
+  "medium": 3,
+  "total": 3
 }
