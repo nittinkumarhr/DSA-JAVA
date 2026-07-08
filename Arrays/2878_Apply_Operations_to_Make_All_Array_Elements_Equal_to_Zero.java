@@ -3,7 +3,7 @@
  * Difficulty: Medium
  * Topic: array, prefix-sum
  * Runtime: 1 ms
- * Memory: 109.3 MB
+ * Memory: 108.5 MB
  * Date: 08 Jul 2026
  * LeetCode: https://leetcode.com/problems/apply-operations-to-make-all-array-elements-equal-to-zero/
  */
