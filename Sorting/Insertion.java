@@ -1,4 +1,4 @@
-public class insertionclass{
+public class insertionclass
 	public static void insertioncsort(int arr[]){
 		int n=arr.length;
 		int i,j,temp;
