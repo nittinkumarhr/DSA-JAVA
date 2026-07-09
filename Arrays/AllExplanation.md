@@ -430,3 +430,64 @@ _Add your key insight here._
 
 =====================================================
 
+# 1538. Maximum Points You Can Obtain from Cards
+
+> 🔗 [LeetCode](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 09 Jul 2026
+
+---
+
+## Problem Summary
+
+Problem #1538 — Maximum Points You Can Obtain from Cards. Difficulty: Medium.
+
+---
+
+## AI-Powered Solution Explanation
+
+- Review the solution code and add your explanation here.
+
+---
+
+## AI Complexity Analysis
+
+### Time Complexity
+
+`O(?)`
+
+### Space Complexity
+
+`O(?)`
+
+---
+
+## AI Learning Insights
+
+### Pattern
+
+- array
+- sliding-window
+- prefix-sum
+
+### Key Observation
+
+_Add your key insight here._
+
+### Similar Problems
+
+- N/A
+
+### Common Mistakes
+
+- N/A
+
+---
+
+## Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
