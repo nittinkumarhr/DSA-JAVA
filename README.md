@@ -7,15 +7,15 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 | Difficulty | Count |
 |------------|-------|
 | 🟢 Easy    | 0 |
-| 🟡 Medium  | 9 |
+| 🟡 Medium  | 10 |
 | 🔴 Hard    | 0 |
-| **Total**  | **9** |
+| **Total**  | **10** |
 
 ## By Topic
 
 | Topic | Solved |
 |-------|--------|
-| Arrays | 8 |
+| Arrays | 9 |
 | Hashing | 1 |
 
 ## Structure
