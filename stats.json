@@ -1,12 +1,12 @@
 {
   "byTopic": {
-    "Arrays": 9,
+    "Arrays": 10,
     "Hashing": 1,
     "Math": 1
   },
-  "easy": 1,
+  "easy": 2,
   "hard": 0,
-  "lastSynced": "2026-07-10T18:26:57.675Z",
+  "lastSynced": "2026-07-10T18:44:06.918Z",
   "medium": 10,
-  "total": 11
+  "total": 12
 }
