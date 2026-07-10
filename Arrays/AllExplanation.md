@@ -557,3 +557,69 @@ _Add your key insight here._
 
 =====================================================
 
+# 0347. Top K Frequent Elements
+
+> 🔗 [LeetCode](https://leetcode.com/problems/top-k-frequent-elements/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 10 Jul 2026
+
+---
+
+## Problem Summary
+
+Problem #347 — Top K Frequent Elements. Difficulty: Medium.
+
+---
+
+## AI-Powered Solution Explanation
+
+- Review the solution code and add your explanation here.
+
+---
+
+## AI Complexity Analysis
+
+### Time Complexity
+
+`O(?)`
+
+### Space Complexity
+
+`O(?)`
+
+---
+
+## AI Learning Insights
+
+### Pattern
+
+- array
+- hash-table
+- divide-and-conquer
+- sorting
+- heap-priority-queue
+- bucket-sort
+- counting
+- quickselect
+
+### Key Observation
+
+_Add your key insight here._
+
+### Similar Problems
+
+- N/A
+
+### Common Mistakes
+
+- N/A
+
+---
+
+## Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
