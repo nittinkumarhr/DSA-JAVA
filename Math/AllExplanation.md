@@ -224,3 +224,97 @@ When dealing with divisibility of numbers in a range, first check the constraint
 
 =====================================================
 
+# 1610. XOR Operation in an Array
+
+> 🔗 [LeetCode](https://leetcode.com/problems/xor-operation-in-an-array/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 13 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to generate an array of n integers where each element at index i is defined by the formula start + 2 * i, and then compute and return the bitwise XOR sum of all these generated elements.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- nums[i] = start + 2*i → Formulaic array generation
+- bitwise XOR of all elements → Bit manipulation / Cumulative XOR reduction
+
+**Pattern(s) used:**
+
+- Bit Manipulation
+- Simulation
+- Mathematics
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a variable to store the cumulative XOR sum.
+- Iterate through the range from 0 to n - 1.
+- In each iteration, compute the element value using the formula: start + 2 * i.
+- XOR this computed value with the running XOR sum.
+- Return the final XOR sum after the loop completes (avoiding array allocation to save space).
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(n)`
+
+> The provided solution loops exactly n times to populate the array and another n times to compute the XOR sum, resulting in O(n) time. It allocates an array of size n, resulting in O(n) auxiliary space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- n = 1 — The loop for XORing should correctly return just the 'start' value without index out of bounds.
+- Large start or n values — If start + 2*i exceeds Integer.MAX_VALUE, integer overflow can occur, though standard constraints usually prevent this.
+- start = 0 — XORing with 0 acts as an identity operation, which must be handled correctly as the initial value of the XOR accumulator.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The elements generated are of the form start + 2*i, meaning they all share the same parity (all even or all odd). By shifting the numbers right by 1 bit, we get a sequence of consecutive integers, allowing us to use the O(1) mathematical pattern of consecutive XORs (which repeats every 4 integers) to optimize the solution.
+
+### Common Mistakes
+
+- Allocating an actual array of size n, which uses unnecessary O(n) memory when the XOR sum can be accumulated on the fly in O(1) space.
+- Confusing the XOR operator '^' with exponentiation or other arithmetic operators.
+- Failing to recognize that the problem can be solved in O(1) time using mathematical properties of XOR on consecutive numbers.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To solve bitwise sequence problems, start with a simple simulation using a loop to accumulate the bitwise state. If constraints are extremely tight (e.g., n > 10^9), look for mathematical properties of bitwise operations, such as the 4-step periodicity of XORing consecutive integers (XOR from 1 to N), to transition from an O(n) simulation to an O(1) mathematical formula.
+
+**Similar Problems to Practice:**
+
+- Single Number
+- Decode XORed Array
+- Find the Original Array of Prefix XOR
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
