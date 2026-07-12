@@ -939,3 +939,73 @@ _Add your key insight here._
 
 =====================================================
 
+# 2876. Number of Employees Who Met the Target
+
+> 🔗 [LeetCode](https://leetcode.com/problems/number-of-employees-who-met-the-target/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 12 Jul 2026
+
+---
+
+## Problem Summary
+
+The problem asks us to count how many employees have worked at least a specified target number of hours, given an array where each element represents the hours worked by an individual employee.
+
+---
+
+## AI-Powered Solution Explanation
+
+- Initialize a counter variable 'count' to 0 to keep track of employees meeting the target.
+- Iterate through each element 'hour' in the 'hours' array using a enhanced for-loop.
+- For each employee, check if their worked hours are greater than or equal to the 'target'.
+- If the condition is met, increment the 'count' by 1.
+- Return the final 'count' after checking all employees.
+
+---
+
+## AI Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm runs in O(N) time because it visits each of the N elements in the array exactly once, and uses O(1) auxiliary space as it only maintains a single integer counter.
+
+---
+
+## AI Learning Insights
+
+### Pattern
+
+- Array
+- Linear Scan
+- Counting
+
+### Key Observation
+
+Each employee's hours can be evaluated independently, allowing us to solve the problem in a single pass without needing to sort or store intermediate states.
+
+### Similar Problems
+
+- Kids With the Greatest Number of Candies
+- Count Items Matching a Rule
+- Find Target Indices After Sorting Array
+
+### Common Mistakes
+
+- Using a strict inequality (hour > target) instead of the required greater-than-or-equal-to comparison (hour >= target).
+- Unnecessarily sorting the array first, which increases the time complexity from O(N) to O(N log N).
+
+---
+
+## Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
