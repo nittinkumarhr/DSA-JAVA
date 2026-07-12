@@ -878,3 +878,64 @@ _Add your key insight here._
 
 =====================================================
 
+# 2231. Find First Palindromic String in the Array
+
+> 🔗 [LeetCode](https://leetcode.com/problems/find-first-palindromic-string-in-the-array/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 12 Jul 2026
+
+---
+
+## Problem Summary
+
+Problem #2231 — Find First Palindromic String in the Array. Difficulty: Easy.
+
+---
+
+## AI-Powered Solution Explanation
+
+- Review the solution code and add your explanation here.
+
+---
+
+## AI Complexity Analysis
+
+### Time Complexity
+
+`O(?)`
+
+### Space Complexity
+
+`O(?)`
+
+---
+
+## AI Learning Insights
+
+### Pattern
+
+- array
+- two-pointers
+- string
+
+### Key Observation
+
+_Add your key insight here._
+
+### Similar Problems
+
+- N/A
+
+### Common Mistakes
+
+- N/A
+
+---
+
+## Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
