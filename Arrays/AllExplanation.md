@@ -817,3 +817,64 @@ _Add your key insight here._
 
 =====================================================
 
+# 2552. Maximum Sum of Distinct Subarrays With Length K
+
+> 🔗 [LeetCode](https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 12 Jul 2026
+
+---
+
+## Problem Summary
+
+Problem #2552 — Maximum Sum of Distinct Subarrays With Length K. Difficulty: Medium.
+
+---
+
+## AI-Powered Solution Explanation
+
+- Review the solution code and add your explanation here.
+
+---
+
+## AI Complexity Analysis
+
+### Time Complexity
+
+`O(?)`
+
+### Space Complexity
+
+`O(?)`
+
+---
+
+## AI Learning Insights
+
+### Pattern
+
+- array
+- hash-table
+- sliding-window
+
+### Key Observation
+
+_Add your key insight here._
+
+### Similar Problems
+
+- N/A
+
+### Common Mistakes
+
+- N/A
+
+---
+
+## Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
