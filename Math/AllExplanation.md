@@ -133,3 +133,94 @@ Preserving the original number in a separate variable is crucial because we need
 
 =====================================================
 
+# 2752. Sum Multiples
+
+> 🔗 [LeetCode](https://leetcode.com/problems/sum-multiples/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 13 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+Given a positive integer n, the problem asks us to find the sum of all integers in the range [1, n] inclusive that are divisible by 3, 5, or 7.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- range [1, n] -> linear scan or mathematical formula
+- divisible by 3, 5, or 7 -> modulo operations or Principle of Inclusion-Exclusion (PIE)
+
+**Pattern(s) used:**
+
+- Brute Force
+- Mathematics
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize an accumulator variable `sum` to 0.
+- Loop through each integer `i` from 1 up to `n` inclusive.
+- Check if `i` is divisible by 3, 5, or 7 using the modulo operator (`i % 3 == 0 || i % 5 == 0 || i % 7 == 0`).
+- If the condition is met, add `i` to `sum`.
+- Return the accumulated `sum` after the loop terminates.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm iterates from 1 to n exactly once, performing constant-time arithmetic operations at each step. No auxiliary space is used.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- n < 3 — The loop runs but no numbers satisfy the condition, correctly returning 0.
+- n is a multiple of multiple targets (e.g., 15, 105) — The logical OR operator ensures these numbers are only added once, avoiding double-counting.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+For small constraints (n <= 10^3), a simple linear scan is highly efficient and less prone to off-by-one errors than a mathematical approach. However, for large n, the Principle of Inclusion-Exclusion (PIE) can solve this in O(1) time.
+
+### Common Mistakes
+
+- Using separate 'if' statements instead of logical OR ('||'), which causes common multiples (like 15) to be added multiple times.
+- Using integer division ('/') instead of the modulo operator ('%') to check for divisibility.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When dealing with divisibility of numbers in a range, first check the constraints on 'n'. If 'n' is small, a simple loop with modulo checks is the safest approach. If 'n' is extremely large (e.g., up to 10^9), use the Principle of Inclusion-Exclusion (PIE) to calculate the sum of arithmetic progressions in O(1) time.
+
+**Similar Problems to Practice:**
+
+- Three Divisors
+- Ugly Number
+- Self Dividing Numbers
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
