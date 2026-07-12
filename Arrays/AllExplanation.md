@@ -1009,3 +1009,96 @@ Each employee's hours can be evaluated independently, allowing us to solve the p
 
 =====================================================
 
+# 2624. Difference Between Element Sum and Digit Sum of an Array
+
+> 🔗 [LeetCode](https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 12 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to calculate the absolute difference between the sum of all elements in an array (element sum) and the sum of all individual digits of those elements (digit sum).
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- digit sum -> requires extracting individual digits from integers using modulo and division
+- difference between element sum and digit sum -> signals maintaining two separate running accumulators during a single-pass traversal
+
+**Pattern(s) used:**
+
+- Math Simulation
+- Array Traversal
+- Digit Extraction
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two accumulator variables: totalSum and digitSum to 0.
+- Iterate through each number in the input array.
+- Add the current number to totalSum.
+- Extract the digits of the current number using a nested while loop: add num % 10 to digitSum, then divide num by 10.
+- Return the difference totalSum - digitSum.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N * log10(M))`
+
+### Space Complexity
+
+`O(1)`
+
+> We iterate through the array of size N once. For each element, we extract its digits, which takes time proportional to the number of digits, log10(M), where M is the maximum value in the array. No extra space is used beyond a few scalar variables.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single-digit numbers — The element sum and digit sum will be identical, resulting in a difference of 0, which the code handles correctly.
+- Large numbers (up to 10^4) — The code correctly processes multi-digit numbers by looping until the number becomes 0.
+- Zero values — The digit extraction loop is skipped for 0, which is correct as it contributes 0 to both sums.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+For any positive integer, its value is mathematically guaranteed to be greater than or equal to the sum of its digits. Therefore, the element sum is always greater than or equal to the digit sum, allowing us to return totalSum - digitSum directly without using Math.abs().
+
+### Common Mistakes
+
+- Converting integers to strings to extract digits, which is highly inefficient and uses unnecessary O(D) auxiliary space.
+- Modifying the loop variable before adding it to the element sum, which would corrupt the totalSum calculation.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem requires processing the individual digits of numbers, avoid string conversion. Instead, use the standard mathematical approach of repeatedly taking modulo 10 (num % 10) to extract the last digit, followed by integer division by 10 (num / 10) to discard it. Combine this extraction loop with a single-pass array traversal to maintain optimal O(1) auxiliary space.
+
+**Similar Problems to Practice:**
+
+- Subtract the Product and Sum of Digits of an Integer
+- Add Digits
+- Sum of All Subset XOR Totals
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
