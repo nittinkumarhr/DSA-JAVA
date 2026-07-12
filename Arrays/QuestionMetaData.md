@@ -2,8 +2,8 @@
 
 ## Statistics
 
-- **Total Problems** : 13
-- **Easy** : 3
+- **Total Problems** : 14
+- **Easy** : 4
 - **Medium** : 8
 - **Hard** : 1
 
@@ -28,5 +28,6 @@
 | 2231 | [Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array/) | Easy | Java | 1 ms | 47.6 MB | 12 Jul 2026 | `Arrays/2231_Find_First_Palindromic_String_in_the_Array.java` |
 | 2240 | [Intervals Between Identical Elements](https://leetcode.com/problems/intervals-between-identical-elements/) | Medium | Java | 170 ms | 189.3 MB | 05 Jul 2026 | `Arrays/2240_Intervals_Between_Identical_Elements.java` |
 | 2552 | [Maximum Sum of Distinct Subarrays With Length K](https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/) | Medium | Java | 60 ms | 99 MB | 12 Jul 2026 | `Arrays/2552_Maximum_Sum_of_Distinct_Subarrays_With_Length_K.java` |
+| 2876 | [Number of Employees Who Met the Target](https://leetcode.com/problems/number-of-employees-who-met-the-target/) | Easy | Java | 1 ms | 43.8 MB | 12 Jul 2026 | `Arrays/2876_Number_of_Employees_Who_Met_the_Target.java` |
 | 2878 | [Apply Operations to Make All Array Elements Equal to Zero](https://leetcode.com/problems/apply-operations-to-make-all-array-elements-equal-to-zero/) | Medium | Java | 1 ms | 109.3 MB | 08 Jul 2026 | `Arrays/2878_Apply_Operations_to_Make_All_Array_Elements_Equal_to_Zero.java` |
 | 3226 | [Minimum Number Game](https://leetcode.com/problems/minimum-number-game/) | Easy | Java | 5 ms | 47.3 MB | 11 Jul 2026 | `Arrays/3226_Minimum_Number_Game.java` |
