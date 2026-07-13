@@ -318,3 +318,96 @@ To solve bitwise sequence problems, start with a simple simulation using a loop 
 
 =====================================================
 
+# 0007. Reverse Integer
+
+> 🔗 [LeetCode](https://leetcode.com/problems/reverse-integer/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 13 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem requires reversing the digits of a 32-bit signed integer and returning 0 if the reversed value overflows the 32-bit integer range.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- reverse digits → modulo and division operators
+- 32-bit signed integer constraints → overflow check before final operation
+
+**Pattern(s) used:**
+
+- Math
+- Modulo Arithmetic
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a result variable as 0.
+- While the input number is not 0, extract the last digit using modulo 10.
+- Check if multiplying the current result by 10 will cause an overflow beyond Integer.MAX_VALUE or below Integer.MIN_VALUE.
+- If safe, update result = result * 10 + digit.
+- Divide the input number by 10 to remove the last digit.
+- Return the result if no overflow occurred, otherwise return 0.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(log(n))`
+
+### Space Complexity
+
+`O(1)`
+
+> The number of iterations is proportional to the number of digits in the integer, which is log10(n).
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Negative numbers — modulo operator in some languages preserves sign, requiring careful handling.
+- Overflow — the reversed integer may exceed 2^31-1 or fall below -2^31, requiring a return of 0.
+- Trailing zeros — the logic naturally handles these by shifting the result.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The last digit of a number is always obtained by 'n % 10', and the number is reduced by 'n / 10'; the reversed number is built by accumulating these digits into a new variable.
+
+### Common Mistakes
+
+- Failing to check for overflow before performing the multiplication.
+- Assuming the input is always positive and ignoring sign handling.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem involves manipulating digits of a number, think of modulo 10 and integer division by 10 as your primary tools. Always identify the constraints on the data type (e.g., 32-bit integer) early, as overflow detection is usually the most critical part of these problems. If the problem asks for reversal or digit-by-digit processing, treat the number as a sequence of digits and process from right to left.
+
+**Similar Problems to Practice:**
+
+- Palindrome Number
+- String to Integer (atoi)
+- Divide Two Integers
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
