@@ -7,16 +7,16 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 | Difficulty | Count |
 |------------|-------|
 | 🟢 Easy    | 5 |
-| 🟡 Medium  | 0 |
+| 🟡 Medium  | 1 |
 | 🔴 Hard    | 0 |
-| **Total**  | **5** |
+| **Total**  | **6** |
 
 ## By Topic
 
 | Topic | Solved |
 |-------|--------|
 | Arrays | 3 |
-| Math | 2 |
+| Math | 3 |
 
 ## Structure
 
