@@ -1102,3 +1102,95 @@ When a problem requires processing the individual digits of numbers, avoid strin
 
 =====================================================
 
+# 0128. Longest Consecutive Sequence
+
+> 🔗 [LeetCode](https://leetcode.com/problems/longest-consecutive-sequence/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 14 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find the length of the longest consecutive sequence of integers in an unsorted array, with the strict constraint that the algorithm must run in O(n) time.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- unsorted array + O(n) time complexity constraint → use a Hash Set to replace O(n log n) sorting with O(1) lookups
+- consecutive sequence → identify sequence boundaries by checking for the existence of immediate neighbors (num - 1)
+
+**Pattern(s) used:**
+
+- Hash Table
+- Sequence Building
+
+---
+
+## 🛠 Solution Approach
+
+- Insert all elements of the input array into a HashSet to eliminate duplicates and enable O(1) lookups.
+- Iterate through the unique elements in the HashSet.
+- For each element, check if it is the start of a sequence by verifying if 'num - 1' is not present in the set.
+- If it is the start, enter a loop to find the length of the consecutive sequence by checking for 'num + 1', 'num + 2', etc.
+- Track and update the maximum sequence length found across all starting elements.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(n)`
+
+> Time complexity is O(n) because each element is inserted into the set in O(1) time, and the inner loop only runs for elements that are the start of a sequence, ensuring each number is visited at most twice. Space complexity is O(n) to store the unique elements in the HashSet.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty array — Handled by the initial check returning 0.
+- All duplicate elements — Handled by the HashSet which automatically filters duplicates, preventing redundant sequence checks.
+- Negative numbers — Handled correctly as HashSets support negative integer keys without any special logic.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+An element is the absolute start of a consecutive sequence if and only if its predecessor (num - 1) does not exist in the set. By only initiating sequence traversal from these 'start' elements, we prevent redundant checks and guarantee linear time complexity.
+
+### Common Mistakes
+
+- Sorting the array first, which results in O(n log n) time complexity and violates the problem constraints.
+- Omitting the 'num - 1' check, causing the algorithm to traverse sequences from every element and degrading the time complexity to O(n^2).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To solve sequence or relationship problems on unsorted data in O(n) time, avoid sorting. Instead, load the elements into a Hash Set or Hash Map to enable O(1) queries. Identify a unique 'anchor' or 'boundary' condition (like the absence of a predecessor) to locate the start of each group, and only perform traversals from these anchors to ensure each element is processed a constant number of times.
+
+**Similar Problems to Practice:**
+
+- First Missing Positive
+- Longest Arithmetic Subsequence
+- Find Three Consecutive Integers That Sum to a Given Number
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
