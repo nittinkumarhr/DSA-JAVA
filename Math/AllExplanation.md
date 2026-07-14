@@ -411,3 +411,95 @@ When a problem involves manipulating digits of a number, think of modulo 10 and 
 
 =====================================================
 
+# 3172. Divisible and Non-divisible Sums Difference
+
+> 🔗 [LeetCode](https://leetcode.com/problems/divisible-and-non-divisible-sums-difference/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 15 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to calculate the difference between two sums: the sum of all integers in the range [1, n] that are not divisible by m (num1), and the sum of all integers in the same range that are divisible by m (num2). The final output is num1 - num2.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- sum of integers in a range [1, n] with a divisibility condition -> Arithmetic Progression (AP) sum formula or linear simulation
+- divisible and non-divisible sums -> partitioning a range into two complementary sets
+
+**Pattern(s) used:**
+
+- Math
+- Simulation
+- Arithmetic Progression
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two variables, num1 and num2, to 0 to accumulate the non-divisible and divisible sums respectively.
+- Iterate through all integers i from 1 to n inclusive.
+- For each integer, check if it is divisible by m using the modulo operator (i % m == 0).
+- If it is not divisible, add i to num1; otherwise, add i to num2.
+- Return the difference num1 - num2.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(1)`
+
+> The loop runs exactly n times, performing constant-time arithmetic operations in each iteration, resulting in O(n) time complexity. Only a few integer variables are used, requiring O(1) auxiliary space. Note that this can be optimized to O(1) time using the arithmetic progression sum formula.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- m > n — when m is strictly greater than n, no numbers in the range are divisible by m, meaning num2 is 0 and num1 is the sum of all numbers from 1 to n.
+- m = 1 — every number in the range is divisible by m, meaning num1 is 0 and num2 is the sum of all numbers from 1 to n.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The sum of all numbers from 1 to n is a known arithmetic progression sum, and the sum of multiples of m is also an arithmetic progression of the form m * (1 + 2 + ... + k) where k = floor(n/m). This allows the problem to be solved in O(1) time using the formula: Total Sum - 2 * (Sum of Multiples of m).
+
+### Common Mistakes
+
+- Off-by-one errors in the loop boundaries (e.g., iterating up to n-1 instead of n).
+- Using integer division incorrectly when attempting the O(1) formula, leading to truncation errors.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks for sums of elements in a range [1, n] satisfying a step condition (like divisibility by m), think of arithmetic progressions. You can partition the range into elements that satisfy the condition and those that do not. Use the formula Sum = k * (first + last) / 2 to compute these sums in O(1) time instead of simulating with a loop.
+
+**Similar Problems to Practice:**
+
+- Difference Between Element Sum and Digit Sum of an Array
+- Sum of All Odd Length Subarrays
+- Find Greatest Common Divisor of Array
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
