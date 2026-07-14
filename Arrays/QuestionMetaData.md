@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 15
+- **Total Problems** : 16
 - **Easy** : 5
-- **Medium** : 8
+- **Medium** : 9
 - **Hard** : 1
 
 **Last Updated**
 
-12 Jul 2026
+14 Jul 2026
 
 ---
 
@@ -18,6 +18,7 @@
 | ID | Problem | Difficulty | Language | Runtime | Memory | Date | Solution |
 |----|---------|------------|----------|---------|--------|------|----------|
 | 119 | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) | Easy | Java | 1 ms | 42.9 MB | 06 Jul 2026 | `Arrays/0119_Pascals_Triangle_II.java` |
+| 128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium | Java | 30 ms | 95.7 MB | 14 Jul 2026 | `Arrays/0128_Longest_Consecutive_Sequence.java` |
 | 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | Java | N/A | N/A | 05 Jul 2026 | `Arrays/0239_Sliding_Window_Maximum.java` |
 | 260 | [Single Number - LeetCode](https://leetcode.com/problems/single-number-leetcode/) | Unknown | java | 1 ms | 46.80 MB | 30 Jun 2026 | `0260_Single_Number_LeetCode.java` |
 | 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium | Java | 16 ms | 47.5 MB | 10 Jul 2026 | `Arrays/0347_Top_K_Frequent_Elements.java` |
