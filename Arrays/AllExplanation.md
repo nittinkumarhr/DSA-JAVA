@@ -1290,3 +1290,99 @@ When faced with finding combinations/tuples across multiple independent arrays t
 
 =====================================================
 
+# 0026. Remove Duplicates from Sorted Array
+
+> 🔗 [LeetCode](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 15 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+Given a sorted integer array, remove the duplicates in-place such that each unique element appears only once. Return the number of unique elements, and modify the array so that the first k elements contain these unique values in their original order.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- sorted array -> allows comparing adjacent elements to detect duplicates easily
+- in-place modification -> suggests a two-pointer approach (read and write pointers) to avoid extra space
+- return number of unique elements -> indicates tracking a write index that represents the count of unique elements
+
+**Pattern(s) used:**
+
+- Two Pointers
+- In-place Array Manipulation
+
+---
+
+## 🛠 Solution Approach
+
+- Handle the base case: if the array length is 0, return 0.
+- Initialize a write pointer 'i' at index 1, which tracks where the next unique element should be placed.
+- Iterate a read pointer 'j' from index 1 to the end of the array.
+- At each step, compare the current element arr[j] with the previous element arr[j-1].
+- If they are different, it means a new unique element has been found. Write arr[j] to arr[i] and increment 'i'.
+- Return 'i' as the total number of unique elements.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We traverse the array of size N exactly once with the read pointer, resulting in O(N) time complexity. Since we modify the array in-place without using any extra data structures, the auxiliary space complexity is O(1).
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty array — handled by returning 0 immediately to prevent index out of bounds.
+- Single element array — handled naturally as the loop condition (j < n) is false, returning 1.
+- All elements are duplicates — e.g., [1, 1, 1]; the write pointer stays at index 1, and we return 1.
+- No duplicates — e.g., [1, 2, 3]; the write pointer advances at every step, returning the full length.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Because the array is sorted, all duplicate elements are guaranteed to be grouped together. This means we only need to compare the current element with the immediately preceding element to determine if it is a duplicate.
+
+### Common Mistakes
+
+- Using an extra set or list, which violates the O(1) auxiliary space constraint.
+- Incorrectly handling index boundaries, leading to ArrayIndexOutOfBoundsException when comparing elements (e.g., comparing index 0 with index -1).
+- Forgetting to increment the write pointer only when a new unique element is found, resulting in overwriting valid unique elements.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to modify an array in-place under constraints (like removing elements or filtering duplicates), think of the Two-Pointer 'Read/Write' strategy. One pointer (the read pointer) scans the array to find valid elements, while the other pointer (the write pointer) marks the destination for the next valid element. This allows you to overwrite unwanted elements on the fly without needing extra memory.
+
+**Similar Problems to Practice:**
+
+- Remove Duplicates from Sorted Array II
+- Remove Element
+- Move Zeroes
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
