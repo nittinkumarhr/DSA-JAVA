@@ -1194,3 +1194,99 @@ To solve sequence or relationship problems on unsorted data in O(n) time, avoid 
 
 =====================================================
 
+# 0454. 4Sum II
+
+> 🔗 [LeetCode](https://leetcode.com/problems/4sum-ii/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 15 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find the number of tuples (i, j, k, l) such that the sum of elements at these indices from four different integer arrays (nums1, nums2, nums3, and nums4) equals zero.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- four independent arrays → split-and-conquer / meet-in-the-middle to reduce O(N^4) to O(N^2)
+- count tuples summing to target → hash map for O(1) complement frequency lookups
+
+**Pattern(s) used:**
+
+- Meet-in-the-Middle
+- Hash Table
+- Complement Lookup
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a hash map to store the sum of elements from nums1 and nums2 as keys, and their frequency of occurrence as values.
+- Run nested loops to iterate through every element of nums1 and nums2, compute their sum, and update its count in the hash map.
+- Initialize a counter variable to 0 to store the total number of valid tuples.
+- Run nested loops to iterate through every element of nums3 and nums4, and compute their sum.
+- For each sum, calculate its complement (the negative of the sum) needed to reach zero.
+- Check if this complement exists in the hash map; if it does, add its frequency to the counter.
+- Return the final counter.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N^2)`
+
+### Space Complexity
+
+`O(N^2)`
+
+> The time complexity is O(N^2) because we run two separate sets of nested loops of size N. The space complexity is O(N^2) because the hash map can store up to N^2 unique sum combinations of nums1 and nums2 in the worst case.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- All zeros — Handled correctly as 0 + 0 = 0, and the map will store high frequencies of 0, multiplying correctly.
+- Negative numbers — Handled naturally as the complement of a negative sum is positive, and vice versa.
+- Duplicate elements — Handled correctly by storing frequencies in the hash map instead of just unique sums.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Instead of checking all combinations across four arrays in O(N^4) time, we can split the problem into two halves of two arrays each. By storing the results of the first half in a hash map, we can query them in O(1) time while processing the second half, reducing the time complexity to O(N^2).
+
+### Common Mistakes
+
+- Using a Set instead of a Map, which fails to account for duplicate sum frequencies.
+- Trying to sort the arrays and use four pointers, which is highly complex and inefficient because the elements are from independent arrays.
+- Not realizing that the indices can be duplicate values across different arrays (i.e., we are counting index tuples, not unique value combinations).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When faced with finding combinations/tuples across multiple independent arrays that sum to a target, avoid nested loops over all arrays. Instead, divide the arrays into two equal groups. Compute and store all possible sums of the first group in a hash map (with frequencies), then iterate through the second group to find the complement. This 'meet-in-the-middle' hashing technique reduces the exponent of the time complexity by half (from O(N^k) to O(N^(k/2))).
+
+**Similar Problems to Practice:**
+
+- Two Sum
+- 4Sum
+- Subarray Sum Equals K
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
