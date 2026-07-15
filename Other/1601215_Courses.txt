@@ -1,0 +1,26 @@
+// Problem: #1601215 - Courses
+// Difficulty: Medium
+// Topic: Other
+// Runtime: N/A
+// Memory: N/A
+// Date: 16 Jul 2026
+// GeeksforGeeks: https://www.geeksforgeeks.org/problems/kadanes-algorithm-1587115620
+
+class Solution {
+    int maxSubarraySum(int[] nums) {
+        int currentSum = 0;
+        int maxSum = Integer.MIN_VALUE;
+        
+        for (int num : nums) {
+            currentSum += num;
+            
+            maxSum = Math.max(maxSum, currentSum);
+            
+            if (currentSum < 0) {
+                currentSum = 0;
+            }
+        }
+        
+        return maxSum;
+    }
+}
