@@ -2,11 +2,12 @@
   "byTopic": {
     "Arrays": 6,
     "Math": 5,
-    "Strings": 1
+    "Strings": 1,
+    "Other": 1
   },
   "easy": 9,
   "hard": 0,
-  "lastSynced": "2026-07-15T14:36:14.633Z",
-  "medium": 3,
-  "total": 12
+  "lastSynced": "2026-07-15T20:11:28.444Z",
+  "medium": 4,
+  "total": 13
 }
