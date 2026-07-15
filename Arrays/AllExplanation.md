@@ -1386,3 +1386,96 @@ When asked to modify an array in-place under constraints (like removing elements
 
 =====================================================
 
+# 0045. Jump Game II
+
+> 🔗 [LeetCode](https://leetcode.com/problems/jump-game-ii/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 16 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks for the minimum number of jumps required to reach the last index of an array where each element represents the maximum jump length from that position. It requires an efficient traversal to determine the optimal jump sequence without exploring every possible path.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- minimum jumps → greedy choice property
+- reach the end → BFS-like level traversal
+- maximum jump length at each index → range-based decision making
+
+**Pattern(s) used:**
+
+- Greedy
+- Breadth-First Search (Implicit)
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize jumps to 0, currentEnd to 0, and maxReach to 0.
+- Iterate through the array up to the second-to-last element.
+- Update maxReach as the maximum of current maxReach and i + nums[i].
+- When the current index i reaches currentEnd, increment jumps and update currentEnd to maxReach.
+- Break early if currentEnd reaches or exceeds the last index.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm performs a single pass through the array (O(n)) using only a constant amount of extra space for pointers.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single element array — returns 0 as no jumps are needed.
+- Zero jump length — handled by the loop logic ensuring progress is made until the end.
+- Array length 2 — handled by the loop condition i < n-1.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The problem can be viewed as a level-order traversal where each 'level' consists of all positions reachable within a certain number of jumps; we only need to track the furthest reachable point for the next level.
+
+### Common Mistakes
+
+- Using dynamic programming (O(n^2)) instead of greedy, leading to Time Limit Exceeded.
+- Incorrectly updating the jump counter by not waiting for the current range to be fully exhausted.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks for the 'minimum' number of steps to reach a target and each step offers a range of choices, consider a greedy approach that tracks the furthest reachable point. Think of the problem as layers or levels: identify the boundary of the current layer, and as you iterate, calculate the boundary of the next layer. This 'BFS-like' greedy strategy is highly efficient for pathfinding problems on linear structures.
+
+**Similar Problems to Practice:**
+
+- Jump Game
+- Jump Game III
+- Minimum Number of Taps to Open to Water a Garden
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
