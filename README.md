@@ -6,17 +6,17 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 
 | Difficulty | Count |
 |------------|-------|
-| 🟢 Easy    | 8 |
+| 🟢 Easy    | 9 |
 | 🟡 Medium  | 3 |
 | 🔴 Hard    | 0 |
-| **Total**  | **11** |
+| **Total**  | **12** |
 
 ## By Topic
 
 | Topic | Solved |
 |-------|--------|
 | Arrays | 6 |
-| Math | 4 |
+| Math | 5 |
 | Strings | 1 |
 
 ## Structure
