@@ -96,3 +96,93 @@ When solving array-based optimization problems where you need to find the minimu
 
 =====================================================
 
+# 1601215. Courses
+
+> 🔗 [LeetCode](https://leetcode.com/problems/kadanes-algorithm-1587115620/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java (21) &nbsp;|&nbsp; 📅 16 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem requires finding the maximum sum of a contiguous subarray within a given one-dimensional array of numbers.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- contiguous subarray → sliding window or dynamic programming
+- maximum sum of subarray → Kadane's algorithm
+
+**Pattern(s) used:**
+
+- Dynamic Programming
+- Kadane's Algorithm
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize maxSum to the minimum integer value and currentSum to 0.
+- Iterate through each element of the array, adding the element to currentSum.
+- Update maxSum with the maximum of currentSum and the existing maxSum.
+- If currentSum drops below 0, reset currentSum to 0 to start a new subarray.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm processes the array of size N in a single pass, utilizing only a few scalar variables for tracking sums.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- All negative numbers — handled correctly by updating maxSum before resetting currentSum, ensuring the least negative number is chosen.
+- Single element array — handled correctly as the loop runs once and returns that single element.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Any subarray prefix with a negative sum cannot contribute to a maximum sum subarray, so we can discard it and start fresh.
+
+### Common Mistakes
+
+- Initializing maxSum to 0, which fails when the input array contains only negative numbers.
+- Resetting currentSum to 0 before updating maxSum, which incorrectly handles negative-only arrays.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To solve contiguous subarray optimization problems, determine if a running sum or state can be discarded when it becomes detrimental. If local optimal choices build up to the global optimum, dynamic programming or a greedy single-pass approach is highly effective.
+
+**Similar Problems to Practice:**
+
+- Maximum Subarray
+- Best Time to Buy and Sell Stock
+- Maximum Product Subarray
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
