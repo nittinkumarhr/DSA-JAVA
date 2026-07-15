@@ -2,8 +2,8 @@
 
 ## Statistics
 
-- **Total Problems** : 17
-- **Easy** : 5
+- **Total Problems** : 18
+- **Easy** : 6
 - **Medium** : 10
 - **Hard** : 1
 
@@ -17,6 +17,7 @@
 
 | ID | Problem | Difficulty | Language | Runtime | Memory | Date | Solution |
 |----|---------|------------|----------|---------|--------|------|----------|
+| 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | Java | 1 ms | 46.4 MB | 15 Jul 2026 | `Arrays/0026_Remove_Duplicates_from_Sorted_Array.java` |
 | 119 | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) | Easy | Java | 1 ms | 42.9 MB | 06 Jul 2026 | `Arrays/0119_Pascals_Triangle_II.java` |
 | 128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium | Java | 30 ms | 95.7 MB | 14 Jul 2026 | `Arrays/0128_Longest_Consecutive_Sequence.java` |
 | 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | Java | N/A | N/A | 05 Jul 2026 | `Arrays/0239_Sliding_Window_Maximum.java` |
