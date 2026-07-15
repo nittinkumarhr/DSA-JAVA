@@ -1,0 +1,29 @@
+// Problem: #1601210 - Array Leaders
+// Difficulty: Easy
+// Topic: Other
+// Runtime: N/A
+// Memory: N/A
+// Date: 16 Jul 2026
+// GeeksforGeeks: https://www.geeksforgeeks.org/problems/leaders-in-an-array-1587115620
+
+class Solution {
+    static ArrayList<Integer> leaders(int arr[]) {
+        // code here
+        ArrayList<Integer> res=new ArrayList();
+        
+        int maxRight=arr[arr.length-1];
+        res.add(maxRight);
+        
+        for(int i=arr.length-2;i>=0;i--){
+            
+            if(arr[i]>=maxRight){
+                maxRight=arr[i];
+                res.add(maxRight);
+            }
+        }
+        
+        Collections.reverse(res);
+        
+        return res;
+    }
+}
