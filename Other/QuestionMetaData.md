@@ -2,8 +2,8 @@
 
 ## Statistics
 
-- **Total Problems** : 1
-- **Easy** : 1
+- **Total Problems** : 2
+- **Easy** : 2
 - **Medium** : 0
 - **Hard** : 0
 
@@ -17,4 +17,5 @@
 
 | ID | Platform | Problem | Difficulty | Language | Runtime | Memory | Date | Solution |
 |----|----------|---------|------------|----------|---------|--------|------|----------|
-| 1601210 | GeeksforGeeks | [Array Leaders](https://www.geeksforgeeks.org/problems/leaders-in-an-array-1587115620) | Easy | Java (21) | N/A | N/A | 16 Jul 2026 | `Other/1601210_Array_Leaders.txt` |
+| 1600437 | GeeksforGeeks | [Duplicates in a Limited Range Array](https://www.geeksforgeeks.org/problems/find-duplicates-in-an-array) | Easy | Java (21) | N/A | N/A | 16 Jul 2026 | `Other/1600437_Duplicates_in_a_Limited_Range_Array.java` |
+| 1601210 | GeeksforGeeks | [Array Leaders](https://www.geeksforgeeks.org/problems/array-leaders) | Easy | Java (21) | N/A | N/A | 16 Jul 2026 | `Other/1601210_Array_Leaders.txt` |
