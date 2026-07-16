@@ -1479,3 +1479,97 @@ When a problem asks for the 'minimum' number of steps to reach a target and each
 
 =====================================================
 
+# 0055. Jump Game
+
+> 🔗 [LeetCode](https://leetcode.com/problems/jump-game/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 16 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks whether it is possible to reach the last index of an array starting from the first, where each element represents the maximum jump length from that position.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- array of jump lengths → Greedy
+- can reach end → Reachability analysis
+- maximum jump distance → Greedy choice property
+
+**Pattern(s) used:**
+
+- Greedy
+- Linear Scan
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize maxReach to 0 to track the furthest index reachable so far.
+- Iterate through the array index by index.
+- If the current index exceeds maxReach, return false as it is unreachable.
+- Update maxReach to the maximum of its current value or the current index plus the jump value at that index.
+- If maxReach reaches or exceeds the last index, return true early.
+- Return true after the loop if the end was reachable.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm performs a single pass through the array, using only a constant amount of extra space for the maxReach variable.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single element array — The loop condition handles this correctly by returning true immediately.
+- Zero at start — If the first element is 0 and length > 1, maxReach stays 0, causing the loop to return false.
+- Large jump values — The code handles values larger than array length by capping the reach logic.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+You don't need to know exactly which path you take; you only need to know the 'furthest reachable point' at any given moment to determine if the end is accessible.
+
+### Common Mistakes
+
+- Using recursion with memoization when a simple greedy approach suffices.
+- Forgetting to check if the current index is reachable (i > maxReach) before updating maxReach.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem involves making a sequence of choices to reach a goal and you only need a boolean result (possible/impossible), consider if a greedy approach works. Ask: 'Does the local optimal choice (furthest reach) lead to the global optimum?' If you can maintain a state variable that represents the 'boundary' of your current reach, you can often solve the problem in a single linear pass.
+
+**Similar Problems to Practice:**
+
+- Jump Game II
+- Jump Game III
+- Minimum Number of Taps to Open to Water a Garden
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
