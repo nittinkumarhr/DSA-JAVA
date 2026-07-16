@@ -2,9 +2,9 @@
 
 ## Statistics
 
-- **Total Problems** : 19
+- **Total Problems** : 20
 - **Easy** : 6
-- **Medium** : 11
+- **Medium** : 12
 - **Hard** : 1
 
 **Last Updated**
@@ -19,6 +19,7 @@
 |----|----------|---------|------------|----------|---------|--------|------|----------|
 | 26 | LeetCode | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | Java | 1 ms | 46.4 MB | 15 Jul 2026 | `Arrays/0026_Remove_Duplicates_from_Sorted_Array.java` |
 | 45 | LeetCode | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | Medium | Java | 1 ms | 47.1 MB | 16 Jul 2026 | `Arrays/0045_Jump_Game_II.java` |
+| 55 | LeetCode | [Jump Game](https://leetcode.com/problems/jump-game/) | Medium | Java | 2 ms | 47.9 MB | 16 Jul 2026 | `Arrays/0055_Jump_Game.java` |
 | 119 | LeetCode | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) | Easy | Java | 1 ms | 42.9 MB | 06 Jul 2026 | `Arrays/0119_Pascals_Triangle_II.java` |
 | 128 | LeetCode | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium | Java | 30 ms | 95.7 MB | 14 Jul 2026 | `Arrays/0128_Longest_Consecutive_Sequence.java` |
 | 239 | LeetCode | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | Java | N/A | N/A | 05 Jul 2026 | `Arrays/0239_Sliding_Window_Maximum.java` |
