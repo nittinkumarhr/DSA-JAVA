@@ -191,3 +191,93 @@ Whenever a problem specifies that array elements are bounded by the array size (
 
 =====================================================
 
+# 1600238. Courses
+
+> 🔗 [LeetCode](https://leetcode.com/problems/binary-search-1587115620/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 17 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find the 0-based index of the first occurrence of a target integer `k` in an array `arr`. If the target is not present in the array, the algorithm should return -1.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- unsorted array search → linear scan
+- find first occurrence → sequential iteration with early return
+
+**Pattern(s) used:**
+
+- Linear Search
+
+---
+
+## 🛠 Solution Approach
+
+- Iterate through the array sequentially starting from index 0.
+- Compare the element at the current index with the target integer `k`.
+- If the current element equals `k`, immediately return the current index.
+- If the loop completes without finding a match, return -1.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> The time complexity is O(N) because we may need to examine every element in the array of size N in the worst case. The space complexity is O(1) because we only use a single loop index variable.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty array — the loop condition is immediately false, returning -1 safely.
+- Target not present — the loop completes entirely and returns -1.
+- Multiple occurrences of target — the early return ensures the first index is returned.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Since the array is unsorted, we cannot make any assumptions about the positions of elements, making a sequential scan necessary and sufficient to find the first occurrence.
+
+### Common Mistakes
+
+- Placing the 'return -1' statement inside an 'else' block within the loop, which terminates the search prematurely after checking only the first element.
+- Using an incorrect loop boundary that causes an IndexOutOfBoundsException.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When searching for an element in an unsorted linear data structure, a linear scan is the default approach. Always ensure that failure cases (element not found) are handled after the loop completes, and return as soon as the target condition is met to optimize the average-case runtime.
+
+**Similar Problems to Practice:**
+
+- Binary Search
+- First Unique Character in a String
+- Find Target Indices After Sorting Array
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
