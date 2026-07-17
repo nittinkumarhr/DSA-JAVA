@@ -1,13 +1,13 @@
 {
   "byTopic": {
-    "Arrays": 8,
+    "Arrays": 9,
     "Math": 5,
     "Other": 5,
     "Strings": 1
   },
   "easy": 12,
   "hard": 0,
-  "lastSynced": "2026-07-16T20:51:55.659Z",
-  "medium": 7,
-  "total": 19
+  "lastSynced": "2026-07-17T12:34:01.392Z",
+  "medium": 8,
+  "total": 20
 }
