@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 20
+- **Total Problems** : 21
 - **Easy** : 6
-- **Medium** : 12
+- **Medium** : 13
 - **Hard** : 1
 
 **Last Updated**
 
-16 Jul 2026
+17 Jul 2026
 
 ---
 
@@ -22,6 +22,7 @@
 | 55 | LeetCode | [Jump Game](https://leetcode.com/problems/jump-game/) | Medium | Java | 2 ms | 47.9 MB | 16 Jul 2026 | `Arrays/0055_Jump_Game.java` |
 | 119 | LeetCode | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) | Easy | Java | 1 ms | 42.9 MB | 06 Jul 2026 | `Arrays/0119_Pascals_Triangle_II.java` |
 | 128 | LeetCode | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium | Java | 30 ms | 95.7 MB | 14 Jul 2026 | `Arrays/0128_Longest_Consecutive_Sequence.java` |
+| 179 | LeetCode | [Largest Number](https://leetcode.com/problems/largest-number/) | Medium | Java | 6 ms | 45.1 MB | 17 Jul 2026 | `Arrays/0179_Largest_Number.java` |
 | 239 | LeetCode | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | Java | N/A | N/A | 05 Jul 2026 | `Arrays/0239_Sliding_Window_Maximum.java` |
 | 260 | LeetCode | [Single Number - LeetCode](https://leetcode.com/problems/single-number-leetcode/) | Unknown | java | 1 ms | 46.80 MB | 30 Jun 2026 | `0260_Single_Number_LeetCode.java` |
 | 347 | LeetCode | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium | Java | 16 ms | 47.5 MB | 10 Jul 2026 | `Arrays/0347_Top_K_Frequent_Elements.java` |
