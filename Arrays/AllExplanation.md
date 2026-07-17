@@ -1573,3 +1573,98 @@ When a problem involves making a sequence of choices to reach a goal and you onl
 
 =====================================================
 
+# 0179. Largest Number
+
+> 🔗 [LeetCode](https://leetcode.com/problems/largest-number/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 17 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to arrange a given list of non-negative integers in such a way that, when concatenated, they form the largest possible numerical string value.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- arrange elements to form largest/smallest value → custom sorting comparator
+- concatenation of elements → string representation and lexicographical comparison
+- greedy choice property → sorting based on local optimal arrangement
+
+**Pattern(s) used:**
+
+- Greedy
+- Custom Sorting
+- String Manipulation
+
+---
+
+## 🛠 Solution Approach
+
+- Convert all integers in the input array to their string representations.
+- Define a custom comparator that compares two strings 'a' and 'b' by checking if 'a + b' is greater than 'b + a'.
+- Sort the array of strings using this custom comparator in descending order.
+- Handle the edge case where the leading element is '0' (meaning all elements are 0) by returning '0'.
+- Concatenate the sorted strings into a single result string.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N * K * log N)`
+
+### Space Complexity
+
+`O(N * K)`
+
+> N is the number of elements and K is the average length of the strings; sorting takes O(N log N) comparisons, each taking O(K) time for concatenation and comparison.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- All zeros — if the sorted array starts with '0', the result must be '0' rather than '000'.
+- Single element — the logic must return the element as is without unnecessary processing.
+- Large numbers — using string concatenation avoids integer overflow issues.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The concatenation order (a+b vs b+a) defines a transitive relation, allowing us to use standard sorting algorithms to achieve a globally optimal arrangement.
+
+### Common Mistakes
+
+- Sorting based on standard lexicographical order (e.g., '9' > '10' is true, but '30' > '3' is false).
+- Failing to handle the '000' case where the result should be '0'.
+- Using integer conversion instead of string concatenation, leading to overflow.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks to arrange elements to maximize or minimize a combined result, consider whether the local optimal choice (comparing two elements at a time) leads to a global optimum. If the combination order matters, define a custom comparator that evaluates the result of both possible concatenation orders (a+b vs b+a) and sort accordingly. Always check for edge cases involving zeros or empty inputs that might break standard string formatting.
+
+**Similar Problems to Practice:**
+
+- LeetCode 179: Largest Number
+- LeetCode 321: Create Maximum Number
+- LeetCode 556: Next Greater Element III
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
