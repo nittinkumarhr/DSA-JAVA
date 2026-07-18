@@ -3,11 +3,12 @@
     "Arrays": 9,
     "Math": 5,
     "Other": 5,
-    "Strings": 1
+    "Strings": 1,
+    "Hashing": 1
   },
   "easy": 12,
   "hard": 0,
-  "lastSynced": "2026-07-17T12:34:01.392Z",
-  "medium": 8,
-  "total": 20
+  "lastSynced": "2026-07-18T12:24:38.028Z",
+  "medium": 9,
+  "total": 21
 }
