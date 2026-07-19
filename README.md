@@ -7,19 +7,19 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 | Difficulty | Count |
 |------------|-------|
 | 🟢 Easy    | 12 |
-| 🟡 Medium  | 9 |
+| 🟡 Medium  | 10 |
 | 🔴 Hard    | 0 |
-| **Total**  | **21** |
+| **Total**  | **22** |
 
 ## By Topic
 
 | Topic | Solved |
 |-------|--------|
-| Arrays | 9 |
+| Arrays | 10 |
 | Math | 5 |
 | Other | 5 |
-| Strings | 1 |
 | Hashing | 1 |
+| Strings | 1 |
 
 ## Structure
 
@@ -45,4 +45,4 @@ leetcode-solutions/
 └── Other/
 ```
 
-*Last updated: 18 Jul 2026*
+*Last updated: 19 Jul 2026*
