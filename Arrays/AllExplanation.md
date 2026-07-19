@@ -1668,3 +1668,95 @@ When a problem asks to arrange elements to maximize or minimize a combined resul
 
 =====================================================
 
+# 0324. Wiggle Sort II
+
+> 🔗 [LeetCode](https://leetcode.com/problems/wiggle-sort-ii/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 19 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+Rearrange an unsorted array such that elements alternate in a strict 'less than, greater than' pattern (nums[0] < nums[1] > nums[2] < nums[3]...). The solution must handle duplicate elements correctly without violating the strict inequality constraints.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- strict alternating inequality (nums[0] < nums[1] > nums[2]...) → split-and-interleave strategy with sorted halves
+- strict inequality with duplicates → reverse-order interleaving to prevent median collisions
+
+**Pattern(s) used:**
+
+- Sorting
+- Two Pointers
+- Interleaving
+
+---
+
+## 🛠 Solution Approach
+
+- Clone the original array to preserve a copy for sorting.
+- Sort the cloned array in ascending order.
+- Divide the sorted array into two halves: the smaller half (from index 0 to (n-1)/2) and the larger half (from (n-1)/2 + 1 to n-1).
+- Initialize two pointers: 'left' pointing to the end of the smaller half, and 'right' pointing to the end of the larger half.
+- Iterate through the original array, placing elements from the 'left' pointer at even indices and elements from the 'right' pointer at odd indices, decrementing the pointers after each placement.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Sorting the cloned array of size N takes O(N log N) time, and iterating to place elements takes O(N) time. The space complexity is O(N) because we allocate a clone of the original array to sort.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array with many duplicate elements — Interleaving from the end of each sorted half ensures that identical elements (especially the median) are placed as far apart as possible, preventing adjacent duplicates.
+- Odd array length — The smaller half must contain the extra element (size (n+1)/2) to ensure correct interleaving starting at index 0.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+To satisfy strict inequalities when duplicates exist, we must place the largest of the smaller half and the largest of the larger half as far apart as possible. Interleaving them in reverse order (from the middle to the start, and from the end to the middle) guarantees that identical median values do not end up adjacent to each other.
+
+### Common Mistakes
+
+- Interleaving the sorted array in forward order (left-to-right), which causes identical median elements to end up adjacent to each other (e.g., [4, 5, 5, 6] becomes [4, 5, 5, 6] instead of [5, 6, 4, 5]).
+- Incorrectly partitioning the array when the length is odd, leading to an index out of bounds or incorrect size for the smaller half.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When faced with strict alternating inequality constraints on arrays with duplicates, sorting and partitioning the array into 'small' and 'large' buckets is a highly effective strategy. To prevent boundary collisions (where the largest of the small bucket equals the smallest of the large bucket), interleave the elements starting from the back of each bucket. This maximizes the distance between elements near the partition boundary.
+
+**Similar Problems to Practice:**
+
+- Wiggle Sort
+- Sort Colors
+- Array Nesting
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
