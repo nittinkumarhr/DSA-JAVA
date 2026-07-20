@@ -1760,3 +1760,96 @@ When faced with strict alternating inequality constraints on arrays with duplica
 
 =====================================================
 
+# 3194. Find Words Containing Character
+
+> 🔗 [LeetCode](https://leetcode.com/problems/find-words-containing-character/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 20 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find all indices of words in a given array of strings that contain a specific target character 'x', and return these indices as a list.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- array of strings + find indices containing character -> Linear Scan with String Search
+- return indices of elements matching a condition -> Filter / Map-to-Index pattern
+
+**Pattern(s) used:**
+
+- Linear Scan
+- String Search
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize an empty list to store the indices of matching words.
+- Iterate through the array of words using a standard for-loop to keep track of the index 'i'.
+- For each word, check if the target character 'x' exists in the string using a fast search method like 'indexOf'.
+- If 'indexOf' returns a value other than -1, add the current index 'i' to the result list.
+- Return the populated list of indices after checking all words.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N * M)`
+
+### Space Complexity
+
+`O(1)`
+
+> We iterate through N words, and for each word, we perform a search that takes up to O(M) time where M is the maximum length of a word. The auxiliary space complexity is O(1) as we only use a few variables for iteration, excluding the space required for the output list.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Character 'x' is not present in any word — The code correctly returns an empty list because 'indexOf' always returns -1.
+- Character 'x' appears multiple times in a single word — The code correctly adds the index only once because 'indexOf' returns the first occurrence and we immediately move to the next word.
+- Empty strings in the input array — The code handles this safely as 'indexOf' on an empty string returns -1.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+We only need to determine the existence of the character 'x' in each word, not its frequency or position. This allows us to short-circuit the search for each word as soon as the first occurrence of 'x' is found.
+
+### Common Mistakes
+
+- Adding the same index multiple times if the character 'x' appears more than once in a single word.
+- Using slow or over-engineered methods like regular expressions instead of a simple character scan or 'indexOf'.
+- Forgetting that string indexing and array indexing are distinct, leading to index out of bounds errors.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To solve problems requiring filtering array elements based on an internal property, use a single-pass linear scan. When checking properties of strings within that scan, leverage built-in, optimized string search methods (like 'indexOf' or 'contains') to short-circuit as soon as the condition is met.
+
+**Similar Problems to Practice:**
+
+- Find Target Indices After Sorting Array
+- First Letter to Appear Twice
+- Detect Capital
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
