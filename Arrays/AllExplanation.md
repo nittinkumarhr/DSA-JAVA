@@ -1853,3 +1853,98 @@ To solve problems requiring filtering array elements based on an internal proper
 
 =====================================================
 
+# 0739. Daily Temperatures
+
+> 🔗 [LeetCode](https://leetcode.com/problems/daily-temperatures/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 21 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an array of daily temperatures, the goal is to find how many days one must wait until a warmer temperature occurs for each day; if no future day is warmer, the result for that day is zero.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- next greater element → monotonic stack
+- find distance to next larger value → monotonic stack
+- comparing current element with previous elements → stack-based tracking
+
+**Pattern(s) used:**
+
+- Monotonic Stack
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize an empty stack to store indices of temperatures.
+- Iterate through the array using index i.
+- While the stack is not empty and the current temperature is greater than the temperature at the index stored at the top of the stack:
+- Pop the index from the stack and calculate the difference (i - poppedIndex) to store in the result array.
+- Push the current index i onto the stack.
+- Return the result array after the loop finishes.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(n)`
+
+> Each index is pushed and popped from the stack exactly once, resulting in linear time, and the stack stores at most n indices in the worst case.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty array — the loop will not execute, returning an empty result.
+- Single element — the loop finishes without popping, leaving the result as 0.
+- Descending temperatures — no elements are popped, leaving all results as 0.
+- Ascending temperatures — every element is popped immediately, resulting in 1s.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+A monotonic decreasing stack allows us to keep track of indices whose 'next warmer day' has not yet been found, enabling us to resolve them as soon as a larger value appears.
+
+### Common Mistakes
+
+- Storing values instead of indices in the stack, which makes calculating the distance impossible.
+- Forgetting to handle the case where no warmer day exists (the array is initialized to 0, so this is handled implicitly).
+- Trying to use a nested loop approach, which results in O(n^2) complexity.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+Look for problems asking for the 'next' or 'previous' element that satisfies a condition (greater, smaller, etc.). When you need to compare an element with multiple previous elements to find a relationship, a monotonic stack is the standard tool. Always store indices in the stack if you need to calculate distances or relative positions.
+
+**Similar Problems to Practice:**
+
+- Next Greater Element I
+- Next Greater Element II
+- Online Stock Span
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
