@@ -503,3 +503,93 @@ When a problem asks for sums of elements in a range [1, n] satisfying a step con
 
 =====================================================
 
+# 2812. Find the Maximum Achievable Number
+
+> 🔗 [LeetCode](https://leetcode.com/problems/find-the-maximum-achievable-number/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 22 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks to find a number 'x' such that after decreasing 'x' by 1 and increasing 'num' by 1 for 't' operations, the two numbers become equal. This is a simple algebraic manipulation problem where we solve for the maximum possible value of 'x'.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- equal after operations → algebraic modeling
+- maximum achievable → optimization via equation
+
+**Pattern(s) used:**
+
+- Math
+- Algebra
+
+---
+
+## 🛠 Solution Approach
+
+- Define the state after t operations: x - t = num + t
+- Rearrange the equation to isolate x: x = num + 2 * t
+- Return the calculated value of x
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(1)`
+
+### Space Complexity
+
+`O(1)`
+
+> The solution performs a single constant-time arithmetic operation regardless of input size.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- num = 0 — handled correctly as the formula holds for non-negative integers
+- t = 0 — returns num as expected since no operations occur
+- large num/t — may cause integer overflow if inputs exceed 2^31-1
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Each operation allows the target number to move 2 units closer to the original number, effectively shifting the gap by 2 for every step 't'.
+
+### Common Mistakes
+
+- Overcomplicating the problem with loops or simulation instead of deriving the formula
+- Miscalculating the coefficient of t (using +t instead of +2t)
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem describes a state change over a fixed number of steps, write down the algebraic relationship between the initial and final states. If the transformation is linear, solve the equation for the unknown variable rather than simulating the steps. Look for invariants or constant rates of change that allow you to collapse multiple iterations into a single mathematical expression.
+
+**Similar Problems to Practice:**
+
+- Water Bottles
+- Count of Matches in Tournament
+- Minimum Number of Operations to Make Array Continuous
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
