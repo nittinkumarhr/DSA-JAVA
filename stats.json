@@ -2,13 +2,13 @@
   "byTopic": {
     "Arrays": 12,
     "Hashing": 1,
-    "Math": 5,
+    "Math": 6,
     "Other": 5,
     "Strings": 1
   },
-  "easy": 13,
+  "easy": 14,
   "hard": 0,
-  "lastSynced": "2026-07-21T14:10:33.569Z",
+  "lastSynced": "2026-07-22T13:53:41.620Z",
   "medium": 11,
-  "total": 24
+  "total": 25
 }
