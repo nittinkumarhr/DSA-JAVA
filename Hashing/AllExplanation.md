@@ -169,7 +169,7 @@ To sort elements by frequency, always start by building a frequency map. If the 
 
 ## 📝 Problem Summary
 
-The problem asks to partition a string into as many parts as possible such that each letter appears in at most one part, returning the size of each partition.
+The problem asks to partition a string into as many parts as possible such that each character appears in at most one part, returning the size of each partition.
 
 ---
 
@@ -177,23 +177,24 @@ The problem asks to partition a string into as many parts as possible such that 
 
 **How to spot this pattern in the problem statement:**
 
-- each letter appears in at most one part → Greedy interval merging
-- partition string into segments → Two pointers or greedy tracking
+- partition string into parts → greedy grouping
+- each character appears in at most one part → interval merging
+- maximize number of segments → greedy choice property
 
 **Pattern(s) used:**
 
 - Greedy
-- Hash Map (or Array)
-- Two Pointers
+- Hash Table
+- Interval Merging
 
 ---
 
 ## 🛠 Solution Approach
 
-- Create an array of size 26 to store the last occurrence index of every character in the string.
-- Initialize two pointers, 'start' and 'end', to track the current partition boundaries.
-- Iterate through the string, updating 'end' to the maximum of its current value and the last occurrence of the current character.
-- When the current index equals 'end', a partition is complete; record its length and update 'start' to 'end + 1'.
+- Create an array of size 26 to store the last occurrence index of each character in the string.
+- Iterate through the string with a pointer 'i', keeping track of the 'end' of the current partition.
+- Update 'end' to the maximum of its current value and the last occurrence index of the character at 'i'.
+- If 'i' reaches 'end', a partition is complete; record the length and update the start pointer for the next segment.
 
 ---
 
@@ -207,16 +208,15 @@ The problem asks to partition a string into as many parts as possible such that 
 
 `O(1)`
 
-> We traverse the string twice (once to find last indices, once to partition), and the space is constant as the alphabet size is fixed at 26.
+> We traverse the string twice (once to map indices, once to partition), and the space is constant as the alphabet size is fixed at 26.
 
 ---
 
 ## ⚠️ Edge Cases to Consider
 
-- Empty string — should return an empty list.
-- Single character string — returns [1].
-- All characters same — returns [N].
-- No overlapping characters — returns array of 1s.
+- Empty string — returns an empty list as there are no partitions.
+- Single character string — returns [1] as the entire string is one partition.
+- All identical characters — returns [N] as the entire string must be one partition.
 
 ---
 
@@ -224,25 +224,24 @@ The problem asks to partition a string into as many parts as possible such that 
 
 ### Key Observation
 
-A partition must extend at least as far as the last occurrence of every character currently contained within that partition.
+A partition must extend at least until the last occurrence of every character currently included in that partition.
 
 ### Common Mistakes
 
-- Forgetting to update the 'end' pointer dynamically as you iterate through the string.
-- Trying to use a nested loop approach which results in O(N^2) complexity.
-- Incorrectly calculating the partition length as 'end - start' instead of 'end - start + 1'.
+- Failing to pre-calculate the last occurrence index, leading to inefficient nested loops.
+- Incorrectly updating the 'end' pointer, causing partitions to be too small.
 
 ---
 
 ## 🔁 How to Approach Similar Problems
 
-When a problem requires partitioning a sequence based on constraints involving element occurrences, first pre-process the data to find the 'reach' or 'last occurrence' of each element. Use a greedy approach to maintain a running boundary that expands as you encounter elements with further reach. Whenever the current index meets the boundary, you have found a valid segment, reset the boundary, and repeat.
+When a problem requires partitioning an array or string into segments based on constraints involving element frequency or range, first identify the 'reach' of each element. Use a hash map or array to store the boundary (last index) of each element. Then, iterate through the input, maintaining a running maximum boundary; whenever your current index matches this boundary, you have found a valid partition point.
 
 **Similar Problems to Practice:**
 
 - Merge Intervals
-- Jump Game II
-- Insert Interval
+- Jump Game
+- Maximum Number of Non-Overlapping Substrings
 
 ---
 
@@ -254,6 +253,7 @@ When a problem requires partitioning a sequence based on constraints involving e
 - **Revision notes:**
 
 =====================================================
+
 
 
 
