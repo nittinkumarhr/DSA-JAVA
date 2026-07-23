@@ -9,7 +9,7 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 | 🟢 Easy    | 14 |
 | 🟡 Medium  | 18 |
 | 🔴 Hard    | 0 |
-| **Total**  | **32** |
+| **Total**  | **33** |
 
 ## By Topic
 
@@ -20,6 +20,7 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 | Math | 6 |
 | Other | 6 |
 | Strings | 1 |
+| Sorting | 1 |
 
 ## Structure
 
