@@ -375,3 +375,94 @@ When a problem asks for a subarray with a specific property related to sums, imm
 
 =====================================================
 
+# 1602678. Courses
+
+> 🔗 [LeetCode](https://leetcode.com/problems/find-missing-and-repeating2512/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 24 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks to identify two numbers in an array of size N containing integers from 1 to N: one that appears twice (the duplicate) and one that is missing entirely.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- array of size N with elements from 1 to N → frequency counting or cyclic sort
+- find duplicate and missing → hash map or index-based marking
+
+**Pattern(s) used:**
+
+- Frequency Counting
+- Hashing
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a frequency map or array to track occurrences of numbers from 1 to N.
+- Iterate through the input array and increment the count for each number encountered.
+- Iterate through the frequency map to find the key with a value of 2 (duplicate) and the key with a value of 0 (missing).
+- Return the results in an array or list.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> The algorithm iterates through the array once and the map once, both taking linear time, while the map stores up to N entries, requiring linear space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- N=2 — minimum possible size where one number is missing and one is duplicated.
+- Array with all elements same — not possible given constraints, but would cause map value to exceed 2.
+- Missing number is 1 or N — ensures the loop boundaries correctly cover the full range.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Since the range of numbers is fixed (1 to N) and the array size is N, the problem can be mapped to a frequency count where exactly one index will have a count of 2 and one will have a count of 0.
+
+### Common Mistakes
+
+- Using nested loops to count frequencies, leading to O(N^2) complexity.
+- Forgetting to initialize the frequency map with all numbers from 1 to N, leading to missing keys.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+Whenever a problem specifies an array of size N containing numbers in the range [1, N] or [0, N-1], immediately consider using the array indices as keys. If you cannot modify the input array, use a frequency array or hash map. If space must be O(1), use the Cyclic Sort pattern or negate values at indices to mark them as visited.
+
+**Similar Problems to Practice:**
+
+- Find the Duplicate Number
+- Set Mismatch
+- First Missing Positive
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
