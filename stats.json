@@ -3,13 +3,13 @@
     "Arrays": 12,
     "Hashing": 7,
     "Math": 6,
-    "Other": 6,
-    "Strings": 1,
-    "Sorting": 1
+    "Other": 7,
+    "Sorting": 1,
+    "Strings": 1
   },
-  "easy": 14,
+  "easy": 15,
   "hard": 0,
-  "lastSynced": "2026-07-23T20:16:24.347Z",
+  "lastSynced": "2026-07-23T20:28:42.174Z",
   "medium": 18,
-  "total": 33
+  "total": 34
 }
