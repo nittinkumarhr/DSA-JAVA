@@ -161,3 +161,97 @@ To sort elements by frequency, always start by building a frequency map. If the 
 
 =====================================================
 
+# 0768. Partition Labels
+
+> 🔗 [LeetCode](https://leetcode.com/problems/partition-labels/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 23 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to partition a string into as many parts as possible such that each character appears in at most one part. We must ensure that if a character appears in a partition, all occurrences of that character in the entire string must be contained within that same partition.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- partition string into parts → greedy grouping
+- each character appears in at most one part → interval merging
+- all occurrences of a character in one part → last occurrence tracking
+
+**Pattern(s) used:**
+
+- Greedy
+- Hash Table
+- Two Pointers
+
+---
+
+## 🛠 Solution Approach
+
+- Create an integer array of size 26 to store the last index of every character in the string.
+- Iterate through the string once to populate the last index map.
+- Use two pointers (start and end) to track the current partition boundaries.
+- Iterate through the string, updating the 'end' pointer to the maximum last index of characters encountered so far.
+- When the current index equals the 'end' pointer, a partition is complete; record the length and move the start pointer.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We traverse the string twice (O(N)) and use a fixed-size array of 26 integers (O(1)).
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single character string — returns [1] as the only possible partition.
+- All identical characters — returns [N] as the entire string is one partition.
+- No overlapping characters — returns an array of 1s representing each character as its own partition.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+A partition can only end at the maximum 'last occurrence' index of all characters seen since the start of the current partition.
+
+### Common Mistakes
+
+- Failing to update the 'end' boundary dynamically as new characters are encountered within a partition.
+- Forgetting to reset the start pointer to the index immediately following the completed partition.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem requires partitioning a sequence based on constraints involving character or element occurrences, first map the 'reach' (last occurrence) of each element. Treat these reaches as intervals and use a greedy approach to merge overlapping intervals. If the current index reaches the furthest end of the current interval, you have found a valid partition boundary.
+
+**Similar Problems to Practice:**
+
+- Merge Intervals
+- Jump Game II
+- Video Stitching
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
