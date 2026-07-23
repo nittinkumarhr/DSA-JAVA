@@ -281,3 +281,97 @@ When searching for an element in an unsorted linear data structure, a linear sca
 
 =====================================================
 
+# 1603043. Courses
+
+> 🔗 [LeetCode](https://leetcode.com/problems/longest-sub-array-with-sum-k0809/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 24 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks to find the length of the longest contiguous subarray within an integer array that sums up to a specific target value k.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- contiguous subarray → sliding window or prefix sum
+- sum equals k → prefix sum with hash map
+- longest subarray → optimization problem
+
+**Pattern(s) used:**
+
+- Prefix Sum
+- Hash Map
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a hash map to store the first occurrence of each prefix sum.
+- Iterate through the array, maintaining a running prefix sum.
+- If the current prefix sum equals k, update the maximum length to the current index plus one.
+- Check if (currentSum - k) exists in the map; if so, calculate the subarray length as (currentIndex - map.get(currentSum - k)) and update the maximum.
+- If the current prefix sum is not in the map, store it with the current index to ensure we capture the longest possible subarray.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(n)`
+
+> We traverse the array once performing constant time hash map operations, and in the worst case, we store n distinct prefix sums in the map.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty array — returns 0 as the loop never executes.
+- Target k not found — returns 0 as max remains initialized to 0.
+- Negative numbers — handled correctly by the prefix sum logic.
+- Array with all zeros — handled by only storing the first occurrence of a prefix sum.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The sum of a subarray from index i+1 to j is equal to prefixSum[j] - prefixSum[i]; by storing the earliest index of each prefix sum, we maximize the distance between j and i.
+
+### Common Mistakes
+
+- Updating the map for every occurrence of a prefix sum instead of only the first one.
+- Forgetting to handle the case where the prefix sum itself equals k by initializing the map with {0: -1}.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks for a subarray with a specific property related to sums, immediately consider the prefix sum technique. If you need to find a range [i, j] such that some function of the elements between them meets a criteria, use a hash map to store the 'state' of the prefix at index i to quickly look up if a valid j exists. Always check if you need to store the first occurrence (for longest) or last occurrence (for shortest) of a prefix sum.
+
+**Similar Problems to Practice:**
+
+- Subarray Sum Equals K
+- Contiguous Array
+- Maximum Size Subarray Sum Equals k
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
