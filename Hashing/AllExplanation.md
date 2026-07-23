@@ -169,7 +169,7 @@ To sort elements by frequency, always start by building a frequency map. If the 
 
 ## 📝 Problem Summary
 
-Partition a string into as many parts as possible such that each letter appears in at most one part, returning the size of each partition.
+The problem asks to partition a string into as many parts as possible such that each letter appears in at most one part, returning the size of each partition.
 
 ---
 
@@ -183,18 +183,18 @@ Partition a string into as many parts as possible such that each letter appears 
 **Pattern(s) used:**
 
 - Greedy
-- Hash Table
+- Hash Map (or Array)
 - Two Pointers
 
 ---
 
 ## 🛠 Solution Approach
 
-- Create an array of size 26 to store the last index of each character in the string.
-- Iterate through the string to populate the last index map.
+- Create an array of size 26 to store the last index of every character in the string.
+- Iterate through the string to populate this last-index map.
 - Use two pointers (start and end) to track the current partition boundaries.
-- Iterate through the string again, updating the 'end' pointer to the maximum last index of characters encountered so far.
-- When the current index equals the 'end' pointer, a partition is complete; record its length and move the 'start' pointer to the next position.
+- Iterate through the string again, updating the 'end' pointer to the maximum last occurrence of any character encountered so far.
+- When the current index equals 'end', a partition is complete; record the length and update 'start' to 'end + 1'.
 
 ---
 
@@ -208,15 +208,15 @@ Partition a string into as many parts as possible such that each letter appears 
 
 `O(1)`
 
-> We traverse the string twice (O(N)) and use a fixed-size array of 26 integers (O(1)).
+> We traverse the string twice (O(N)) and use a fixed-size array of 26 characters (O(1)).
 
 ---
 
 ## ⚠️ Edge Cases to Consider
 
-- Empty string — returns an empty list as there are no partitions.
-- Single character string — returns [1] as the entire string is one partition.
-- All identical characters — returns [N] as all characters must stay in one partition.
+- Single character string — returns [1] as the only partition.
+- All identical characters — returns [N] as the entire string is one partition.
+- No overlapping characters — returns an array of 1s representing each character as its own partition.
 
 ---
 
@@ -224,24 +224,24 @@ Partition a string into as many parts as possible such that each letter appears 
 
 ### Key Observation
 
-A partition must extend at least as far as the last occurrence of every character currently included in that partition.
+A partition can only end when we reach the furthest last-occurrence index of all characters seen since the start of the current partition.
 
 ### Common Mistakes
 
-- Forgetting to update the 'end' pointer dynamically as you iterate through the current partition.
-- Failing to reset the 'start' pointer correctly after closing a partition.
+- Forgetting to update the 'end' pointer dynamically as you encounter new characters within a partition.
+- Trying to use a nested loop to find the end of a partition, leading to O(N^2) complexity.
 
 ---
 
 ## 🔁 How to Approach Similar Problems
 
-When a problem asks to partition or group elements based on constraints that depend on the 'extent' of items (like first/last appearance), use a pre-processing step to map the boundaries. Then, use a greedy approach to expand the current window until all elements within it have their entire range contained inside, signaling a valid partition point.
+When a problem requires partitioning an array or string based on constraints involving element frequency or range, first pre-process the data to find the 'boundary' of each element (e.g., last index). Then, use a greedy approach to extend your current segment until you have satisfied all requirements for every element currently included in that segment. If you find yourself needing to group items based on their span, look for the 'furthest reach' of the current set.
 
 **Similar Problems to Practice:**
 
 - Merge Intervals
 - Jump Game II
-- Maximum Chunks To Make Sorted
+- Video Stitching
 
 ---
 
@@ -253,5 +253,6 @@ When a problem asks to partition or group elements based on constraints that dep
 - **Revision notes:**
 
 =====================================================
+
 
 
