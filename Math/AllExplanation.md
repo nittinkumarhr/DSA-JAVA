@@ -593,3 +593,95 @@ When a problem describes a state change over a fixed number of steps, write down
 
 =====================================================
 
+# 1406. Subtract the Product and Sum of Digits of an Integer
+
+> 🔗 [LeetCode](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 24 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem requires calculating the difference between the product and the sum of the individual digits of a given non-negative integer n.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- digits of an integer → modulo and division operators
+- process each digit → iterative extraction
+
+**Pattern(s) used:**
+
+- Math
+- Digit Manipulation
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize sum to 0 and product to 1.
+- Use a while loop to process n as long as it is greater than 0.
+- Extract the last digit using n % 10.
+- Update sum by adding the digit and product by multiplying the digit.
+- Remove the last digit from n using integer division n / 10.
+- Return the difference between product and sum.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(log n)`
+
+### Space Complexity
+
+`O(1)`
+
+> The time complexity is logarithmic because the number of digits in n is proportional to log10(n), and space is constant as we only use a few integer variables.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- n = 0 — the loop condition n > 0 fails, returning 0 - 0 = 0, which is correct.
+- Single digit n — the loop runs once, correctly returning (digit - digit) = 0.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Any integer can be decomposed into its constituent digits by repeatedly taking the remainder of division by 10 (to get the last digit) and then dividing by 10 (to shift the number).
+
+### Common Mistakes
+
+- Initializing product to 0 instead of 1, which results in a product of 0.
+- Forgetting to update n inside the loop, leading to an infinite loop.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem involves manipulating or analyzing the digits of a number, immediately think of the modulo (%) and integer division (/) operators. These tools allow you to peel off digits one by one from right to left. Always consider the base case of 0 or single-digit numbers to ensure your loop termination condition is robust.
+
+**Similar Problems to Practice:**
+
+- Add Digits
+- Reverse Integer
+- Palindrome Number
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
