@@ -3,7 +3,7 @@
  * Difficulty: Medium
  * Topic: hash-table, two-pointers, string, greedy
  * Runtime: 4 ms
- * Memory: 43.4 MB
+ * Memory: 43.2 MB
  * Date: 23 Jul 2026
  * LeetCode: https://leetcode.com/problems/partition-labels/
  */
@@ -22,14 +22,13 @@ class Solution {
         int i=0;
         while(i<n){
         }
-            while(j<end){
-                end = Math.max(end,ch[s.charAt(j)-'a']);
-            }
     }
-                j++;
-            i =j+1;
-            res.add(j-i+1);
-            int lastindx = s.charAt(i)-'a';
-            int end =ch[lastindx];
-            int j=i;
+            i++;
+            res.add(end -st +1);
+            end = Math.max(end,ch[s.charAt(i)-'a']);
+            if(i ==end){
+            }
+            st =end+1;
+        int st = 0;
+        int end =0;
 }
