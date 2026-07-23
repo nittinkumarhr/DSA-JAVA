@@ -9,16 +9,16 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 | 🟢 Easy    | 16 |
 | 🟡 Medium  | 18 |
 | 🔴 Hard    | 0 |
-| **Total**  | **35** |
+| **Total**  | **36** |
 
 ## By Topic
 
 | Topic | Solved |
 |-------|--------|
 | Arrays | 12 |
+| Other | 8 |
 | Hashing | 7 |
 | Math | 7 |
-| Other | 7 |
 | Sorting | 1 |
 | Strings | 1 |
 
