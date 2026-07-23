@@ -466,3 +466,96 @@ Whenever a problem specifies an array of size N containing numbers in the range 
 
 =====================================================
 
+# 830536. Compare the Triplets
+
+> 🔗 [LeetCode](https://leetcode.com/problems/compare-the-triplets/) &nbsp;|&nbsp; 🏷 Authorshafaetdifficultyeasymax score10submitted by2251812 &nbsp;|&nbsp; 💻 Unknown &nbsp;|&nbsp; 📅 24 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem requires comparing two triplets (lists of three integers) element-by-element. For each index, if the first list's value is greater, the first player gains a point; if the second list's value is greater, the second player gains a point; if they are equal, no points are awarded. The final result is a list containing the total scores of both players.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- element-by-element comparison → Iterative traversal
+- fixed size input → Direct indexing
+- accumulating results based on conditions → Counter variables
+
+**Pattern(s) used:**
+
+- Iteration
+- Conditional Logic
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a result list with two zeros to represent Alice and Bob's scores.
+- Loop through the indices from 0 to 2.
+- Retrieve the values at the current index for both input lists.
+- Compare the values: increment Alice's score if her value is higher, increment Bob's if his is higher.
+- Return the result list after the loop finishes.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(1)`
+
+### Space Complexity
+
+`O(1)`
+
+> The input size is fixed at three elements, making the operations constant time and constant space regardless of input values.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Equal values — The logic correctly ignores these as no points are awarded.
+- All values equal — The result will correctly remain [0, 0].
+- Maximum integer values — The logic uses simple comparison, so no overflow occurs.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The problem is a direct mapping task where the state of the output depends solely on a simple conditional check at each index of the input arrays.
+
+### Common Mistakes
+
+- Forgetting to handle the case where values are equal (doing nothing).
+- Using nested loops or complex data structures when a simple linear pass suffices.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks to compare two collections element-by-element or perform an operation based on matching indices, look for a single loop approach. If the input size is small and fixed, direct indexing is the most efficient strategy. Always identify the 'scoring' criteria first and map them to conditional branches within your loop.
+
+**Similar Problems to Practice:**
+
+- Find the Difference
+- Count Items Matching a Rule
+- Check if Two String Arrays are Equivalent
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
