@@ -685,3 +685,97 @@ When a problem involves manipulating or analyzing the digits of a number, immedi
 
 =====================================================
 
+# 861125. Constructing a Number
+
+> 🔗 [LeetCode](https://leetcode.com/problems/constructing-a-number/) &nbsp;|&nbsp; 🏷 Authorqoo2p5difficultyeasymax score15submitted by15658 &nbsp;|&nbsp; 💻 Unknown &nbsp;|&nbsp; 📅 25 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks whether a number formed by concatenating a given list of integers is divisible by 3. By the properties of modular arithmetic, a number is divisible by 3 if and only if the sum of its digits is divisible by 3, allowing us to solve the problem by summing all digits of the input integers without needing to construct the potentially massive concatenated number.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- divisibility by 3 → sum of digits property
+- concatenating numbers → modular arithmetic properties
+- large number construction → avoid overflow by using digit sums
+
+**Pattern(s) used:**
+
+- Number Theory
+- Modular Arithmetic
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a running sum variable to zero.
+- Iterate through each integer in the input list.
+- For each integer, extract its digits (either via modulo/division or string conversion).
+- Add each extracted digit to the running sum.
+- After processing all integers, check if the total sum is divisible by 3 using the modulo operator.
+- Return 'Yes' if the remainder is 0, otherwise return 'No'.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N * D)`
+
+### Space Complexity
+
+`O(1)`
+
+> The time complexity is O(N * D) where N is the number of integers and D is the average number of digits per integer, as we must visit every digit once; space complexity is O(1) as we only store the running sum.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty list — the sum would be 0, which is divisible by 3, so it should return 'Yes'.
+- Single digit numbers — the logic holds as the digit itself is the sum.
+- Zero — adding 0 does not change the sum, correctly maintaining divisibility.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+A number is congruent to the sum of its digits modulo 3; therefore, the order of concatenation does not affect the divisibility result, and we only need the total sum of all digits.
+
+### Common Mistakes
+
+- Attempting to construct the actual concatenated number, which leads to integer overflow.
+- Forgetting that the sum of digits property only applies to divisibility by 3 and 9, not other numbers.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+Whenever a problem involves properties of a very large number formed by concatenation or arithmetic operations, look for modular arithmetic rules (like the divisibility rule for 3 or 9). Always check if you can perform the operation on the components or digits individually rather than constructing the full value, as this usually reduces complexity from exponential/large-integer space to linear time.
+
+**Similar Problems to Practice:**
+
+- LeetCode 258: Add Digits
+- LeetCode 171: Excel Sheet Column Number
+- LeetCode 1281: Subtract the Product and Sum of Digits of an Integer
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
