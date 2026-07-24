@@ -2137,3 +2137,96 @@ When a problem asks for a specific pattern or count of consecutive elements, use
 
 =====================================================
 
+# 1791. Richest Customer Wealth
+
+> 🔗 [LeetCode](https://leetcode.com/problems/richest-customer-wealth/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 25 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+This problem asks to find the maximum sum among all rows in a 2D integer array, where each row represents a customer's bank accounts and the sum represents their total wealth.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- 2D array/matrix → iteration over rows
+- sum of elements in a group → aggregation
+- find the maximum → tracking a running global variable
+
+**Pattern(s) used:**
+
+- Array Traversal
+- Aggregation
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a variable 'maxWealth' to 0.
+- Iterate through each row (customer) in the matrix.
+- For each row, calculate the sum of all elements (bank accounts).
+- Compare the current row's sum with 'maxWealth' and update 'maxWealth' if the sum is larger.
+- Return 'maxWealth' after all rows are processed.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(m * n)`
+
+### Space Complexity
+
+`O(1)`
+
+> We must visit every element in the m x n matrix once, and we only use a constant amount of extra space for the sum and max variables.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single customer/single bank account — the logic correctly identifies the only value as the maximum.
+- All zeros — the sum remains zero and the maximum is correctly identified as zero.
+- Large values — the sum could potentially exceed integer limits if values are extremely high, though not expected per constraints.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The problem is essentially a row-wise reduction where we transform each row into a scalar value (sum) and then find the maximum of those scalars.
+
+### Common Mistakes
+
+- Overcomplicating by using extra data structures like HashMaps or lists to store sums.
+- Forgetting to reset the 'sum' variable to zero for each new customer row.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When faced with a matrix problem, first determine if you need to process rows, columns, or the entire grid. If the problem asks for a 'maximum' or 'minimum' based on a group-wise calculation, use a nested loop structure where the outer loop iterates through the groups and the inner loop performs the aggregation. Always track the global result outside the inner loop to maintain state across groups.
+
+**Similar Problems to Practice:**
+
+- K Weakest Rows in a Matrix
+- Find Winner on a Tic Tac Toe Game
+- Matrix Diagonal Sum
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
