@@ -651,3 +651,95 @@ To solve rate or percentage problems in SQL, always start with a LEFT JOIN from 
 
 =====================================================
 
+# 810515. Practice makes us perfect Practice Coding Problem
+
+> 🔗 [LeetCode](https://leetcode.com/problems/PRACTICEPERF/) &nbsp;|&nbsp; 🏷 Difficulty:467 &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 25 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to determine how many weeks out of four a user met their target of solving at least 10 programming problems, given the number of problems solved in each of the four weeks.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- fixed number of inputs (4 weeks) -> constant-size loop or direct variable checks
+- at least 10 problems -> conditional filtering and counting
+
+**Pattern(s) used:**
+
+- Linear Scan
+- Counting / Filtering
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a counter variable to zero to track successful weeks.
+- Iterate exactly 4 times to read each weekly problem count.
+- For each count, check if it is greater than or equal to 10.
+- If the condition is met, increment the counter.
+- Output the final counter value.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(1)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm runs in constant time and uses constant extra space because the input size is fixed at exactly 4 elements.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- All weeks below 10 — counter remains 0, which is correct.
+- All weeks 10 or above — counter reaches 4, which is correct.
+- Exactly 10 problems solved — boundary condition handled correctly by using the >= operator.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The problem reduces to a simple conditional count over a fixed-size dataset, which can be solved efficiently using a single loop and a counter.
+
+### Common Mistakes
+
+- Using strict inequality (>) instead of greater than or equal to (>=) for the target threshold.
+- Unnecessarily storing all inputs in an array when they can be processed on the fly.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To solve counting and filtering problems, identify the target condition and the size of the input. Use a loop to iterate through the elements, apply a conditional check (if-statement) for each element, and maintain a running counter to track the number of elements that satisfy the condition.
+
+**Similar Problems to Practice:**
+
+- Find Numbers with Even Number of Digits
+- How Many Numbers Are Smaller Than the Current Number
+- Number of Common Factors
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
