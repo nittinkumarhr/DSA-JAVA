@@ -1,6 +1,6 @@
 {
   "byTopic": {
-    "Arrays": 12,
+    "Arrays": 13,
     "Hashing": 7,
     "Math": 7,
     "Other": 9,
@@ -9,7 +9,7 @@
   },
   "easy": 16,
   "hard": 0,
-  "lastSynced": "2026-07-24T11:05:49.331Z",
-  "medium": 19,
-  "total": 37
+  "lastSynced": "2026-07-24T12:16:51.517Z",
+  "medium": 20,
+  "total": 38
 }
