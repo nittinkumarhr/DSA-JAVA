@@ -1948,3 +1948,99 @@ Look for problems asking for the 'next' or 'previous' element that satisfies a c
 
 =====================================================
 
+# 0985. Bag of Tokens
+
+> 🔗 [LeetCode](https://leetcode.com/problems/bag-of-tokens/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 24 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks to maximize a score by either spending power to gain score (using the smallest tokens) or spending score to gain power (using the largest tokens) in a series of moves, requiring a strategic balance between two resources.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- maximize score with two resources → greedy choice property
+- array of values with two-way operations → two pointers
+- sorting required for optimal selection → greedy strategy
+
+**Pattern(s) used:**
+
+- Two Pointers
+- Greedy
+- Sorting
+
+---
+
+## 🛠 Solution Approach
+
+- Sort the token array in ascending order.
+- Initialize two pointers: i at the start (smallest) and j at the end (largest).
+- If current power is enough to face the smallest token, spend power to gain score and increment i.
+- If power is insufficient but score is at least 1, spend score to gain power from the largest token and decrement j.
+- If neither is possible, terminate the loop.
+- Track the maximum score achieved during the process.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N)`
+
+### Space Complexity
+
+`O(1) or O(N)`
+
+> Sorting the array takes O(N log N), and the two-pointer traversal takes O(N), resulting in O(N log N) overall; space depends on the sorting algorithm implementation.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty array — score remains 0.
+- Insufficient power for first token — loop terminates immediately returning 0.
+- Score becomes 0 — prevents further power gains from tokens.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+To maximize score, always spend the least power possible to gain a point, and when you need more power, always sacrifice a point to gain the largest possible power boost.
+
+### Common Mistakes
+
+- Forgetting to sort the array before applying the two-pointer logic.
+- Failing to track the maximum score reached, instead only returning the final score.
+- Incorrectly handling the condition where score is 0 and power is insufficient.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem involves two competing resources where you can trade one for another to reach a goal, check if sorting allows for a greedy approach. If you can identify 'cheap' items to gain resources and 'expensive' items to trade for more resources, use two pointers starting from opposite ends of the sorted array to make optimal local decisions that lead to a global maximum.
+
+**Similar Problems to Practice:**
+
+- Assign Cookies
+- Boats to Save People
+- Maximize Distance to Closest Person
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
