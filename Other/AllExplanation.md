@@ -559,3 +559,95 @@ When a problem asks to compare two collections element-by-element or perform an 
 
 =====================================================
 
+# 2087. Confirmation Rate
+
+> 🔗 [LeetCode](https://leetcode.com/problems/confirmation-rate/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 24 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+Calculate the confirmation rate of each user, which is the number of 'confirmed' messages divided by the total number of requested confirmation messages, rounded to two decimal places. Users who did not request any confirmation messages must have a confirmation rate of 0.00.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- for each user -> GROUP BY user_id
+- users with no confirmation requests -> LEFT JOIN from Signups to Confirmations
+- rate of a specific condition -> AVG(IF(condition, 1, 0)) or AVG(CASE WHEN...)
+
+**Pattern(s) used:**
+
+- SQL Left Join
+- SQL Conditional Aggregation
+- SQL Group By
+
+---
+
+## 🛠 Solution Approach
+
+- Perform a LEFT JOIN from the Signups table (s) to the Confirmations table (c) on user_id to retain all users even if they have no confirmation history.
+- Group the joined dataset by s.user_id.
+- Apply the AVG function on a conditional statement (IF or CASE WHEN) that yields 1 if the action is 'confirmed' and 0 otherwise.
+- Round the calculated average to 2 decimal places using the ROUND function.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N + M)`
+
+### Space Complexity
+
+`O(N)`
+
+> The database engine scans the Signups table of size N and the Confirmations table of size M to perform the join and aggregation, requiring O(N + M) time. The space complexity is O(N) to store the grouped output records for each unique user.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Users with zero confirmation requests — Handled by the LEFT JOIN which produces NULL for the action, and AVG(IF(NULL='confirmed', 1, 0)) correctly evaluates to 0.00.
+- Users with only 'timeout' requests — Handled correctly as the IF condition evaluates to 0 for all records, yielding a 0.00 rate.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Using a LEFT JOIN instead of an INNER JOIN ensures that users with no confirmation attempts are preserved, and using AVG(IF(action = 'confirmed', 1, 0)) elegantly computes the ratio of successes to total attempts (including handling NULLs as 0).
+
+### Common Mistakes
+
+- Using an INNER JOIN which incorrectly excludes users who have never requested a confirmation.
+- Using COUNT(action) as a denominator without handling division by zero or NULL values properly.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To solve rate or percentage problems in SQL, always start with a LEFT JOIN from the master entity table to the transaction table to avoid losing entities with zero transactions. Then, use conditional aggregation like AVG(IF(condition, 1, 0)) to compute the ratio directly, which naturally handles the math and grouping in a single pass.
+
+**Similar Problems to Practice:**
+
+- Immediate Food Delivery II
+- Monthly Transactions I
+- Queries Quality and Percentage
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
