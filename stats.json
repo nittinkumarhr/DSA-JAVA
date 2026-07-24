@@ -2,14 +2,14 @@
   "byTopic": {
     "Arrays": 14,
     "Hashing": 7,
-    "Math": 7,
+    "Math": 8,
     "Other": 9,
     "Sorting": 1,
     "Strings": 1
   },
   "easy": 17,
   "hard": 0,
-  "lastSynced": "2026-07-24T20:44:46.838Z",
+  "lastSynced": "2026-07-24T20:55:01.252Z",
   "medium": 20,
-  "total": 39
+  "total": 40
 }
