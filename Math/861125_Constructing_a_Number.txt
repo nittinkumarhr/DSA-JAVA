@@ -1,0 +1,35 @@
+// Problem: #861125 - Constructing a Number
+// Difficulty: Authorqoo2p5difficultyeasymax score15submitted by15658
+// Topic: Number Theory, Mathematics
+// Runtime: N/A
+// Memory: N/A
+// Date: 25 Jul 2026
+// HackerRank: https://www.hackerrank.com/challenges/constructing-a-number/problem
+
+for (Integer i : a) {
+            char[] charArray = String.valueOf(i).toCharArray();
+            for (char c : charArray) {
+                res += Integer.parseInt(Character.toString(c));
+            }
+        }
+        return (res % 3 == 0)? "Yes" : "No";
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv
+        ("OUTPUT_PATH")));
+
+        int t = Integer.parseInt(bufferedReader.readLine().trim());
+
+        IntStream.range(0, t).forEach(tItr -> {
+            try {
+                int n = Integer.parseInt(bufferedReader.readLine().trim());
+
+                List<Integer> a = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split
+                (" "))
+                    .map(Integer::parseInt)
+                    .collect(toList());
