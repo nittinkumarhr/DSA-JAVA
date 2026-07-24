@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 24
+- **Total Problems** : 25
 - **Easy** : 7
-- **Medium** : 15
+- **Medium** : 16
 - **Hard** : 1
 
 **Last Updated**
 
-21 Jul 2026
+24 Jul 2026
 
 ---
 
@@ -32,6 +32,7 @@
 | 560 | LeetCode | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | Medium | Java | 25 ms | 48.8 MB | 07 Jul 2026 | `Arrays/0560_Subarray_Sum_Equals_K.java` |
 | 739 | LeetCode | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium | Java | 60 ms | 107.8 MB | 21 Jul 2026 | `Arrays/0739_Daily_Temperatures.java` |
 | 940 | LeetCode | [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/) | Medium | Java | 54 ms | 70.8 MB | 09 Jul 2026 | `Arrays/0940_Fruit_Into_Baskets.java` |
+| 985 | LeetCode | [Bag of Tokens](https://leetcode.com/problems/bag-of-tokens/) | Medium | Java | 6 ms | 45.1 MB | 24 Jul 2026 | `Arrays/0985_Bag_of_Tokens.java` |
 | 1538 | LeetCode | [Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/) | Medium | Java | 1 ms | 62 MB | 09 Jul 2026 | `Arrays/1538_Maximum_Points_You_Can_Obtain_from_Cards.java` |
 | 2231 | LeetCode | [Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array/) | Easy | Java | 1 ms | 47.6 MB | 12 Jul 2026 | `Arrays/2231_Find_First_Palindromic_String_in_the_Array.java` |
 | 2240 | LeetCode | [Intervals Between Identical Elements](https://leetcode.com/problems/intervals-between-identical-elements/) | Medium | Java | 170 ms | 189.3 MB | 05 Jul 2026 | `Arrays/2240_Intervals_Between_Identical_Elements.java` |
