@@ -2044,3 +2044,96 @@ When a problem involves two competing resources where you can trade one for anot
 
 =====================================================
 
+# 1293. Three Consecutive Odds
+
+> 🔗 [LeetCode](https://leetcode.com/problems/three-consecutive-odds/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 25 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks to determine if an integer array contains at least three consecutive odd numbers by iterating through the array and tracking the current streak of odd integers.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- consecutive elements → linear scan with state tracking
+- fixed count of sequence → counter or sliding window
+
+**Pattern(s) used:**
+
+- Linear Scan
+- Counter/State Tracking
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a counter variable to zero.
+- Iterate through each element of the array.
+- If the current element is odd, increment the counter.
+- If the counter reaches three, immediately return true.
+- If the current element is even, reset the counter to zero.
+- If the loop finishes without returning true, return false.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm performs a single pass through the array, and uses only a single integer variable for state tracking.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array length less than 3 — impossible to have three consecutive odds, loop finishes and returns false.
+- All even numbers — counter never increments, returns false.
+- Exactly three odd numbers at the end — counter reaches 3 on the last iteration, returns true.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The streak of consecutive odd numbers is broken immediately upon encountering an even number, allowing for a simple reset mechanism.
+
+### Common Mistakes
+
+- Forgetting to reset the counter to zero when an even number is encountered.
+- Using a nested loop unnecessarily when a single pass is sufficient.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks for a specific pattern or count of consecutive elements, use a linear scan with a state variable (counter). If the condition is met, increment the counter; if the condition is broken, reset the counter. This 'reset-on-break' logic is the standard approach for any problem involving consecutive streaks in a sequence.
+
+**Similar Problems to Practice:**
+
+- Max Consecutive Ones
+- Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+- Find All Anagrams in a String
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
