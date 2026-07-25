@@ -2,9 +2,9 @@
 
 ## Statistics
 
-- **Total Problems** : 10
+- **Total Problems** : 11
 - **Easy** : 8
-- **Medium** : 1
+- **Medium** : 2
 - **Hard** : 0
 
 **Last Updated**
@@ -18,6 +18,7 @@
 | ID | Platform | Problem | Difficulty | Language | Runtime | Memory | Date | Solution |
 |----|----------|---------|------------|----------|---------|--------|------|----------|
 | 7 | LeetCode | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Medium | Java | 1 ms | 42.7 MB | 13 Jul 2026 | `Math/0007_Reverse_Integer.java` |
+| 50 | LeetCode | [Pow(x, n)](https://leetcode.com/problems/powx-n/) | Medium | Java | 0 ms | 47.7 MB | 25 Jul 2026 | `Math/0050_Powx_n.java` |
 | 258 | LeetCode | [Add Digits](https://leetcode.com/problems/add-digits/) | Easy | Java | 1 ms | 42.7 MB | 10 Jul 2026 | `Math/0258_Add_Digits.java` |
 | 1406 | LeetCode | [Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/) | Easy | Java | 0 ms | 42.2 MB | 24 Jul 2026 | `Math/1406_Subtract_the_Product_and_Sum_of_Digits_of_an_Integer.java` |
 | 1610 | LeetCode | [XOR Operation in an Array](https://leetcode.com/problems/xor-operation-in-an-array/) | Easy | Java | 0 ms | 42.5 MB | 13 Jul 2026 | `Math/1610_XOR_Operation_in_an_Array.java` |
@@ -26,4 +27,4 @@
 | 2752 | LeetCode | [Sum Multiples](https://leetcode.com/problems/sum-multiples/) | Easy | Java | 3 ms | 42.9 MB | 13 Jul 2026 | `Math/2752_Sum_Multiples.java` |
 | 2812 | LeetCode | [Find the Maximum Achievable Number](https://leetcode.com/problems/find-the-maximum-achievable-number/) | Easy | Java | 1 ms | 43.2 MB | 22 Jul 2026 | `Math/2812_Find_the_Maximum_Achievable_Number.java` |
 | 3172 | LeetCode | [Divisible and Non-divisible Sums Difference](https://leetcode.com/problems/divisible-and-nondivisible-sums-difference/) | Easy | Java | 1 ms | 42.5 MB | 15 Jul 2026 | `Math/3172_Divisible_and_Nondivisible_Sums_Difference.java` |
-| 861125 | HackerRank | [Constructing a Number](https://www.hackerrank.com/challenges/constructing-a-number/problem) | Authorqoo2p5difficultyeasymax score15submitted by15658 | Unknown | N/A | N/A | 25 Jul 2026 | `Math/861125_Constructing_a_Number.txt` |
+| 861125 | HackerRank | [Constructing a Number](https://leetcode.com/problems/constructing-a-number/) | Authorqoo2p5difficultyeasymax score15submitted by15658 | Unknown | N/A | N/A | 25 Jul 2026 | `Math/861125_Constructing_a_Number.txt` |
