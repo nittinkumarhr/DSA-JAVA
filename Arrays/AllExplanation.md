@@ -2230,3 +2230,96 @@ When faced with a matrix problem, first determine if you need to process rows, c
 
 =====================================================
 
+# 1950. Sign of the Product of an Array
+
+> 🔗 [LeetCode](https://leetcode.com/problems/sign-of-the-product-of-an-array/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 26 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an array of integers, determine the sign of the product of all elements in the array (1 for positive, -1 for negative, and 0 if the product is zero) without actually computing the product to avoid integer overflow.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- product of an array → track properties of elements (like sign or parity) rather than computing the actual cumulative value
+- sign of the product → count negative numbers and check for the presence of zero
+
+**Pattern(s) used:**
+
+- State Tracking
+- Math
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a variable `sign` to 1 to represent a positive starting state.
+- Iterate through each number `n` in the array `nums`.
+- If `n` is 0, immediately return 0 because any product containing zero is zero.
+- If `n` is negative, flip the sign (`sign = -sign`).
+- If `n` is positive, do nothing as it does not change the sign.
+- Return the final value of `sign` after the loop completes.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We traverse the array of size N exactly once, using a constant amount of extra space for the sign tracker.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array contains zero — handled immediately by returning 0 upon encountering the first zero.
+- Integer overflow — avoided entirely by tracking only the sign (-1 or 1) instead of computing the actual product.
+- All negative numbers — handled correctly by flipping the sign on every element, resulting in 1 for an even count and -1 for an odd count.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The actual magnitude of the numbers does not affect the sign of their product; only the presence of zero and the parity of the count of negative numbers determine the final sign.
+
+### Common Mistakes
+
+- Attempting to calculate the actual product of the array, which quickly causes integer overflow for larger arrays.
+- Forgetting to return 0 early when a zero is encountered, leading to unnecessary iterations.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to compute a property of a cumulative operation (like product, sum, or bitwise operations) where the actual value could overflow or is unnecessary, focus on tracking the state transitions (e.g., parity, sign, or modulo) instead of the actual value. Look for identity elements (like 0 in multiplication) that allow for early termination.
+
+**Similar Problems to Practice:**
+
+- Product of Array Except Self
+- Find Numbers with Even Number of Digits
+- Can Make Arithmetic Progression From Sequence
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
