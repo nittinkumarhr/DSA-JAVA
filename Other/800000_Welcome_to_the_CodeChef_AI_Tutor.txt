@@ -1,0 +1,10 @@
+// Problem: #800000 - Welcome to the CodeChef AI Tutor
+// Difficulty: Unknown
+// Topic: Other
+// Runtime: N/A
+// Memory: N/A
+// Date: 26 Jul 2026
+// CodeChef: https://www.codechef.com/problems/
+
+-- your code goes here
+select Movie_name  from Cinema where Rating > 7.0 AND Rating < 9.0;
