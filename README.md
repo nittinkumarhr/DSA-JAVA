@@ -9,14 +9,14 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 | 🟢 Easy    | 18 |
 | 🟡 Medium  | 21 |
 | 🔴 Hard    | 0 |
-| **Total**  | **44** |
+| **Total**  | **45** |
 
 ## By Topic
 
 | Topic | Solved |
 |-------|--------|
 | Arrays | 15 |
-| Other | 11 |
+| Other | 12 |
 | Math | 9 |
 | Hashing | 7 |
 | Sorting | 1 |
