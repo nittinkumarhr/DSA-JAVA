@@ -743,3 +743,92 @@ To solve counting and filtering problems, identify the target condition and the 
 
 =====================================================
 
+# 867808. New Year Resolution Practice Coding Problem
+
+> 🔗 [LeetCode](https://leetcode.com/problems/NYRES/) &nbsp;|&nbsp; 🏷 Difficulty:19 &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 26 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to calculate the total amount of practice or activity completed over the entire month of January, given a daily resolution target of $x$ units. Since January has exactly 31 days, the total is computed by multiplying the daily rate $x$ by 31.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- daily resolution for January → implies a fixed cycle of 31 days
+- total activity given daily rate → constant factor multiplication
+
+**Pattern(s) used:**
+
+- Basic Arithmetic
+- Constant Time O(1) Simulation
+
+---
+
+## 🛠 Solution Approach
+
+- Read the daily resolution target integer $x$ from the standard input.
+- Multiply the input value $x$ by 31, representing the number of days in January.
+- Output the resulting product to the console.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(1)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm performs a single multiplication operation and uses a fixed amount of memory to store the input variable, requiring constant time and space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- x = 0 — The output should be 0, representing no progress made, which is handled correctly by multiplication.
+- Large values of x — If x is extremely large, integer overflow could occur, but standard 32-bit integers are sufficient for realistic daily limits.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+January always has exactly 31 days, allowing the total progress to be computed via direct multiplication ($31 \times x$) rather than simulating day-by-day accumulation.
+
+### Common Mistakes
+
+- Using a loop to add $x$ thirty-one times, which is computationally inefficient compared to direct multiplication.
+- Hardcoding the wrong number of days (e.g., 30 or 365) instead of specifically 31 for January.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When dealing with problems involving fixed calendar intervals or repeating cycles, identify the constant period length (e.g., 31 days for January, 7 days for a week). Avoid iterative simulation and instead use direct mathematical formulas or modulo arithmetic to solve the problem in $O(1)$ time.
+
+**Similar Problems to Practice:**
+
+- Calculate Money in LeetCode Bank
+- Day of the Week
+- Number of Days Between Two Dates
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
