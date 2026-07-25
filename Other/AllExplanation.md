@@ -832,3 +832,94 @@ When dealing with problems involving fixed calendar intervals or repeating cycle
 
 =====================================================
 
+# 800000. Welcome to the CodeChef AI Tutor
+
+> 🔗 [LeetCode](https://leetcode.com/problems//) &nbsp;|&nbsp; 🏷 Unknown &nbsp;|&nbsp; 💻 Unknown &nbsp;|&nbsp; 📅 26 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to retrieve the names of movies from a database table named 'Cinema' that have a rating strictly between 7.0 and 9.0.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- Retrieve specific attributes -> SELECT clause projection
+- Filter rows based on a range -> WHERE clause with strict inequality operators and logical AND
+
+**Pattern(s) used:**
+
+- SQL Querying
+- Relational Algebra (Selection and Projection)
+
+---
+
+## 🛠 Solution Approach
+
+- Identify the target table ('Cinema') and the column to project ('Movie_name').
+- Apply a filtering condition using the WHERE clause to restrict rows to those with 'Rating' strictly greater than 7.0.
+- Combine this with a second condition using the logical 'AND' operator to restrict rows to those with 'Rating' strictly less than 9.0.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Time complexity is O(N) where N is the number of rows in the table, as a full table scan is required in the worst case without an index. Space complexity is O(N) to store and return the filtered result set.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- No movies match the criteria — The query correctly returns an empty result set.
+- Ratings exactly equal to 7.0 or 9.0 — Excluded correctly due to strict inequality operators ('>' and '<').
+- NULL values in Rating column — Evaluated as UNKNOWN by SQL and automatically filtered out.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Using strict inequality operators ('>' and '<') combined with 'AND' correctly implements an exclusive range filter, which is crucial because SQL's 'BETWEEN' operator is inclusive.
+
+### Common Mistakes
+
+- Using the 'BETWEEN' operator, which is inclusive and would incorrectly include ratings of exactly 7.0 and 9.0.
+- Selecting all columns using 'SELECT *' instead of projecting only the requested 'Movie_name' column.
+- Using logical 'OR' instead of 'AND', which would return movies with ratings outside the desired range.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To solve basic database filtering problems, first identify the source table and the specific columns needed for the output (Projection). Next, translate the filtering criteria into logical conditions using comparison operators and combine them using logical operators (AND, OR, NOT) in the WHERE clause. Always verify whether range boundaries are inclusive or exclusive to choose the correct operators.
+
+**Similar Problems to Practice:**
+
+- LeetCode 1757: Recyclable and Low Fat Products
+- LeetCode 584: Find Customer Referee
+- LeetCode 1148: Article Views I
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
