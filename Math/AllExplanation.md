@@ -779,3 +779,97 @@ Whenever a problem involves properties of a very large number formed by concaten
 
 =====================================================
 
+# 0050. Pow(x, n)
+
+> 🔗 [LeetCode](https://leetcode.com/problems/powx-n/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 25 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+Implement a function to calculate x raised to the power n (i.e., x^n) efficiently, handling both positive and negative integer exponents.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- large exponent n (up to 2^31 - 1) → linear O(n) multiplication will TLE, signaling the need for an O(log n) logarithmic approach
+- repeated multiplication of the same base → signals Divide and Conquer / Binary Exponentiation
+
+**Pattern(s) used:**
+
+- Divide and Conquer
+- Binary Exponentiation
+- Recursion
+
+---
+
+## 🛠 Solution Approach
+
+- Cast the exponent `n` to a 64-bit integer (`long`) to prevent integer overflow when negating `Integer.MIN_VALUE`.
+- If the exponent is negative, compute the reciprocal of the result of the positive exponent: `1.0 / power(x, -n)`.
+- In the recursive helper, define base cases: return `1.0` if `n == 0`, and return `x` if `n == 1`.
+- If `n` is even, recursively compute `power(x * x, n / 2)` to halve the exponent size.
+- If `n` is odd, recursively compute `x * power(x, n - 1)` to reduce it to an even exponent.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(log n)`
+
+### Space Complexity
+
+`O(log n)`
+
+> The exponent is halved at least every two recursive steps, resulting in a logarithmic number of recursive calls and stack frames.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- n = -2^31 (Integer.MIN_VALUE) — Negating this value directly in a 32-bit signed integer causes overflow, so we must cast to a 64-bit long first.
+- n = 0 — Any non-zero number raised to the power of 0 is 1.0, which is handled as a base case.
+- x = 0.0 or 1.0 — Base values of 0 or 1 remain unchanged, and the code handles them correctly without division-by-zero issues for positive n.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Instead of multiplying x by itself n times linearly, we can square the base x and halve the exponent n when n is even, reducing the problem size logarithmically.
+
+### Common Mistakes
+
+- Failing to handle integer overflow when n = -2^31 and negating it to 2^31.
+- Using a naive linear loop O(n) which results in a Time Limit Exceeded (TLE) error for large n.
+- Incorrectly handling negative bases or negative exponents.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to compute a function that grows exponentially or requires repeated applications of an associative operation (like multiplication or matrix multiplication), look for a Divide and Conquer approach. If the exponent or step count is extremely large, try to halve the work at each step by squaring the base or doubling the step size, transforming an O(n) linear process into an O(log n) logarithmic one.
+
+**Similar Problems to Practice:**
+
+- Super Pow
+- Sqrt(x)
+- Count Collisions on a Road
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
