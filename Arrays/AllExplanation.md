@@ -2323,3 +2323,97 @@ When asked to compute a property of a cumulative operation (like product, sum, o
 
 =====================================================
 
+# 0982. Minimum Increment to Make Array Unique
+
+> 🔗 [LeetCode](https://leetcode.com/problems/minimum-increment-to-make-array-unique/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 26 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an integer array, find the minimum number of increment operations (adding 1 to an element) required to make all elements in the array unique.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- minimum increments to make unique → sorting + greedy sequential assignment
+- order of elements does not matter → sorting as a preprocessing step
+- make elements unique with minimal cost → greedy choice (incrementing to the next available integer)
+
+**Pattern(s) used:**
+
+- Greedy
+- Sorting
+
+---
+
+## 🛠 Solution Approach
+
+- Sort the input array in non-decreasing order to process elements from smallest to largest.
+- Initialize a counter `mov` to track the total number of increments needed.
+- Iterate through the sorted array starting from the second element (index 1).
+- If the current element `arr[i]` is less than or equal to the previous element `arr[i-1]`, calculate the target unique value as `need = arr[i-1] + 1`.
+- Add the difference `need - arr[i]` to `mov` and update `arr[i]` to `need`.
+- Return the total increments `mov`.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N)`
+
+### Space Complexity
+
+`O(log N)`
+
+> Sorting the array of size N takes O(N log N) time, and the subsequent linear scan takes O(N) time. Space complexity is O(log N) due to the recursive call stack of the sorting algorithm in Java.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty array or single element — Requires 0 increments, handled correctly as the loop does not execute.
+- All elements are identical — Requires maximum increments; sorting groups them together, and each subsequent element is incremented to be exactly 1 greater than the previous.
+- Already unique and sorted array — No elements trigger the `arr[i] <= arr[i-1]` condition, returning 0 increments correctly.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+By sorting the array, we can resolve duplicates locally. If we ensure each element is strictly greater than its predecessor, we guarantee global uniqueness with the minimum possible increments because we only increment an element to the smallest possible valid integer (arr[i-1] + 1).
+
+### Common Mistakes
+
+- Using a Hash Set to find the next available integer for each duplicate, which leads to O(N^2) worst-case time complexity.
+- Forgetting to update the current element's value in the array after calculating the increment, causing subsequent elements to compare against the old, non-unique value.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to make elements unique or non-overlapping with minimal modifications, consider sorting the elements first. Sorting allows you to solve the problem greedily by resolving conflicts sequentially from left to right, ensuring that each decision depends only on the immediate predecessor's finalized state.
+
+**Similar Problems to Practice:**
+
+- Non-overlapping Intervals
+- Eliminate Maximum Number of Monsters
+- Minimum Moves to Equal Array Elements II
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
