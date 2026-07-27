@@ -2,9 +2,9 @@
 
 ## Statistics
 
-- **Total Problems** : 30
+- **Total Problems** : 31
 - **Easy** : 10
-- **Medium** : 18
+- **Medium** : 19
 - **Hard** : 1
 
 **Last Updated**
@@ -17,6 +17,7 @@
 
 | ID | Platform | Problem | Difficulty | Language | Runtime | Memory | Date | Solution |
 |----|----------|---------|------------|----------|---------|--------|------|----------|
+| 15 | LeetCode | [3Sum](https://leetcode.com/problems/3sum/) | Medium | Java | 37 ms | 59.2 MB | 27 Jul 2026 | `Arrays/0015_3Sum.java` |
 | 26 | LeetCode | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | Java | 1 ms | 46.4 MB | 15 Jul 2026 | `Arrays/0026_Remove_Duplicates_from_Sorted_Array.java` |
 | 45 | LeetCode | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | Medium | Java | 1 ms | 47.1 MB | 16 Jul 2026 | `Arrays/0045_Jump_Game_II.java` |
 | 55 | LeetCode | [Jump Game](https://leetcode.com/problems/jump-game/) | Medium | Java | 2 ms | 47.9 MB | 16 Jul 2026 | `Arrays/0055_Jump_Game.java` |
