@@ -2417,3 +2417,96 @@ When asked to make elements unique or non-overlapping with minimal modifications
 
 =====================================================
 
+# 2016. Reduction Operations to Make the Array Elements Equal
+
+> 🔗 [LeetCode](https://leetcode.com/problems/reduction-operations-to-make-the-array-elements-equal/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 27 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks for the total number of reduction operations required to make all elements in an array equal. In one operation, you identify the largest element and replace it with the next largest element, effectively collapsing the distribution of values until all elements match the minimum value.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- make all elements equal → sorting/frequency analysis
+- replace largest with next largest → rank-based transformation
+- total operations → accumulation of counts
+
+**Pattern(s) used:**
+
+- Sorting
+- Greedy
+- Frequency Counting
+
+---
+
+## 🛠 Solution Approach
+
+- Sort the array in non-decreasing order.
+- Iterate through the sorted array to identify unique values and their positions.
+- For each element at index i that is greater than the previous element, add the number of elements from the start of the array up to index i to the total operations count.
+- Alternatively, track the number of 'steps' (rank) each unique value is away from the minimum and multiply by its frequency.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N)`
+
+### Space Complexity
+
+`O(1) or O(N) depending on sorting implementation`
+
+> Sorting the array takes O(N log N), and the single pass to calculate operations takes O(N).
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single element — requires 0 operations as it is already equal to itself.
+- All elements identical — requires 0 operations as no reduction is possible.
+- Already sorted array — sorting step remains necessary for consistent logic.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Each time you reduce an element, it effectively 'joins' the group of the next smaller value; the total operations is the sum of (number of elements greater than the current value) for every unique value in the array.
+
+### Common Mistakes
+
+- Attempting to simulate the reduction process step-by-step instead of calculating based on frequency/rank.
+- Forgetting to handle duplicate values, which do not trigger a new reduction step.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem involves transforming all elements to a single value through sequential operations, look for a 'rank' or 'frequency' pattern. Sort the data to reveal the relative order, then determine how many elements are 'left behind' or 'pushed down' at each step. If the operation depends on the relative order of values, sorting is almost always the first step to simplify the state space.
+
+**Similar Problems to Practice:**
+
+- Minimum Moves to Equal Array Elements II
+- Minimum Operations to Make Array Equal
+- Minimum Number of Operations to Make All Array Elements Equal to 1
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
