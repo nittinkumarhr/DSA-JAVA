@@ -2510,3 +2510,98 @@ When a problem involves transforming all elements to a single value through sequ
 
 =====================================================
 
+# 0987. Reveal Cards In Increasing Order
+
+> 🔗 [LeetCode](https://leetcode.com/problems/reveal-cards-in-increasing-order/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 28 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to reconstruct a deck of cards such that when cards are revealed one by one according to a specific simulation process (reveal top, move next to bottom, repeat), the revealed cards appear in strictly increasing order.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- simulation of a process with specific rules → Queue/Deque simulation
+- reversing a process → Reverse Engineering/Simulation
+- ordering elements based on a sequence of operations → Sorting + Queue
+
+**Pattern(s) used:**
+
+- Queue
+- Sorting
+- Simulation
+
+---
+
+## 🛠 Solution Approach
+
+- Sort the input deck in ascending order.
+- Initialize a queue containing indices [0, 1, ..., n-1].
+- Create a result array of size n.
+- For each card in the sorted deck, take the front index from the queue and place the card there.
+- If the queue is not empty, move the next front index to the back of the queue to simulate the 'move to bottom' step.
+- Repeat until all cards are placed.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Sorting the array takes O(N log N), and the simulation process using a queue takes O(N) time and space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single card — the loop should handle it without moving anything to the back.
+- Two cards — verifies the alternating reveal/move logic.
+- Already sorted input — ensures the logic correctly maps the sorted values to the simulation result.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Instead of simulating the reveal process on the final array, we can simulate the 'empty slots' using a queue of indices to determine where the next smallest card must be placed to satisfy the reveal sequence.
+
+### Common Mistakes
+
+- Trying to simulate the reveal process forward instead of reverse-engineering the positions.
+- Forgetting to sort the input array first, which is essential for the greedy placement strategy.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem describes a complex sequence of 'move to back' or 'remove and re-insert' operations, represent the state using a Queue. If the process is deterministic and reversible, try simulating the process in reverse or using the queue to track available positions rather than the values themselves. Always check if sorting the input simplifies the decision-making process for each step of the simulation.
+
+**Similar Problems to Practice:**
+
+- Time Needed to Buy Tickets
+- Number of Students Unable to Eat Lunch
+- Design Circular Queue
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
