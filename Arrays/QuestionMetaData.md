@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 31
+- **Total Problems** : 32
 - **Easy** : 10
-- **Medium** : 19
+- **Medium** : 20
 - **Hard** : 1
 
 **Last Updated**
 
-27 Jul 2026
+28 Jul 2026
 
 ---
 
@@ -35,6 +35,7 @@
 | 940 | LeetCode | [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/) | Medium | Java | 54 ms | 70.8 MB | 09 Jul 2026 | `Arrays/0940_Fruit_Into_Baskets.java` |
 | 982 | LeetCode | [Minimum Increment to Make Array Unique](https://leetcode.com/problems/minimum-increment-to-make-array-unique/) | Medium | Java | 43 ms | 80.3 MB | 26 Jul 2026 | `Arrays/0982_Minimum_Increment_to_Make_Array_Unique.java` |
 | 985 | LeetCode | [Bag of Tokens](https://leetcode.com/problems/bag-of-tokens/) | Medium | Java | 6 ms | 45.1 MB | 24 Jul 2026 | `Arrays/0985_Bag_of_Tokens.java` |
+| 987 | LeetCode | [Reveal Cards In Increasing Order](https://leetcode.com/problems/reveal-cards-in-increasing-order/) | Medium | Java | 6 ms | 45.2 MB | 28 Jul 2026 | `Arrays/0987_Reveal_Cards_In_Increasing_Order.java` |
 | 1293 | LeetCode | [Three Consecutive Odds](https://leetcode.com/problems/three-consecutive-odds/) | Easy | Java | 0 ms | 44.4 MB | 25 Jul 2026 | `Arrays/1293_Three_Consecutive_Odds.java` |
 | 1538 | LeetCode | [Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/) | Medium | Java | 1 ms | 62 MB | 09 Jul 2026 | `Arrays/1538_Maximum_Points_You_Can_Obtain_from_Cards.java` |
 | 1791 | LeetCode | [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) | Easy | Java | 0 ms | 44.4 MB | 25 Jul 2026 | `Arrays/1791_Richest_Customer_Wealth.java` |
