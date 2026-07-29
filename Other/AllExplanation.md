@@ -923,3 +923,95 @@ To solve basic database filtering problems, first identify the source table and 
 
 =====================================================
 
+# 873422. Distinct Companies Practice Coding Problem
+
+> 🔗 [LeetCode](https://leetcode.com/problems/SQLPBP13/) &nbsp;|&nbsp; 🏷 Unknown &nbsp;|&nbsp; 💻 SQL &nbsp;|&nbsp; 📅 30 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem requires retrieving a list of unique company names from a database table named 'Works', effectively filtering out duplicate entries to ensure each company appears exactly once in the result set.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- unique values → DISTINCT keyword
+- remove duplicates → DISTINCT keyword
+- list all occurrences once → DISTINCT keyword
+
+**Pattern(s) used:**
+
+- Deduplication
+- Projection
+
+---
+
+## 🛠 Solution Approach
+
+- Select the target column 'company_name' from the 'Works' table.
+- Apply the 'DISTINCT' keyword to the column to filter out duplicate rows.
+- Return the resulting set of unique company names.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Time complexity is dominated by the sorting or hashing required to identify unique values, and space complexity is proportional to the number of unique records stored in the result set.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty table — returns an empty result set
+- All identical rows — returns a single row
+- NULL values — DISTINCT treats NULL as a unique value and returns one instance
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The SQL 'DISTINCT' operator is the standard declarative way to perform set-based deduplication without needing manual grouping or procedural logic.
+
+### Common Mistakes
+
+- Using GROUP BY when a simple DISTINCT suffices
+- Forgetting that DISTINCT applies to the entire row if multiple columns are selected
+- Assuming NULL values are ignored by DISTINCT
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks for 'unique', 'distinct', or 'non-repeating' values, immediately identify the projection requirement. In SQL, use DISTINCT; in programming languages, use a Hash Set to track seen elements. Always clarify if the uniqueness constraint applies to a single column or the entire row tuple.
+
+**Similar Problems to Practice:**
+
+- LeetCode 182: Duplicate Emails
+- LeetCode 176: Second Highest Salary
+- LeetCode 596: Classes More Than 5 Students
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
