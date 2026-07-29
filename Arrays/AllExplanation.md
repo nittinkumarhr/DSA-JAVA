@@ -2605,3 +2605,98 @@ When a problem describes a complex sequence of 'move to back' or 'remove and re-
 
 =====================================================
 
+# 0682. Baseball Game
+
+> 🔗 [LeetCode](https://leetcode.com/problems/baseball-game/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 30 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem requires calculating the total sum of scores in a baseball game based on a sequence of operations. Operations include adding a new integer score, doubling the previous score, removing the last score, or summing the two previous scores. A stack is used to maintain the history of scores to perform these operations efficiently.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- previous scores/operations → stack for LIFO access
+- undo/remove last action → stack pop
+- sum of previous two → stack peek/pop
+
+**Pattern(s) used:**
+
+- Stack
+- Simulation
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize an empty stack to store scores and a variable for the running sum.
+- Iterate through the operations array.
+- If the operation is an integer, parse it and push to the stack.
+- If 'D', peek at the top, multiply by 2, and push the result.
+- If 'C', pop the top element from the stack.
+- If '+', pop the top, peek the new top, sum them, push the original top back, then push the sum.
+- Maintain the running sum by adding/subtracting values as they are pushed or popped.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> We iterate through the N operations exactly once, and the stack can grow to size N in the worst case.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty input — the problem constraints usually guarantee at least one operation, but code should handle empty stacks.
+- Single element — operations like '+' or 'D' require at least one or two elements, so constraints usually ensure valid sequences.
+- Negative numbers — the input can contain negative integers, which the stack handles naturally.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The problem is a classic LIFO (Last-In-First-Out) scenario where each operation depends strictly on the most recent state of the data, making a stack the ideal data structure.
+
+### Common Mistakes
+
+- Forgetting to push the original top back onto the stack after calculating the '+' operation.
+- Failing to update the running sum correctly when popping elements during a 'C' operation.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem involves a sequence of operations where you need to 'undo' the last action or reference the most recent results, think of a stack. If the problem asks you to maintain a state that changes based on previous inputs in a LIFO manner, simulation using a stack is almost always the most efficient approach.
+
+**Similar Problems to Practice:**
+
+- Backspace String Compare
+- Valid Parentheses
+- Crawler Log Folder
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
