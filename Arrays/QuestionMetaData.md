@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 32
-- **Easy** : 10
+- **Total Problems** : 33
+- **Easy** : 11
 - **Medium** : 20
 - **Hard** : 1
 
 **Last Updated**
 
-28 Jul 2026
+30 Jul 2026
 
 ---
 
@@ -31,6 +31,7 @@
 | 454 | LeetCode | [4Sum II](https://leetcode.com/problems/4sum-ii/) | Medium | Java | 127 ms | 46.8 MB | 15 Jul 2026 | `Arrays/0454_4Sum_II.java` |
 | 523 | LeetCode | [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) | Medium | Java | 24 ms | 139.8 MB | 05 Jul 2026 | `Arrays/0523_Continuous_Subarray_Sum.java` |
 | 560 | LeetCode | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | Medium | Java | 25 ms | 48.8 MB | 07 Jul 2026 | `Arrays/0560_Subarray_Sum_Equals_K.java` |
+| 682 | LeetCode | [Baseball Game](https://leetcode.com/problems/baseball-game/) | Easy | Java | 2 ms | 43.5 MB | 30 Jul 2026 | `Arrays/0682_Baseball_Game.java` |
 | 739 | LeetCode | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium | Java | 60 ms | 107.8 MB | 21 Jul 2026 | `Arrays/0739_Daily_Temperatures.java` |
 | 940 | LeetCode | [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/) | Medium | Java | 54 ms | 70.8 MB | 09 Jul 2026 | `Arrays/0940_Fruit_Into_Baskets.java` |
 | 982 | LeetCode | [Minimum Increment to Make Array Unique](https://leetcode.com/problems/minimum-increment-to-make-array-unique/) | Medium | Java | 43 ms | 80.3 MB | 26 Jul 2026 | `Arrays/0982_Minimum_Increment_to_Make_Array_Unique.java` |
