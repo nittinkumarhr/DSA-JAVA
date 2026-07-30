@@ -191,3 +191,95 @@ When a problem requires removing or collapsing adjacent elements that meet a cer
 
 =====================================================
 
+# 0657. Robot Return to Origin
+
+> 🔗 [LeetCode](https://leetcode.com/problems/robot-return-to-origin/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 30 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks whether a sequence of directional moves (U, D, L, R) results in a robot returning to its starting coordinate (0, 0) on a 2D plane.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- sequence of operations → simulation
+- returning to origin → net displacement calculation
+- fixed set of moves → state tracking
+
+**Pattern(s) used:**
+
+- Simulation
+- Coordinate Geometry
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize x and y coordinates to 0.
+- Iterate through each character in the input string.
+- Update x by +1 for 'R' and -1 for 'L'.
+- Update y by +1 for 'U' and -1 for 'D'.
+- Return true if both x and y are 0 after processing all moves.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm performs a single pass over the input string of length n, using only two integer variables for state tracking.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty string — the robot starts at (0,0) and makes no moves, so it remains at the origin.
+- Odd number of moves — it is mathematically impossible to return to the origin if the total move count is odd.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The order of moves does not matter; only the net count of opposing directions (U vs D, L vs R) determines the final position.
+
+### Common Mistakes
+
+- Using a 2D array or grid to simulate the movement, which is unnecessary and inefficient.
+- Forgetting to reset the coordinate variables if the function is called multiple times in a class instance.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem involves tracking a state through a sequence of operations, identify if the operations are commutative or if they can be reduced to a net change. If the order doesn't matter, use counters to track the net effect of each operation type. If the order does matter, simulate the process step-by-step using variables or a data structure to maintain the current state.
+
+**Similar Problems to Practice:**
+
+- Goal Parser Interpretation
+- Check if the Sentence Is Pangram
+- Determine if String Halves Are Alike
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
