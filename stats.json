@@ -5,11 +5,11 @@
     "Math": 9,
     "Other": 13,
     "Sorting": 1,
-    "Strings": 2
+    "Strings": 3
   },
-  "easy": 20,
+  "easy": 21,
   "hard": 0,
-  "lastSynced": "2026-07-29T21:01:59.101Z",
+  "lastSynced": "2026-07-30T11:27:47.190Z",
   "medium": 26,
-  "total": 53
+  "total": 54
 }
