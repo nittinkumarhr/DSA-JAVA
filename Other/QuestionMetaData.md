@@ -2,7 +2,7 @@
 
 ## Statistics
 
-- **Total Problems** : 13
+- **Total Problems** : 14
 - **Easy** : 4
 - **Medium** : 3
 - **Hard** : 0
@@ -24,6 +24,7 @@
 | 830536 | HackerRank | [Compare the Triplets](https://leetcode.com/problems/compare-the-triplets/) | Authorshafaetdifficultyeasymax score10submitted by2251812 | Unknown | N/A | N/A | 24 Jul 2026 | `Other/830536_Compare_the_Triplets.txt` |
 | 867808 | CodeChef | [New Year Resolution Practice Coding Problem](https://www.codechef.com/problems/new-year-resolution-practice-coding-problem) | Difficulty:19 | Java | N/A | N/A | 26 Jul 2026 | `Other/867808_New_Year_Resolution_Practice_Coding_Problem.java` |
 | 873422 | CodeChef | [Distinct Companies Practice Coding Problem](https://www.codechef.com/problems/distinct-companies-practice-coding-problem) | Unknown | SQL | N/A | N/A | 30 Jul 2026 | `Other/873422_Distinct_Companies_Practice_Coding_Problem.sql` |
+| 885751 | CodeChef | [World Chess Championship Practice Coding Problem](https://www.codechef.com/problems/WCC) | Difficulty:  935 | Java | N/A | N/A | 01 Aug 2026 | `Other/885751_World_Chess_Championship_Practice_Coding_Problem.java` |
 | 1600238 | GeeksforGeeks | [Courses](https://www.geeksforgeeks.org/problems/courses) | Easy | Java | N/A | N/A | 17 Jul 2026 | `Other/1600238_Courses.java` |
 | 1600383 | GeeksforGeeks | [Courses](https://www.geeksforgeeks.org/problems/courses) | Medium | Java | N/A | N/A | 01 Aug 2026 | `Other/1600383_Courses.java` |
 | 1600437 | GeeksforGeeks | [Duplicates in a Limited Range Array](https://www.geeksforgeeks.org/problems/duplicates-in-a-limited-range-array) | Easy | Java (21) | N/A | N/A | 16 Jul 2026 | `Other/1600437_Duplicates_in_a_Limited_Range_Array.java` |
