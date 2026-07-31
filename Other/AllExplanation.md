@@ -1015,3 +1015,98 @@ When a problem asks for 'unique', 'distinct', or 'non-repeating' values, immedia
 
 =====================================================
 
+# 1600383. Courses
+
+> 🔗 [LeetCode](https://leetcode.com/problems/multiply-two-strings/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 01 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+This problem involves performing multiplication on two large integers represented as strings, which exceed the capacity of standard primitive data types like long or double, requiring a manual digit-by-digit simulation of the multiplication algorithm.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- large numbers as strings → signals need for manual arithmetic simulation
+- exceeding integer limits → signals use of array-based digit storage
+- multiplication of two numbers → signals O(N*M) nested loop digit processing
+
+**Pattern(s) used:**
+
+- String Manipulation
+- Simulation
+- Math
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize an integer array of size N+M to store the product of two strings of length N and M.
+- Iterate through both strings in reverse order, multiplying digits and adding to the corresponding position in the array.
+- Maintain a carry variable to handle values greater than 9 during addition and multiplication.
+- Convert the resulting array into a string, skipping leading zeros.
+- Handle the sign separately if the input strings represent negative numbers.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N * M)`
+
+### Space Complexity
+
+`O(N + M)`
+
+> The nested loops iterate through each digit of both input strings, and the result array requires space proportional to the sum of the lengths of the inputs.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Zero input — must return '0' rather than an empty string or '-0'.
+- Leading zeros — must be skipped during the final string construction.
+- Negative numbers — requires tracking the sign and performing absolute value arithmetic.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Any multiplication of two numbers with N and M digits will result in a product with at most N+M digits, allowing for a fixed-size array to store intermediate results.
+
+### Common Mistakes
+
+- Forgetting to handle the carry correctly after the inner loop finishes.
+- Failing to skip leading zeros in the result array, leading to incorrect string formatting.
+- Attempting to convert strings to integers, which causes overflow for large inputs.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When faced with arithmetic operations on numbers too large for standard types, immediately pivot to a 'manual simulation' mindset. Treat the numbers as arrays of digits and simulate the elementary school algorithm (column-wise addition/multiplication). Always verify the maximum possible size of the output and use an array to buffer the result before string conversion.
+
+**Similar Problems to Practice:**
+
+- Multiply Strings
+- Add Strings
+- Add Binary
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
