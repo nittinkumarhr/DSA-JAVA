@@ -873,3 +873,94 @@ When asked to compute a function that grows exponentially or requires repeated a
 
 =====================================================
 
+# 0043. Multiply Strings
+
+> 🔗 [LeetCode](https://leetcode.com/problems/multiply-strings/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 31 Jul 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks to multiply two non-negative integers represented as strings and return the product as a string, without using built-in BigInteger libraries in a real-world scenario, though the provided solution uses them for simplicity.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- large numbers as strings → signals potential integer overflow
+- arithmetic operations on strings → signals manual digit-by-digit simulation
+
+**Pattern(s) used:**
+
+- Math
+- String Simulation
+- Big Integer Arithmetic
+
+---
+
+## 🛠 Solution Approach
+
+- Convert each string into a numeric representation (or use BigInteger for convenience).
+- Perform the multiplication operation.
+- Convert the resulting numeric product back into a string format.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N * M)`
+
+### Space Complexity
+
+`O(N + M)`
+
+> The time complexity is proportional to the product of the lengths of the two strings, and the space complexity is required to store the resulting product string.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Zero input — must return '0' instead of an empty string or error.
+- Leading zeros — input might contain '00', which should be handled as 0.
+- Very large strings — standard integer types will overflow, necessitating BigInteger or array-based multiplication.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The product of two numbers with lengths N and M will have at most N + M digits, allowing us to pre-allocate an array or use BigInteger to handle the overflow.
+
+### Common Mistakes
+
+- Attempting to convert strings to standard int or long types, which causes overflow for large inputs.
+- Forgetting to handle the '0' case explicitly, which can lead to incorrect output formats.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When faced with arithmetic on strings, first check if the input size exceeds standard integer limits. If it does, avoid direct conversion and instead simulate the manual 'pen-and-paper' multiplication method using an array of size N+M to store intermediate products, processing digits from right to left.
+
+**Similar Problems to Practice:**
+
+- Add Strings
+- Multiply Strings (Array-based implementation)
+- Add Binary
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
