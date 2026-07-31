@@ -1203,3 +1203,97 @@ When a problem involves a pattern that repeats infinitely or up to a massive ind
 
 =====================================================
 
+# 885751. World Chess Championship Practice Coding Problem
+
+> 🔗 [LeetCode](https://leetcode.com/problems/WCC/) &nbsp;|&nbsp; 🏷 Difficulty:  935 &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 01 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem requires calculating the final prize money for a chess tournament based on a string of 14 game results ('C' for Carlsen win, 'N' for Chef win, 'D' for draw) and a multiplier X, where wins award 2 points and draws award 1 point.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- fixed number of iterations (14 games) → constant time simulation
+- mapping characters to specific values → scoring/accumulation pattern
+- conditional logic based on final totals → decision-making logic
+
+**Pattern(s) used:**
+
+- Simulation
+- Accumulation
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two integer counters for Carlsen and Chef scores.
+- Iterate through the 14-character string exactly once.
+- For each character, update the respective counter based on the scoring rules.
+- Compare the final scores to determine the prize multiplier.
+- Multiply the chosen prize constant by X and output the result.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(1)`
+
+### Space Complexity
+
+`O(1)`
+
+> The input size is fixed at 14 characters, making the time and space complexity constant regardless of the input value X.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- All draws — results in a tie (55 * X) handled by the equality check.
+- All wins for one player — results in the maximum prize (60 * X) handled by the greater-than check.
+- X = 0 — results in 0 prize money, handled correctly by multiplication.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The problem is a simple state-tracking simulation where the total number of games is small and fixed, allowing for direct iteration without complex data structures.
+
+### Common Mistakes
+
+- Miscalculating the point values for wins versus draws.
+- Forgetting to multiply the final prize constant by X.
+- Using a dynamic loop size instead of the fixed 14 games.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem involves processing a sequence of events with fixed rules, identify the state variables (the scores) and the transformation logic (the scoring rules). If the input size is small or constant, prioritize a direct simulation approach. Always verify if the output depends on a multiplier or a threshold that needs to be applied at the very end.
+
+**Similar Problems to Practice:**
+
+- LeetCode 1704: Determine if String Halves Are Alike
+- LeetCode 1684: Count the Number of Consistent Strings
+- LeetCode 2114: Maximum Number of Words Found in Sentences
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
