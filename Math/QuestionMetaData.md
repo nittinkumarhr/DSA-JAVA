@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 11
+- **Total Problems** : 12
 - **Easy** : 8
-- **Medium** : 2
+- **Medium** : 3
 - **Hard** : 0
 
 **Last Updated**
 
-25 Jul 2026
+31 Jul 2026
 
 ---
 
@@ -18,6 +18,7 @@
 | ID | Platform | Problem | Difficulty | Language | Runtime | Memory | Date | Solution |
 |----|----------|---------|------------|----------|---------|--------|------|----------|
 | 7 | LeetCode | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Medium | Java | 1 ms | 42.7 MB | 13 Jul 2026 | `Math/0007_Reverse_Integer.java` |
+| 43 | LeetCode | [Multiply Strings](https://leetcode.com/problems/multiply-strings/) | Medium | Java | 12 ms | 46.8 MB | 31 Jul 2026 | `Math/0043_Multiply_Strings.java` |
 | 50 | LeetCode | [Pow(x, n)](https://leetcode.com/problems/powx-n/) | Medium | Java | 0 ms | 47.7 MB | 25 Jul 2026 | `Math/0050_Powx_n.java` |
 | 258 | LeetCode | [Add Digits](https://leetcode.com/problems/add-digits/) | Easy | Java | 1 ms | 42.7 MB | 10 Jul 2026 | `Math/0258_Add_Digits.java` |
 | 1406 | LeetCode | [Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/) | Easy | Java | 0 ms | 42.2 MB | 24 Jul 2026 | `Math/1406_Subtract_the_Product_and_Sum_of_Digits_of_an_Integer.java` |
