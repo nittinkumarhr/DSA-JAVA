@@ -1110,3 +1110,96 @@ When faced with arithmetic operations on numbers too large for standard types, i
 
 =====================================================
 
+# 777439. Repeated String
+
+> 🔗 [LeetCode](https://leetcode.com/problems/repeated-string/) &nbsp;|&nbsp; 🏷 Authortunyashdifficultyeasymax score20submitted by618986 &nbsp;|&nbsp; 💻 Unknown &nbsp;|&nbsp; 📅 01 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks to count the occurrences of a specific character ('a') in an infinitely repeating string up to a very large index n, requiring an efficient mathematical approach rather than string construction.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- infinitely repeating pattern → modular arithmetic
+- very large n (up to 10^12) → O(1) or O(length of pattern) time complexity
+- fixed pattern length → pre-calculation
+
+**Pattern(s) used:**
+
+- Mathematical Optimization
+- Modular Arithmetic
+
+---
+
+## 🛠 Solution Approach
+
+- Calculate the number of full repetitions of the string using n / s.length().
+- Calculate the remaining length of the partial string using n % s.length().
+- Count the target character in the original string once.
+- Count the target character in the prefix of the string defined by the remainder.
+- Multiply the full count by the number of full repetitions and add the remainder count.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(L)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm iterates through the input string of length L exactly once, and uses constant extra space for counters.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- n < s.length() — the remainder logic handles this by setting fullRepeats to 0.
+- String contains no 'a's — the counters remain 0, returning the correct result.
+- n is very large — using long data types prevents integer overflow.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Since the string repeats periodically, the total count is just (count in one full string * number of full strings) + (count in the remaining prefix).
+
+### Common Mistakes
+
+- Attempting to construct the string up to length n, which causes Memory Limit Exceeded.
+- Forgetting to use long for the result and n, leading to integer overflow errors.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem involves a pattern that repeats infinitely or up to a massive index, avoid simulation. Instead, identify the cycle length, use division to find how many full cycles fit into the target index, and use the modulo operator to handle the remaining partial cycle. Always check if the result exceeds 32-bit integer limits.
+
+**Similar Problems to Practice:**
+
+- Count Primes
+- Find the Duplicate Number
+- String Compression
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
