@@ -262,7 +262,7 @@ When a problem requires partitioning or grouping elements based on constraints t
 
 ## 📝 Problem Summary
 
-Sort a string `s` such that its characters follow the custom order defined by another string `order`. Characters in `s` that are not present in `order` can be placed in any position (typically at the end) of the resulting string.
+Sort a string 's' based on a custom character ordering defined by another string 'order'. Characters in 's' that are not present in 'order' can be placed in any position in the output.
 
 ---
 
@@ -270,25 +270,23 @@ Sort a string `s` such that its characters follow the custom order defined by an
 
 **How to spot this pattern in the problem statement:**
 
-- custom sorting order -> frequency mapping or custom comparator
-- lowercase English letters constraint -> counting sort / fixed-size frequency array
-- relative ordering of elements -> hash map frequency counting
+- custom sorting order -> frequency map + custom ordering traversal
+- characters not in order can be in any position -> append remaining elements from frequency map at the end
 
 **Pattern(s) used:**
 
+- Frequency Map / Hash Table
 - Counting Sort
-- Hash Table
-- String Manipulation
 
 ---
 
 ## 🛠 Solution Approach
 
-- Count the frequency of each character in string `s` using a hash map or a frequency array.
-- Iterate through each character in the `order` string.
-- For each character in `order`, if it exists in the frequency map, append it to the result string as many times as its recorded frequency, then remove it from the map.
-- Iterate through the remaining characters in the frequency map (characters that were in `s` but not in `order`) and append them to the result.
-- Return the final constructed string.
+- Count and store the frequency of each character in string 's' using a hash map.
+- Iterate through the characters of the 'order' string.
+- For each character in 'order', if it exists in the frequency map, append it to the result string as many times as its recorded frequency, then remove it from the map.
+- Iterate through the remaining entries in the frequency map (characters in 's' but not in 'order') and append them to the result.
+- Return the constructed custom-sorted string.
 
 ---
 
@@ -302,15 +300,15 @@ Sort a string `s` such that its characters follow the custom order defined by an
 
 `O(1)`
 
-> We iterate through `s` of length N to build the frequency map, and `order` of length M to build the sorted string. The space complexity is O(1) because the alphabet size is fixed (at most 26 unique lowercase English letters).
+> We iterate through 's' of length N to build the frequency map and 'order' of length M to construct the sorted string. The auxiliary space is O(1) because the frequency map contains at most 26 unique lowercase English letters.
 
 ---
 
 ## ⚠️ Edge Cases to Consider
 
-- Characters in `s` not in `order` — Handled by appending remaining map keys at the end.
-- Characters in `order` not in `s` — Handled by checking if the character exists in the frequency map before appending.
-- Empty strings or single-character strings — Handled naturally as loops will execute 0 or 1 times.
+- s contains characters not in order — These must be appended at the end without being discarded.
+- order contains characters not in s — The algorithm must safely ignore these characters without throwing errors.
+- s has duplicate characters — The frequency count must correctly preserve and repeat all duplicates in the output.
 
 ---
 
@@ -318,25 +316,25 @@ Sort a string `s` such that its characters follow the custom order defined by an
 
 ### Key Observation
 
-Instead of using a general-purpose O(N log N) sorting algorithm with a custom comparator, we can achieve O(N) time complexity by counting frequencies and reconstructing the string in the exact sequence specified by `order`.
+Instead of using a comparison-based sorting algorithm (which takes O(N log N)), we can use counting sort (O(N)) because the relative order is predefined and the character set is small and finite.
 
 ### Common Mistakes
 
-- Using a custom comparator with standard sorting, which introduces O(N log N) overhead and complex comparator logic.
-- Forgetting to append the characters from `s` that do not appear in `order`.
-- Modifying the string in-place inefficiently rather than using a StringBuilder.
+- Using a comparison-based sort with a custom comparator, which is less efficient than counting sort.
+- Forgetting to append the characters of 's' that do not appear in 'order'.
+- Modifying the string directly instead of using a StringBuilder, leading to O(N^2) time complexity due to string immutability.
 
 ---
 
 ## 🔁 How to Approach Similar Problems
 
-When asked to sort elements based on a custom, non-standard order (especially with a small, bounded alphabet like English letters), avoid general O(N log N) sorting. Instead, use Counting Sort: count the frequencies of each element first, then reconstruct the output by iterating through the custom order template, and finally append any remaining elements.
+When asked to sort elements according to a custom, non-standard order, avoid standard comparison sorts. Instead, use a frequency map (or a fixed-size array if the character set is small) to count occurrences. Reconstruct the output by iterating through the custom ordering first, consuming the counts, and then handling any leftover elements. This reduces the time complexity from O(N log N) to O(N).
 
 **Similar Problems to Practice:**
 
 - Sort Characters By Frequency
-- Relative Sort Array
 - Reorganize String
+- First Unique Character in a String
 
 ---
 
@@ -348,5 +346,6 @@ When asked to sort elements based on a custom, non-standard order (especially wi
 - **Revision notes:**
 
 =====================================================
+
 
 
