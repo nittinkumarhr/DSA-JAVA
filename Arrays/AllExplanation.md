@@ -2791,3 +2791,96 @@ When a problem asks you to find a unique element among duplicates under strict O
 
 =====================================================
 
+# 0442. Find All Duplicates in an Array
+
+> 🔗 [LeetCode](https://leetcode.com/problems/find-all-duplicates-in-an-array/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 02 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find all elements that appear twice in an integer array of size n, where all integers are in the range [1, n]. The solution must run in O(n) time complexity and use only O(1) auxiliary space.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- elements in range [1, n] and size n → array indices can be mapped directly to values (index = abs(val) - 1)
+- O(n) time and O(1) extra space constraints → in-place modification or cyclic sort is required
+
+**Pattern(s) used:**
+
+- In-place Hash / Negative Marking
+- Cyclic Sort
+
+---
+
+## 🛠 Solution Approach
+
+- Iterate through the array from left to right.
+- For each element, determine its target index using `idx = Math.abs(nums[i]) - 1`.
+- Check the sign of the value at `nums[idx]`. If it is negative, it means we have already visited this value, so add `Math.abs(nums[i])` to the result list.
+- If the value at `nums[idx]` is positive, negate it to mark it as visited: `nums[idx] = -nums[idx]`.
+- Return the accumulated list of duplicates.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(1)`
+
+> We traverse the array of size n exactly once, performing constant-time lookups and negations. No extra space is used besides the output list.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- No duplicates — The algorithm correctly negates elements but never finds an already-negated element, returning an empty list.
+- All elements duplicated — Every element is correctly identified on its second occurrence.
+- Array of size 1 — Since elements are in range [1, n], a size 1 array can only contain [1], which has no duplicates; the loop completes without adding to the result.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Since the array values are bounded by the array's size [1, n], we can use the array itself as a hash table. Negating the value at index `abs(x) - 1` acts as a state flag indicating that the number `x` has been seen once.
+
+### Common Mistakes
+
+- Using an auxiliary frequency array or HashSet, which violates the O(1) extra space constraint.
+- Forgetting to use `Math.abs()` when calculating the target index, leading to `ArrayIndexOutOfBoundsException` due to previously negated values.
+- Modifying the array values in a way that destroys the original numbers permanently, making them unrecoverable during traversal.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When given an array of size n with elements strictly bounded in a range like [1, n] or [0, n-1], and asked to solve it in O(n) time and O(1) space, treat the array indices as keys of a hash map. Use either negative marking (negating `nums[abs(val) - 1]`) or cyclic swapping (placing `nums[i]` at index `nums[i] - 1`) to track state in-place.
+
+**Similar Problems to Practice:**
+
+- Find the Duplicate Number
+- Find All Numbers Disappeared in an Array
+- First Missing Positive
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
