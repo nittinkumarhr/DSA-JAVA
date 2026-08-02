@@ -2700,3 +2700,94 @@ When a problem involves a sequence of operations where you need to 'undo' the la
 
 =====================================================
 
+# 0136. Single Number
+
+> 🔗 [LeetCode](https://leetcode.com/problems/single-number/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 02 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find the single unique integer in an array where every other integer appears exactly twice, using linear time complexity and constant extra space.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- every element appears twice except for one → XOR cancellation pattern
+- linear time and constant extra space → Bit manipulation (avoiding HashMaps/Sets)
+
+**Pattern(s) used:**
+
+- Bit Manipulation
+- XOR Properties
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize an accumulator variable `unique` to 0.
+- Iterate through each integer in the input array.
+- Perform a bitwise XOR operation between `unique` and the current integer, updating `unique` with the result.
+- Return `unique` after the loop finishes, as all paired elements will have canceled each other out to 0, leaving only the single number.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(1)`
+
+> We iterate through the array of size n exactly once, and we only use a single integer variable to store the running XOR sum, requiring no extra memory.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single element array — The loop runs once and returns the element itself, which is correct.
+- Negative numbers — XOR operates at the bit level, so negative numbers are handled correctly via their two's complement representation.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The XOR operator is commutative and associative, and any number XORed with itself is 0 (A ⊕ A = 0). Thus, all paired numbers cancel out regardless of their order, leaving only the single unique element.
+
+### Common Mistakes
+
+- Using a HashMap or Set, which violates the O(1) auxiliary space constraint.
+- Sorting the array first, which increases the time complexity to O(n log n).
+- Initializing the accumulator to a non-zero value, which corrupts the final XOR sum.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks you to find a unique element among duplicates under strict O(1) space constraints, think of bitwise operations, especially XOR. Look for properties of pairs or even/odd frequencies that can be canceled out. If elements appear an odd/even number of times, XOR is often the most optimal tool to filter out the noise without allocating memory.
+
+**Similar Problems to Practice:**
+
+- Single Number II
+- Single Number III
+- Missing Number
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
