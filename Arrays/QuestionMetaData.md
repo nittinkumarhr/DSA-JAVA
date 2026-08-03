@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 35
-- **Easy** : 12
+- **Total Problems** : 36
+- **Easy** : 13
 - **Medium** : 21
 - **Hard** : 1
 
 **Last Updated**
 
-02 Aug 2026
+03 Aug 2026
 
 ---
 
@@ -50,5 +50,6 @@
 | 2624 | LeetCode | [Difference Between Element Sum and Digit Sum of an Array](https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/) | Easy | Java | 2 ms | 46.4 MB | 12 Jul 2026 | `Arrays/2624_Difference_Between_Element_Sum_and_Digit_Sum_of_an_Array.java` |
 | 2876 | LeetCode | [Number of Employees Who Met the Target](https://leetcode.com/problems/number-of-employees-who-met-the-target/) | Easy | Java | 1 ms | 43.8 MB | 12 Jul 2026 | `Arrays/2876_Number_of_Employees_Who_Met_the_Target.java` |
 | 2878 | LeetCode | [Apply Operations to Make All Array Elements Equal to Zero](https://leetcode.com/problems/apply-operations-to-make-all-array-elements-equal-to-zero/) | Medium | Java | 1 ms | 109.3 MB | 08 Jul 2026 | `Arrays/2878_Apply_Operations_to_Make_All_Array_Elements_Equal_to_Zero.java` |
+| 3176 | LeetCode | [Minimum Sum of Mountain Triplets I](https://leetcode.com/problems/minimum-sum-of-mountain-triplets-i/) | Easy | Java | 2 ms | 43.7 MB | 03 Aug 2026 | `Arrays/3176_Minimum_Sum_of_Mountain_Triplets_I.java` |
 | 3194 | LeetCode | [Find Words Containing Character](https://leetcode.com/problems/find-words-containing-character/) | Easy | Java | 1 ms | 46.6 MB | 20 Jul 2026 | `Arrays/3194_Find_Words_Containing_Character.java` |
 | 3226 | LeetCode | [Minimum Number Game](https://leetcode.com/problems/minimum-number-game/) | Easy | Java | 5 ms | 47.3 MB | 11 Jul 2026 | `Arrays/3226_Minimum_Number_Game.java` |
