@@ -2884,3 +2884,99 @@ When given an array of size n with elements strictly bounded in a range like [1,
 
 =====================================================
 
+# 3176. Minimum Sum of Mountain Triplets I
+
+> 🔗 [LeetCode](https://leetcode.com/problems/minimum-sum-of-mountain-triplets-i/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 03 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find the minimum sum of a mountain triplet (i, j, k) in an array such that i < j < k, nums[i] < nums[j], and nums[k] < nums[j]. If no such triplet exists, we return -1.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- triplet (i, j, k) with i < j < k -> Fix the middle element j and look left/right
+- nums[i] < nums[j] and nums[k] < nums[j] -> Find the minimum elements to the left and right of a peak
+- minimum sum of elements -> Precompute prefix and suffix minimums to find optimal boundaries in O(1) time per center
+
+**Pattern(s) used:**
+
+- Prefix/Suffix Minimums
+- Dynamic Programming
+- Enumeration
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize an array 'leftMin' where leftMin[i] stores the minimum value in nums[0...i-1].
+- Initialize an array 'rightMin' where rightMin[i] stores the minimum value in nums[i+1...n-1].
+- Iterate through each element j from 1 to n-2 as the potential peak of the mountain.
+- For each j, check if leftMin[j] < nums[j] and rightMin[j] < nums[j].
+- If the condition is met, calculate the sum (leftMin[j] + nums[j] + rightMin[j]) and update the global minimum sum.
+- Return the minimum sum found, or -1 if no valid triplet exists.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> We perform three linear passes: one to compute prefix minimums, one to compute suffix minimums, and one to find the optimal peak element, using O(N) extra space for the prefix/suffix arrays.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array length less than 3 — Handled by returning -1 immediately as no triplet can exist.
+- Strictly increasing or decreasing array — No peak can exist; the algorithm should correctly return -1.
+- All elements are equal — No element can be strictly greater than its neighbors, returning -1.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Instead of searching for all triplets independently, fixing the middle element 'j' as the peak allows us to independently find the minimum element to its left (i) and the minimum element to its right (k) in O(1) time using precomputed prefix and suffix minimums.
+
+### Common Mistakes
+
+- Using a nested three-loop O(N^3) approach which TLEs on larger inputs (like version II of this problem).
+- Forgetting the strict inequality constraint (nums[i] < nums[j] and nums[k] < nums[j]) and allowing equal elements.
+- Not handling the case where no valid mountain triplet exists and failing to return -1.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to find a triplet (i, j, k) satisfying conditions relative to a middle element 'j', try fixing 'j' as the pivot. Precompute prefix properties (like min, max, or sum) for the left side [0...j-1] and suffix properties for the right side [j+1...n-1]. This transforms an O(N^3) brute-force search into an efficient O(N) solution by decoupling the left and right choices.
+
+**Similar Problems to Practice:**
+
+- Best Time to Buy and Sell Stock
+- Trapping Rain Water
+- Product of Array Except Self
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
