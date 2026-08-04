@@ -2980,3 +2980,98 @@ When asked to find a triplet (i, j, k) satisfying conditions relative to a middl
 
 =====================================================
 
+# 0524. Longest Word in Dictionary through Deleting
+
+> 🔗 [LeetCode](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 04 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find the longest string from a given dictionary that can be formed by deleting characters from a source string S. If there are multiple valid strings of the same maximum length, we must return the one that is lexicographically smallest. If no such string exists, we return an empty string.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- deleting characters from a string to form another -> subsequence verification
+- longest word / lexicographically smallest -> greedy tracking with pruning
+
+**Pattern(s) used:**
+
+- Two Pointers
+- Subsequence Verification
+- Greedy
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize an empty string `ans` to store the best valid word found so far.
+- Iterate through each `word` in the dictionary `D`.
+- Apply pruning: if the current `word` is shorter than `ans`, or if it is of the same length but lexicographically larger than `ans`, skip the subsequence check entirely.
+- Verify if `word` is a subsequence of `S` by finding each character of `word` sequentially in `S` using `indexOf` starting from the index after the last matched character.
+- If the entire `word` is successfully matched as a subsequence, update `ans` to `word`.
+- Return `ans` after checking all words in the dictionary.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N * L)`
+
+### Space Complexity
+
+`O(1)`
+
+> We iterate through the dictionary of size N. For each word, we perform a subsequence check against S of length M. In the worst case, this takes O(M) time, leading to O(N * M) overall time complexity (where L represents the length of S). No extra space is used beyond a few pointer variables.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- No word in the dictionary is a subsequence of S — handled correctly by returning the initial empty string.
+- Multiple words of the same maximum length — handled by the lexicographical comparison check `word.compareTo(ans) > 0` to ensure only the lexicographically smaller word updates the answer.
+- Empty dictionary or empty string S — handled gracefully as the loops will either not execute or fail the subsequence check immediately.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Checking if a word can be formed by deleting characters from S is equivalent to checking if that word is a subsequence of S. By pruning candidates that are shorter or lexicographically larger than our current best answer, we avoid redundant subsequence checks.
+
+### Common Mistakes
+
+- Sorting the entire dictionary first, which adds unnecessary O(N log N * L) overhead compared to pruning on the fly.
+- Using a full dynamic programming LCS (Longest Common Subsequence) approach, which is too slow and overcomplicates a simple subsequence check.
+- Incorrectly updating the pointer during the subsequence check, leading to false positives or infinite loops.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to find a word from a list that can be formed by deleting characters from a source string, reframe the problem as finding the 'best' subsequence. Use two pointers or sequential character searching to verify the subsequence property in linear time. Always look for pruning opportunities (like length or lexicographical order) to avoid expensive checks on suboptimal candidates.
+
+**Similar Problems to Practice:**
+
+- Is Subsequence
+- Longest Uncommon Subsequence II
+- Shortest Way to Form String
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
