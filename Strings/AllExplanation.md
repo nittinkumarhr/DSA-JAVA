@@ -283,3 +283,97 @@ When a problem involves tracking a state through a sequence of operations, ident
 
 =====================================================
 
+# 0957. Minimum Add to Make Parentheses Valid
+
+> 🔗 [LeetCode](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 05 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks for the minimum number of parentheses (either '(' or ')') that must be added to a given string to make the entire sequence valid. A valid sequence is one where every opening parenthesis has a matching closing parenthesis in the correct order.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- parentheses/brackets sequence → Stack or balance counters
+- minimum add to make valid → tracking unmatched elements
+
+**Pattern(s) used:**
+
+- Stack
+- Greedy
+- Simulation
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a stack to keep track of unmatched parentheses.
+- Iterate through each character of the string.
+- If the current character is ')' and the top of the stack is '(', pop the '(' from the stack since they form a valid matching pair.
+- Otherwise, push the current character (whether '(' or unmatched ')') onto the stack.
+- After processing the entire string, the size of the stack represents the total number of unmatched parentheses, which is the minimum number of additions required.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> We traverse the string of length N exactly once, performing O(1) push and pop operations on the stack. In the worst case (e.g., all '(' or all ')'), the stack stores all N characters, requiring O(N) auxiliary space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty string — returns 0 because no additions are needed for an already valid empty sequence.
+- Already valid string (e.g., '()()') — returns 0 as all brackets match and the stack ends up empty.
+- Only open parentheses (e.g., '(((') — stack retains all elements, returning the length of the string.
+- Only close parentheses (e.g., ')))') — stack retains all elements, returning the length of the string.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Any valid pair of adjacent parentheses '()' can be immediately eliminated from consideration because they cancel each other out. The remaining unmatched parentheses cannot be paired with each other and must each be resolved by adding a corresponding matching parenthesis.
+
+### Common Mistakes
+
+- Using a single integer balance counter that decrements below zero without tracking unmatched closing brackets separately (e.g., treating ')' followed by '(' as balanced when it actually requires 2 additions).
+- Failing to handle the syntax error in the provided code where an unreachable 'else' block is placed after the return statement.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When dealing with nested or matching structures like brackets, HTML tags, or paired operations, think of a Stack. If you only need to count unmatched elements without reconstructing the string, optimize the O(N) space stack to O(1) space by using two counters: one for unmatched open brackets and one for unmatched close brackets.
+
+**Similar Problems to Practice:**
+
+- Valid Parentheses
+- Minimum Remove to Make Valid Parentheses
+- Generate Parentheses
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
