@@ -3075,3 +3075,94 @@ When asked to find a word from a list that can be formed by deleting characters 
 
 =====================================================
 
+# 3515. Find if Digit Game Can Be Won
+
+> 🔗 [LeetCode](https://leetcode.com/problems/find-if-digit-game-can-be-won/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 06 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks whether Alice can win a game where she can choose to take either all single-digit numbers or all double-digit numbers from an array, leaving the remaining numbers to Bob. Alice wins if the sum of her chosen numbers is strictly greater than the sum of Bob's numbers.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- choose all single-digit or all double-digit -> partition array into two mutually exclusive sets
+- Alice wins if her sum is strictly greater -> binary choice comparison
+
+**Pattern(s) used:**
+
+- Simulation
+- Array Partitioning
+- Greedy
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two sum accumulators: 'sing_d' for single-digit numbers and 'two_d' for double-digit numbers.
+- Iterate through the array, checking if each number is between 0 and 9 (inclusive).
+- If it is a single-digit number, add its value to 'sing_d'; otherwise, add it to 'two_d'.
+- Compare the two sums: if 'sing_d' is equal to 'two_d', Alice cannot win (returns false). Otherwise, Alice can always win by choosing the partition with the larger sum (returns true).
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm performs a single pass over the array of size n, requiring O(n) time, and only uses a few integer variables for tracking sums, requiring O(1) auxiliary space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Equal sums — If the sum of single-digit numbers equals the sum of double-digit numbers, Alice cannot win because whichever she picks, Bob gets an equal sum.
+- All elements of one type — If the array contains only single-digit or only double-digit numbers, Alice wins easily by choosing that type, leaving Bob with a sum of 0.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Because Alice's choice of one group completely determines Bob's group, Alice can win if and only if the sum of single-digit numbers is not equal to the sum of double-digit numbers. If they are unequal, Alice simply picks the larger group.
+
+### Common Mistakes
+
+- Overcomplicating the game logic with minimax or dynamic programming, failing to realize it is a simple binary choice.
+- Failing to handle the strict inequality requirement, which results in returning true when the sums are equal.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a game theory problem limits a player's choices to partitioning the input into two fixed, mutually exclusive sets, simplify the problem by calculating the sum or value of both partitions. If the winning condition is a strict inequality, the first player wins if and only if the partitions are unequal. Avoid complex recursion or state-tracking when the decision space is this small.
+
+**Similar Problems to Practice:**
+
+- Partition Array Into Three Parts With Equal Sum
+- Find the Middle Index in Array
+- Split Array with Equal Sum
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
