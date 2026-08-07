@@ -3166,3 +3166,97 @@ When a game theory problem limits a player's choices to partitioning the input i
 
 =====================================================
 
+# 1605. Minimum Number of Days to Make m Bouquets
+
+> 🔗 [LeetCode](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 07 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks for the minimum number of days required to make m bouquets, where each bouquet consists of k adjacent flowers. If it is impossible to make the required bouquets because there are not enough flowers in total, the algorithm should return -1.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- Find the minimum value of X such that a condition is met → Binary Search on Answer
+- Monotonic feasibility (if we can do it in D days, we can do it in D+1 days) → Binary Search on Answer
+- Contiguous/adjacent elements grouping constraint → Greedy validation function
+
+**Pattern(s) used:**
+
+- Binary Search on Answer
+- Greedy
+
+---
+
+## 🛠 Solution Approach
+
+- Check if the total flowers required (m * k) exceeds the array length; if so, return -1 immediately to handle the impossible case.
+- Define the search space for the binary search: the minimum possible day is 1, and the maximum is the maximum value in the bloomDay array.
+- Perform binary search on this range. For each candidate day 'mid', count how many bouquets of k adjacent bloomed flowers can be formed.
+- If the count of bouquets is at least m, record 'mid' as a potential answer and search the left half (r = mid - 1) to find a smaller valid day.
+- If the count is less than m, search the right half (l = mid + 1) because more days are needed for more flowers to bloom.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log(max_day))`
+
+### Space Complexity
+
+`O(1)`
+
+> The binary search takes O(log(max_day)) steps, and in each step, we iterate through the array of size N to greedily count the bouquets, resulting in O(N log(max_day)) time. No extra space is used beyond a few variables, giving O(1) auxiliary space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- m * k > arr.length — Handled by returning -1 early, preventing impossible scenarios and integer overflow during multiplication by casting to long.
+- k = 1 — Each flower is its own bouquet; the helper function must correctly handle single-element groupings.
+- All elements in arr are the same — The search space collapses quickly, and the helper function must correctly count adjacent groups.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The feasibility of making m bouquets is monotonic: if we can make m bouquets on day D, we can definitely make them on any day D' > D. This monotonicity allows us to binary search the answer space instead of searching the array directly.
+
+### Common Mistakes
+
+- Integer overflow when calculating m * k in languages like Java/C++ if not cast to long.
+- Incorrect greedy counting logic in the helper function (e.g., failing to reset the consecutive flower count when a flower has not bloomed yet).
+- Setting the upper bound of the binary search range to a fixed arbitrary large number instead of the maximum element in the array, leading to unnecessary iterations.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To recognize 'Binary Search on Answer', look for optimization problems asking for a 'minimum' or 'maximum' threshold where the feasibility function is monotonic (i.e., if X is valid, all values greater than X are also valid, or vice versa). Once identified, define the search space [L, R] based on the problem constraints, write a greedy/simulation helper function to check feasibility for a candidate mid, and adjust the search boundaries accordingly.
+
+**Similar Problems to Practice:**
+
+- Capacity To Ship Packages Within D Days
+- Koko Eating Bananas
+- Split Array Largest Sum
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
