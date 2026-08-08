@@ -3260,3 +3260,99 @@ To recognize 'Binary Search on Answer', look for optimization problems asking fo
 
 =====================================================
 
+# 0018. 4Sum
+
+> 🔗 [LeetCode](https://leetcode.com/problems/4sum/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 08 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an array of integers and a target value, find all unique quadruplets that sum up to the target. The solution must ensure that no duplicate quadruplets are included in the final output.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- find unique quadruplets/triplets/k-tuples -> Sorting + Multi-pointer search to easily skip duplicates
+- sum of elements equals target -> Reduce to 2-Sum using nested loops and Two Pointers
+
+**Pattern(s) used:**
+
+- Two Pointers
+- Sorting
+- K-Sum Reduction
+
+---
+
+## 🛠 Solution Approach
+
+- Sort the input array to enable the two-pointer technique and easily skip duplicates.
+- Use a nested loop with variables i and j to fix the first two elements of the quadruplet.
+- For each outer loop, skip duplicate values of nums[i] and nums[j] to avoid duplicate quadruplets.
+- Initialize two pointers, l at j + 1 and r at n - 1, to find the remaining two elements.
+- Calculate the sum of the four elements using a 64-bit integer (long) to prevent integer overflow.
+- If the sum matches the target, add the quadruplet to the result and advance both pointers past duplicate values.
+- If the sum is less than the target, increment l; if greater, decrement r.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N^3)`
+
+### Space Complexity
+
+`O(log N)`
+
+> Sorting takes O(N log N) time, and the nested loops with a two-pointer search take O(N^3) time. Space complexity is O(log N) to O(N) depending on the sorting implementation's recursion stack.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array size less than 4 — Handled by loop bounds (i < n - 3) which prevents execution and returns an empty list.
+- Integer overflow when summing four elements — Handled by casting the sum to 'long' before addition.
+- Highly duplicated elements — Handled by explicitly skipping consecutive identical elements for all four pointers.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Sorting the array allows us to convert a search problem into a directional two-pointer traversal, while also making duplicate detection trivial by comparing adjacent elements.
+
+### Common Mistakes
+
+- Forgetting to cast the sum to a 64-bit integer (long), leading to integer overflow errors with large target/element values.
+- Incorrectly skipping duplicates (e.g., skipping before processing the first occurrence, or skipping only one pointer when a match is found).
+- Not adjusting the loop bounds correctly, leading to Out of Bounds exceptions.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To solve any K-Sum problem, sort the array first. Reduce the problem from K-Sum to (K-1)-Sum recursively or via nested loops until you reach 2-Sum, which can be solved in O(N) time using two pointers. Always handle duplicates at each level of nesting by skipping identical adjacent elements after processing their first occurrence.
+
+**Similar Problems to Practice:**
+
+- 3Sum
+- 3Sum Closest
+- 4Sum II
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
