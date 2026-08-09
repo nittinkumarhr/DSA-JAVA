@@ -3356,3 +3356,97 @@ To solve any K-Sum problem, sort the array first. Reduce the problem from K-Sum 
 
 =====================================================
 
+# 2122. Count Special Quadruplets
+
+> 🔗 [LeetCode](https://leetcode.com/problems/count-special-quadruplets/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 09 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to count the number of distinct quadruplets of indices (a, b, c, d) in an array such that a < b < c < d and nums[a] + nums[b] + nums[c] == nums[d].
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- quadruplets with index constraint a < b < c < d → Split-and-Meet / Hash Map optimization to avoid O(N^4) brute force
+- equation nums[a] + nums[b] + nums[c] == nums[d] → Algebraic rearrangement to group variables (nums[a] + nums[b] == nums[d] - nums[c])
+
+**Pattern(s) used:**
+
+- Hash Table
+- Meet-in-the-Middle
+- Algebraic Transformation
+
+---
+
+## 🛠 Solution Approach
+
+- Rearrange the target equation nums[a] + nums[b] + nums[c] == nums[d] to nums[a] + nums[b] == nums[d] - nums[c] with a < b < c < d.
+- Iterate backwards with a pivot index i representing the boundary between the left pair (a, b) and the right pair (c, d), where b = i - 1 and c = i.
+- In each step, add all valid differences nums[j] - nums[i] (for j > i) to a frequency map.
+- Then, search the map for sums of the form nums[j] + nums[i - 1] (for j < i - 1) and add their frequencies to the result.
+- This ensures that all index constraints a < b < c < d are strictly maintained while reducing the time complexity to O(N^2).
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N^2)`
+
+### Space Complexity
+
+`O(N^2)`
+
+> The outer loop runs N times, and the two inner loops combined scan the array elements to the left and right of the pivot, taking O(N) time per step, resulting in O(N^2) total time. The hash map stores at most O(N^2) unique differences.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array length less than 4 — Handled correctly because the loop bounds will prevent execution, returning 0.
+- Duplicate values — Handled correctly by using a frequency map to count occurrences of differences rather than just tracking existence.
+- Negative numbers — Handled correctly because algebraic rearrangement holds true for negative integers, and the hash map keys can be negative.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+By rewriting nums[a] + nums[b] + nums[c] == nums[d] as nums[a] + nums[b] == nums[d] - nums[c], we can decouple the four-variable search into two independent two-variable searches separated by a moving pivot index i.
+
+### Common Mistakes
+
+- Using a naive O(N^4) brute-force solution which, although it passes for very small constraints, is highly inefficient and fails on larger inputs.
+- Forgetting to maintain the strict index inequality a < b < c < d when matching pairs, leading to overcounting or invalid quadruplets.
+- Not updating the hash map dynamically, which can cause elements from the left side to be incorrectly matched as part of the right side.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When faced with finding tuples satisfying an equation with strict index ordering, look to split the equation into two balanced halves (e.g., LHS and RHS). Use a moving pivot to separate the indices belonging to the LHS from those on the RHS. Maintain a dynamic frequency map of the RHS values as the pivot moves, and query it using the LHS values to achieve a lower polynomial time complexity.
+
+**Similar Problems to Practice:**
+
+- 4Sum
+- 4Sum II
+- Count Triplets That Can Form Two Blocks of Equal XOR
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
