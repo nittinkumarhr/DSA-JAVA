@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 40
-- **Easy** : 14
+- **Total Problems** : 41
+- **Easy** : 15
 - **Medium** : 24
 - **Hard** : 1
 
 **Last Updated**
 
-08 Aug 2026
+09 Aug 2026
 
 ---
 
@@ -47,6 +47,7 @@
 | 1791 | LeetCode | [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) | Easy | Java | 0 ms | 44.4 MB | 25 Jul 2026 | `Arrays/1791_Richest_Customer_Wealth.java` |
 | 1950 | LeetCode | [Sign of the Product of an Array](https://leetcode.com/problems/sign-of-the-product-of-an-array/) | Easy | Java | 0 ms | 45.3 MB | 26 Jul 2026 | `Arrays/1950_Sign_of_the_Product_of_an_Array.java` |
 | 2016 | LeetCode | [Reduction Operations to Make the Array Elements Equal](https://leetcode.com/problems/reduction-operations-to-make-the-array-elements-equal/) | Medium | Java | 38 ms | 71.6 MB | 27 Jul 2026 | `Arrays/2016_Reduction_Operations_to_Make_the_Array_Elements_Equal.java` |
+| 2122 | LeetCode | [Count Special Quadruplets](https://leetcode.com/problems/count-special-quadruplets/) | Easy | Java | 9 ms | 45.1 MB | 09 Aug 2026 | `Arrays/2122_Count_Special_Quadruplets.java` |
 | 2231 | LeetCode | [Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array/) | Easy | Java | 1 ms | 47.6 MB | 12 Jul 2026 | `Arrays/2231_Find_First_Palindromic_String_in_the_Array.java` |
 | 2240 | LeetCode | [Intervals Between Identical Elements](https://leetcode.com/problems/intervals-between-identical-elements/) | Medium | Java | 170 ms | 189.3 MB | 05 Jul 2026 | `Arrays/2240_Intervals_Between_Identical_Elements.java` |
 | 2552 | LeetCode | [Maximum Sum of Distinct Subarrays With Length K](https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/) | Medium | Java | 60 ms | 99 MB | 12 Jul 2026 | `Arrays/2552_Maximum_Sum_of_Distinct_Subarrays_With_Length_K.java` |
