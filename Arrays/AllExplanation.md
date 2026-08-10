@@ -3450,3 +3450,95 @@ When faced with finding tuples satisfying an equation with strict index ordering
 
 =====================================================
 
+# 2392. Successful Pairs of Spells and Potions
+
+> 🔗 [LeetCode](https://leetcode.com/problems/successful-pairs-of-spells-and-potions/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 10 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+Given two integer arrays representing spells and potions, and a success threshold, determine the number of successful pairs for each spell where the product of the spell's strength and the potion's strength is at least the success threshold.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- Find pairs from two arrays satisfying a product inequality → Sorting and Binary Search
+- Large constraints (up to 10^5 elements) → Avoid O(N*M) brute force, aim for O((N+M) log M)
+
+**Pattern(s) used:**
+
+- Sorting
+- Binary Search
+
+---
+
+## 🛠 Solution Approach
+
+- Sort the potions array in ascending order to enable binary search.
+- Iterate through each spell in the spells array.
+- For each spell, perform a binary search on the sorted potions array to find the leftmost (smallest) index where the product of the spell and potion is at least the success threshold.
+- If a valid index is found, the number of successful potions is the total number of potions minus this index; otherwise, it is 0.
+- Store the count in the result array and return it.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(M log M + N log M)`
+
+### Space Complexity
+
+`O(log M)`
+
+> Sorting the potions array of size M takes O(M log M) time and O(log M) space for the sorting algorithm. Performing binary search for each of the N spells takes O(N log M) time.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Integer overflow — Multiplying a spell and a potion can exceed 32-bit integer limits, requiring a cast to long before multiplication.
+- No successful potions — The binary search returns -1, which must be correctly handled to yield 0 successful pairs.
+- All potions successful — The binary search finds index 0, yielding potions.length successful pairs.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Sorting the potions array allows us to use binary search to find the boundary where potions transition from unsuccessful to successful, reducing the search time per spell from O(M) to O(log M).
+
+### Common Mistakes
+
+- Forgetting to cast the product of spell and potion to a 64-bit integer (long), leading to overflow and incorrect comparisons.
+- Using a linear search instead of binary search, resulting in a Time Limit Exceeded (TLE) error due to O(N * M) complexity.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to find pairs from two arrays satisfying a threshold condition, consider sorting one of the arrays. This enables binary search (specifically finding a lower/upper bound) to locate the transition point in logarithmic time, transforming an O(N*M) brute-force approach into an efficient O((N+M) log M) solution.
+
+**Similar Problems to Practice:**
+
+- Most Beautiful Item for Each Query
+- Search Insert Position
+- Two Sum II - Input Array Is Sorted
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
