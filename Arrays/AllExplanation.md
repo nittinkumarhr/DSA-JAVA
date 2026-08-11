@@ -3542,3 +3542,96 @@ When asked to find pairs from two arrays satisfying a threshold condition, consi
 
 =====================================================
 
+# 1938. Minimum Operations to Make the Array Increasing
+
+> 🔗 [LeetCode](https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 11 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks for the minimum number of increment operations required to make an array of integers strictly increasing, where an operation consists of incrementing any single element by 1.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- strictly increasing -> requires each element to be strictly greater than its predecessor
+- minimum operations with only increment allowed -> signals a greedy approach where we make each element exactly 1 greater than the previous
+
+**Pattern(s) used:**
+
+- Greedy
+- Array Traversal
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a counter `cnt` to 0 to store the total operations, and a tracker `prev` to 0 to represent the required minimum value of the previous element.
+- Iterate through each element `cur` in the array.
+- If `cur` is less than or equal to `prev`, it must be incremented to `prev + 1`. Calculate the difference `(prev + 1) - cur`, add it to `cnt`, and update `prev` to `prev + 1`.
+- If `cur` is already greater than `prev`, no operations are needed. Update `prev` to `cur`.
+- Return the total operations count `cnt`.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We traverse the array of size N exactly once, performing constant-time arithmetic operations at each step, and use only a few scalar variables for tracking state.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array of size 1 — already strictly increasing, loop runs once and returns 0 operations correctly.
+- Already strictly increasing array — the condition `cur <= prev` is never met, returning 0 operations.
+- Array with all identical elements — each subsequent element must be incremented to be exactly 1 greater than the previous, handled correctly by updating `prev` sequentially.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+To minimize operations, we should never increment an element more than necessary. The optimal choice at each step is to make the current element exactly `prev + 1` if it is not already greater than `prev`.
+
+### Common Mistakes
+
+- Modifying the array elements directly in-place, which incurs unnecessary write overhead instead of just tracking the virtual 'previous' value.
+- Using a nested loop to increment elements one by one instead of calculating the required difference mathematically in O(1) time.
+- Failing to handle the strictly increasing condition correctly by allowing adjacent elements to be equal.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks to make an array monotonic (increasing/decreasing) with minimal increment/decrement operations, look for a greedy local strategy. Since changes to an element only constrain subsequent elements, process the array sequentially from left to right. At each step, make the minimal adjustment required to satisfy the condition relative to the immediate neighbor, and carry forward the updated value.
+
+**Similar Problems to Practice:**
+
+- Minimum Increment to Make Array Unique
+- Non-decreasing Array
+- Minimum Moves to Equal Array Elements
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
