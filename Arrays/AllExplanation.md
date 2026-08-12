@@ -3635,3 +3635,98 @@ When a problem asks to make an array monotonic (increasing/decreasing) with mini
 
 =====================================================
 
+# 1635. Number of Good Pairs
+
+> 🔗 [LeetCode](https://leetcode.com/problems/number-of-good-pairs/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 12 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an array of integers, the task is to find the number of 'good pairs' (i, j) such that nums[i] == nums[j] and i < j.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- count pairs (i, j) where nums[i] == nums[j] and i < j -> frequency counting / hash map / combinatorics
+- find identical elements -> hash table or sorting to group duplicates
+
+**Pattern(s) used:**
+
+- Hash Table
+- Counting
+- Combinatorics
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a total count variable to 0.
+- Create a frequency map (or a fixed-size array if the range of numbers is small and bounded) to store the count of each number encountered so far.
+- Iterate through the array from left to right.
+- For each number, add its current frequency in the map to the total count (since it can form a new good pair with each of its previous occurrences).
+- Increment the frequency of the current number in the map.
+- Return the total count.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> We traverse the array of size N exactly once, performing O(1) map operations per element. In the worst case, we store up to N unique elements in the hash map.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array with all unique elements — No pairs can be formed; the frequency of each element is 1, and the count remains 0.
+- Array with all identical elements — Every element can pair with every other element; the total pairs should equal N * (N - 1) / 2.
+- Minimal array size (1 element) — No pairs can be formed; the loop should safely return 0.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+If a number has already appeared k times, encountering it again allows us to form k new good pairs with the previous occurrences. Thus, we can accumulate the pairs dynamically in a single pass.
+
+### Common Mistakes
+
+- Using a nested O(N^2) loop which passes for small constraints but fails due to Time Limit Exceeded (TLE) on larger inputs.
+- Double counting pairs by not enforcing the i < j constraint (e.g., counting both (i, j) and (j, i)).
+- Using a two-pass approach with the formula n * (n - 1) / 2 but forgetting to handle potential integer overflow if frequencies are extremely large.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to count pairs of equal elements or elements satisfying a specific relation, avoid the naive O(N^2) nested loop. Instead, use a Hash Map or frequency array to store counts of elements seen so far. As you iterate, query the map to find how many previously processed elements satisfy the relation with the current element, accumulate this count, and then update the map.
+
+**Similar Problems to Practice:**
+
+- Two Sum
+- Subarray Sum Equals K
+- Find All Duplicates in an Array
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
