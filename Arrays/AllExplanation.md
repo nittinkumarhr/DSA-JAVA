@@ -3730,3 +3730,98 @@ When asked to count pairs of equal elements or elements satisfying a specific re
 
 =====================================================
 
+# 1730. Special Array With X Elements Greater Than or Equal X
+
+> 🔗 [LeetCode](https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 13 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find a unique integer $x$ such that there are exactly $x$ elements in the given array `nums` that are greater than or equal to $x$. If no such $x$ exists, we should return -1.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- exactly X elements greater than or equal to X → Sorting to easily count elements using array indices
+- finding a threshold value based on counts → Binary Search on the answer or Sorting + Linear Scan
+
+**Pattern(s) used:**
+
+- Sorting
+- Binary Search
+- Two Pointers / Counting
+
+---
+
+## 🛠 Solution Approach
+
+- Sort the array `nums` in ascending order.
+- Iterate through the sorted array from index `0` to `n - 1`.
+- At each index `i`, the number of elements greater than or equal to `nums[i]` is exactly `x = n - i`.
+- Check if the current element `nums[i]` is greater than or equal to `x`.
+- To ensure there are *exactly* `x` elements (and not more), verify that the previous element `nums[i - 1]` (if it exists) is strictly less than `x`.
+- If both conditions are met, return `x`. If the loop completes without finding a valid `x`, return -1.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N \log N)`
+
+### Space Complexity
+
+`O(1)`
+
+> Sorting the array of size N takes O(N log N) time, and the subsequent linear scan takes O(N) time. The auxiliary space complexity is O(1) if we ignore the stack space used by the sorting algorithm.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- All elements are 0 — Handled correctly; the loop completes and returns -1 because x cannot be 0 for a non-empty array.
+- Array with a single element — If nums = [0], it returns -1. If nums = [5], x = 1, nums[0] >= 1, returns 1.
+- Duplicate elements — If duplicates cross the boundary of x, the condition `nums[i - 1] < x` prevents returning an incorrect count.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+By sorting the array, the number of elements greater than or equal to any element at index `i` is exactly `n - i`. This allows us to map indices directly to candidate values of `x` and validate them in O(1) time.
+
+### Common Mistakes
+
+- Assuming x must be a value present in the array `nums`.
+- Failing to check the upper bound constraint (i.e., forgetting to ensure that elements before index `i` are strictly less than `x`).
+- Using a nested loop to count elements for each candidate $x$, resulting in an inefficient $O(N^2)$ solution.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem requires finding a threshold value $x$ based on the count of elements that satisfy a comparison with $x$, sorting is almost always the first step. Sorting allows you to use array indices to determine counts of elements greater than or less than a candidate value in $O(1)$ time. Once sorted, you can either perform a linear scan or use binary search on the range of possible answers $[0, N]$ to find the threshold.
+
+**Similar Problems to Practice:**
+
+- H-Index
+- H-Index II
+- Arranging Coins
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
