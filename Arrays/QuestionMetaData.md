@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 44
-- **Easy** : 17
+- **Total Problems** : 45
+- **Easy** : 18
 - **Medium** : 25
 - **Hard** : 1
 
 **Last Updated**
 
-12 Aug 2026
+13 Aug 2026
 
 ---
 
@@ -45,6 +45,7 @@
 | 1538 | LeetCode | [Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/) | Medium | Java | 1 ms | 62 MB | 09 Jul 2026 | `Arrays/1538_Maximum_Points_You_Can_Obtain_from_Cards.java` |
 | 1605 | LeetCode | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Medium | Java | 19 ms | 82.5 MB | 07 Aug 2026 | `Arrays/1605_Minimum_Number_of_Days_to_Make_m_Bouquets.java` |
 | 1635 | LeetCode | [Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/) | Easy | Java | 1 ms | 42.7 MB | 12 Aug 2026 | `Arrays/1635_Number_of_Good_Pairs.java` |
+| 1730 | LeetCode | [Special Array With X Elements Greater Than or Equal X](https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/) | Easy | Java | 4 ms | 43.2 MB | 13 Aug 2026 | `Arrays/1730_Special_Array_With_X_Elements_Greater_Than_or_Equal_X.java` |
 | 1791 | LeetCode | [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) | Easy | Java | 0 ms | 44.4 MB | 25 Jul 2026 | `Arrays/1791_Richest_Customer_Wealth.java` |
 | 1938 | LeetCode | [Minimum Operations to Make the Array Increasing](https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing/) | Easy | Java | 2 ms | 47.2 MB | 11 Aug 2026 | `Arrays/1938_Minimum_Operations_to_Make_the_Array_Increasing.java` |
 | 1950 | LeetCode | [Sign of the Product of an Array](https://leetcode.com/problems/sign-of-the-product-of-an-array/) | Easy | Java | 0 ms | 45.3 MB | 26 Jul 2026 | `Arrays/1950_Sign_of_the_Product_of_an_Array.java` |
