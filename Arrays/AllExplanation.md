@@ -3825,3 +3825,98 @@ When a problem requires finding a threshold value $x$ based on the count of elem
 
 =====================================================
 
+# 1044. Find Common Characters
+
+> 🔗 [LeetCode](https://leetcode.com/problems/find-common-characters/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 14 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an array of strings, find all characters that appear in every single string within the array, including duplicates, and return them in any order.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- "common characters" → "intersection of character sets"
+- "including duplicates" → "track minimum frequency of each character across all inputs instead of boolean presence"
+- "lowercase English letters" → "fixed-size frequency array (size 26) or hash map for O(1) space lookup"
+
+**Pattern(s) used:**
+
+- Frequency Map
+- Hash Table
+- Multiset Intersection
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a global frequency map (or array of size 26) with the character counts of the first word.
+- Iterate through each subsequent word in the input array.
+- For each word, construct a local frequency map of its characters.
+- Update the global frequency map by taking the minimum of the current global count and the local count for each character.
+- Reconstruct the final list of characters by adding each character to the result list according to its final minimum frequency.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N * L)`
+
+### Space Complexity
+
+`O(1)`
+
+> We iterate through all N words of average length L to count character frequencies, taking O(N * L) time. The auxiliary space is O(1) because the frequency maps only store lowercase English letters, which has a constant maximum size of 26.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single word in input — The loop for subsequent words is skipped, and all characters of the single word are correctly returned.
+- No common characters — The minimum frequency of all characters eventually drops to 0, correctly resulting in an empty list.
+- Duplicate characters in all words — The minimum frequency logic correctly preserves the lowest common count of duplicates (e.g., 'll' in 'bella' and 'roller').
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The intersection of multiple multisets can be computed by taking the element-wise minimum of their individual frequency counts.
+
+### Common Mistakes
+
+- Using a Set instead of a Map/Array, which discards duplicate occurrences of common characters.
+- Forgetting to reset or re-initialize the local frequency map for each new word in the loop.
+- Not handling characters that are completely missing in a subsequent word (their count must drop to 0).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to find common elements across multiple collections while preserving duplicates, think of it as finding the intersection of multisets. Use a frequency map (or a fixed-size array if the alphabet is limited) to represent each collection. Initialize your global state with the first collection's frequencies, and iteratively update it by taking the minimum frequency for each element across all collections.
+
+**Similar Problems to Practice:**
+
+- Intersection of Two Arrays II
+- First Unique Character in a String
+- Find All Anagrams in a String
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
