@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 45
-- **Easy** : 18
+- **Total Problems** : 46
+- **Easy** : 19
 - **Medium** : 25
 - **Hard** : 1
 
 **Last Updated**
 
-13 Aug 2026
+14 Aug 2026
 
 ---
 
@@ -41,6 +41,7 @@
 | 982 | LeetCode | [Minimum Increment to Make Array Unique](https://leetcode.com/problems/minimum-increment-to-make-array-unique/) | Medium | Java | 43 ms | 80.3 MB | 26 Jul 2026 | `Arrays/0982_Minimum_Increment_to_Make_Array_Unique.java` |
 | 985 | LeetCode | [Bag of Tokens](https://leetcode.com/problems/bag-of-tokens/) | Medium | Java | 6 ms | 45.1 MB | 24 Jul 2026 | `Arrays/0985_Bag_of_Tokens.java` |
 | 987 | LeetCode | [Reveal Cards In Increasing Order](https://leetcode.com/problems/reveal-cards-in-increasing-order/) | Medium | Java | 6 ms | 45.2 MB | 28 Jul 2026 | `Arrays/0987_Reveal_Cards_In_Increasing_Order.java` |
+| 1044 | LeetCode | [Find Common Characters](https://leetcode.com/problems/find-common-characters/) | Easy | Java | 21 ms | 46.9 MB | 14 Aug 2026 | `Arrays/1044_Find_Common_Characters.java` |
 | 1293 | LeetCode | [Three Consecutive Odds](https://leetcode.com/problems/three-consecutive-odds/) | Easy | Java | 0 ms | 44.4 MB | 25 Jul 2026 | `Arrays/1293_Three_Consecutive_Odds.java` |
 | 1538 | LeetCode | [Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/) | Medium | Java | 1 ms | 62 MB | 09 Jul 2026 | `Arrays/1538_Maximum_Points_You_Can_Obtain_from_Cards.java` |
 | 1605 | LeetCode | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Medium | Java | 19 ms | 82.5 MB | 07 Aug 2026 | `Arrays/1605_Minimum_Number_of_Days_to_Make_m_Bouquets.java` |
