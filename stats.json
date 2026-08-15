@@ -5,11 +5,12 @@
     "Math": 10,
     "Other": 16,
     "Sorting": 1,
-    "Strings": 4
+    "Strings": 4,
+    "Two_Pointers": 1
   },
-  "easy": 30,
+  "easy": 31,
   "hard": 0,
-  "lastSynced": "2026-08-15T12:33:00.854Z",
+  "lastSynced": "2026-08-15T18:00:05.872Z",
   "medium": 37,
-  "total": 76
+  "total": 77
 }
