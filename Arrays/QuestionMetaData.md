@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 46
-- **Easy** : 19
+- **Total Problems** : 47
+- **Easy** : 20
 - **Medium** : 25
 - **Hard** : 1
 
 **Last Updated**
 
-14 Aug 2026
+15 Aug 2026
 
 ---
 
@@ -51,6 +51,7 @@
 | 1938 | LeetCode | [Minimum Operations to Make the Array Increasing](https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing/) | Easy | Java | 2 ms | 47.2 MB | 11 Aug 2026 | `Arrays/1938_Minimum_Operations_to_Make_the_Array_Increasing.java` |
 | 1950 | LeetCode | [Sign of the Product of an Array](https://leetcode.com/problems/sign-of-the-product-of-an-array/) | Easy | Java | 0 ms | 45.3 MB | 26 Jul 2026 | `Arrays/1950_Sign_of_the_Product_of_an_Array.java` |
 | 2016 | LeetCode | [Reduction Operations to Make the Array Elements Equal](https://leetcode.com/problems/reduction-operations-to-make-the-array-elements-equal/) | Medium | Java | 38 ms | 71.6 MB | 27 Jul 2026 | `Arrays/2016_Reduction_Operations_to_Make_the_Array_Elements_Equal.java` |
+| 2102 | LeetCode | [Find the Middle Index in Array](https://leetcode.com/problems/find-the-middle-index-in-array/) | Easy | Java | 0 ms | 43.7 MB | 15 Aug 2026 | `Arrays/2102_Find_the_Middle_Index_in_Array.java` |
 | 2122 | LeetCode | [Count Special Quadruplets](https://leetcode.com/problems/count-special-quadruplets/) | Easy | Java | 9 ms | 45.1 MB | 09 Aug 2026 | `Arrays/2122_Count_Special_Quadruplets.java` |
 | 2231 | LeetCode | [Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array/) | Easy | Java | 1 ms | 47.6 MB | 12 Jul 2026 | `Arrays/2231_Find_First_Palindromic_String_in_the_Array.java` |
 | 2240 | LeetCode | [Intervals Between Identical Elements](https://leetcode.com/problems/intervals-between-identical-elements/) | Medium | Java | 170 ms | 189.3 MB | 05 Jul 2026 | `Arrays/2240_Intervals_Between_Identical_Elements.java` |
