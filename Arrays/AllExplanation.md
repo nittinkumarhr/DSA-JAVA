@@ -3920,3 +3920,97 @@ When asked to find common elements across multiple collections while preserving 
 
 =====================================================
 
+# 2102. Find the Middle Index in Array
+
+> 🔗 [LeetCode](https://leetcode.com/problems/find-the-middle-index-in-array/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 15 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find the leftmost index in an array where the sum of all elements strictly to its left is equal to the sum of all elements strictly to its right. If no such index exists, we return -1.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- sum of elements to the left equals sum of elements to the right → Prefix Sum / Running Sum
+- comparing left and right partitions of an array → Total sum tracking with dynamic state split
+
+**Pattern(s) used:**
+
+- Prefix Sum
+- Array Partitioning
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a prefix sum array `leftsum` of size `nums.length + 1` and a `total` sum variable.
+- Iterate through the array to populate `leftsum` (where `leftsum[i]` stores the sum of elements before index `i`) and compute the `total` sum of all elements.
+- Iterate through the array again from left to right.
+- For each index `i`, calculate the `rightsum` as `total - nums[i] - leftsum[i]`.
+- If `leftsum[i]` equals `rightsum`, return the current index `i` immediately to ensure the leftmost index is returned.
+- If the loop finishes without finding a match, return -1.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> We traverse the array twice: once to compute the prefix sums and total sum, and once to find the middle index, resulting in O(N) time. The space complexity is O(N) due to the auxiliary `leftsum` array of size N + 1 (which can be optimized to O(1) auxiliary space by maintaining a single running integer for the left sum).
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Index at the boundaries (0 or N-1) — The sum of elements to the left of index 0 is 0, and the sum of elements to the right of index N-1 is 0. The code correctly handles this by initializing leftsum[0] to 0.
+- Negative numbers in the array — Sums can decrease or fluctuate, but the algebraic relation total - nums[i] - leftsum[i] still holds true.
+- Single element array — The only element is at index 0. Left sum is 0, right sum is 0, so it should return 0. The code handles this correctly.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The sum of elements to the right of any index `i` can be computed in O(1) time if we know the total sum of the array and the sum of elements to the left of `i`: `right_sum = total_sum - nums[i] - left_sum`.
+
+### Common Mistakes
+
+- Forgetting that the sum of elements to the left of index 0 is 0 (and similarly for the right of the last index).
+- Not returning the first (leftmost) valid index when multiple middle indices exist.
+- Using nested loops to calculate left and right sums for each index, resulting in an inefficient O(N^2) time complexity.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem requires comparing properties (like sum, product, or count) of elements before and after a partition point, avoid recalculating these properties from scratch. Instead, compute a global aggregate (like total sum) first, and then use a single pass to dynamically maintain the 'left' state while deriving the 'right' state in O(1) time using the global aggregate.
+
+**Similar Problems to Practice:**
+
+- Find Pivot Index
+- Subarray Sum Equals K
+- Product of Array Except Self
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
