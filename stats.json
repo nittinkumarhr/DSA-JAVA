@@ -1,6 +1,6 @@
 {
   "byTopic": {
-    "Arrays": 35,
+    "Arrays": 36,
     "Hashing": 10,
     "Math": 10,
     "Other": 16,
@@ -8,9 +8,9 @@
     "Strings": 4,
     "Two_Pointers": 1
   },
-  "easy": 31,
+  "easy": 32,
   "hard": 0,
-  "lastSynced": "2026-08-15T18:00:05.872Z",
+  "lastSynced": "2026-08-16T10:31:39.549Z",
   "medium": 37,
-  "total": 77
+  "total": 78
 }
