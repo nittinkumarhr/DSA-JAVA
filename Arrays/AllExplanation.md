@@ -4014,3 +4014,97 @@ When a problem requires comparing properties (like sum, product, or count) of el
 
 =====================================================
 
+# 2847. Find Maximum Number of String Pairs
+
+> 🔗 [LeetCode](https://leetcode.com/problems/find-maximum-number-of-string-pairs/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 16 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find the maximum number of string pairs in an array of distinct strings, where a pair consists of two strings such that one is the exact reverse of the other.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- find pairs of elements with a specific relationship -> use a hash set to store complements for O(1) lookup
+- distinct strings in the input -> guarantees each string can pair with at most one other, eliminating complex frequency tracking
+
+**Pattern(s) used:**
+
+- Hash Table
+- Complementary Search
+- String Manipulation
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize an empty hash set to store the reversed versions of the strings we have already processed.
+- Iterate through each string in the input array.
+- Check if the current string exists in the hash set. If it does, a matching pair is found; increment the pair counter.
+- Reverse the current string and add it to the hash set so that its counterpart (if it appears later) can match with it.
+- Return the total count of pairs.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N * L)`
+
+### Space Complexity
+
+`O(N * L)`
+
+> We iterate through N strings, and for each string of average length L, we perform a reverse operation and a hash set lookup/insertion, both taking O(L) time. The space complexity is O(N * L) to store the reversed strings in the hash set.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- No pairs exist — the count remains 0, and the set stores all reversed strings without matches.
+- All strings form pairs — the algorithm correctly pairs each one and returns N/2.
+- Strings of length 1 — if single-character strings are allowed, reversing them yields the same character. However, since input strings are distinct, self-pairing is naturally avoided.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Instead of checking all pairs with a nested loop in O(N^2) time, we can store the 'complement' (the reversed string) of each visited string in a hash set. This turns the search into a single-pass O(1) lookup per element.
+
+### Common Mistakes
+
+- Adding the original string to the set instead of its reverse, which fails to match pairs correctly.
+- Double counting pairs by adding both the string and its reverse unconditionally without checking existence first.
+- Using a nested loop approach which results in O(N^2 * L) time complexity, leading to inefficiency on larger inputs.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to find pairs of elements that satisfy a symmetric relationship (like A + B = K, or A is the reverse of B), avoid the brute-force O(N^2) approach. Instead, use a Hash Set or Hash Map to store either the elements themselves or their 'target complements' as you iterate. For each element, check if its complement is already in the set. This 'Complementary Search' pattern reduces the time complexity from quadratic to linear.
+
+**Similar Problems to Practice:**
+
+- Two Sum
+- Group Anagrams
+- Find All Anagrams in a String
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
