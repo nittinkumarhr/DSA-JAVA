@@ -4108,3 +4108,98 @@ When asked to find pairs of elements that satisfy a symmetric relationship (like
 
 =====================================================
 
+# 1786. Count the Number of Consistent Strings
+
+> 🔗 [LeetCode](https://leetcode.com/problems/count-the-number-of-consistent-strings/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 17 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to count how many strings in a given array contain only characters that are present in a specified 'allowed' string.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- allowed characters set -> use a Hash Set, boolean array, or bitmask for O(1) lookups
+- all characters in a string must belong to a set -> character-by-character validation against the allowed set
+
+**Pattern(s) used:**
+
+- Hash Table
+- Bit Manipulation
+- String Validation
+
+---
+
+## 🛠 Solution Approach
+
+- Store all characters of the 'allowed' string in a lookup structure (like a boolean array of size 26 or a bitmask).
+- Initialize a counter to 0 to keep track of consistent strings.
+- Iterate through each word in the input array.
+- For each word, check if every character exists in the lookup structure.
+- If all characters of a word are present in the allowed set, increment the counter.
+- Return the final count.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N + M * L)`
+
+### Space Complexity
+
+`O(1)`
+
+> Creating the lookup set takes O(N) time where N is the length of 'allowed' (at most 26 characters). Iterating through each of the M words of average length L takes O(M * L) time. The space complexity is O(1) because the lookup set/bitmask stores at most 26 unique lowercase English characters.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- allowed string has length 1 — ensure single-character sets are correctly matched.
+- words containing duplicate characters — ensure duplicate characters do not falsely invalidate or double-count a word.
+- words with length longer than allowed — ensure the validation checks every character of the word, not just up to the length of allowed.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Since the alphabet is limited to 26 lowercase English letters, we can optimize the lookup table to a simple boolean array of size 26 or a single 32-bit integer (bitmask), achieving O(1) auxiliary space and extremely fast lookups.
+
+### Common Mistakes
+
+- Using a nested loop that searches the 'allowed' string directly using .indexOf() or .contains(), resulting in O(N * M * L) time complexity.
+- Not breaking early out of the inner loop as soon as an invalid character is found, leading to unnecessary operations.
+- Confusing the direction of the subset check (checking if 'allowed' is a subset of the word instead of the word being a subset of 'allowed').
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to validate strings against a set of allowed characters, always convert the allowed characters into an O(1) lookup structure (like a hash set, boolean array, or bitmask) first. Then, iterate through each candidate string and perform a character-by-character check, breaking early on the first mismatch to optimize performance.
+
+**Similar Problems to Practice:**
+
+- Jewels and Stones
+- Keyboard Row
+- Find Words That Can Be Formed by Characters
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
