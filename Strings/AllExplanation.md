@@ -377,3 +377,98 @@ When dealing with nested or matching structures like brackets, HTML tags, or pai
 
 =====================================================
 
+# 1283. Reformat Date
+
+> 🔗 [LeetCode](https://leetcode.com/problems/reformat-date/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 18 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+Convert a date string from 'Day Month Year' format (with English ordinal suffixes for days and abbreviated month names) into the standard 'YYYY-MM-DD' ISO format.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- "Day Month Year" format → String splitting by delimiter
+- Abbreviated month names → Hash map lookup for translation
+- Ordinal suffixes (st, nd, rd, th) → Slicing/substring manipulation
+- Fixed-width output (e.g., 2-digit day/month) → Conditional zero-padding
+
+**Pattern(s) used:**
+
+- String Manipulation
+- Hash Map / Lookup Table
+
+---
+
+## 🛠 Solution Approach
+
+- Split the input date string by spaces to isolate the day, month, and year components.
+- Initialize a lookup map containing the 12 month abbreviations mapped to their corresponding 2-digit string representations (e.g., 'Jan' -> '01').
+- Extract the numeric day by removing the last two characters (the ordinal suffix) from the day component.
+- Pad the day with a leading '0' if it is a single digit (length of 1).
+- Construct and return the final formatted string in the order of 'YYYY-MM-DD' using a StringBuilder.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(1)`
+
+### Space Complexity
+
+`O(1)`
+
+> The input string has a strictly bounded length (at most 15 characters), and the month lookup map has a constant size of 12 elements, resulting in constant time and space complexities.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single-digit days (e.g., '1st', '2nd') — Requires prepending a leading '0' to ensure a 2-digit 'DD' format.
+- Double-digit days (e.g., '20th', '31st') — Must be parsed correctly without adding an extra leading '0'.
+- Varying ordinal suffixes ('st', 'nd', 'rd', 'th') — Handled uniformly by stripping the last two characters of the day string regardless of the specific suffix.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The components of the date are always separated by spaces in a fixed order (Day, Month, Year), and the ordinal suffix of the day is always exactly two characters long, allowing for deterministic splitting and slicing.
+
+### Common Mistakes
+
+- Hardcoding the day substring indices (e.g., assuming day is always index 0 to 2) instead of dynamically slicing relative to the string's length, which fails for single-digit days.
+- Forgetting to pad single-digit days or months with a leading zero.
+- Manually writing complex conditional logic for month conversion instead of using a clean hash map or list lookup.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When faced with string reformatting and translation problems, first identify the delimiters to split the input into logical tokens. Use a hash map or lookup array for translating categorical tokens (like months or words) to their target values. Finally, apply conditional padding or slicing to normalize variable-length tokens (like days or numbers) to a fixed-width format before joining them back together.
+
+**Similar Problems to Practice:**
+
+- Reformat Phone Number
+- Compare Version Numbers
+- Most Common Word
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
