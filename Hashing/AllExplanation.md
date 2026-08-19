@@ -347,5 +347,97 @@ When asked to sort elements according to a custom, non-standard order, avoid sta
 
 =====================================================
 
+# 1297. Maximum Number of Balloons
 
+> 🔗 [LeetCode](https://leetcode.com/problems/maximum-number-of-balloons/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 19 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+Given a string, find the maximum number of times the word 'balloon' can be formed using its characters. Each character in the input string can be used at most once, meaning we must count the frequencies of the constituent characters ('b', 'a', 'l', 'o', 'n') and find the limiting bottleneck.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- form a target word multiple times -> frequency counting and bottleneck calculation
+- characters can be used at most once -> hash table or frequency array
+
+**Pattern(s) used:**
+
+- Frequency Counting
+- Hash Table
+- Bottleneck Analysis
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a frequency array of size 26 to count occurrences of each lowercase English letter in the input string.
+- Iterate through the input string and populate the frequency array.
+- Retrieve the counts for the characters 'b', 'a', 'l', 'o', and 'n'.
+- Divide the counts of 'l' and 'o' by 2, since each 'balloon' requires two of each.
+- Return the minimum of these five values, which represents the maximum number of complete 'balloon' words that can be formed.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We iterate through the string of length N exactly once to count character frequencies. The space complexity is O(1) because the frequency array size is fixed at 26, regardless of the input size.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- String length is less than 7 — handled correctly because the counts of required characters will not be sufficient, resulting in a minimum of 0.
+- No characters from 'balloon' present — all relevant counts will be 0, and the minimum returned will be 0.
+- Abundant 'b', 'a', 'n' but zero 'l' or 'o' — division by 2 yields 0, correctly identifying 'l' or 'o' as the bottleneck.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The maximum number of target words we can form is strictly limited by the 'bottleneck' character—the character that has the lowest ratio of (available count / required count in target word).
+
+### Common Mistakes
+
+- Forgetting to divide the counts of 'l' and 'o' by 2, leading to an overestimation of the possible words.
+- Using an expensive HashMap instead of a fixed-size array of size 26 for character counting.
+- Not handling cases where some required characters are completely missing from the input string.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To solve any problem asking for the maximum number of target patterns/words that can be formed from a source pool: 1) Count the frequencies of all elements in the source pool. 2) Identify the required frequency of each element in a single target instance. 3) Divide the source count of each element by its target requirement. 4) The minimum of these quotients is your bottleneck and final answer.
+
+**Similar Problems to Practice:**
+
+- Find Words That Can Be Formed by Characters
+- Ransom Note
+- Minimum Window Substring
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
 
