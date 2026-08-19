@@ -4203,3 +4203,96 @@ When asked to validate strings against a set of allowed characters, always conve
 
 =====================================================
 
+# 1781. Check If Two String Arrays are Equivalent
+
+> 🔗 [LeetCode](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 19 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+Determine if two string arrays represent the same concatenated string by comparing their characters in order.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- compare concatenated string arrays → multi-level pointer traversal
+- equivalent string representation → character-by-character stream comparison
+
+**Pattern(s) used:**
+
+- Two Pointers
+- String Manipulation
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize four pointers: two to track the current word index in each array, and two to track the current character index within those words.
+- Loop while both word pointers are within their respective array bounds.
+- Compare the characters at the current pointer positions; if they do not match, return false.
+- Increment the character pointers. If a character pointer reaches the end of its current word, reset it to 0 and increment the corresponding word pointer.
+- After the loop, return true if and only if both word pointers have reached the end of their arrays simultaneously.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N + M)`
+
+### Space Complexity
+
+`O(1)`
+
+> We traverse each character of both string arrays exactly once, using only a constant number of pointer variables for tracking positions without allocating new strings.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Arrays of different total lengths — handled because one pointer pair will exhaust its array before the other, resulting in a false return.
+- Single-character strings — handled correctly as pointers increment and transition to the next word naturally.
+- One array is a prefix of the other — handled by verifying both arrays are fully exhausted at the end.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Instead of physically concatenating the arrays into full strings (which consumes O(N + M) extra memory), we can simulate the concatenated string on the fly using pointers to track our position across both the array level and the string level.
+
+### Common Mistakes
+
+- Concatenating strings using the '+' operator in a loop, which leads to quadratic O(N^2) time complexity due to string immutability.
+- Failing to verify that both arrays are fully exhausted at the end of the comparison, leading to false positives when one array is a prefix of the other.
+- Using nested loops that reset incorrectly, causing index out of bounds errors.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to compare two sequences formed by concatenating nested collections (like arrays of strings), avoid flattening or concatenating them physically. Instead, use a multi-level pointer strategy (outer index for the container, inner index for the element) to stream and compare elements one-by-one in O(1) auxiliary space.
+
+**Similar Problems to Practice:**
+
+- Backspace String Compare
+- Merge Strings Alternately
+- Compare Version Numbers
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
