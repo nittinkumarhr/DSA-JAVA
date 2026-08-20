@@ -4296,3 +4296,97 @@ When asked to compare two sequences formed by concatenating nested collections (
 
 =====================================================
 
+# 0822. Unique Morse Code Words
+
+> 🔗 [LeetCode](https://leetcode.com/problems/unique-morse-code-words/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 20 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find the number of unique Morse code representations among a given list of words. Each lowercase English letter maps to a specific Morse code string, and we need to transform each word into its concatenated Morse code representation and determine the count of unique transformations.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- number of unique... -> HashSet to store unique elements and return its size
+- map each character to a representation -> Direct indexing using character arithmetic (c - 'a') with a lookup array
+
+**Pattern(s) used:**
+
+- Hash Table / HashSet
+- String Manipulation
+
+---
+
+## 🛠 Solution Approach
+
+- Define a static array of 26 strings containing the Morse code representations for 'a' through 'z'.
+- Initialize a HashSet of strings to store the unique Morse code transformations.
+- Iterate through each word in the input array.
+- For each word, use a StringBuilder to build its Morse code representation by mapping each character to its corresponding Morse code string using 'c - a' as the index.
+- Add the fully constructed Morse code string to the HashSet.
+- Return the size of the HashSet, which represents the number of unique transformations.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N * L)`
+
+### Space Complexity
+
+`O(N * L)`
+
+> We iterate through every character of every word to build the Morse code representation, taking O(N * L) time where N is the number of words and L is the maximum length of a word. In the worst case, all transformations are unique, requiring O(N * L) space to store them in the HashSet.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single word in input — The set will contain exactly 1 element, returning 1 correctly.
+- All words are identical — The set will filter out duplicates and return 1.
+- Words that map to the same Morse code (collisions) — The HashSet naturally handles collisions by only storing unique representations, which is the core requirement.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The core insight is that we can map characters to their Morse code representations in O(1) time using an array lookup with 'c - a', and we can use a HashSet to automatically handle deduplication of the resulting concatenated strings.
+
+### Common Mistakes
+
+- Using a List instead of a Set, which leads to manual deduplication that is inefficient and error-prone.
+- Using string concatenation with '+' in a loop instead of StringBuilder, creating unnecessary intermediate string objects.
+- Forgetting to subtract 'a' from the character, leading to IndexOutOfBoundsException.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks to find the count of 'unique' transformations or representations after some mapping, always think of using a Set (HashSet). First, define the mapping mechanism (like an array for fixed-size alphabets or a HashMap for dynamic keys). Then, process each input item to its mapped representation, insert it into the Set, and return the Set's size. This pattern guarantees O(1) lookups and automatic deduplication.
+
+**Similar Problems to Practice:**
+
+- Destination City
+- Keyboard Row
+- Uncommon Words from Two Sentences
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
