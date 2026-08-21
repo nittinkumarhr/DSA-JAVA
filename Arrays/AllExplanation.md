@@ -4390,3 +4390,95 @@ When a problem asks to find the count of 'unique' transformations or representat
 
 =====================================================
 
+# 2210. Find Target Indices After Sorting Array
+
+> 🔗 [LeetCode](https://leetcode.com/problems/find-target-indices-after-sorting-array/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 21 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find all the indices of a given target element in an array after the array has been sorted in non-decreasing order.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- after sorting array → signals sorting or counting elements relative to the target
+- indices of target → signals binary search or tracking counts of smaller/equal elements
+
+**Pattern(s) used:**
+
+- Sorting
+- Counting
+- Greedy / Math
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two counters: one for elements strictly less than the target, and one for elements equal to the target.
+- Iterate through the array once to populate both counters.
+- The starting index of the target in the sorted array will be equal to the count of elements strictly less than the target.
+- Generate consecutive indices starting from this count, up to the number of times the target appears, and add them to the result list.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We only perform a single pass over the array to count elements, requiring constant extra space (excluding the output list). This is more optimal than the O(N log N) sorting approach.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Target not present in array — count of equal elements is 0, returning an empty list correctly.
+- All elements equal to target — count of smaller elements is 0, returning indices from 0 to N-1.
+- Target is smaller than all elements — count of smaller and equal elements are both 0, returning an empty list.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+In a sorted array, the exact starting index of any element is equal to the count of elements strictly smaller than it, and its duplicates will occupy consecutive subsequent indices.
+
+### Common Mistakes
+
+- Unnecessarily sorting the array, which degrades the time complexity to O(N log N).
+- Failing to handle the case where the target is completely absent from the array.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks for indices or properties of elements in a sorted version of an array, ask yourself if you actually need to sort it. Often, you can determine an element's final sorted position simply by counting how many elements are smaller than it, reducing the time complexity from O(N log N) to O(N).
+
+**Similar Problems to Practice:**
+
+- How Many Numbers Are Smaller Than the Current Number
+- Find First and Last Position of Element in Sorted Array
+- Sort Colors
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
