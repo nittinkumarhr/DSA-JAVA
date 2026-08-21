@@ -4398,7 +4398,7 @@ When a problem asks to find the count of 'unique' transformations or representat
 
 ## 📝 Problem Summary
 
-Given an integer array and a target value, the goal is to find all indices where the target element would appear if the array were sorted in non-decreasing order. The resulting indices must be returned in increasing order.
+Given an unsorted array and a target value, find all indices where the target would appear if the array were sorted in non-decreasing order.
 
 ---
 
@@ -4406,22 +4406,22 @@ Given an integer array and a target value, the goal is to find all indices where
 
 **How to spot this pattern in the problem statement:**
 
-- indices after sorting → signals counting elements smaller than the target to find its starting position
-- find target in sorted array → signals binary search or counting-based rank determination
+- indices after sorting -> can be determined by counting elements smaller than and equal to the target without actual sorting
+- non-decreasing order -> relative order depends strictly on element values, suggesting counting or bucket-based positioning
 
 **Pattern(s) used:**
 
 - Counting
-- Sorting-free Rank Determination
+- Linear Scan
 
 ---
 
 ## 🛠 Solution Approach
 
-- Initialize two counters: one for elements strictly less than the target, and another for elements equal to the target.
-- Iterate through the array in a single pass to populate both counters.
-- The target elements in a sorted array will occupy consecutive indices starting exactly at the count of elements smaller than the target.
-- Generate the result list by starting from the count of smaller elements and incrementing it for each occurrence of the target.
+- Initialize two counters: one for elements strictly less than the target, and one for elements equal to the target.
+- Iterate through the array once, updating both counters.
+- The starting index of the target in the sorted array will be equal to the count of elements strictly less than the target.
+- Generate a list of sequential indices starting from this count, with a length equal to the count of elements equal to the target.
 
 ---
 
@@ -4435,15 +4435,15 @@ Given an integer array and a target value, the goal is to find all indices where
 
 `O(1)`
 
-> The algorithm performs a single linear scan of the array of size N to count elements, and the output list generation takes at most O(N) steps, using no extra auxiliary space beyond the output list.
+> We perform a single pass over the array of size N to count elements, and then a loop of at most N iterations to populate the result list, using constant auxiliary space.
 
 ---
 
 ## ⚠️ Edge Cases to Consider
 
-- Target not present in array — handled correctly because the count of equal elements will be 0, resulting in an empty list.
-- All elements equal to target — handled correctly as the count of smaller elements is 0, and indices from 0 to N-1 are returned.
-- Array is already sorted — the counting logic remains identical and correct without requiring any sorting overhead.
+- Target not present in array — handled correctly because the count of equal elements will be 0, returning an empty list.
+- All elements are equal to target — handled correctly as the count of smaller elements is 0, and indices from 0 to N-1 are returned.
+- Target is smaller than all elements — handled correctly as smaller count is 0 and equal count is 0, returning an empty list.
 
 ---
 
@@ -4451,19 +4451,19 @@ Given an integer array and a target value, the goal is to find all indices where
 
 ### Key Observation
 
-Instead of actually sorting the array (which takes O(N log N) time), we can determine the exact sorted position of any element by simply counting how many elements are smaller than it. This is the fundamental principle of Counting Sort.
+Instead of sorting the entire array in O(N log N) time, we can determine the exact sorted positions of any element in O(N) time by simply counting how many elements are smaller than it and how many are equal to it.
 
 ### Common Mistakes
 
 - Actually sorting the array using O(N log N) sorting algorithms, which is less efficient than the O(N) counting approach.
-- Off-by-one errors when calculating the starting index or the range of target indices.
-- Failing to handle cases where the target does not exist in the array.
+- Off-by-one errors when generating the final list of indices.
+- Failing to handle the case where the target does not exist in the array.
 
 ---
 
 ## 🔁 How to Approach Similar Problems
 
-When a problem asks for positions or ranks of elements in a sorted array, consider if you can avoid sorting entirely by counting. By counting elements smaller than, equal to, or greater than a target, you can mathematically determine their final sorted positions in O(N) time. This is a highly transferable technique derived from Counting Sort.
+When a problem asks for properties of an array 'after sorting' but only focuses on a specific element or value, avoid sorting the entire array. Instead, think about how the final position of an element is determined: its index in a sorted array is exactly equal to the number of elements strictly smaller than it. Use counting techniques to solve these problems in linear time.
 
 **Similar Problems to Practice:**
 
@@ -4481,5 +4481,6 @@ When a problem asks for positions or ranks of elements in a sorted array, consid
 - **Revision notes:**
 
 =====================================================
+
 
 
