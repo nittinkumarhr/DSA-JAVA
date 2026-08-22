@@ -6,16 +6,16 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 
 | Difficulty | Count |
 |------------|-------|
-| 🟢 Easy    | 40 |
+| 🟢 Easy    | 41 |
 | 🟡 Medium  | 37 |
 | 🔴 Hard    | 0 |
-| **Total**  | **86** |
+| **Total**  | **87** |
 
 ## By Topic
 
 | Topic | Solved |
 |-------|--------|
-| Arrays | 42 |
+| Arrays | 43 |
 | Other | 16 |
 | Hashing | 11 |
 | Math | 10 |
@@ -47,4 +47,4 @@ leetcode-solutions/
 └── Other/
 ```
 
-*Last updated: 21 Aug 2026*
+*Last updated: 22 Aug 2026*
