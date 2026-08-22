@@ -4482,5 +4482,98 @@ When a problem asks for properties of an array 'after sorting' but only focuses 
 
 =====================================================
 
+# 1899. Count Items Matching a Rule
 
+> 🔗 [LeetCode](https://leetcode.com/problems/count-items-matching-a-rule/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 22 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to count how many items in a list of triplets (where each triplet represents [type, color, name]) match a given rule. The rule is defined by a key ('type', 'color', or 'name') and a target value.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- items[i] = [type_i, color_i, name_i] -> Fixed-size tuple representation
+- ruleKey is 'type', 'color', or 'name' -> Mapping descriptive keys to array indices
+- Count items matching... -> Linear scan with a counter
+
+**Pattern(s) used:**
+
+- Linear Scan
+- Array Index Mapping
+
+---
+
+## 🛠 Solution Approach
+
+- Map the 'ruleKey' to its corresponding index in the item list: 0 for 'type', 1 for 'color', and 2 for 'name'.
+- Initialize a counter variable to 0.
+- Iterate through each item in the 'items' list.
+- For each item, check if the string at the mapped index equals 'ruleValue'.
+- If it matches, increment the counter.
+- Return the final counter value.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We perform a single pass over the list of N items, doing constant-time string comparisons and index lookups, requiring no additional memory.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- No matching items — The counter remains 0, which is correct.
+- All items matching — The counter correctly reaches N.
+- Empty items list — The loop does not execute, returning 0 immediately.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Instead of checking the 'ruleKey' inside the loop for every single item, we can resolve the target index (0, 1, or 2) once before the loop starts, simplifying the inner loop comparison.
+
+### Common Mistakes
+
+- Using '==' instead of '.equals()' in Java to compare strings, which compares memory references instead of actual content.
+- Declaring the counter variable inside the loop scope (as seen in the buggy draft code), causing compilation errors or resetting the count on each iteration.
+- Evaluating the 'ruleKey' condition inside the loop repeatedly instead of resolving the index once externally.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When dealing with structured tuples represented as arrays/lists, map the descriptive query keys to their corresponding indices first. This decouples the metadata resolution from the iteration logic, allowing you to run a clean, single-pass linear scan using direct index lookups.
+
+**Similar Problems to Practice:**
+
+- Find Words That Can Be Formed by Characters
+- Destination City
+- Unique Morse Code Words
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
 
