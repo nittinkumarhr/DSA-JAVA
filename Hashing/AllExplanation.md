@@ -441,3 +441,95 @@ To solve any problem asking for the maximum number of target patterns/words that
 
 =====================================================
 
+# 1363. Greatest English Letter in Upper and Lower Case
+
+> 🔗 [LeetCode](https://leetcode.com/problems/greatest-english-letter-in-upper-and-lower-case/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 23 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find the lexicographically greatest English letter that appears in both its uppercase and lowercase forms within a given string. If no such letter exists, we return an empty string.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- greatest letter -> Reverse iteration (from 'Z' to 'A') to find the optimal solution first
+- both lowercase and uppercase -> Set lookup or bitmasking for existence of paired elements
+
+**Pattern(s) used:**
+
+- Hash Table
+- Greedy / Reverse Search
+
+---
+
+## 🛠 Solution Approach
+
+- Insert all characters of the input string into a hash set to enable O(1) lookup.
+- Iterate through the uppercase English alphabet in reverse order, starting from 'Z' down to 'A'.
+- For each uppercase character, check if both it and its lowercase counterpart exist in the hash set.
+- Return the first character that satisfies this condition as a string, as reverse iteration guarantees it is the greatest.
+- If the loop completes without finding any matching pair, return an empty string.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> Populating the hash set takes O(N) time where N is the length of the string. The search phase takes O(1) time because we iterate a constant 26 times. The space complexity is O(1) because the hash set can store at most 52 unique English characters.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- No matching pairs — The loop completes and correctly returns an empty string.
+- Only lowercase or only uppercase letters — The set will only contain one case, so the pair check fails and returns an empty string.
+- Multiple valid pairs — Handled correctly by reverse iteration ('Z' to 'A'), ensuring the greatest letter is returned first.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Instead of comparing every character in the string against every other character, we can store all characters in a set and iterate backwards through the alphabet ('Z' to 'A'). The first letter we find that has both cases present is guaranteed to be the greatest.
+
+### Common Mistakes
+
+- Iterating from 'A' to 'Z' and keeping track of the maximum, which is less elegant and slower than returning early during a reverse search.
+- Using nested loops to compare every character pair, leading to an unnecessary O(N^2) time complexity.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to find the 'greatest' or 'best' element satisfying a condition from a small, fixed domain (like the alphabet), prefer iterating backwards through the domain itself rather than the input. Use a hash set or boolean array/bitmask for O(1) existence checks of paired states.
+
+**Similar Problems to Practice:**
+
+- First Letter to Appear Twice
+- Keyboard Row
+- Find Words That Can Be Formed by Characters
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
