@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 5
-- **Easy** : 1
+- **Total Problems** : 6
+- **Easy** : 2
 - **Medium** : 4
 - **Hard** : 0
 
 **Last Updated**
 
-19 Aug 2026
+23 Aug 2026
 
 ---
 
@@ -22,3 +22,4 @@
 | 807 | LeetCode | [Custom Sort String](https://leetcode.com/problems/custom-sort-string/) | Medium | Java | 2 ms | 43 MB | 01 Aug 2026 | `Hashing/0807_Custom_Sort_String.java` |
 | 1065 | LeetCode | [Binary String With Substrings Representing 1 To N](https://leetcode.com/problems/binary-string-with-substrings-representing-1-to-n/) | Medium | Java | 0 ms | 42.6 MB | 08 Jul 2026 | `Hashing/1065_Binary_String_With_Substrings_Representing_1_To_N.java` |
 | 1297 | LeetCode | [Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/) | Easy | Java | 2 ms | 43 MB | 19 Aug 2026 | `Hashing/1297_Maximum_Number_of_Balloons.java` |
+| 1363 | LeetCode | [Greatest English Letter in Upper and Lower Case](https://leetcode.com/problems/greatest-english-letter-in-upper-and-lower-case/) | Easy | Java | 6 ms | 43.7 MB | 23 Aug 2026 | `Hashing/1363_Greatest_English_Letter_in_Upper_and_Lower_Case.java` |
