@@ -472,3 +472,95 @@ When faced with string reformatting and translation problems, first identify the
 
 =====================================================
 
+# 1970. Sorting the Sentence
+
+> 🔗 [LeetCode](https://leetcode.com/problems/sorting-the-sentence/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 24 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to reconstruct a shuffled sentence where each word has its original 1-based position appended to its end. We need to extract these positions, strip them from the words, place the words in their correct order, and return the reconstructed sentence.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- words with appended numbers → bucket sort / direct placement
+- reconstruct original order from shuffled indices → direct indexing
+
+**Pattern(s) used:**
+
+- String Manipulation
+- Direct Placement
+
+---
+
+## 🛠 Solution Approach
+
+- Split the input sentence by spaces to get an array of shuffled words.
+- Initialize a result string array of the same size as the split array.
+- Iterate through each word, extract the last character, and convert it to a 0-based index by subtracting '1'.
+- Store the word (excluding the last character) at the calculated index in the result array.
+- Join the sorted words from the result array using a StringBuilder, separating them with single spaces, and return the final string.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> We iterate through the string of length N to split and process each character exactly once, and we use O(N) auxiliary space to store the split words and the reconstructed sentence.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single word sentence — The loop runs once, extracts index '1', and correctly returns the word without the digit.
+- Max length sentence (up to 9 words) — The indices are single digits ('1'-'9'), so extracting the last character works without needing multi-digit parsing.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The appended numbers are 1-based indices that directly map to the correct positions in the output array, allowing us to place each word in its final position in O(1) time per word without using a general-purpose sorting algorithm.
+
+### Common Mistakes
+
+- Using a heavy sorting algorithm like Arrays.sort() which takes O(N log N) instead of O(N) direct placement.
+- Off-by-one errors when converting 1-based string indices to 0-based array indices.
+- Forgetting to strip the trailing digit from the word before appending it to the final result.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem requires sorting elements based on explicit, small, bounded integer keys embedded in the input, avoid comparison-based sorting. Instead, use direct placement (bucket sort style) by mapping the keys directly to array indices. This reduces the time complexity from O(N log N) to O(N).
+
+**Similar Problems to Practice:**
+
+- Shuffle String
+- Cells in a Range on an Excel Sheet
+- Reconstruct Original Digits from English
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
