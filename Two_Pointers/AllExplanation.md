@@ -95,3 +95,97 @@ To determine if one sequence is a subsequence of another while preserving order,
 
 =====================================================
 
+# 2128. Reverse Prefix of Word
+
+> 🔗 [LeetCode](https://leetcode.com/problems/reverse-prefix-of-word/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 25 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+Given a 0-indexed string `word` and a character `ch`, the task is to find the first occurrence of `ch` in `word` and reverse the segment of the string from index 0 up to the index of this first occurrence (inclusive). If the character does not exist in the string, the original string should be returned unchanged.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- reverse a segment/prefix → Two-pointer swap technique
+- first occurrence of a character → Linear search / single-pass scanning
+
+**Pattern(s) used:**
+
+- Two Pointers
+- String Manipulation
+
+---
+
+## 🛠 Solution Approach
+
+- Convert the input string into a mutable character array to allow in-place modifications.
+- Iterate through the character array from left to right to locate the first index `i` where `arr[i] == ch`.
+- If the character `ch` is found, invoke a helper method to reverse the subarray from index `0` to `i` using two pointers (`start` and `end`) swapping elements towards the center.
+- Break out of the loop immediately after the first occurrence is processed to avoid reversing subsequent segments.
+- Convert the modified character array back into a string and return it.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Finding the character takes O(N) time where N is the length of the string, and reversing the prefix takes at most O(N) time, resulting in O(N) overall time complexity. The space complexity is O(N) to store the character array representation of the string in Java since strings are immutable.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Character 'ch' not present in 'word' — The loop completes without finding 'ch', leaving the array unmodified and returning the original string correctly.
+- Character 'ch' is at the very first index (index 0) — The reverse function is called with start = 0 and end = 0, which immediately terminates without swapping, returning the original string.
+- Character 'ch' is at the very last index — The entire string is reversed correctly as the loop finds 'ch' at index N-1.
+- Multiple occurrences of 'ch' — The code breaks after the first occurrence, ensuring only the prefix up to the first 'ch' is reversed.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The problem only requires reversing up to the first occurrence of the target character. Once this character is found and the prefix is reversed, we can immediately stop processing, making a single-pass linear scan highly efficient.
+
+### Common Mistakes
+
+- Reversing all occurrences of the character instead of stopping at the first occurrence.
+- Off-by-one errors when setting the boundaries for the two-pointer swap (e.g., reversing up to `i-1` instead of `i`).
+- Inefficiently recreating strings repeatedly during concatenation instead of using an in-place character array or StringBuilder.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to reverse a specific segment or the entirety of a sequence, look for the 'Two Pointers' pattern. Initialize one pointer at the start of the target segment and another at the end, swapping their elements and moving them toward each other until they meet. Always identify the exact boundary conditions (indices) of the segment to be reversed before initiating the swap loop.
+
+**Similar Problems to Practice:**
+
+- Reverse String
+- Reverse Vowels of a String
+- Reverse Words in a String III
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
