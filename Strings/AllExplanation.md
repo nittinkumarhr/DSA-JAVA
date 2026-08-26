@@ -564,3 +564,95 @@ When a problem requires sorting elements based on explicit, small, bounded integ
 
 =====================================================
 
+# 2401. Count Asterisks
+
+> 🔗 [LeetCode](https://leetcode.com/problems/count-asterisks/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 26 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to count the number of asterisks ('*') in a given string, excluding any asterisks that are located between pairs of vertical bars ('|'). The vertical bars are guaranteed to be balanced and non-nested.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- excluding characters between pairs of delimiters → boolean toggle state tracking
+- sequential processing with alternating states → single-pass state machine
+
+**Pattern(s) used:**
+
+- State Machine
+- String Simulation
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a boolean flag 'insidePipe' to false and an integer 'count' to 0.
+- Iterate through the string character by character.
+- If the current character is a vertical bar ('|'), toggle the 'insidePipe' flag to its opposite value.
+- If the current character is an asterisk ('*') and 'insidePipe' is false, increment 'count'.
+- Return the accumulated 'count' after processing the entire string.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We perform a single pass over the string of length N, requiring O(N) time, and use only a few primitive variables, requiring O(1) auxiliary space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- No vertical bars present — 'insidePipe' remains false, and all asterisks are correctly counted.
+- No asterisks present — The counter remains 0, which is correct.
+- All asterisks enclosed in vertical bars — 'insidePipe' is true during every asterisk encounter, returning 0.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Because the vertical bars are guaranteed to be paired and non-nested, we do not need a stack to track depth; a simple boolean toggle is sufficient to represent the binary state of being inside or outside a pair of bars.
+
+### Common Mistakes
+
+- Using a stack or split operations which increases space complexity to O(N) unnecessarily.
+- Incorrectly ordering the toggle and the asterisk check, leading to off-by-one boundary errors.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem requires ignoring or processing elements based on paired, non-nested delimiters, use a single-pass state machine with a boolean flag or counter. If nesting is possible, upgrade the state tracking to a stack or depth counter. Always verify if the delimiters are guaranteed to be balanced before choosing the simpler flag-based approach.
+
+**Similar Problems to Practice:**
+
+- Score of Parentheses
+- Minimum Add to Make Parentheses Valid
+- Remove Outermost Parentheses
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
