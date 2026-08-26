@@ -6,10 +6,10 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 
 | Difficulty | Count |
 |------------|-------|
-| 🟢 Easy    | 44 |
+| 🟢 Easy    | 45 |
 | 🟡 Medium  | 37 |
 | 🔴 Hard    | 0 |
-| **Total**  | **90** |
+| **Total**  | **91** |
 
 ## By Topic
 
@@ -19,7 +19,7 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 | Other | 16 |
 | Hashing | 12 |
 | Math | 10 |
-| Strings | 6 |
+| Strings | 7 |
 | Two Pointers | 2 |
 | Sorting | 1 |
 
@@ -47,4 +47,4 @@ leetcode-solutions/
 └── Other/
 ```
 
-*Last updated: 25 Aug 2026*
+*Last updated: 26 Aug 2026*
