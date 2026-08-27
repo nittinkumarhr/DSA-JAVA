@@ -533,3 +533,99 @@ When asked to find the 'greatest' or 'best' element satisfying a condition from 
 
 =====================================================
 
+# 1915. Check if One String Swap Can Make Strings Equal
+
+> 🔗 [LeetCode](https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 27 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+Determine if two strings of equal length can be made identical by swapping at most one pair of characters in one of the strings.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- "at most one string swap" → "limit of 2 mismatched positions"
+- "make strings equal" → "compare character-by-character and count differences"
+
+**Pattern(s) used:**
+
+- String Manipulation
+- Two-Pointer/Index Tracking
+- Counting Mismatches
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two index variables `i` and `j` to -1 to store the positions of mismatches, and a counter `cnt` to 0.
+- Iterate through the strings from index 0 to length - 1.
+- If characters at the current index differ, increment `cnt`. If it is the first mismatch, store the index in `i`. If it is the second, store it in `j`.
+- After the loop, if `cnt` is 0, return true because the strings are already equal.
+- If `cnt` is exactly 2, verify if swapping the characters at `i` and `j` in `s1` matches `s2` (i.e., `s1[i] == s2[j]` and `s1[j] == s2[i]`).
+- Otherwise, return false.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We perform a single pass over the strings of length N, using constant extra space to store mismatch indices and counters.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Strings already equal — No mismatches found (cnt == 0), should return true immediately.
+- Exactly one mismatch — Cannot resolve with a swap (cnt == 1), should return false.
+- More than two mismatches — Requires more than one swap, should return false.
+- Two mismatches but mismatched characters do not match crosswise — e.g., s1='bank', s2='bink' (cnt=2 but 'a' != 'i'), should return false.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+For two strings to be equal after exactly one swap, they must differ at exactly zero positions (already equal) or exactly two positions, and those two mismatched positions must contain the same pair of characters in reversed order.
+
+### Common Mistakes
+
+- Forgetting to check if the mismatched characters actually match crosswise (only checking if the count of mismatches is 2).
+- Not handling the case where the strings are already identical (0 mismatches).
+- Using a full frequency map or sorting, which unnecessarily increases space complexity to O(N) or time complexity to O(N log N).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks if a single swap or a small, fixed number of operations can make two sequences equal, avoid heavy sorting or hashing. Instead, perform a single-pass comparison to isolate the exact indices where the sequences differ. If the number of differences exceeds the allowed budget (e.g., > 2 for a single swap), terminate early. Otherwise, validate if the isolated differences can be resolved by the permitted operation.
+
+**Similar Problems to Practice:**
+
+- Buddy Strings
+- Determine if Two Strings Are Close
+- Make Number of Distinct Characters Equal After One Swap
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
