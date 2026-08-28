@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 53
-- **Easy** : 26
+- **Total Problems** : 54
+- **Easy** : 27
 - **Medium** : 25
 - **Hard** : 1
 
 **Last Updated**
 
-22 Aug 2026
+28 Aug 2026
 
 ---
 
@@ -32,6 +32,7 @@
 | 347 | LeetCode | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium | Java | 16 ms | 47.5 MB | 10 Jul 2026 | `Arrays/0347_Top_K_Frequent_Elements.java` |
 | 442 | LeetCode | [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | Medium | Java | 6 ms | 60.6 MB | 02 Aug 2026 | `Arrays/0442_Find_All_Duplicates_in_an_Array.java` |
 | 454 | LeetCode | [4Sum II](https://leetcode.com/problems/4sum-ii/) | Medium | Java | 127 ms | 46.8 MB | 15 Jul 2026 | `Arrays/0454_4Sum_II.java` |
+| 506 | LeetCode | [Relative Ranks](https://leetcode.com/problems/relative-ranks/) | Easy | Java | 10 ms | 47.8 MB | 28 Aug 2026 | `Arrays/0506_Relative_Ranks.java` |
 | 523 | LeetCode | [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) | Medium | Java | 24 ms | 139.8 MB | 05 Jul 2026 | `Arrays/0523_Continuous_Subarray_Sum.java` |
 | 524 | LeetCode | [Longest Word in Dictionary through Deleting](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/) | Medium | Java | 9 ms | 48 MB | 04 Aug 2026 | `Arrays/0524_Longest_Word_in_Dictionary_through_Deleting.java` |
 | 560 | LeetCode | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | Medium | Java | 25 ms | 48.8 MB | 07 Jul 2026 | `Arrays/0560_Subarray_Sum_Equals_K.java` |
