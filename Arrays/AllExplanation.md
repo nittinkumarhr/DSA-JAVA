@@ -4577,3 +4577,96 @@ When dealing with structured tuples represented as arrays/lists, map the descrip
 
 =====================================================
 
+# 0506. Relative Ranks
+
+> 🔗 [LeetCode](https://leetcode.com/problems/relative-ranks/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 28 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an array of unique integers representing the scores of athletes, return an array of strings where each athlete's rank is represented. The top three athletes receive 'Gold Medal', 'Silver Medal', and 'Bronze Medal', while the remaining athletes receive their placement rank as a string (e.g., '4', '5').
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- ranking elements based on value → sorting or heap-based ordering
+- retaining original positions after sorting → index mapping or storing index-value pairs
+
+**Pattern(s) used:**
+
+- Heap (Priority Queue)
+- Sorting
+- Index Mapping
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a max-heap (PriorityQueue) that stores array indices, ordered descendingly by their corresponding scores.
+- Populate the heap with all indices from 0 to n-1.
+- Initialize a result string array of size n and a rank counter starting at 1.
+- Repeatedly poll the highest-scoring index from the heap.
+- Assign 'Gold Medal' for rank 1, 'Silver Medal' for rank 2, 'Bronze Medal' for rank 3, and the string representation of the rank for any rank greater than 3.
+- Increment the rank counter after each assignment and return the result array.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Time complexity is O(N log N) because we insert N elements into a priority queue of size N, where each insertion/deletion takes O(log N) time. Space complexity is O(N) to store the priority queue and the output array.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- N = 1 — Only one athlete, must correctly assign 'Gold Medal' without index out of bounds or missing ranks.
+- N = 2 or 3 — Fewer than 3 athletes, must correctly assign only the available medals (e.g., no 'Bronze Medal' if N=2) without throwing errors.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Instead of sorting the scores directly and losing their original positions, we sort the indices of the scores using a custom comparator that references the scores array. This allows us to write the ranks directly back to their original positions in O(1) time per element.
+
+### Common Mistakes
+
+- Sorting the scores array directly and losing the original index mapping, making it impossible to construct the output in the correct order.
+- Hardcoding rank checks without handling cases where the total number of athletes is less than 3.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem requires sorting or ranking elements but demands that the output matches the original input order, avoid sorting the input array in-place. Instead, create an auxiliary array of indices (0 to N-1) or pairs of (value, index) and sort them based on the values. This preserves the original spatial relationships and allows direct, out-of-order writes to the result array.
+
+**Similar Problems to Practice:**
+
+- Rank Transform of an Array
+- Kth Largest Element in an Array
+- Sort Characters By Frequency
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
