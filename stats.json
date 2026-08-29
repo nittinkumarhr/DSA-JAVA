@@ -6,11 +6,12 @@
     "Other": 16,
     "Sorting": 1,
     "Strings": 7,
-    "Two_Pointers": 2
+    "Two_Pointers": 2,
+    "Trees": 1
   },
-  "easy": 47,
+  "easy": 48,
   "hard": 0,
-  "lastSynced": "2026-08-28T02:30:27.093Z",
+  "lastSynced": "2026-08-29T09:06:12.804Z",
   "medium": 37,
-  "total": 93
+  "total": 94
 }
