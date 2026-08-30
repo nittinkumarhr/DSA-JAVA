@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 54
-- **Easy** : 27
+- **Total Problems** : 55
+- **Easy** : 28
 - **Medium** : 25
 - **Hard** : 1
 
 **Last Updated**
 
-28 Aug 2026
+30 Aug 2026
 
 ---
 
@@ -62,6 +62,7 @@
 | 2231 | LeetCode | [Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array/) | Easy | Java | 1 ms | 47.6 MB | 12 Jul 2026 | `Arrays/2231_Find_First_Palindromic_String_in_the_Array.java` |
 | 2240 | LeetCode | [Intervals Between Identical Elements](https://leetcode.com/problems/intervals-between-identical-elements/) | Medium | Java | 170 ms | 189.3 MB | 05 Jul 2026 | `Arrays/2240_Intervals_Between_Identical_Elements.java` |
 | 2392 | LeetCode | [Successful Pairs of Spells and Potions](https://leetcode.com/problems/successful-pairs-of-spells-and-potions/) | Medium | Java | 53 ms | 146.8 MB | 10 Aug 2026 | `Arrays/2392_Successful_Pairs_of_Spells_and_Potions.java` |
+| 2502 | LeetCode | [Sort the People](https://leetcode.com/problems/sort-the-people/) | Easy | Java | 9 ms | 47.5 MB | 30 Aug 2026 | `Arrays/2502_Sort_the_People.java` |
 | 2552 | LeetCode | [Maximum Sum of Distinct Subarrays With Length K](https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/) | Medium | Java | 60 ms | 99 MB | 12 Jul 2026 | `Arrays/2552_Maximum_Sum_of_Distinct_Subarrays_With_Length_K.java` |
 | 2624 | LeetCode | [Difference Between Element Sum and Digit Sum of an Array](https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/) | Easy | Java | 2 ms | 46.4 MB | 12 Jul 2026 | `Arrays/2624_Difference_Between_Element_Sum_and_Digit_Sum_of_an_Array.java` |
 | 2847 | LeetCode | [Find Maximum Number of String Pairs](https://leetcode.com/problems/find-maximum-number-of-string-pairs/) | Easy | Java | 3 ms | 45 MB | 16 Aug 2026 | `Arrays/2847_Find_Maximum_Number_of_String_Pairs.java` |
