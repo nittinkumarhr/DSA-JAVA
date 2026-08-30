@@ -4670,3 +4670,95 @@ When a problem requires sorting or ranking elements but demands that the output 
 
 =====================================================
 
+# 2502. Sort the People
+
+> 🔗 [LeetCode](https://leetcode.com/problems/sort-the-people/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 30 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+Given two parallel arrays representing the names and distinct heights of a group of people, the task is to return the names sorted in descending order of their heights.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- distinct heights paired with names -> use a hash map to preserve association while sorting
+- sort in descending order -> sort the keys and traverse backwards or use a custom comparator
+
+**Pattern(s) used:**
+
+- Hash Table
+- Sorting
+
+---
+
+## 🛠 Solution Approach
+
+- Map each unique height to its corresponding name using a hash map.
+- Sort the heights array in ascending order using the built-in sorting utility.
+- Initialize a result array of the same size as the input arrays.
+- Iterate through the sorted heights array from the end (largest to smallest).
+- For each height, retrieve the associated name from the map and place it into the result array.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Sorting the heights array of size N takes O(N log N) time. The hash map operations (insertion and lookup) take O(N) time in total. The space complexity is O(N) to store the height-to-name mappings and the output array.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single element array — Handled correctly as sorting is trivial and the loop runs exactly once.
+- Already sorted in descending order — Handled correctly as the sorting step still functions and the reverse iteration correctly preserves the order.
+- Already sorted in ascending order — Handled correctly as the reverse iteration successfully reverses the order.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Because the heights are guaranteed to be distinct, we can use the heights as unique keys in a hash map to maintain their relationship with names, allowing us to sort the heights array independently.
+
+### Common Mistakes
+
+- Trying to sort both arrays in parallel manually, which is highly error-prone and complex to implement.
+- Assuming heights can contain duplicates, which would cause key collisions in a simple map-based approach (though the problem constraints guarantee distinct heights).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When tasked with sorting one array based on the values of a parallel array, check if the sorting keys are unique. If they are unique, map each key to its value, sort the keys, and reconstruct the sorted values. If they are not unique, pair them into a custom object/tuple array and sort using a custom comparator.
+
+**Similar Problems to Practice:**
+
+- Sort Array by Increasing Frequency
+- Rank Transform of an Array
+- Custom Sort String
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
