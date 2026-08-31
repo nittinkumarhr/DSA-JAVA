@@ -4762,3 +4762,98 @@ When tasked with sorting one array based on the values of a parallel array, chec
 
 =====================================================
 
+# 1458. Sort Integers by The Number of 1 Bits
+
+> 🔗 [LeetCode](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 31 Aug 2026
+
+---
+
+## 📝 Problem Summary
+
+Sort an array of integers in ascending order based on the number of set bits (1s) in their binary representation. If multiple numbers have the same number of set bits, they must be sorted in ascending order of their actual numerical values.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- sort by [computed property] → custom comparator sorting
+- number of 1 bits / set bits → bit manipulation
+- if they have the same... sort by value → multi-key sorting / tie-breaker logic
+
+**Pattern(s) used:**
+
+- Custom Sorting
+- Bit Manipulation
+- Multi-key Comparison
+
+---
+
+## 🛠 Solution Approach
+
+- Iterate through the input array and compute the number of set bits (1s) for each integer.
+- Encapsulate each integer and its corresponding bit count into a helper structure (like a custom Node class).
+- Sort the collection using a custom comparator that compares the bit counts first.
+- If the bit counts are equal, use the integer values themselves as a tie-breaker.
+- Copy the sorted values back into the original array and return it.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Computing the set bits for each of the N numbers takes O(N) time since the bit-width is constant (32 bits). Sorting the N elements takes O(N log N) time. O(N) auxiliary space is used to store the helper Node objects for sorting.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- All elements have the same number of set bits — tests the tie-breaker logic to ensure it falls back to sorting by value.
+- Array contains duplicates — the comparator must handle equal values correctly without causing unstable sorting issues.
+- Input contains 0 — 0 has zero set bits and must be handled correctly as the minimum possible set bit count.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+By transforming the raw integers into a composite structure containing both the value and its bit count, we can leverage standard sorting algorithms with a custom two-tier comparator to handle the primary and secondary sorting criteria simultaneously.
+
+### Common Mistakes
+
+- Forgetting the tie-breaker condition, leading to incorrect relative ordering of numbers with the same bit count.
+- Recomputing the bit count repeatedly inside the comparator during sorting, which degrades performance due to redundant calculations.
+- Using a sorting approach that does not explicitly handle ties, assuming the default sort is stable when the problem requires a specific tie-breaker.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to sort elements based on a derived property rather than their natural order, use the 'decorate-sort-undecorate' pattern. First, map each element to a pair or object containing the original element and its computed property. Next, sort this collection using a custom comparator that implements the primary sorting criteria and any secondary tie-breakers. Finally, project the sorted collection back to the original format.
+
+**Similar Problems to Practice:**
+
+- Sort Features by Popularity
+- Queue Reconstruction by Height
+- Sort Array by Parity II
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
