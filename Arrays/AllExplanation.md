@@ -4857,3 +4857,96 @@ When asked to sort elements based on a derived property rather than their natura
 
 =====================================================
 
+# 1741. Sort Array by Increasing Frequency
+
+> 🔗 [LeetCode](https://leetcode.com/problems/sort-array-by-increasing-frequency/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 01 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem requires sorting an array of integers in ascending order based on their frequency of occurrence. If two or more elements have the same frequency, they must be sorted in descending order of their values.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- sort... by frequency → Frequency Map + Custom Sorting
+- if frequencies are equal, sort by value → Custom Comparator with tie-breaker logic
+
+**Pattern(s) used:**
+
+- Frequency Map
+- Custom Sorting
+- Hash Table
+
+---
+
+## 🛠 Solution Approach
+
+- Count the frequency of each integer in the input array using a HashMap.
+- Convert the map entries into a list of pairs (or 2-element arrays) representing [value, frequency].
+- Sort the list using a custom comparator: if frequencies differ, sort by frequency in ascending order; if frequencies are equal, sort by value in descending order.
+- Reconstruct the final array by iterating through the sorted list and appending each value according to its frequency.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Counting frequencies takes O(N) time and O(N) space. Sorting the unique elements (up to N elements) takes O(N log N) time, and reconstructing the array takes O(N) time.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- All elements have the same frequency — Verifies that the tie-breaker (descending order of values) is correctly applied.
+- Negative numbers in input — The HashMap handles negative keys natively without index-out-of-bounds issues.
+- All elements are unique — Frequencies are all 1, meaning the array is sorted entirely in descending order of values.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+By decoupling the frequency counting from the sorting phase, we can represent each unique element as a pair (value, frequency) and apply a custom comparator to resolve both sorting criteria simultaneously.
+
+### Common Mistakes
+
+- Forgetting the tie-breaker condition, resulting in incorrect ordering for elements with equal frequencies.
+- Attempting to sort the primitive array directly with a custom comparator in Java, which is not natively supported without boxing to Integer.
+- Incorrectly implementing the descending comparator logic (e.g., doing a[0] - b[0] instead of b[0] - a[0]).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to sort elements based on multiple custom criteria (like frequency, parity, or string length), first aggregate the metrics (e.g., frequency) using a hash map or helper array. Then, map the elements to a list of objects or boxed types and sort them using a custom comparator that chains the criteria (primary, secondary, etc.). Finally, project the sorted elements back into the target format.
+
+**Similar Problems to Practice:**
+
+- Sort Characters By Frequency
+- Top K Frequent Elements
+- Sort Array by Parity
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
