@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 56
-- **Easy** : 29
+- **Total Problems** : 57
+- **Easy** : 30
 - **Medium** : 25
 - **Hard** : 1
 
 **Last Updated**
 
-31 Aug 2026
+01 Sept 2026
 
 ---
 
@@ -50,6 +50,7 @@
 | 1605 | LeetCode | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Medium | Java | 19 ms | 82.5 MB | 07 Aug 2026 | `Arrays/1605_Minimum_Number_of_Days_to_Make_m_Bouquets.java` |
 | 1635 | LeetCode | [Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/) | Easy | Java | 1 ms | 42.7 MB | 12 Aug 2026 | `Arrays/1635_Number_of_Good_Pairs.java` |
 | 1730 | LeetCode | [Special Array With X Elements Greater Than or Equal X](https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/) | Easy | Java | 4 ms | 43.2 MB | 13 Aug 2026 | `Arrays/1730_Special_Array_With_X_Elements_Greater_Than_or_Equal_X.java` |
+| 1741 | LeetCode | [Sort Array by Increasing Frequency](https://leetcode.com/problems/sort-array-by-increasing-frequency/) | Easy | Java | 6 ms | 45.6 MB | 01 Sept 2026 | `Arrays/1741_Sort_Array_by_Increasing_Frequency.java` |
 | 1781 | LeetCode | [Check If Two String Arrays are Equivalent](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/) | Easy | Java | 1 ms | 43.6 MB | 19 Aug 2026 | `Arrays/1781_Check_If_Two_String_Arrays_are_Equivalent.java` |
 | 1786 | LeetCode | [Count the Number of Consistent Strings](https://leetcode.com/problems/count-the-number-of-consistent-strings/) | Easy | Java | 11 ms | 47.3 MB | 17 Aug 2026 | `Arrays/1786_Count_the_Number_of_Consistent_Strings.java` |
 | 1791 | LeetCode | [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) | Easy | Java | 0 ms | 44.4 MB | 25 Jul 2026 | `Arrays/1791_Richest_Customer_Wealth.java` |
