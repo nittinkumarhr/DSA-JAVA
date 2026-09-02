@@ -4950,3 +4950,99 @@ When asked to sort elements based on multiple custom criteria (like frequency, p
 
 =====================================================
 
+# 2283. Sort Even and Odd Indices Independently
+
+> 🔗 [LeetCode](https://leetcode.com/problems/sort-even-and-odd-indices-independently/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 02 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem requires sorting the elements at even indices of an array in non-decreasing (ascending) order, and the elements at odd indices in non-increasing (descending) order, independently of each other.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- Sort even and odd indices independently → Index-based segregation
+- 1 <= nums[i] <= 100 → Counting Sort / Bucket Sort eligibility due to small value range
+
+**Pattern(s) used:**
+
+- Counting Sort
+- Simulation
+- Two Pointers
+
+---
+
+## 🛠 Solution Approach
+
+- Create two frequency arrays (buckets) of size 101: one for elements at even indices and one for elements at odd indices.
+- Iterate through the input array and populate the respective frequency arrays based on whether the index is even or odd.
+- Initialize pointer 'e' to 0 (to find the smallest elements for even indices) and pointer 'o' to 100 (to find the largest elements for odd indices).
+- Iterate through the original array indices from 0 to length - 1.
+- For even indices, increment 'e' until a non-zero count is found in the even bucket, place it in the array, and decrement its count.
+- For odd indices, decrement 'o' until a non-zero count is found in the odd bucket, place it in the array, and decrement its count.
+- Return the modified array.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> The time complexity is O(N + K) where N is the array length and K is the value range (100). Since K is constant, this simplifies to O(N). The auxiliary space complexity is O(1) because the frequency arrays have a fixed size of 101 regardless of the input size.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array of length 1 or 2 — Handled correctly as there is at most one element per parity group, requiring no actual reordering.
+- All elements are identical — Handled correctly because the frequency array counts will naturally decrement and place the same values back.
+- Already sorted array — Handled correctly because the counting sort reconstruction naturally outputs the elements in the correct sorted order.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Since the values in the array are constrained to a very small range [1, 100], we can use Counting Sort to achieve O(N) time complexity. By traversing the even frequency array forward and the odd frequency array backward, we easily achieve ascending and descending order respectively without sorting overhead.
+
+### Common Mistakes
+
+- Attempting to sort the entire array directly without separating the elements at even and odd indices first.
+- Forgetting that odd indices must be sorted in descending order while even indices must be sorted in ascending order.
+- Using an O(N log N) sorting algorithm when an O(N) counting sort is highly optimal and easy to implement due to constraints.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks you to sort subsets of an array independently based on index properties (like parity), first check the value constraints. If the range of values is small and fixed, use Counting Sort with separate frequency arrays. Traverse the frequency arrays in forward or reverse order depending on whether ascending or descending order is required for each subset.
+
+**Similar Problems to Practice:**
+
+- Sort Array By Parity II
+- Sort Colors
+- Height Checker
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
