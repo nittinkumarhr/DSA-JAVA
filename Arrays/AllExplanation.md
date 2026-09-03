@@ -5046,3 +5046,98 @@ When a problem asks you to sort subsets of an array independently based on index
 
 =====================================================
 
+# 1829. Maximum Units on a Truck
+
+> 🔗 [LeetCode](https://leetcode.com/problems/maximum-units-on-a-truck/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 03 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+Given a 2D array representing box types where each element contains the number of boxes and the units per box, along with a maximum truck capacity, find the maximum number of units that can be loaded onto the truck.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- maximize total units with a capacity constraint -> Greedy / Knapsack
+- can take fractional/partial quantities of a box type -> Fractional Knapsack (Greedy)
+- each item has a weight (boxes) and value (units) -> Greedy sorting by unit value
+
+**Pattern(s) used:**
+
+- Greedy
+- Sorting
+
+---
+
+## 🛠 Solution Approach
+
+- Sort the boxTypes array in descending order based on the number of units per box (index 1).
+- Initialize a variable to keep track of the total units loaded.
+- Iterate through the sorted box types.
+- If the remaining truck capacity can accommodate all boxes of the current type, add all units to the total and decrease the truck capacity.
+- If the remaining capacity is less than the current box count, take only the remaining capacity amount of boxes, add their units, and immediately return the total.
+- Return the accumulated total units if all box types are exhausted before the truck is full.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N)`
+
+### Space Complexity
+
+`O(log N)`
+
+> Sorting the N box types takes O(N log N) time, while the space complexity is O(log N) to store the call stack of the sorting algorithm in Java.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- truckSize is larger than total available boxes — the loop completes, returning the sum of all units.
+- truckSize is 0 — the else block executes immediately, adding 0 units and returning 0.
+- Integer overflow in comparator — using Integer.compare(b[1], a[1]) instead of subtraction (b[1] - a[1]) prevents potential integer overflow bugs.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+To maximize the total units, we should always prioritize loading the boxes that contain the highest number of units per box first (a classic fractional knapsack greedy strategy).
+
+### Common Mistakes
+
+- Sorting in ascending order instead of descending order, which minimizes the units loaded.
+- Using simple subtraction (b[1] - a[1]) in the comparator, which can cause integer overflow if values are extremely large or negative.
+- Forgetting to break or return early when the truck capacity is fully exhausted, leading to overcounting.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to maximize a total value under a strict capacity constraint where items can be chosen partially (fractional knapsack), always consider a Greedy approach. Sort the items by their unit value (value per weight) in descending order, then greedily consume as much of the highest-value items as possible until the capacity is exhausted.
+
+**Similar Problems to Practice:**
+
+- Fractional Knapsack
+- Bag of Tokens
+- How Many Apples Can You Put into the Basket
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
