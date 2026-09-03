@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 58
-- **Easy** : 31
+- **Total Problems** : 59
+- **Easy** : 32
 - **Medium** : 25
 - **Hard** : 1
 
 **Last Updated**
 
-02 Sept 2026
+03 Sept 2026
 
 ---
 
@@ -54,6 +54,7 @@
 | 1781 | LeetCode | [Check If Two String Arrays are Equivalent](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/) | Easy | Java | 1 ms | 43.6 MB | 19 Aug 2026 | `Arrays/1781_Check_If_Two_String_Arrays_are_Equivalent.java` |
 | 1786 | LeetCode | [Count the Number of Consistent Strings](https://leetcode.com/problems/count-the-number-of-consistent-strings/) | Easy | Java | 11 ms | 47.3 MB | 17 Aug 2026 | `Arrays/1786_Count_the_Number_of_Consistent_Strings.java` |
 | 1791 | LeetCode | [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) | Easy | Java | 0 ms | 44.4 MB | 25 Jul 2026 | `Arrays/1791_Richest_Customer_Wealth.java` |
+| 1829 | LeetCode | [Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck/) | Easy | Java | 9 ms | 46.9 MB | 03 Sept 2026 | `Arrays/1829_Maximum_Units_on_a_Truck.java` |
 | 1899 | LeetCode | [Count Items Matching a Rule](https://leetcode.com/problems/count-items-matching-a-rule/) | Easy | Java | 8 ms | 50 MB | 22 Aug 2026 | `Arrays/1899_Count_Items_Matching_a_Rule.java` |
 | 1938 | LeetCode | [Minimum Operations to Make the Array Increasing](https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing/) | Easy | Java | 2 ms | 47.2 MB | 11 Aug 2026 | `Arrays/1938_Minimum_Operations_to_Make_the_Array_Increasing.java` |
 | 1950 | LeetCode | [Sign of the Product of an Array](https://leetcode.com/problems/sign-of-the-product-of-an-array/) | Easy | Java | 0 ms | 45.3 MB | 26 Jul 2026 | `Arrays/1950_Sign_of_the_Product_of_an_Array.java` |
