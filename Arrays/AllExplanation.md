@@ -5141,3 +5141,99 @@ When asked to maximize a total value under a strict capacity constraint where it
 
 =====================================================
 
+# 1519. Minimum Subsequence in Non-Increasing Order
+
+> 🔗 [LeetCode](https://leetcode.com/problems/minimum-subsequence-in-non-increasing-order/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 04 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find a subsequence of an array with the minimum number of elements such that the sum of these elements is strictly greater than the sum of the remaining elements. If there are multiple such subsequences, we must choose the one with the maximum total sum, and return it sorted in non-increasing order.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- minimum number of elements with maximum sum → greedy choice (pick the largest elements first)
+- subsequence sum strictly greater than remaining sum → prefix/suffix sum comparison after sorting
+- non-increasing order → sorting in descending order or traversing sorted array backwards
+
+**Pattern(s) used:**
+
+- Greedy
+- Sorting
+
+---
+
+## 🛠 Solution Approach
+
+- Calculate the total sum of all elements in the array.
+- Sort the array in ascending order to easily access the largest elements from the end.
+- Initialize an empty list for the result and a variable to track the sum of selected elements.
+- Iterate backwards from the largest element (end of the sorted array) to the smallest.
+- Add the current element to the selected sum and the result list.
+- Calculate the remaining sum as total sum minus selected sum.
+- If the selected sum is strictly greater than the remaining sum, terminate the loop and return the result.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Sorting the array of size N takes O(N log N) time, while calculating the sum and traversing the array takes O(N) time. The space complexity is O(N) to store the elements in the output list (or O(log N) auxiliary space if we only count the sorting call stack).
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single element array — Handled correctly because the loop runs once, the selected sum equals the total sum, the remaining sum is 0, and the condition (total > 0) is immediately met.
+- Array with all identical elements — Handled correctly; the algorithm greedily takes elements one by one until the selected sum strictly exceeds 50% of the total sum.
+- Already sorted array — Handled correctly as sorting it again is a no-op, and the greedy selection from the end still yields the correct result.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+To minimize the number of elements in the subsequence while maximizing their sum, we must always greedily choose the largest available elements first.
+
+### Common Mistakes
+
+- Using a non-strict inequality (>=) instead of strict inequality (>) when comparing the selected sum to the remaining sum.
+- Attempting to use dynamic programming or backtracking, which is unnecessarily complex and leads to Time Limit Exceeded (TLE) for a greedy-solvable problem.
+- Forgetting to return the final subsequence in non-increasing order.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks to find a subset or subsequence that minimizes the count of elements while maximizing a sum-based condition, think of a Greedy approach. Sort the array first to make optimal choices at each step (either largest-first or smallest-first). Track the running sum of your selections against the remaining total to determine the stopping condition efficiently.
+
+**Similar Problems to Practice:**
+
+- Reduce Array Size to The Half
+- Partition Array Into Three Parts With Equal Sum
+- Split a String in Balanced Strings
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
