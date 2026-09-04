@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 59
-- **Easy** : 32
+- **Total Problems** : 60
+- **Easy** : 33
 - **Medium** : 25
 - **Hard** : 1
 
 **Last Updated**
 
-03 Sept 2026
+04 Sept 2026
 
 ---
 
@@ -46,6 +46,7 @@
 | 1044 | LeetCode | [Find Common Characters](https://leetcode.com/problems/find-common-characters/) | Easy | Java | 21 ms | 46.9 MB | 14 Aug 2026 | `Arrays/1044_Find_Common_Characters.java` |
 | 1293 | LeetCode | [Three Consecutive Odds](https://leetcode.com/problems/three-consecutive-odds/) | Easy | Java | 0 ms | 44.4 MB | 25 Jul 2026 | `Arrays/1293_Three_Consecutive_Odds.java` |
 | 1458 | LeetCode | [Sort Integers by The Number of 1 Bits](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/) | Easy | Java | 9 ms | 46.6 MB | 31 Aug 2026 | `Arrays/1458_Sort_Integers_by_The_Number_of_1_Bits.java` |
+| 1519 | LeetCode | [Minimum Subsequence in Non-Increasing Order](https://leetcode.com/problems/minimum-subsequence-in-non-increasing-order/) | Easy | Java | 9 ms | 52.2 MB | 04 Sept 2026 | `Arrays/1519_Minimum_Subsequence_in_NonIncreasing_Order.java` |
 | 1538 | LeetCode | [Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/) | Medium | Java | 1 ms | 62 MB | 09 Jul 2026 | `Arrays/1538_Maximum_Points_You_Can_Obtain_from_Cards.java` |
 | 1605 | LeetCode | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Medium | Java | 19 ms | 82.5 MB | 07 Aug 2026 | `Arrays/1605_Minimum_Number_of_Days_to_Make_m_Bouquets.java` |
 | 1635 | LeetCode | [Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/) | Easy | Java | 1 ms | 42.7 MB | 12 Aug 2026 | `Arrays/1635_Number_of_Good_Pairs.java` |
