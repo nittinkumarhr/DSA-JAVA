@@ -5237,3 +5237,97 @@ When a problem asks to find a subset or subsequence that minimizes the count of 
 
 =====================================================
 
+# 1445. Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold
+
+> 🔗 [LeetCode](https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 05 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find the number of contiguous subarrays of a fixed size `k` whose average value is greater than or equal to a given `threshold`.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- "sub-arrays of size k" → Fixed-size sliding window
+- "average greater than or equal to threshold" → Maintain a running sum to avoid O(k) recomputation
+
+**Pattern(s) used:**
+
+- Sliding Window
+- Prefix Sum / Running Sum
+
+---
+
+## 🛠 Solution Approach
+
+- Convert the average condition `sum / k >= threshold` to a sum condition `sum >= threshold * k` to avoid division truncation and floating-point precision issues.
+- Calculate the sum of the first `k` elements to initialize the sliding window.
+- If this initial sum is greater than or equal to the target sum (`threshold * k`), increment the count.
+- Slide the window from index `k` to the end of the array by adding the incoming element `arr[j]` and subtracting the outgoing element `arr[j - k]`.
+- At each step, check if the updated sum meets the target sum condition and increment the count if it does.
+- Return the total count of valid subarrays.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We traverse the array of size N exactly once using a sliding window, performing constant-time O(1) arithmetic operations at each step. No extra space is allocated beyond a few variables.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- k equals array length — The window covers the entire array; the sliding loop does not run, and we only evaluate the initial sum.
+- Integer division truncation — Using `sum / k >= threshold` can cause incorrect evaluations (e.g., 5/3 evaluates to 1 instead of 1.67). We handle this by comparing `sum >= threshold * k`.
+- Large values of elements — The running sum can potentially overflow standard 32-bit integers if elements are extremely large (though standard constraints typically fit within 32-bit signed integers).
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Instead of recalculating the sum of each subarray of size `k` from scratch (which takes O(k) time and results in O(N * k) overall), we can transition from one subarray to the next in O(1) time by subtracting the element leaving the window and adding the element entering it.
+
+### Common Mistakes
+
+- Using integer division `sum / k >= threshold` which truncates decimal values and leads to incorrect comparisons.
+- Recomputing the sum of the subarray of size `k` from scratch at each iteration, leading to a Time Limit Exceeded (TLE) error.
+- Off-by-one errors when sliding the window, such as incorrectly indexing the element to be removed or added.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks to evaluate a property (like sum, average, or character count) of all contiguous subarrays of a fixed size `k`, immediately apply the Fixed-Size Sliding Window pattern. Initialize the window by processing the first `k` elements, then slide the window one element at a time by adding the new element at the right and removing the old element from the left. Always look for algebraic simplifications (like multiplying both sides of an inequality) to avoid division and floating-point issues.
+
+**Similar Problems to Practice:**
+
+- Maximum Average Subarray I
+- Find All Anagrams in a String
+- Minimum Size Subarray Sum
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
