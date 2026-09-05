@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 60
+- **Total Problems** : 61
 - **Easy** : 33
-- **Medium** : 25
+- **Medium** : 26
 - **Hard** : 1
 
 **Last Updated**
 
-04 Sept 2026
+05 Sept 2026
 
 ---
 
@@ -45,8 +45,9 @@
 | 987 | LeetCode | [Reveal Cards In Increasing Order](https://leetcode.com/problems/reveal-cards-in-increasing-order/) | Medium | Java | 6 ms | 45.2 MB | 28 Jul 2026 | `Arrays/0987_Reveal_Cards_In_Increasing_Order.java` |
 | 1044 | LeetCode | [Find Common Characters](https://leetcode.com/problems/find-common-characters/) | Easy | Java | 21 ms | 46.9 MB | 14 Aug 2026 | `Arrays/1044_Find_Common_Characters.java` |
 | 1293 | LeetCode | [Three Consecutive Odds](https://leetcode.com/problems/three-consecutive-odds/) | Easy | Java | 0 ms | 44.4 MB | 25 Jul 2026 | `Arrays/1293_Three_Consecutive_Odds.java` |
+| 1445 | LeetCode | [Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold](https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/) | Medium | Java | 3 ms | 72 MB | 05 Sept 2026 | `Arrays/1445_Number_of_Subarrays_of_Size_K_and_Average_Greater_than_or_Equal_to_Threshold.java` |
 | 1458 | LeetCode | [Sort Integers by The Number of 1 Bits](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/) | Easy | Java | 9 ms | 46.6 MB | 31 Aug 2026 | `Arrays/1458_Sort_Integers_by_The_Number_of_1_Bits.java` |
-| 1519 | LeetCode | [Minimum Subsequence in Non-Increasing Order](https://leetcode.com/problems/minimum-subsequence-in-non-increasing-order/) | Easy | Java | 9 ms | 52.2 MB | 04 Sept 2026 | `Arrays/1519_Minimum_Subsequence_in_NonIncreasing_Order.java` |
+| 1519 | LeetCode | [Minimum Subsequence in Non-Increasing Order](https://leetcode.com/problems/minimum-subsequence-in-nonincreasing-order/) | Easy | Java | 9 ms | 52.2 MB | 04 Sept 2026 | `Arrays/1519_Minimum_Subsequence_in_NonIncreasing_Order.java` |
 | 1538 | LeetCode | [Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/) | Medium | Java | 1 ms | 62 MB | 09 Jul 2026 | `Arrays/1538_Maximum_Points_You_Can_Obtain_from_Cards.java` |
 | 1605 | LeetCode | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Medium | Java | 19 ms | 82.5 MB | 07 Aug 2026 | `Arrays/1605_Minimum_Number_of_Days_to_Make_m_Bouquets.java` |
 | 1635 | LeetCode | [Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/) | Easy | Java | 1 ms | 42.7 MB | 12 Aug 2026 | `Arrays/1635_Number_of_Good_Pairs.java` |
