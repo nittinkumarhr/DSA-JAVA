@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 7
-- **Easy** : 3
+- **Total Problems** : 8
+- **Easy** : 4
 - **Medium** : 4
 - **Hard** : 0
 
 **Last Updated**
 
-27 Aug 2026
+06 Sept 2026
 
 ---
 
@@ -24,3 +24,4 @@
 | 1297 | LeetCode | [Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/) | Easy | Java | 2 ms | 43 MB | 19 Aug 2026 | `Hashing/1297_Maximum_Number_of_Balloons.java` |
 | 1363 | LeetCode | [Greatest English Letter in Upper and Lower Case](https://leetcode.com/problems/greatest-english-letter-in-upper-and-lower-case/) | Easy | Java | 6 ms | 43.7 MB | 23 Aug 2026 | `Hashing/1363_Greatest_English_Letter_in_Upper_and_Lower_Case.java` |
 | 1915 | LeetCode | [Check if One String Swap Can Make Strings Equal](https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/) | Easy | Java | 0 ms | 42.9 MB | 27 Aug 2026 | `Hashing/1915_Check_if_One_String_Swap_Can_Make_Strings_Equal.java` |
+| 2053 | LeetCode | [Check if All Characters Have Equal Number of Occurrences](https://leetcode.com/problems/check-if-all-characters-have-equal-number-of-occurrences/) | Easy | Java | 2 ms | 42.9 MB | 06 Sept 2026 | `Hashing/2053_Check_if_All_Characters_Have_Equal_Number_of_Occurrences.java` |
