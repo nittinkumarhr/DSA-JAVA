@@ -1,7 +1,7 @@
 {
   "byTopic": {
     "Arrays": 51,
-    "Hashing": 13,
+    "Hashing": 14,
     "Math": 10,
     "Other": 16,
     "Sorting": 1,
@@ -9,9 +9,9 @@
     "Trees": 1,
     "Two_Pointers": 2
   },
-  "easy": 54,
+  "easy": 55,
   "hard": 0,
-  "lastSynced": "2026-09-05T14:02:03.045Z",
+  "lastSynced": "2026-09-06T12:47:49.049Z",
   "medium": 38,
-  "total": 101
+  "total": 102
 }
