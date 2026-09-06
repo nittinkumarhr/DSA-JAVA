@@ -629,3 +629,96 @@ When a problem asks if a single swap or a small, fixed number of operations can 
 
 =====================================================
 
+# 2053. Check if All Characters Have Equal Number of Occurrences
+
+> 🔗 [LeetCode](https://leetcode.com/problems/check-if-all-characters-have-equal-number-of-occurrences/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 06 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to determine if all unique characters present in a given string occur the exact same number of times. If every character that appears in the string has the same frequency, we return true; otherwise, we return false.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- equal number of occurrences → frequency counting with a hash map or fixed-size array
+- all characters → validation pass requiring a single reference value comparison
+
+**Pattern(s) used:**
+
+- Frequency Counting
+- Hash Table / Bucket Array
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a fixed-size integer array of size 26 to store the frequency of each lowercase English letter.
+- Iterate through the string, incrementing the frequency of each character in the array.
+- Track the maximum frequency encountered during the iteration to use as the target reference frequency.
+- Iterate through the frequency array, skipping any characters with a count of 0.
+- If any non-zero frequency does not equal the target reference frequency, return false.
+- If all non-zero frequencies match, return true.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We iterate through the string of length N exactly once to count frequencies. The second pass iterates over a fixed alphabet size of 26, requiring constant time and space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single unique character (e.g., 'aaaa') — The loop finds only one non-zero frequency, which trivially matches itself, returning true.
+- All unique characters (e.g., 'abcdef') — Every character has a frequency of 1, matching the target frequency of 1, returning true.
+- Characters with zero occurrences — The code must skip index positions in the frequency array that are 0 to avoid false mismatches.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Instead of comparing every character's frequency against every other character, we can establish a single reference frequency (the maximum frequency of any character) and verify that every active character's frequency matches this reference.
+
+### Common Mistakes
+
+- Comparing zero-frequency characters (forgetting to check `freq[i] == 0`), which causes the algorithm to incorrectly return false.
+- Attempting to validate frequencies during the first pass before all characters have been fully counted.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To validate a uniform property across elements (such as equal frequencies or counts), use a two-step approach: first, aggregate the counts using a hash map or fixed-size array; second, establish a reference value from the first non-empty bucket and validate that all other non-empty buckets match this reference.
+
+**Similar Problems to Practice:**
+
+- Redistribute Characters to Make All Strings Equal
+- Valid Anagram
+- Unique Number of Occurrences
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
