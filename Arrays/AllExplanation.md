@@ -5331,3 +5331,97 @@ When a problem asks to evaluate a property (like sum, average, or character coun
 
 =====================================================
 
+# 0645. Set Mismatch
+
+> 🔗 [LeetCode](https://leetcode.com/problems/set-mismatch/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 07 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find two specific numbers in an array of size n containing integers from 1 to n: one number that is duplicated (appears twice) and one number that is missing (appears zero times). We need to return them in an array as [duplicate, missing].
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- numbers from 1 to n -> Cyclic Sort or In-place Hashing
+- one duplicate and one missing -> Pigeonhole Principle / Math (Sum difference)
+
+**Pattern(s) used:**
+
+- Cyclic Sort
+- Hash Table
+- Bit Manipulation
+- Math
+
+---
+
+## 🛠 Solution Approach
+
+- Use cyclic sort to place each number at its correct index: `nums[i]` should ideally be at index `nums[i] - 1`.
+- Iterate through the array. If `nums[i]` is not equal to `nums[nums[i] - 1]`, swap them to place `nums[i]` in its correct position.
+- Repeat the swap until the current element is either in its correct position or is a duplicate of the element already at its target position.
+- Traverse the sorted array: the first index `i` where `nums[i] != i + 1` reveals the duplicate (`nums[i]`) and the missing number (`i + 1`).
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(1)`
+
+> Cyclic sort places each element in its correct position in at most two passes (at most n swaps), requiring O(n) time and O(1) auxiliary space as the sorting is done in-place.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Duplicate is at the beginning (e.g., [2, 2]) — ensures the missing number 1 is correctly identified.
+- Duplicate is at the end (e.g., [1, 1]) — ensures the missing number 2 is correctly identified.
+- Array of minimum size 2 (e.g., [1, 1]) — boundary check for the smallest possible input.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+In an array of size n containing numbers from 1 to n, if we place each number x at index x - 1, the duplicate number will inevitably occupy the index of the missing number.
+
+### Common Mistakes
+
+- Using O(n) extra space (like a hash set) when the problem constraints or interviewer require O(1) auxiliary space.
+- Integer overflow when using the math sum/squares approach for very large arrays.
+- Incorrectly handling 1-based indexing vs 0-based array indices during cyclic sort swaps, leading to infinite loops.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When given an array of size n containing elements strictly in the range [1, n] (or [0, n-1]) and asked to find duplicates, missing numbers, or anomalies, think of Cyclic Sort or In-place Sign Flipping. These techniques allow you to use the array indices as an implicit hash map, achieving O(n) time and O(1) space.
+
+**Similar Problems to Practice:**
+
+- First Missing Positive
+- Find the Duplicate Number
+- Find All Numbers Disappeared in an Array
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
