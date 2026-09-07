@@ -5425,3 +5425,96 @@ When given an array of size n containing elements strictly in the range [1, n] (
 
 =====================================================
 
+# 0287. Find the Duplicate Number
+
+> 🔗 [LeetCode](https://leetcode.com/problems/find-the-duplicate-number/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 07 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an array of n + 1 integers where each integer is in the range [1, n] inclusive, find and return the single duplicate number. The solution must run in O(n) time and use O(1) auxiliary space without modifying the input array.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- array of size n+1 with elements 1 to n → cycle detection via array indices
+- constant extra space and do not modify the array → rules out sorting, hashing, or in-place marking, signaling Floyd's Cycle Detection or Binary Search on value range
+
+**Pattern(s) used:**
+
+- Floyd's Cycle Finding Algorithm (Tortoise and Hare)
+- Binary Search on Value Range
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two pointers, tortoise and hare, both starting at the first element nums[0].
+- Advance tortoise by one step (tortoise = nums[tortoise]) and hare by two steps (hare = nums[nums[hare]]) until they meet inside the cycle.
+- Reset the tortoise pointer to the start of the array nums[0], keeping the hare pointer at the meeting point.
+- Advance both pointers one step at a time (tortoise = nums[tortoise], hare = nums[hare]).
+- The point where they meet again is the entrance to the cycle, which corresponds to the duplicate number.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(1)`
+
+> Floyd's cycle detection algorithm traverses the array indices as a linked list, finding the cycle intersection and entrance in linear time using only two pointer variables.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Smallest input size (n = 1, array length 2) — handled correctly as the cycle immediately points to the duplicate index.
+- Multiple copies of the duplicate (e.g., [2, 2, 2, 2]) — Floyd's algorithm still forms a cycle pointing to the duplicate value.
+- Duplicate is at the start or end of the array — pointers correctly traverse the array regardless of the duplicate's physical position.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Because the array contains n+1 elements with values from 1 to n, we can treat the array as a directed graph where an edge exists from index i to index nums[i]. Since there is a duplicate, at least two indices point to the same value, creating a cycle. The duplicate number is the entry point of this cycle.
+
+### Common Mistakes
+
+- Modifying the input array (e.g., sorting or using negative marking) which violates the read-only constraint.
+- Using a hash set or boolean array which violates the O(1) auxiliary space constraint.
+- Incorrectly initializing the tortoise and hare pointers, leading to an infinite loop or missing the cycle entrance.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to find a duplicate or missing number in an array of size N containing elements bounded by 1 to N, think of the array values as pointers to other indices. If the array is read-only and space must be O(1), apply Floyd's Cycle Detection (Tortoise and Hare) to find the cycle entrance, or perform a binary search over the search space of possible values [1, N] by counting elements less than or equal to a midpoint.
+
+**Similar Problems to Practice:**
+
+- Linked List Cycle II
+- First Missing Positive
+- Set Mismatch
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
