@@ -5518,3 +5518,100 @@ When asked to find a duplicate or missing number in an array of size N containin
 
 =====================================================
 
+# 2448. Count Number of Bad Pairs
+
+> 🔗 [LeetCode](https://leetcode.com/problems/count-number-of-bad-pairs/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 08 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to count the number of 'bad pairs' (i, j) in an array such that i < j and j - i != nums[j] - nums[i]. A bad pair is defined as any pair of indices where the difference between the indices does not equal the difference between their corresponding values.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- count pairs (i, j) where i < j and an equation/inequality holds → algebraic rearrangement to group index-specific variables
+- count 'bad' pairs (inequality condition) → complementary counting (total pairs minus 'good' pairs)
+- finding frequencies of transformed values → single-pass hash map tracking
+
+**Pattern(s) used:**
+
+- Hash Table
+- Math / Combinatorics
+- Complementary Counting
+- Variable Transformation
+
+---
+
+## 🛠 Solution Approach
+
+- Calculate the total number of possible pairs in an array of size n using the combination formula: totalPairs = n * (n - 1) / 2.
+- Initialize a hash map to store the frequency of the transformed key: key = i - nums[i] (or nums[i] - i).
+- Iterate through the array from left to right.
+- For each element, calculate its key and check how many times this key has been seen previously. Add this count to the running total of 'goodPairs'.
+- Update the hash map by incrementing the frequency of the current key.
+- Subtract the total number of good pairs from the total possible pairs to obtain and return the number of bad pairs.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> We iterate through the array of size N exactly once, performing O(1) hash map operations per element, and store at most N unique transformed keys in the map.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array size less than 2 — handled correctly as totalPairs becomes 0, and the loop returns 0.
+- All elements form good pairs — goodPairs will equal totalPairs, correctly returning 0 bad pairs.
+- Large array size (N up to 10^5) — totalPairs can exceed the 32-bit integer limit, so we must use 64-bit integers (long in Java) to prevent arithmetic overflow.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The inequality j - i != nums[j] - nums[i] can be rearranged algebraically to nums[i] - i != nums[j] - j. By defining a transformed variable key = nums[i] - i, a pair is 'good' if and only if key[i] == key[j]. Counting bad pairs directly is difficult, but counting good pairs using a frequency map and subtracting them from the total pairs is highly efficient.
+
+### Common Mistakes
+
+- Using a nested loop O(N^2) brute-force approach, which results in a Time Limit Exceeded (TLE) error.
+- Integer overflow when calculating n * (n - 1) / 2 using 32-bit integers instead of casting to 64-bit long.
+- Failing to rearrange the inequality to group index-specific terms together, preventing the use of a hash map.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to count pairs (i, j) satisfying an equation or inequality involving both indices and values (e.g., A[i] - A[j] = i - j), always attempt to group all terms containing 'i' on one side and all terms containing 'j' on the other (e.g., A[i] - i = A[j] - j). Once transformed into f(i) == f(j), use a Hash Map to count frequencies of f(i) in a single pass, reducing the complexity from O(N^2) to O(N). If the problem asks for 'not equal' or 'bad' pairs, count the 'good' pairs instead and subtract from the total pairs.
+
+**Similar Problems to Practice:**
+
+- Count Nice Pairs in an Array
+- Two Sum
+- Number of Pairs Satisfying Inequality
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
