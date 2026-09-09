@@ -189,3 +189,98 @@ When asked to reverse a specific segment or the entirety of a sequence, look for
 
 =====================================================
 
+# 0874. Backspace String Compare
+
+> 🔗 [LeetCode](https://leetcode.com/problems/backspace-string-compare/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 09 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+Determine if two strings are equal after processing backspace characters ('#'), where each '#' deletes the character immediately preceding it (if any).
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- backspace/delete operations → Stack (LIFO) simulation
+- O(1) space constraint with deletion → Two Pointers traversing backwards
+
+**Pattern(s) used:**
+
+- Two Pointers
+- Stack
+- Simulation
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two pointers at the end of both strings, s and t.
+- Maintain a count of active backspaces for both strings as you traverse backwards.
+- For each string, skip characters that are deleted: if you see '#', increment the backspace count; if you see a normal character and backspace count > 0, decrement the count and skip the character.
+- Once both pointers stop on valid, undeleted characters, compare them. If they do not match, return false.
+- If one string runs out of characters before the other, return false.
+- Decrement both pointers and repeat until both strings are fully processed.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N + M)`
+
+### Space Complexity
+
+`O(1)`
+
+> We traverse both strings of lengths N and M at most twice from right to left, using only a few integer variables for pointers and backspace counts.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- More backspaces than characters (e.g., 'a##') — must ensure pointer does not go out of bounds and backspace count doesn't cause errors.
+- All characters deleted (e.g., 'ab##' vs 'c#d#') — both should evaluate to empty strings and return true.
+- No backspaces present — should correctly compare characters directly without skipping.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+By traversing the strings from right to left (backwards), we encounter the backspace characters ('#') before the characters they delete. This allows us to know exactly which characters to skip without needing to store the intermediate state in a stack.
+
+### Common Mistakes
+
+- Attempting a left-to-right two-pointer approach, which fails because you cannot look ahead to see if a character will be deleted.
+- Failing to handle consecutive backspaces (e.g., 'b###') correctly, leading to incorrect skip counts.
+- Not checking if one pointer has exhausted its string while the other pointer is still pointing to an undeleted character.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem involves 'undo', 'backspace', or 'cancel' operations, a Stack is the intuitive LIFO tool. To optimize a Stack-based simulation to O(1) space, try reversing the direction of traversal (right-to-left or bottom-up) so that the 'canceling' operator is processed before the elements it affects.
+
+**Similar Problems to Practice:**
+
+- Removing Stars From a String
+- Crawler Log Folder
+- Compare Version Numbers
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
