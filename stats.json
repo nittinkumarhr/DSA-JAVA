@@ -5,13 +5,13 @@
     "Math": 10,
     "Other": 16,
     "Sorting": 1,
-    "Strings": 7,
+    "Strings": 8,
     "Trees": 1,
     "Two_Pointers": 3
   },
   "easy": 57,
   "hard": 0,
-  "lastSynced": "2026-09-09T10:42:10.684Z",
-  "medium": 40,
-  "total": 106
+  "lastSynced": "2026-09-09T10:57:53.387Z",
+  "medium": 41,
+  "total": 107
 }
