@@ -656,3 +656,96 @@ When a problem requires ignoring or processing elements based on paired, non-nes
 
 =====================================================
 
+# 2470. Removing Stars From a String
+
+> 🔗 [LeetCode](https://leetcode.com/problems/removing-stars-from-a-string/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 09 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to remove all star characters '*' from a given string, along with the closest non-star character to the left of each star. This process is simulated sequentially until all stars are eliminated, and we return the final modified string.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- remove the closest character to the left of '*' → Last-In-First-Out (LIFO) behavior signaling a Stack
+- sequential processing with undo/delete operations → Stack-based simulation
+
+**Pattern(s) used:**
+
+- Stack
+- Simulation
+- Two Pointers
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a stack (or a StringBuilder/character array acting as a stack) to store the characters of the final string.
+- Iterate through each character of the input string 's' from left to right.
+- If the current character is a star '*', pop the top character from the stack (representing the closest non-star character to its left).
+- If the current character is not a star, push it onto the stack.
+- After processing the entire string, build the final string from the characters remaining in the stack and return it.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> We iterate through the string of length N exactly once, performing O(1) push and pop operations, leading to O(N) time complexity. The space complexity is O(N) to store the characters in the stack/StringBuilder in the worst case when there are no stars.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- No stars in the string — The stack will accumulate all characters and return the original string.
+- All characters are deleted — The stack becomes empty, and the code safely returns an empty string.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+A star '*' always deletes the most recently processed, non-deleted character to its left. This 'last-in, first-out' relationship makes a Stack the ideal data structure to track active characters.
+
+### Common Mistakes
+
+- Using a raw Stack<Character> in Java and reversing it inefficiently, which adds unnecessary overhead compared to using a StringBuilder or a character array as a stack.
+- Attempting to modify the string in-place using repeated substring operations, leading to an O(N^2) time complexity.
+- Not handling empty stack checks if the problem constraints allowed more stars than available characters to delete (though guaranteed valid here, it is a good defensive habit).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem requires processing elements sequentially and 'undoing' or 'deleting' the most recent elements based on a trigger character (like backspaces, stars, or matching parentheses), think of a Stack. To optimize space and time, you can often simulate the stack in-place using a two-pointer write-head approach on a character array.
+
+**Similar Problems to Practice:**
+
+- Backspace String Compare
+- Simplify Path
+- Minimum Remove to Make Valid Parentheses
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
