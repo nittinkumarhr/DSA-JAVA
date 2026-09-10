@@ -749,3 +749,97 @@ When a problem requires processing elements sequentially and 'undoing' or 'delet
 
 =====================================================
 
+# 1666. Make The String Great
+
+> 🔗 [LeetCode](https://leetcode.com/problems/make-the-string-great/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 10 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+Given a string of lower and upper case English letters, repeatedly remove adjacent characters that are the same letter but in different cases (e.g., 'aA' or 'Aa') until no such adjacent pairs remain, and return the resulting 'good' string.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- adjacent characters that satisfy a condition are removed -> Stack-based elimination (LIFO behavior)
+- repeatedly remove pairs -> Stack to process elements sequentially and handle cascading deletions
+
+**Pattern(s) used:**
+
+- Stack
+- String Manipulation
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize an empty stack to keep track of the characters of the 'good' string.
+- Iterate through each character of the input string.
+- For each character, check if the stack is not empty and if the absolute ASCII difference between the top of the stack and the current character is exactly 32 (indicating they are the same letter with different cases).
+- If they match the deletion criteria, pop the top character from the stack (annihilating both).
+- Otherwise, push the current character onto the stack.
+- After processing all characters, reconstruct the string from the stack and reverse it to restore the original order.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> We iterate through the string of length N exactly once, performing O(1) stack operations per character. The space complexity is O(N) to store the characters in the stack and the final reconstructed string.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty string — Handled naturally as the loop won't execute, returning an empty string.
+- Single character string — No adjacent pairs can exist, so the character is pushed and returned as-is.
+- String with cascading deletions (e.g., 'abBA') — The stack handles this perfectly by popping 'bB' first, leaving 'a' on top, which then pairs with 'A' and pops, resulting in an empty string.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The problem exhibits a LIFO (Last-In-First-Out) elimination pattern: removing a pair of characters can make their previously separated neighbors adjacent, triggering a cascade of deletions. A stack naturally tracks the history of active characters to resolve these cascading matches in O(1) time per match.
+
+### Common Mistakes
+
+- Using a naive nested loop or recursion that scans the string repeatedly, leading to O(N^2) time complexity.
+- Forgetting to reverse the reconstructed string when building it from the stack.
+- Incorrectly checking the case difference (e.g., using hardcoded ASCII values without checking if they are actually the same letter, though 32 works perfectly for English alphabets).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem requires repeatedly removing adjacent elements that satisfy a certain relationship, think of a Stack. As you iterate through the input, compare the current element with the top of the stack. If they match the removal condition, pop from the stack to simulate elimination; otherwise, push the current element. This ensures that any new adjacencies created by an elimination are immediately checked against the next elements.
+
+**Similar Problems to Practice:**
+
+- Valid Parentheses
+- Remove All Adjacent Duplicates In String
+- Remove All Adjacent Duplicates in String II
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
