@@ -7,11 +7,12 @@
     "Sorting": 1,
     "Strings": 9,
     "Trees": 1,
-    "Two_Pointers": 3
+    "Two_Pointers": 3,
+    "Stack": 1
   },
-  "easy": 58,
+  "easy": 59,
   "hard": 0,
-  "lastSynced": "2026-09-10T10:11:26.216Z",
+  "lastSynced": "2026-09-10T17:58:02.483Z",
   "medium": 41,
-  "total": 108
+  "total": 109
 }
