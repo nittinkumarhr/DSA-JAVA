@@ -5615,3 +5615,96 @@ When asked to count pairs (i, j) satisfying an equation or inequality involving 
 
 =====================================================
 
+# 0150. Evaluate Reverse Polish Notation
+
+> 🔗 [LeetCode](https://leetcode.com/problems/evaluate-reverse-polish-notation/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 11 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to evaluate the value of an arithmetic expression written in Reverse Polish Notation (postfix). We are given an array of strings representing operators (+, -, *, /) and integer operands, and we need to compute the final evaluated integer result, ensuring division truncates toward zero.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- Reverse Polish Notation / postfix → Stack-based evaluation
+- operators apply to the most recently seen operands → Last-In, First-Out (LIFO) behavior using a Stack
+
+**Pattern(s) used:**
+
+- Stack
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize an empty stack to store integer operands.
+- Iterate through each token in the input array.
+- If the token is a number, parse it to an integer and push it onto the stack.
+- If the token is an operator (+, -, *, /), pop the top two elements from the stack.
+- Assign the first popped element to 'b' (the second operand) and the second popped element to 'a' (the first operand).
+- Perform the corresponding arithmetic operation (a + b, a - b, a * b, or a / b) and push the result back onto the stack.
+- After processing all tokens, pop and return the single remaining element from the stack as the final result.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> We process each token in the input array exactly once, yielding O(N) time complexity. In the worst case, the stack can store up to O(N) operands (e.g., when all operands appear before any operators).
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single element array (e.g., ['18']) — Handled correctly because the loop pushes the single number to the stack, and we return it without executing any operator cases.
+- Negative numbers (e.g., ['-11']) — Handled correctly by parsing the entire string as an integer, distinguishing it from the standalone subtraction operator '-'.
+- Division truncation — Java's integer division naturally truncates toward zero, satisfying the problem constraint.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+In postfix notation, an operator is always applied to the two most recently evaluated operands. A stack perfectly models this LIFO (Last-In, First-Out) dependency.
+
+### Common Mistakes
+
+- Popping operands in the wrong order for non-commutative operations, resulting in doing 'b - a' or 'b / a' instead of 'a - b' or 'a / a'.
+- Incorrectly identifying negative numbers as subtraction operators by checking if the token contains '-' instead of checking for exact equality with '-'.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When evaluating expressions where operators depend on the most recently processed operands or nested structures (like postfix, prefix, or matching parentheses), use a Stack to defer operations until all required operands are available.
+
+**Similar Problems to Practice:**
+
+- Basic Calculator
+- Decode String
+- Simplify Path
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
