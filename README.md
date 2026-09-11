@@ -7,23 +7,23 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 | Difficulty | Count |
 |------------|-------|
 | 🟢 Easy    | 59 |
-| 🟡 Medium  | 41 |
+| 🟡 Medium  | 42 |
 | 🔴 Hard    | 0 |
-| **Total**  | **109** |
+| **Total**  | **110** |
 
 ## By Topic
 
 | Topic | Solved |
 |-------|--------|
-| Arrays | 54 |
+| Arrays | 55 |
 | Other | 16 |
 | Hashing | 14 |
 | Math | 10 |
 | Strings | 9 |
 | Two Pointers | 3 |
 | Sorting | 1 |
-| Trees | 1 |
 | Stack | 1 |
+| Trees | 1 |
 
 ## Structure
 
@@ -49,4 +49,4 @@ leetcode-solutions/
 └── Other/
 ```
 
-*Last updated: 10 Sept 2026*
+*Last updated: 11 Sept 2026*
