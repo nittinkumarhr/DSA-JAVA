@@ -284,3 +284,96 @@ When a problem involves 'undo', 'backspace', or 'cancel' operations, a Stack is 
 
 =====================================================
 
+# 0680. Valid Palindrome II
+
+> 🔗 [LeetCode](https://leetcode.com/problems/valid-palindrome-ii/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 12 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks whether a given string can be transformed into a palindrome by deleting at most one character.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- palindrome check → two pointers meeting in the middle
+- at most one deletion/modification allowed → greedy branching upon first mismatch
+
+**Pattern(s) used:**
+
+- Two Pointers
+- Greedy
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two pointers, i at the start (0) and j at the end (length - 1) of the string.
+- While i < j, compare the characters at both pointers.
+- If the characters match, increment i and decrement j.
+- If a mismatch occurs, branch into two checks: check if the substring s[i+1...j] is a palindrome, or if the substring s[i...j-1] is a palindrome.
+- If either of these sub-checks is true, return true; otherwise, return false.
+- If the loop completes without any mismatch, return true.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We traverse the string at most twice: once for the initial outer scan, and at most once more for the inner validation of the remaining substring of length at most N.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Already a palindrome — handled naturally as the pointers meet without triggering any mismatch.
+- String of length 1 or 2 — handled correctly because any 1 or 2-character string can be made a palindrome with at most one deletion.
+- Mismatch at the exact center — handled correctly as the sub-checks will validate the remaining single-character or empty transitions.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+When a mismatch s[i] != s[j] is encountered, the only two possible ways to fix it with a single deletion are to either skip s[i] or skip s[j]. Since we only have a budget of one deletion, we do not need deep recursion; we only need to check these two immediate branches once.
+
+### Common Mistakes
+
+- Only checking one side of the mismatch (e.g., always skipping the left character) instead of trying both options.
+- Using a full backtracking or dynamic programming approach, which is over-engineered and results in O(N^2) time complexity instead of O(N).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To validate symmetric properties with a small, constant budget of 'skips' or 'errors' (k), use a two-pointer approach moving inward. Upon encountering a violation, branch out to validate the remaining range with k-1 allowed errors. For k=1, this yields a highly efficient, single-branch O(N) solution.
+
+**Similar Problems to Practice:**
+
+- Valid Palindrome
+- Valid Palindrome III
+- Minimum Insertion Steps to Make a String Palindrome
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
