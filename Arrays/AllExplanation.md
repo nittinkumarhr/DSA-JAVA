@@ -5708,3 +5708,97 @@ When evaluating expressions where operators depend on the most recently processe
 
 =====================================================
 
+# 1570. Final Prices With a Special Discount in a Shop
+
+> 🔗 [LeetCode](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 12 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an array of prices, apply a discount to each item equal to the price of the first subsequent item that is less than or equal to its own price. If no such subsequent item exists, the price remains unchanged.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- first element to the right that is less than or equal to → Next Smaller Element (NSE) pattern
+- j > i and prices[j] <= prices[i] → Monotonic stack to track indices of elements waiting for their discount
+
+**Pattern(s) used:**
+
+- Monotonic Stack
+- Next Smaller Element
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize the answer array as a copy of the input prices array to handle the default case of no discount.
+- Initialize an empty stack to store the indices of the prices.
+- Iterate through the prices array from left to right.
+- While the stack is not empty and the current price is less than or equal to the price at the index stored at the top of the stack, pop the index from the stack and update its final price by subtracting the current price.
+- Push the current index onto the stack.
+- Return the updated answer array.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Each element is pushed onto and popped from the stack at most once, leading to a linear time complexity of O(N). The space complexity is O(N) to store indices in the stack in the worst case (e.g., strictly increasing prices).
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Strictly increasing prices — No discounts are applied; the stack keeps growing and elements are never popped, leaving original prices intact.
+- Strictly decreasing prices — Each element immediately discounts the previous one; elements are popped almost immediately.
+- Duplicate prices — The comparison must use 'less than or equal to' (<=) to ensure duplicate values correctly trigger discounts.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+This is a direct variation of the 'Next Smaller Element' problem. Instead of searching forward for every element (which takes O(N^2) time), we can use a monotonic stack to process elements in a single pass.
+
+### Common Mistakes
+
+- Forgetting to initialize the answer array with the original prices, which results in 0 values for items that receive no discount.
+- Using a strictly increasing stack comparison (<) instead of non-decreasing (<=), which fails to apply discounts when subsequent items have the exact same price.
+- Submitting an O(N^2) brute-force solution with unreachable dead code (as seen in the provided Java snippet).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To recognize Monotonic Stack problems, look for queries asking for the 'first element to the right/left that is smaller/larger than the current element'. When you need to compare each element with its neighbors to find the first one that satisfies an inequality, maintain a stack of indices. Push elements onto the stack and pop them as soon as you encounter an element that violates the monotonic property.
+
+**Similar Problems to Practice:**
+
+- Next Greater Element I
+- Daily Temperatures
+- Online Stock Span
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
