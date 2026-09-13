@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 66
-- **Easy** : 35
+- **Total Problems** : 67
+- **Easy** : 36
 - **Medium** : 29
 - **Hard** : 1
 
 **Last Updated**
 
-12 Sept 2026
+13 Sept 2026
 
 ---
 
@@ -55,6 +55,7 @@
 | 1570 | LeetCode | [Final Prices With a Special Discount in a Shop](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/) | Easy | Java | 2 ms | 45.1 MB | 12 Sept 2026 | `Arrays/1570_Final_Prices_With_a_Special_Discount_in_a_Shop.java` |
 | 1605 | LeetCode | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Medium | Java | 19 ms | 82.5 MB | 07 Aug 2026 | `Arrays/1605_Minimum_Number_of_Days_to_Make_m_Bouquets.java` |
 | 1635 | LeetCode | [Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/) | Easy | Java | 1 ms | 42.7 MB | 12 Aug 2026 | `Arrays/1635_Number_of_Good_Pairs.java` |
+| 1720 | LeetCode | [Crawler Log Folder](https://leetcode.com/problems/crawler-log-folder/) | Easy | Java | 1 ms | 43.7 MB | 13 Sept 2026 | `Arrays/1720_Crawler_Log_Folder.java` |
 | 1730 | LeetCode | [Special Array With X Elements Greater Than or Equal X](https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/) | Easy | Java | 4 ms | 43.2 MB | 13 Aug 2026 | `Arrays/1730_Special_Array_With_X_Elements_Greater_Than_or_Equal_X.java` |
 | 1741 | LeetCode | [Sort Array by Increasing Frequency](https://leetcode.com/problems/sort-array-by-increasing-frequency/) | Easy | Java | 6 ms | 45.6 MB | 01 Sept 2026 | `Arrays/1741_Sort_Array_by_Increasing_Frequency.java` |
 | 1781 | LeetCode | [Check If Two String Arrays are Equivalent](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/) | Easy | Java | 1 ms | 43.6 MB | 19 Aug 2026 | `Arrays/1781_Check_If_Two_String_Arrays_are_Equivalent.java` |
