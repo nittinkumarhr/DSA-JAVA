@@ -1059,3 +1059,95 @@ When a problem requires reducing a number to zero using division by 2 and subtra
 
 =====================================================
 
+# 1303. Minimum Moves to Reach Target Score
+
+> 🔗 [LeetCode](https://leetcode.com/problems/minimum-moves-to-reach-target-score/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 13 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+Given a target integer and a maximum number of double operations allowed, find the minimum number of moves to reach the target starting from 1, where you can either increment by 1 or double the current value.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- minimum moves to reach target with doubling/halving → greedy backward search
+- limited budget of a powerful operation (doubles) → prioritize using the powerful operation as late as possible (or as early as possible when working backward)
+
+**Pattern(s) used:**
+
+- Greedy
+- Backward Induction / Reverse Thinking
+
+---
+
+## 🛠 Solution Approach
+
+- Start from the target and work backward to 1.
+- If maxDoubles is 0, add target - 1 to the move count and terminate immediately, as only decrements are allowed.
+- If target is odd, decrement it by 1 and increment the move count by 1.
+- If target is even and maxDoubles > 0, divide target by 2, decrement maxDoubles by 1, and increment the move count by 1.
+- Repeat this process until target reaches 1.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(log(target))`
+
+### Space Complexity
+
+`O(1)`
+
+> In the worst case, we divide the target by 2 at each step until maxDoubles is exhausted or target becomes 1, leading to logarithmic time complexity. The space complexity is O(1) as we only use a few variables for tracking state.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- maxDoubles is 0 — handled immediately by returning target - 1, avoiding unnecessary loops.
+- target is already 1 — handled by returning 0 moves immediately.
+- maxDoubles is larger than log2(target) — the algorithm naturally terminates when target reaches 1 before maxDoubles is exhausted.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Working backward from the target is deterministic: if the target is even and we have doubles left, division is always optimal because it reduces the remaining distance much faster than subtraction. If the target is odd, we have no choice but to subtract 1.
+
+### Common Mistakes
+
+- Trying to simulate forward from 1 to target, which requires backtracking or BFS due to branching choices.
+- Not handling the case where maxDoubles becomes 0 early, leading to Time Limit Exceeded (TLE) by subtracting 1 iteratively instead of doing a direct O(1) subtraction.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When faced with a problem that asks for the minimum operations to reach a target using a mix of scaling (multiplication/division) and shifting (addition/subtraction) operations, always try working backward from the target. Working backward often eliminates choices (e.g., an odd number cannot be divided by 2), turning a branching search space into a deterministic greedy path.
+
+**Similar Problems to Practice:**
+
+- Broken Calculator
+- 2 Keys Keyboard
+- Integer Replacement
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
