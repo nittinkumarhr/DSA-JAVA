@@ -964,3 +964,98 @@ When faced with arithmetic on strings, first check if the input size exceeds sta
 
 =====================================================
 
+# 1444. Number of Steps to Reduce a Number to Zero
+
+> 🔗 [LeetCode](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 13 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an integer `num`, the task is to find the number of steps required to reduce it to zero. In each step, if the current number is even, you must divide it by 2; if it is odd, you must subtract 1 from it.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- divide by 2 if even, subtract 1 if odd → bitwise manipulation / binary representation simulation
+- reduce a number to zero → logarithmic state reduction
+
+**Pattern(s) used:**
+
+- Simulation
+- Bit Manipulation
+- Recursion
+
+---
+
+## 🛠 Solution Approach
+
+- Start with the input number `num` and a step counter initialized to 0.
+- While `num` is greater than 0, check if it is even or odd.
+- If `num` is even, divide it by 2 (or right-shift by 1: `num >>= 1`).
+- If `num` is odd, subtract 1 from it (or clear the lowest bit).
+- Increment the step counter after each operation.
+- Return the step counter once `num` reaches 0.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(log N)`
+
+### Space Complexity
+
+`O(1)`
+
+> Each division by 2 halves the value of the number, meaning there are at most log2(N) division steps. Subtraction steps can happen at most once before each division (when the number is odd), leading to at most log2(N) subtraction steps. Thus, the total operations are bounded by 2 * log2(N), resulting in O(log N) time complexity. The iterative approach uses O(1) auxiliary space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- num = 0 — The code must immediately return 0 without entering any loops or recursive steps.
+- num = 1 — Requires exactly 1 step (subtracting 1 to reach 0).
+- Large input (up to 10^6) — Fits well within standard 32-bit signed integer limits, so overflow is not an issue.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The operations correspond directly to the binary representation of the number. Dividing by 2 is a right shift (removing a trailing 0), and subtracting 1 from an odd number changes the last bit from 1 to 0. Therefore, the total number of steps is equal to the total number of bits in the binary representation of `num` plus the number of set bits (1s), minus 1.
+
+### Common Mistakes
+
+- Failing to handle the base case `num = 0` correctly in recursive implementations, leading to infinite recursion or stack overflow.
+- Using slow division and modulo operations when high-performance bitwise operations (`num & 1` and `num >> 1`) could be used instead.
+- Miscounting steps by not incrementing the counter on both division and subtraction phases.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem requires reducing a number to zero using division by 2 and subtraction of 1, view the number in its binary form. Each '0' bit requires 1 step (division/shift), and each '1' bit requires 2 steps (subtraction then division), except for the most significant bit which only requires 1 step (subtraction) to reach zero. You can solve any such problem either by simulating the process iteratively or by using bitwise built-ins to count the total bits and set bits directly.
+
+**Similar Problems to Practice:**
+
+- Number of 1 Bits
+- Power of Two
+- Binary Gap
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
