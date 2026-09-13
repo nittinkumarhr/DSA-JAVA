@@ -5802,3 +5802,97 @@ To recognize Monotonic Stack problems, look for queries asking for the 'first el
 
 =====================================================
 
+# 1720. Crawler Log Folder
+
+> 🔗 [LeetCode](https://leetcode.com/problems/crawler-log-folder/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 13 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+Determine the minimum number of operations to return to the main folder after executing a sequence of directory change commands ('../', './', and 'x/').
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- directory path traversal → Stack or depth counter simulation
+- undo/backtrack operation ('../') → LIFO (Last-In-First-Out) behavior
+
+**Pattern(s) used:**
+
+- Stack
+- Simulation
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a stack to keep track of the current folder depth (or a simple integer counter).
+- Iterate through each log in the array.
+- If the log is '../', pop from the stack if it is not empty (go up one level).
+- If the log is './', do nothing (stay in the current directory).
+- If the log is any other directory name 'x/', push it onto the stack (go down one level).
+- Return the size of the stack, which represents the current depth from the main folder.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We iterate through the logs array of size N exactly once, taking O(N) time. Space complexity is O(1) if we optimize the stack to a simple integer counter tracking the depth, or O(N) if we use a stack to store folder names.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Executing '../' at the main folder — the depth must not go below 0, which the code handles by checking if the stack is empty before popping.
+- Only './' operations — the depth remains 0 as we never change directories.
+- No operations — returns 0 immediately as we start at the main folder.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+We do not need to know the actual names of the directories to find the distance to the root; we only need to track the current depth, which can be optimized from a Stack to a simple integer counter.
+
+### Common Mistakes
+
+- Allowing the depth counter or stack size to go below zero when encountering '../' at the root folder.
+- Using a full Stack when a simple integer counter is sufficient, leading to unnecessary O(N) space complexity.
+- Incorrectly parsing the string operations (e.g., treating 'x/' as a parent directory command).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To solve path traversal or undo-redo style problems, look for operations that reverse or cancel previous actions. If you only need to track the current state's depth or size, a simple counter variable is sufficient. If you need to reconstruct the exact history or path, use a Stack to store the elements in LIFO order.
+
+**Similar Problems to Practice:**
+
+- Simplify Path
+- Backspace String Compare
+- Validate Stack Sequences
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
