@@ -1067,7 +1067,7 @@ When a problem requires reducing a number to zero using division by 2 and subtra
 
 ## 📝 Problem Summary
 
-Given a target integer and a maximum number of double operations allowed, find the minimum number of moves to reach the target starting from 1, where you can either increment by 1 or double the current value.
+The problem asks for the minimum number of moves to reach a target integer starting from 1. In each move, you can either increment the current number by 1 or double it, with the constraint that the doubling operation can be used at most maxDoubles times.
 
 ---
 
@@ -1075,23 +1075,24 @@ Given a target integer and a maximum number of double operations allowed, find t
 
 **How to spot this pattern in the problem statement:**
 
-- minimum moves to reach target with doubling/halving → greedy backward search
-- limited budget of a powerful operation (doubles) → prioritize using the powerful operation as late as possible (or as early as possible when working backward)
+- minimum moves to reach target → Greedy or BFS
+- doubling operation with limit → Backward simulation (halving is highly constrained)
+- large target up to 10^9 → O(log N) mathematical/greedy approach rather than DP/BFS
 
 **Pattern(s) used:**
 
 - Greedy
-- Backward Induction / Reverse Thinking
+- Backward Induction / Reverse Simulation
 
 ---
 
 ## 🛠 Solution Approach
 
-- Start from the target and work backward to 1.
-- If maxDoubles is 0, add target - 1 to the move count and terminate immediately, as only decrements are allowed.
-- If target is odd, decrement it by 1 and increment the move count by 1.
-- If target is even and maxDoubles > 0, divide target by 2, decrement maxDoubles by 1, and increment the move count by 1.
-- Repeat this process until target reaches 1.
+- Start from the target and work backwards to 1.
+- If maxDoubles is 0, add the remaining distance (target - 1) directly to the move count and terminate.
+- If the current target is even and maxDoubles > 0, divide the target by 2, decrement maxDoubles, and increment the move count.
+- If the current target is odd, subtract 1 to make it even and increment the move count.
+- Repeat the process recursively or iteratively until target reaches 1.
 
 ---
 
@@ -1103,17 +1104,17 @@ Given a target integer and a maximum number of double operations allowed, find t
 
 ### Space Complexity
 
-`O(1)`
+`O(log(target))`
 
-> In the worst case, we divide the target by 2 at each step until maxDoubles is exhausted or target becomes 1, leading to logarithmic time complexity. The space complexity is O(1) as we only use a few variables for tracking state.
+> The target is halved at least every two steps when maxDoubles > 0, leading to logarithmic time complexity. The space complexity is O(log(target)) due to the recursion stack of the helper function.
 
 ---
 
 ## ⚠️ Edge Cases to Consider
 
-- maxDoubles is 0 — handled immediately by returning target - 1, avoiding unnecessary loops.
+- maxDoubles is 0 — handled by returning target - 1 immediately to avoid TLE.
 - target is already 1 — handled by returning 0 moves immediately.
-- maxDoubles is larger than log2(target) — the algorithm naturally terminates when target reaches 1 before maxDoubles is exhausted.
+- maxDoubles is greater than log2(target) — the algorithm naturally stops dividing once target reaches 1.
 
 ---
 
@@ -1121,18 +1122,19 @@ Given a target integer and a maximum number of double operations allowed, find t
 
 ### Key Observation
 
-Working backward from the target is deterministic: if the target is even and we have doubles left, division is always optimal because it reduces the remaining distance much faster than subtraction. If the target is odd, we have no choice but to subtract 1.
+Working backwards from the target is deterministic. Since halving a larger number saves significantly more addition steps than halving a smaller number, we should greedily use our doubling operations as late as possible in the forward direction, which translates to using them as early as possible when working backwards.
 
 ### Common Mistakes
 
-- Trying to simulate forward from 1 to target, which requires backtracking or BFS due to branching choices.
-- Not handling the case where maxDoubles becomes 0 early, leading to Time Limit Exceeded (TLE) by subtracting 1 iteratively instead of doing a direct O(1) subtraction.
+- Trying to work forward from 1, which requires tracking multiple states and leads to TLE or MLE.
+- Using Breadth-First Search (BFS) or Dynamic Programming, which fails because the target can be as large as 10^9.
+- Failing to optimize when maxDoubles becomes 0, resulting in TLE from subtracting 1 iteratively.
 
 ---
 
 ## 🔁 How to Approach Similar Problems
 
-When faced with a problem that asks for the minimum operations to reach a target using a mix of scaling (multiplication/division) and shifting (addition/subtraction) operations, always try working backward from the target. Working backward often eliminates choices (e.g., an odd number cannot be divided by 2), turning a branching search space into a deterministic greedy path.
+When a problem involves reaching a target using multiplication/doubling and addition/subtraction, always try working backwards. Division is highly constrained (only valid for even numbers), which drastically reduces the search space and often makes a greedy choice deterministic. If a multiplying operation is limited, greedily apply its inverse (division) to the largest numbers possible.
 
 **Similar Problems to Practice:**
 
@@ -1150,4 +1152,5 @@ When faced with a problem that asks for the minimum operations to reach a target
 - **Revision notes:**
 
 =====================================================
+
 
