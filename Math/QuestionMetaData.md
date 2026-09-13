@@ -2,9 +2,9 @@
 
 ## Statistics
 
-- **Total Problems** : 13
+- **Total Problems** : 14
 - **Easy** : 9
-- **Medium** : 3
+- **Medium** : 4
 - **Hard** : 0
 
 **Last Updated**
@@ -21,6 +21,7 @@
 | 43 | LeetCode | [Multiply Strings](https://leetcode.com/problems/multiply-strings/) | Medium | Java | 12 ms | 46.8 MB | 31 Jul 2026 | `Math/0043_Multiply_Strings.java` |
 | 50 | LeetCode | [Pow(x, n)](https://leetcode.com/problems/powx-n/) | Medium | Java | 0 ms | 47.7 MB | 25 Jul 2026 | `Math/0050_Powx_n.java` |
 | 258 | LeetCode | [Add Digits](https://leetcode.com/problems/add-digits/) | Easy | Java | 1 ms | 42.7 MB | 10 Jul 2026 | `Math/0258_Add_Digits.java` |
+| 1303 | LeetCode | [Minimum Moves to Reach Target Score](https://leetcode.com/problems/minimum-moves-to-reach-target-score/) | Medium | Java | 0 ms | 42.4 MB | 13 Sept 2026 | `Math/1303_Minimum_Moves_to_Reach_Target_Score.java` |
 | 1406 | LeetCode | [Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/) | Easy | Java | 0 ms | 42.2 MB | 24 Jul 2026 | `Math/1406_Subtract_the_Product_and_Sum_of_Digits_of_an_Integer.java` |
 | 1444 | LeetCode | [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) | Easy | Java | 0 ms | 42.4 MB | 13 Sept 2026 | `Math/1444_Number_of_Steps_to_Reduce_a_Number_to_Zero.java` |
 | 1610 | LeetCode | [XOR Operation in an Array](https://leetcode.com/problems/xor-operation-in-an-array/) | Easy | Java | 0 ms | 42.5 MB | 13 Jul 2026 | `Math/1610_XOR_Operation_in_an_Array.java` |
