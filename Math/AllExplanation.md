@@ -1152,5 +1152,98 @@ When a problem allows doubling/halving and adding/subtracting to reach a target,
 
 =====================================================
 
+# 2288. Count Operations to Obtain Zero
 
+> 🔗 [LeetCode](https://leetcode.com/problems/count-operations-to-obtain-zero/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 14 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find the number of subtraction operations required to reduce either of two non-negative integers, num1 or num2, to zero. In each step, we subtract the smaller integer from the larger one (or either from the other if they are equal).
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- repeatedly subtract the smaller from the larger → Euclidean algorithm / subtraction-based reduction
+- until one of them becomes 0 → simulation with a clear termination condition
+
+**Pattern(s) used:**
+
+- Simulation
+- Math
+- Euclidean Algorithm
+
+---
+
+## 🛠 Solution Approach
+
+- Check if either num1 or num2 is initially 0; if so, return 0.
+- Initialize an operation counter to 0.
+- While both numbers are greater than 0, compare them.
+- If num1 >= num2, subtract num2 from num1. Otherwise, subtract num1 from num2.
+- Increment the operation counter by 1 after each subtraction.
+- Return the counter once the loop terminates.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(max(num1, num2))`
+
+### Space Complexity
+
+`O(1)`
+
+> In the worst case (e.g., one number is 1 and the other is N), the algorithm performs N subtractions, leading to linear time complexity. The iterative approach uses constant extra space, though the provided recursive code uses O(max(num1, num2)) stack space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Either num1 or num2 is 0 — handled immediately by returning 0.
+- num1 equals num2 — handled in 1 operation as one becomes 0.
+- One number is 1 and the other is very large — triggers the worst-case linear runtime.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The subtraction process is identical to the subtraction-based Euclidean algorithm for finding the Greatest Common Divisor (GCD). It can be optimized from O(N) to O(log(min(N, M))) by using division (modulo) to batch multiple subtractions.
+
+### Common Mistakes
+
+- Writing unreachable code in recursive branches (as seen in the provided code's else block).
+- Failing to handle the base case where one of the inputs is already 0, leading to infinite recursion or loops.
+- Using naive subtraction when constraints are extremely large (where a modulo/division optimization is required).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem requires reducing two numbers by repeatedly subtracting the smaller from the larger, recognize it as a variant of the Euclidean GCD algorithm. For small constraints, a simple iterative simulation is sufficient. For large constraints, optimize the simulation by replacing repeated subtraction with division and modulo operations to achieve logarithmic time complexity.
+
+**Similar Problems to Practice:**
+
+- Number of Steps to Reduce a Number to Zero
+- Water Bottles
+- Greatest Common Divisor of Strings
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
 
