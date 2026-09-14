@@ -5896,3 +5896,98 @@ To solve path traversal or undo-redo style problems, look for operations that re
 
 =====================================================
 
+# 4316. Minimum Swaps to Move Zeros to End
+
+> 🔗 [LeetCode](https://leetcode.com/problems/minimum-swaps-to-move-zeros-to-end/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 15 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem requires finding the minimum number of swaps to move all zero elements in an array to the end. Unlike standard 'Move Zeroes' problems, this variation does not require preserving the relative order of non-zero elements, allowing us to swap elements from the end of the array to minimize the total swap count.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- move elements to one end → two-pointer partitioning
+- minimum swaps to group elements → two pointers meeting in the middle
+
+**Pattern(s) used:**
+
+- Two Pointers
+- Partitioning
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two pointers: `i` at the start (0) and `j` at the end (length - 1) of the array, along with a swap counter `c` set to 0.
+- Iterate while `i` is less than or equal to `j`.
+- If the element at `j` is already 0, decrement `j` to skip it since it is already in its correct final position.
+- If the element at `i` is 0 (and `j` points to a non-zero element), swap `arr[i]` and `arr[j]`, increment the swap counter `c`, and decrement `j`.
+- Increment `i` to continue scanning the array.
+- Return the total swap count `c`.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> The array is traversed at most once as the two pointers `i` and `j` sweep inward from both ends, performing constant-time swaps in-place.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- No zeros in the array — The algorithm should perform 0 swaps and return 0.
+- All zeros in the array — The right pointer `j` will decrement all the way to the left without triggering any swaps, returning 0.
+- Already sorted (zeros at the end) — The right pointer skips all trailing zeros, and no swaps are triggered, returning 0.
+- Single element array — The loop terminates immediately or runs once without swapping, returning 0.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+To minimize swaps, we should only swap a zero from the left side of the array with a non-zero element from the right side. Swapping a zero with another zero, or a non-zero with another non-zero, is redundant and inefficient.
+
+### Common Mistakes
+
+- Attempting to preserve the relative order of non-zero elements, which is unnecessary and leads to an O(N) shift approach instead of O(1) swaps.
+- Failing to skip trailing zeros first, which results in swapping a zero with another zero.
+- Using nested loops to search for non-zero elements, resulting in an O(N^2) time complexity.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to group, partition, or move specific elements to one end of an array with minimum operations (and relative order does not matter), use two pointers starting at opposite ends. Move the right pointer inward to skip elements already in their correct final state, and move the left pointer inward to find elements out of place. Perform a swap only when both pointers stop on misplaced elements, then advance both.
+
+**Similar Problems to Practice:**
+
+- Move Zeroes
+- Sort Colors
+- Remove Element
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
