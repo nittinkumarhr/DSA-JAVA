@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 14
-- **Easy** : 9
+- **Total Problems** : 15
+- **Easy** : 10
 - **Medium** : 4
 - **Hard** : 0
 
 **Last Updated**
 
-13 Sept 2026
+14 Sept 2026
 
 ---
 
@@ -25,6 +25,7 @@
 | 1406 | LeetCode | [Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/) | Easy | Java | 0 ms | 42.2 MB | 24 Jul 2026 | `Math/1406_Subtract_the_Product_and_Sum_of_Digits_of_an_Integer.java` |
 | 1444 | LeetCode | [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) | Easy | Java | 0 ms | 42.4 MB | 13 Sept 2026 | `Math/1444_Number_of_Steps_to_Reduce_a_Number_to_Zero.java` |
 | 1610 | LeetCode | [XOR Operation in an Array](https://leetcode.com/problems/xor-operation-in-an-array/) | Easy | Java | 0 ms | 42.5 MB | 13 Jul 2026 | `Math/1610_XOR_Operation_in_an_Array.java` |
+| 2288 | LeetCode | [Count Operations to Obtain Zero](https://leetcode.com/problems/count-operations-to-obtain-zero/) | Easy | Java | 9 ms | 49.1 MB | 14 Sept 2026 | `Math/2288_Count_Operations_to_Obtain_Zero.java` |
 | 2507 | LeetCode | [Number of Common Factors](https://leetcode.com/problems/number-of-common-factors/) | Easy | Java | 1 ms | 42 MB | 15 Jul 2026 | `Math/2507_Number_of_Common_Factors.java` |
 | 2608 | LeetCode | [Count the Digits That Divide a Number](https://leetcode.com/problems/count-the-digits-that-divide-a-number/) | Easy | Java | 0 ms | 42.2 MB | 12 Jul 2026 | `Math/2608_Count_the_Digits_That_Divide_a_Number.java` |
 | 2752 | LeetCode | [Sum Multiples](https://leetcode.com/problems/sum-multiples/) | Easy | Java | 3 ms | 42.9 MB | 13 Jul 2026 | `Math/2752_Sum_Multiples.java` |
