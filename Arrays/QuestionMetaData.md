@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 67
-- **Easy** : 36
+- **Total Problems** : 68
+- **Easy** : 37
 - **Medium** : 29
 - **Hard** : 1
 
 **Last Updated**
 
-13 Sept 2026
+15 Sept 2026
 
 ---
 
@@ -84,3 +84,4 @@
 | 3194 | LeetCode | [Find Words Containing Character](https://leetcode.com/problems/find-words-containing-character/) | Easy | Java | 1 ms | 46.6 MB | 20 Jul 2026 | `Arrays/3194_Find_Words_Containing_Character.java` |
 | 3226 | LeetCode | [Minimum Number Game](https://leetcode.com/problems/minimum-number-game/) | Easy | Java | 5 ms | 47.3 MB | 11 Jul 2026 | `Arrays/3226_Minimum_Number_Game.java` |
 | 3515 | LeetCode | [Find if Digit Game Can Be Won](https://leetcode.com/problems/find-if-digit-game-can-be-won/) | Easy | Java | 1 ms | 45.3 MB | 06 Aug 2026 | `Arrays/3515_Find_if_Digit_Game_Can_Be_Won.java` |
+| 4316 | LeetCode | [Minimum Swaps to Move Zeros to End](https://leetcode.com/problems/minimum-swaps-to-move-zeros-to-end/) | Easy | Java | 1 ms | 46.4 MB | 15 Sept 2026 | `Arrays/4316_Minimum_Swaps_to_Move_Zeros_to_End.java` |
