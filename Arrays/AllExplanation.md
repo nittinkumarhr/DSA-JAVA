@@ -5991,3 +5991,98 @@ When asked to group, partition, or move specific elements to one end of an array
 
 =====================================================
 
+# 0496. Next Greater Element I
+
+> 🔗 [LeetCode](https://leetcode.com/problems/next-greater-element-i/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 15 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find the next greater element for each element of an array nums1 inside another array nums2, where nums1 is a subset of nums2. The next greater element of a number x in nums2 is the first element to its right that is strictly larger than x. If no such element exists, the answer for that query is -1.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- "next greater element" → Monotonic Stack
+- "first element to the right that is larger" → Monotonic Stack
+- "subset of another array" → Hash Map for O(1) index/value mapping
+
+**Pattern(s) used:**
+
+- Monotonic Stack
+- Hash Table
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize an empty stack and a hash map to store the next greater element for each number in nums2.
+- Iterate through nums2 from left to right.
+- While the stack is not empty and the current element is greater than the stack's top element, pop the top element from the stack and record the current element as its next greater element in the hash map.
+- Push the current element onto the stack.
+- For any elements remaining in the stack after traversing nums2, their next greater element is -1 (or handled by default map lookups).
+- Iterate through nums1 and build the result array by looking up each element's next greater value in the hash map.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N + M)`
+
+### Space Complexity
+
+`O(M)`
+
+> We traverse nums2 of size M once, pushing and popping each element at most once from the stack, taking O(M) time. Querying the next greater element for each of the N elements in nums1 takes O(1) time per query using the hash map, resulting in O(N) time. The space complexity is O(M) to store the hash map and stack for nums2.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- nums2 is sorted in descending order — No element has a next greater element; the stack grows to size M and all map to -1.
+- nums1 has only one element — Handled correctly by the map lookup without any special conditions.
+- No greater element exists for some elements — Handled by checking if the element exists in the map; if not, default to -1.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+By maintaining a monotonic decreasing stack, we defer finding the next greater element for smaller elements until we encounter a larger element. The first larger element we see immediately resolves the query for all smaller elements currently waiting at the top of the stack.
+
+### Common Mistakes
+
+- Using a brute-force O(N * M) nested loop solution which is inefficient for larger inputs.
+- Maintaining the stack in the wrong monotonic order (e.g., increasing instead of decreasing).
+- Forgetting that elements remaining in the stack at the end of the iteration have no next greater element and must map to -1.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To recognize a monotonic stack pattern, look for queries asking for the 'next greater', 'next smaller', 'previous greater', or 'previous smaller' element in an array. When you see this, use a stack to store elements (or their indices) in a strictly increasing or decreasing order. Process elements sequentially, popping from the stack to resolve queries for older elements as soon as the monotonic property is violated by the current element.
+
+**Similar Problems to Practice:**
+
+- Next Greater Element II
+- Daily Temperatures
+- Online Stock Span
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
