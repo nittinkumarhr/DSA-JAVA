@@ -6086,3 +6086,98 @@ To recognize a monotonic stack pattern, look for queries asking for the 'next gr
 
 =====================================================
 
+# 0503. Next Greater Element II
+
+> 🔗 [LeetCode](https://leetcode.com/problems/next-greater-element-ii/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 15 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find the next greater element for each element in a circular integer array. The search for the next greater element wraps around the end of the array to the beginning, and if no greater element exists, we return -1 for that position.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- next greater element → monotonic stack
+- circular array → virtual array doubling using modulo arithmetic (2 * N iterations)
+
+**Pattern(s) used:**
+
+- Monotonic Stack
+- Circular Array Indexing
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize an answer array 'ans' of size N with -1, and an empty stack to store array indices.
+- Iterate backwards through a virtual doubled array from index 2 * N - 1 down to 0.
+- For each index, calculate the circular index using 'i % N'.
+- Pop elements from the stack while the stack is not empty and the element at the top of the stack is less than or equal to the current element 'arr[i % N]'.
+- If the stack is not empty and we are in the first pass (i < N), the top of the stack is the next greater element for 'arr[i % N]'. Update 'ans[i % N]'.
+- Push the current circular index 'i % N' onto the stack.
+- Return the populated 'ans' array.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Each element is pushed and popped from the stack at most twice during the 2 * N virtual traversal, resulting in linear time. The stack stores at most N indices, requiring linear auxiliary space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array with all identical elements — The stack will grow to size N and all answers will remain -1 because no element is strictly greater than itself.
+- Strictly decreasing array — The next greater element for each element (except the maximum) will be the one preceding it circularly, requiring the full 2 * N traversal to resolve.
+- Single element array — The loop should immediately return [-1] since an element cannot have a greater neighbor in a single-element circular array.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+By simulating a doubled array (traversing from 2 * N - 1 down to 0) and using modulo indexing (% N), we can resolve circular dependencies using a standard monotonic stack without physically duplicating the array in memory.
+
+### Common Mistakes
+
+- Physically duplicating the array to handle circularity, which wastes O(N) extra memory.
+- Using a monotonic queue or sorting, which breaks the relative index order needed to find the 'next' greater element.
+- Forgetting to store indices instead of values in the stack, which prevents correct mapping to the output array.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to find the 'next' or 'previous' greater/smaller element for every position in an array, think Monotonic Stack. If the array is circular, virtually double its length by iterating up to 2 * N - 1 and accessing elements via index modulo N (% N). Maintain a stack of indices that keeps elements in a strictly decreasing or increasing order to resolve queries in O(1) amortized time per element.
+
+**Similar Problems to Practice:**
+
+- Next Greater Element I
+- Daily Temperatures
+- Online Stock Span
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
