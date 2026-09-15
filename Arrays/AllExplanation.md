@@ -6181,3 +6181,97 @@ When asked to find the 'next' or 'previous' greater/smaller element for every po
 
 =====================================================
 
+# 0229. Majority Element II
+
+> 🔗 [LeetCode](https://leetcode.com/problems/majority-element-ii/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 15 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find all elements in an integer array that appear strictly more than ⌊ n/3 ⌋ times. Since any array can contain at most two such elements, we can solve this in linear time and constant extra space by generalizing the Boyer-Moore Majority Vote algorithm.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- elements appearing more than n/k times → Boyer-Moore Majority Vote Algorithm with k-1 candidates
+- O(1) auxiliary space constraint with frequency threshold → Elimination-based voting instead of hash map tracking
+
+**Pattern(s) used:**
+
+- Boyer-Moore Majority Vote Algorithm
+- Counting
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two candidate variables (candidate1, candidate2) and their respective counters (count1, count2) to 0.
+- Iterate through the array: if the current element matches candidate1, increment count1; else if it matches candidate2, increment count2.
+- If count1 is 0, assign the current element to candidate1 and set count1 to 1. Else if count2 is 0, assign the current element to candidate2 and set count2 to 1.
+- If the current element matches neither candidate and both counts are non-zero, decrement both count1 and count2.
+- Reset count1 and count2 to 0, and perform a second pass over the array to count the exact occurrences of candidate1 and candidate2.
+- Add any candidate to the result list if its actual count is strictly greater than n/3.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(1)`
+
+> We traverse the array exactly twice (once for finding candidates, once for verification), resulting in O(n) time. We only maintain a constant number of variables for candidates and counters, achieving O(1) auxiliary space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array size less than 3 — The threshold n/3 is 0, so any element appearing at least once is valid. The second pass verification correctly handles this.
+- All elements are identical — One candidate will capture all votes while the other remains empty or unused; verification ensures we do not add duplicates to the output.
+- No element meets the threshold — The second pass verification will correctly filter out both candidates, returning an empty list.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+An array can contain at most two elements that appear strictly more than ⌊ n/3 ⌋ times. By pairing up and canceling out triplets of three distinct elements, we can guarantee that the majority elements will remain as candidates.
+
+### Common Mistakes
+
+- Forgetting the second pass verification step, which is mandatory because Boyer-Moore only guarantees potential candidates, not that they actually exceed the threshold.
+- Incorrectly updating candidates when counts are zero, such as reassigning a candidate to an element that is already the other active candidate.
+- Not handling duplicate candidates in the final output when the array has fewer than 3 unique elements.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To find elements appearing more than n/k times in O(1) space, generalize the Boyer-Moore Majority Vote algorithm. Maintain k-1 candidates and their counts. In the first pass, if a number matches a candidate, increment its count; if a count is zero, claim the candidate; otherwise, decrement all counts. Always perform a second pass to verify candidates against the n/k threshold.
+
+**Similar Problems to Practice:**
+
+- Majority Element
+- Check If a Number Is Majority Element in a Sorted Array
+- Most Frequent Even Element
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
