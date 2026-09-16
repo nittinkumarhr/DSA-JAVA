@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 71
+- **Total Problems** : 72
 - **Easy** : 38
-- **Medium** : 31
+- **Medium** : 32
 - **Hard** : 1
 
 **Last Updated**
 
-15 Sept 2026
+16 Sept 2026
 
 ---
 
@@ -78,6 +78,7 @@
 | 2392 | LeetCode | [Successful Pairs of Spells and Potions](https://leetcode.com/problems/successful-pairs-of-spells-and-potions/) | Medium | Java | 53 ms | 146.8 MB | 10 Aug 2026 | `Arrays/2392_Successful_Pairs_of_Spells_and_Potions.java` |
 | 2448 | LeetCode | [Count Number of Bad Pairs](https://leetcode.com/problems/count-number-of-bad-pairs/) | Medium | Java | 43 ms | 87.7 MB | 08 Sept 2026 | `Arrays/2448_Count_Number_of_Bad_Pairs.java` |
 | 2502 | LeetCode | [Sort the People](https://leetcode.com/problems/sort-the-people/) | Easy | Java | 9 ms | 47.5 MB | 30 Aug 2026 | `Arrays/2502_Sort_the_People.java` |
+| 2519 | LeetCode | [Find The Original Array of Prefix Xor](https://leetcode.com/problems/find-the-original-array-of-prefix-xor/) | Medium | Java | 2 ms | 108.8 MB | 16 Sept 2026 | `Arrays/2519_Find_The_Original_Array_of_Prefix_Xor.java` |
 | 2552 | LeetCode | [Maximum Sum of Distinct Subarrays With Length K](https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/) | Medium | Java | 60 ms | 99 MB | 12 Jul 2026 | `Arrays/2552_Maximum_Sum_of_Distinct_Subarrays_With_Length_K.java` |
 | 2624 | LeetCode | [Difference Between Element Sum and Digit Sum of an Array](https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/) | Easy | Java | 2 ms | 46.4 MB | 12 Jul 2026 | `Arrays/2624_Difference_Between_Element_Sum_and_Digit_Sum_of_an_Array.java` |
 | 2847 | LeetCode | [Find Maximum Number of String Pairs](https://leetcode.com/problems/find-maximum-number-of-string-pairs/) | Easy | Java | 3 ms | 45 MB | 16 Aug 2026 | `Arrays/2847_Find_Maximum_Number_of_String_Pairs.java` |
