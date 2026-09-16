@@ -6366,3 +6366,98 @@ To reconstruct an original array from any prefix-accumulated state (such as pref
 
 =====================================================
 
+# 3428. Find the XOR of Numbers Which Appear Twice
+
+> 🔗 [LeetCode](https://leetcode.com/problems/find-the-xor-of-numbers-which-appear-twice/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 16 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find the bitwise XOR sum of all numbers that appear exactly twice in a given integer array, where other numbers appear only once.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- numbers which appear twice -> frequency tracking, hash set, or sorting to group duplicates
+- XOR of numbers -> bitwise XOR accumulation to combine the target values
+
+**Pattern(s) used:**
+
+- Sorting
+- Bit Manipulation
+- Two Pointers
+
+---
+
+## 🛠 Solution Approach
+
+- Sort the input array in ascending order to place duplicate elements adjacent to each other.
+- Initialize an integer variable `num` to 0 to accumulate the XOR sum.
+- Iterate through the sorted array starting from index 1 to the end.
+- Compare the current element with the previous element (`nums[i] == nums[i-1]`).
+- If they are equal, XOR the duplicate value into `num`.
+- Return the accumulated XOR sum `num`.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N)`
+
+### Space Complexity
+
+`O(log N)`
+
+> Sorting the array of size N takes O(N log N) time, and the subsequent linear scan takes O(N) time. The space complexity is O(log N) due to the recursive call stack of the sorting algorithm.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- No duplicates present — The loop condition is never met, and the code correctly returns 0.
+- All elements are duplicates — Every pair triggers the XOR condition exactly once, correctly accumulating all unique duplicate values.
+- Array of minimum length (1 or 2) — If length is 1, the loop does not run and returns 0. If length is 2, it correctly detects if they are duplicates.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Sorting groups identical elements together, allowing us to identify duplicates in a single linear scan by comparing adjacent elements, and then we can accumulate them using the XOR operator's self-canceling and associative properties.
+
+### Common Mistakes
+
+- Forgetting that sorting modifies the input array, which might not be allowed if the original order must be preserved.
+- Assuming elements can appear more than twice, which would cause incorrect XOR accumulations if not handled with a Set.
+- XORing every element blindly instead of only XORing the detected duplicates.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to find or aggregate duplicates in an array, consider sorting first to bring identical elements together, reducing the search space to adjacent elements. If O(N log N) is too slow, transition to a Hash Set or frequency array for O(N) time at the cost of O(N) space. For bitwise aggregation like XOR, ensure you only apply the operator to the filtered subset of elements (the duplicates) rather than the entire array.
+
+**Similar Problems to Practice:**
+
+- Single Number
+- Find All Duplicates in an Array
+- Single Number III
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
