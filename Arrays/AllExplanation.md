@@ -6275,3 +6275,94 @@ To find elements appearing more than n/k times in O(1) space, generalize the Boy
 
 =====================================================
 
+# 2519. Find The Original Array of Prefix Xor
+
+> 🔗 [LeetCode](https://leetcode.com/problems/find-the-original-array-of-prefix-xor/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 16 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to reconstruct an original array given its prefix XOR array, where each element in the prefix array is the cumulative XOR sum of all elements in the original array up to that index.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- prefix XOR -> reconstruct using inverse XOR operation
+- pref[i] = arr[0] ^ ... ^ arr[i] -> adjacent elements relationship: arr[i] = pref[i] ^ pref[i-1]
+
+**Pattern(s) used:**
+
+- Bit Manipulation
+- Prefix Sum / Prefix XOR
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize the result array with the same length as the input prefix array.
+- Set the first element of the result array to be equal to the first element of the prefix array.
+- Iterate through the prefix array from index 1 to n - 1.
+- For each index i, calculate the original element by XORing the current prefix value with the previous prefix value: ans[i] = pref[i] ^ pref[i-1].
+- Return the populated result array.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We perform a single pass over the array of size N, executing a constant-time XOR operation at each step. The auxiliary space is O(1) if we modify the input array in-place, or O(N) to store the output array.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array of size 1 — The loop does not execute, and the single element is correctly returned as pref[0].
+- All elements are 0 — The XOR operations naturally handle zeros correctly, resulting in an all-zero output.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The XOR operation is its own inverse. Since pref[i] = pref[i-1] ^ arr[i], we can apply XOR with pref[i-1] to both sides of the equation to isolate the original element: arr[i] = pref[i] ^ pref[i-1].
+
+### Common Mistakes
+
+- Attempting to reconstruct the array using nested loops, resulting in an O(N^2) time complexity and a Time Limit Exceeded (TLE) verdict.
+- Modifying the array in-place in a forward direction without caching the original value of pref[i-1], which corrupts the prefix values needed for subsequent calculations.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To reconstruct an original array from any prefix-accumulated state (such as prefix sum, prefix product, or prefix XOR), identify the inverse of the accumulation operator. For sum, the inverse is subtraction; for XOR, the inverse is XOR itself. Apply this inverse operator between adjacent elements (pref[i] and pref[i-1]) to isolate and extract each original element in O(1) time per element.
+
+**Similar Problems to Practice:**
+
+- Decode XORed Array
+- XOR Queries of a Subarray
+- Running Sum of 1d Array
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
