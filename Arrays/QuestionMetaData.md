@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 73
-- **Easy** : 39
+- **Total Problems** : 74
+- **Easy** : 40
 - **Medium** : 32
 - **Hard** : 1
 
 **Last Updated**
 
-16 Sept 2026
+17 Sept 2026
 
 ---
 
@@ -71,6 +71,7 @@
 | 2016 | LeetCode | [Reduction Operations to Make the Array Elements Equal](https://leetcode.com/problems/reduction-operations-to-make-the-array-elements-equal/) | Medium | Java | 38 ms | 71.6 MB | 27 Jul 2026 | `Arrays/2016_Reduction_Operations_to_Make_the_Array_Elements_Equal.java` |
 | 2102 | LeetCode | [Find the Middle Index in Array](https://leetcode.com/problems/find-the-middle-index-in-array/) | Easy | Java | 0 ms | 43.7 MB | 15 Aug 2026 | `Arrays/2102_Find_the_Middle_Index_in_Array.java` |
 | 2122 | LeetCode | [Count Special Quadruplets](https://leetcode.com/problems/count-special-quadruplets/) | Easy | Java | 9 ms | 45.1 MB | 09 Aug 2026 | `Arrays/2122_Count_Special_Quadruplets.java` |
+| 2137 | LeetCode | [Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/) | Easy | Java | 1 ms | 44.1 MB | 17 Sept 2026 | `Arrays/2137_Final_Value_of_Variable_After_Performing_Operations.java` |
 | 2210 | LeetCode | [Find Target Indices After Sorting Array](https://leetcode.com/problems/find-target-indices-after-sorting-array/) | Easy | Java | 6 ms | 50.1 MB | 21 Aug 2026 | `Arrays/2210_Find_Target_Indices_After_Sorting_Array.java` |
 | 2231 | LeetCode | [Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array/) | Easy | Java | 1 ms | 47.6 MB | 12 Jul 2026 | `Arrays/2231_Find_First_Palindromic_String_in_the_Array.java` |
 | 2240 | LeetCode | [Intervals Between Identical Elements](https://leetcode.com/problems/intervals-between-identical-elements/) | Medium | Java | 170 ms | 189.3 MB | 05 Jul 2026 | `Arrays/2240_Intervals_Between_Identical_Elements.java` |
