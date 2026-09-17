@@ -377,3 +377,96 @@ To validate symmetric properties with a small, constant budget of 'skips' or 'er
 
 =====================================================
 
+# 1894. Merge Strings Alternately
+
+> 🔗 [LeetCode](https://leetcode.com/problems/merge-strings-alternately/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 17 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+Given two strings, merge them by adding letters in alternating order, starting with the first string. If one string is longer than the other, append the additional letters onto the end of the merged string.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- merge two sequences alternately → two pointers traversing independent inputs
+- unequal lengths with remainder appended → post-loop pointer cleanup
+
+**Pattern(s) used:**
+
+- Two Pointers
+- String Manipulation
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two pointers, i and j, to 0 to track the current position in word1 and word2 respectively.
+- Use a StringBuilder to efficiently build the merged string.
+- Run a loop while both pointers are within their respective string bounds, appending the character from word1 then word2, and incrementing both pointers.
+- After the loop, append any remaining characters from the longer string using a substring or a simple loop.
+- Convert the StringBuilder to a string and return it.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N + M)`
+
+### Space Complexity
+
+`O(1)`
+
+> We only use a few pointer variables which take O(1) auxiliary space (excluding the output string buffer which takes O(N + M) space to store the result). We traverse each string exactly once, leading to O(N + M) time complexity.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- word1 is longer than word2 — tests if the remainder of word1 is correctly appended after the main loop
+- word2 is longer than word1 — tests if the remainder of word2 is correctly appended after the main loop
+- Single-character strings — ensures the pointers do not go out of bounds on minimal input sizes
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Instead of complex conditional logic inside a single loop, we can cleanly process the common length first, and then append the remainder of whichever string is longer.
+
+### Common Mistakes
+
+- Using string concatenation (+) inside the loop instead of StringBuilder, leading to O((N+M)^2) time complexity due to string immutability.
+- Forgetting to append the remaining characters of the longer string after the main loop terminates.
+- Index out of bounds errors by not checking the boundary conditions of both pointers independently.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to merge, compare, or interleave two independent sequences (like arrays, strings, or linked lists), use two independent pointers. Initialize one pointer for each sequence, advance them based on the problem's rules, and always include post-loop checks to handle any leftover elements from the longer sequence.
+
+**Similar Problems to Practice:**
+
+- Merge Sorted Array
+- Interval List Intersections
+- Reverse Vowels of a String
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
