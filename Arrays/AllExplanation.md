@@ -6461,3 +6461,94 @@ When asked to find or aggregate duplicates in an array, consider sorting first t
 
 =====================================================
 
+# 2137. Final Value of Variable After Performing Operations
+
+> 🔗 [LeetCode](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 17 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+Calculate the final value of an integer variable (initially 0) after performing a series of increment ('++X', 'X++') and decrement ('--X', 'X--') operations represented as an array of strings.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- list of operations/instructions → Simulation
+- increment or decrement strings → Conditional state modification
+
+**Pattern(s) used:**
+
+- Simulation
+- String Matching
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize an accumulator variable `count` to 0.
+- Iterate through each operation string in the input array.
+- Check if the operation represents an increment or decrement.
+- Update `count` by adding 1 for increments or subtracting 1 for decrements.
+- Return the final value of `count`.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We iterate through the array of size N exactly once, performing constant-time string checks and updates, requiring no extra memory.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty operations array — handled correctly if the loop doesn't run, returning 0.
+- All operations of one type (e.g., all increments) — ensures the accumulator correctly scales up to N without overflow.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Instead of performing full string comparisons, we can inspect just the middle character of each 3-character operation string: if `op.charAt(1) == '+'`, it is always an increment; otherwise, it is a decrement.
+
+### Common Mistakes
+
+- Using slow string operations or regex when simple character inspection or direct equality checks suffice.
+- Syntax errors in conditional blocks (such as leaving an empty if-statement block and executing the increment unconditionally).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+For simulation problems where you need to track a state based on sequential instructions, identify the minimal set of conditions needed to transition the state. Look for shortcuts in string matching (like checking a single character at a fixed index) to optimize the inner loop of your simulation.
+
+**Similar Problems to Practice:**
+
+- Calculate Money in LeetCode Bank
+- Defanging an IP Address
+- Matrix Cells in Distance Order
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
