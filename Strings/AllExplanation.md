@@ -843,3 +843,98 @@ When a problem requires repeatedly removing adjacent elements that satisfy a cer
 
 =====================================================
 
+# 2736. Minimum Additions to Make Valid String
+
+> 🔗 [LeetCode](https://leetcode.com/problems/minimum-additions-to-make-valid-string/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 18 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks for the minimum number of characters ('a', 'b', or 'c') that must be inserted into a given string so that the resulting string is valid, where a valid string is defined as any concatenation of the block "abc".
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- minimum additions to make valid → Greedy sequence matching
+- concatenating 'abc' → Cyclic state machine / pattern simulation
+
+**Pattern(s) used:**
+
+- Greedy
+- Simulation
+- State Machine
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a counter `ans` for insertions, an index `i` to traverse the input string, and a cycle state `j` (0 for 'a', 1 for 'b', 2 for 'c').
+- Iterate through the string while `i` is less than the string length.
+- Calculate the expected character at the current state: `(char)('a' + j)`.
+- If the character at `word.charAt(i)` matches the expected character, advance the input pointer `i`.
+- If there is a mismatch, increment `ans` to simulate inserting the expected character at this position.
+- Advance the cycle state `j` to the next expected character using `(j + 1) % 3`.
+- After exiting the loop, if the cycle state `j` is not 0 (meaning the string ended in the middle of an "abc" block), add `3 - j` to `ans` to complete the final block.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm processes each character of the string of length N at most once, using a constant amount of extra space for pointers and counters.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single character string (e.g., 'a') — The loop matches 'a', then the cleanup step correctly adds 2 to complete the 'bc' part.
+- Already valid string (e.g., 'abcabc') — The loop matches every character perfectly, resulting in 0 insertions.
+- Reverse order characters (e.g., 'cba') — The state machine forces insertions of missing characters to form 'abcabcabc', correctly yielding 6 insertions.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The target valid string is a repeating sequence of 'abc'. By simulating a pointer moving through an infinite 'abcabc...' sequence and matching it against the input string, any mismatch represents a mandatory insertion.
+
+### Common Mistakes
+
+- Forgetting to complete the final cycle if the input string ends on 'a' or 'b'.
+- Attempting to use complex dynamic programming when a simple greedy simulation is sufficient and more optimal.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To solve problems requiring sequence completion or validation against a repeating pattern, model the pattern as a cyclic state machine. Traverse the input string while matching characters to the expected state of the machine. When a mismatch occurs, greedily 'insert' the expected character by incrementing the insertion counter and advancing the state machine while keeping the input pointer stationary. Always remember to handle any incomplete cycles after the input is fully consumed.
+
+**Similar Problems to Practice:**
+
+- Append Characters to String to Make Subsequence
+- Minimum Additions to Make Parentheses Valid
+- Is Subsequence
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
