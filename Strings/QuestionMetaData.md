@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 9
+- **Total Problems** : 10
 - **Easy** : 6
-- **Medium** : 3
+- **Medium** : 4
 - **Hard** : 0
 
 **Last Updated**
 
-14 Sept 2026
+18 Sept 2026
 
 ---
 
@@ -25,4 +25,5 @@
 | 1970 | LeetCode | [Sorting the Sentence](https://leetcode.com/problems/sorting-the-sentence/) | Easy | Java | 0 ms | 43 MB | 24 Aug 2026 | `Strings/1970_Sorting_the_Sentence.java` |
 | 2401 | LeetCode | [Count Asterisks](https://leetcode.com/problems/count-asterisks/) | Easy | Java | 3 ms | 43.2 MB | 26 Aug 2026 | `Strings/2401_Count_Asterisks.java` |
 | 2470 | LeetCode | [Removing Stars From a String](https://leetcode.com/problems/removing-stars-from-a-string/) | Medium | Java | 90 ms | 48.8 MB | 09 Sept 2026 | `Strings/2470_Removing_Stars_From_a_String.java` |
+| 2736 | LeetCode | [Minimum Additions to Make Valid String](https://leetcode.com/problems/minimum-additions-to-make-valid-string/) | Medium | Java | 1 ms | 44 MB | 18 Sept 2026 | `Strings/2736_Minimum_Additions_to_Make_Valid_String.java` |
 | 3312 | LeetCode | [Number of Changing Keys](https://leetcode.com/problems/number-of-changing-keys/) | Easy | Java | 1 ms | 43.5 MB | 15 Jul 2026 | `Strings/3312_Number_of_Changing_Keys.java` |
