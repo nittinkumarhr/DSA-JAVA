@@ -6,13 +6,13 @@
     "Other": 16,
     "Sorting": 1,
     "Stack": 1,
-    "Strings": 10,
+    "Strings": 11,
     "Trees": 1,
     "Two_Pointers": 5
   },
   "easy": 69,
   "hard": 0,
-  "lastSynced": "2026-09-17T13:06:57.291Z",
-  "medium": 49,
-  "total": 127
+  "lastSynced": "2026-09-18T11:41:44.339Z",
+  "medium": 50,
+  "total": 128
 }
