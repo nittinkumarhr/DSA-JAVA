@@ -6552,3 +6552,98 @@ For simulation problems where you need to track a state based on sequential inst
 
 =====================================================
 
+# 1620. Check If Array Pairs Are Divisible by k
+
+> 🔗 [LeetCode](https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 19 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+Determine if an array of even length can be partitioned into pairs such that the sum of each pair is divisible by a given integer k.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- sum of pairs divisible by k → modulo arithmetic and remainder frequency tracking
+- partition array into pairs → frequency matching of complementary states
+
+**Pattern(s) used:**
+
+- Hash Table
+- Math
+- Modulo Arithmetic
+- Frequency Counting
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a frequency array of size k to store the count of each remainder.
+- Iterate through the input array, compute the normalized remainder for each element using `((num % k) + k) % k`, and increment its count in the frequency array.
+- Check if the count of elements with remainder 0 is even; if not, return false because they can only pair with each other.
+- For each remainder i from 1 to k - 1, verify that the frequency of remainder i equals the frequency of remainder k - i. If any mismatch is found, return false.
+- If all frequency checks pass, return true.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N + K)`
+
+### Space Complexity
+
+`O(K)`
+
+> We iterate through the array of size N once to populate the remainder frequencies, and then iterate up to K to validate the pairs. The auxiliary space is O(K) to store the remainder frequencies.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Negative numbers — Java's % operator can yield negative results, so remainders must be normalized using `((num % k) + k) % k` to prevent negative array indices.
+- Remainder 0 — Elements divisible by k must pair with each other, requiring their count to be even.
+- Even k and remainder k/2 — Elements with remainder k/2 must pair with themselves, requiring their count to be even (this is naturally handled when checking if count[i] == count[k-i] for i = k/2).
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+For any two numbers to sum to a multiple of k, their remainders modulo k must sum to k (or both be 0). Thus, the problem reduces to matching the frequency of remainder r with the frequency of remainder k - r.
+
+### Common Mistakes
+
+- Forgetting to handle negative numbers correctly, leading to negative array index exceptions.
+- Failing to check that the count of elements with remainder 0 must be even.
+- Using a nested loop O(N^2) approach which results in a Time Limit Exceeded (TLE) error.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to find pairs or groups of numbers that satisfy a divisibility condition, leverage modulo arithmetic. Map each number to its remainder modulo k, reducing the search space from arbitrary integers to a finite set of k remainders. Use a frequency map or array of size k to track these remainders, and then pair complementary remainders r and k - r.
+
+**Similar Problems to Practice:**
+
+- Subarray Sums Divisible by K
+- Continuous Subarray Sum
+- Pairs of Songs With Total Durations Divisible by 60
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
