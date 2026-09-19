@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 74
+- **Total Problems** : 75
 - **Easy** : 40
-- **Medium** : 32
+- **Medium** : 33
 - **Hard** : 1
 
 **Last Updated**
 
-17 Sept 2026
+19 Sept 2026
 
 ---
 
@@ -57,6 +57,7 @@
 | 1538 | LeetCode | [Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/) | Medium | Java | 1 ms | 62 MB | 09 Jul 2026 | `Arrays/1538_Maximum_Points_You_Can_Obtain_from_Cards.java` |
 | 1570 | LeetCode | [Final Prices With a Special Discount in a Shop](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/) | Easy | Java | 2 ms | 45.1 MB | 12 Sept 2026 | `Arrays/1570_Final_Prices_With_a_Special_Discount_in_a_Shop.java` |
 | 1605 | LeetCode | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Medium | Java | 19 ms | 82.5 MB | 07 Aug 2026 | `Arrays/1605_Minimum_Number_of_Days_to_Make_m_Bouquets.java` |
+| 1620 | LeetCode | [Check If Array Pairs Are Divisible by k](https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k/) | Medium | Java | 4 ms | 84.5 MB | 19 Sept 2026 | `Arrays/1620_Check_If_Array_Pairs_Are_Divisible_by_k.java` |
 | 1635 | LeetCode | [Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/) | Easy | Java | 1 ms | 42.7 MB | 12 Aug 2026 | `Arrays/1635_Number_of_Good_Pairs.java` |
 | 1720 | LeetCode | [Crawler Log Folder](https://leetcode.com/problems/crawler-log-folder/) | Easy | Java | 1 ms | 43.7 MB | 13 Sept 2026 | `Arrays/1720_Crawler_Log_Folder.java` |
 | 1730 | LeetCode | [Special Array With X Elements Greater Than or Equal X](https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/) | Easy | Java | 4 ms | 43.2 MB | 13 Aug 2026 | `Arrays/1730_Special_Array_With_X_Elements_Greater_Than_or_Equal_X.java` |
