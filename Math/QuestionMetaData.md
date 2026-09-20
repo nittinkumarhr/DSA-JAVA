@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 15
-- **Easy** : 10
+- **Total Problems** : 16
+- **Easy** : 11
 - **Medium** : 4
 - **Hard** : 0
 
 **Last Updated**
 
-14 Sept 2026
+20 Sept 2026
 
 ---
 
@@ -24,6 +24,7 @@
 | 1303 | LeetCode | [Minimum Moves to Reach Target Score](https://leetcode.com/problems/minimum-moves-to-reach-target-score/) | Medium | Java | 0 ms | 42.4 MB | 13 Sept 2026 | `Math/1303_Minimum_Moves_to_Reach_Target_Score.java` |
 | 1406 | LeetCode | [Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/) | Easy | Java | 0 ms | 42.2 MB | 24 Jul 2026 | `Math/1406_Subtract_the_Product_and_Sum_of_Digits_of_an_Integer.java` |
 | 1444 | LeetCode | [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) | Easy | Java | 0 ms | 42.4 MB | 13 Sept 2026 | `Math/1444_Number_of_Steps_to_Reduce_a_Number_to_Zero.java` |
+| 1448 | LeetCode | [Maximum 69 Number](https://leetcode.com/problems/maximum-69-number/) | Easy | Java | 1 ms | 41.8 MB | 20 Sept 2026 | `Math/1448_Maximum_69_Number.java` |
 | 1610 | LeetCode | [XOR Operation in an Array](https://leetcode.com/problems/xor-operation-in-an-array/) | Easy | Java | 0 ms | 42.5 MB | 13 Jul 2026 | `Math/1610_XOR_Operation_in_an_Array.java` |
 | 2288 | LeetCode | [Count Operations to Obtain Zero](https://leetcode.com/problems/count-operations-to-obtain-zero/) | Easy | Java | 9 ms | 49.1 MB | 14 Sept 2026 | `Math/2288_Count_Operations_to_Obtain_Zero.java` |
 | 2507 | LeetCode | [Number of Common Factors](https://leetcode.com/problems/number-of-common-factors/) | Easy | Java | 1 ms | 42 MB | 15 Jul 2026 | `Math/2507_Number_of_Common_Factors.java` |
