@@ -1247,3 +1247,96 @@ When a problem requires reducing two numbers by repeatedly subtracting the small
 
 =====================================================
 
+# 1448. Maximum 69 Number
+
+> 🔗 [LeetCode](https://leetcode.com/problems/maximum-69-number/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 20 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+Given a positive integer consisting only of the digits 6 and 9, find the maximum possible number that can be obtained by changing at most one digit (either 6 to 9 or 9 to 6).
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- maximum number by changing at most one digit → greedy choice (modify the most significant digit)
+- digits 6 and 9 → digit-by-digit processing or string conversion
+
+**Pattern(s) used:**
+
+- Greedy
+- String Manipulation
+
+---
+
+## 🛠 Solution Approach
+
+- Convert the integer to a string and then to a character array to easily access individual digits.
+- Traverse the digits from left to right (from most significant to least significant).
+- Find the first occurrence of the character '6'.
+- Change this first '6' to '9' to maximize the value increase, and immediately break the loop.
+- Convert the modified character array back to an integer and return it.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Time complexity is O(N) where N is the number of digits (log10(num)) because we scan the digits at most once. Space complexity is O(N) to store the character array representation of the number.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Number consists only of 9s — No '6' is found, so no changes are made, and the original number is correctly returned.
+- Number consists only of 6s — The very first digit (leftmost) is changed to '9', maximizing the value.
+- Single digit number — If it is '6', it becomes '9'; if it is '9', it stays '9'.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+To maximize the value of a number, any increase at a higher place value (leftmost) is strictly greater than any increase at a lower place value (rightmost). Thus, we must greedily change the first '6' we encounter from the left.
+
+### Common Mistakes
+
+- Changing the last '6' instead of the first '6', which yields a smaller number (e.g., converting 9669 to 9699 instead of 9969).
+- Changing a '9' to a '6', which decreases the value instead of increasing it.
+- Attempting complex mathematical division/modulo operations to find the digit when string conversion is much simpler and less error-prone.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to maximize or minimize a number by changing a limited number of digits, always think greedily. Focus on the most significant digits (leftmost) first, as changes there have an exponentially larger impact on the overall value than changes on the right. Convert the number to a string or array representation to easily inspect and modify individual place values.
+
+**Similar Problems to Practice:**
+
+- Maximum Swap
+- Monotone Increasing Digits
+- Remove K Digits
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
