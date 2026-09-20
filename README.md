@@ -6,18 +6,18 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 
 | Difficulty | Count |
 |------------|-------|
-| 🟢 Easy    | 69 |
+| 🟢 Easy    | 70 |
 | 🟡 Medium  | 51 |
 | 🔴 Hard    | 0 |
-| **Total**  | **129** |
+| **Total**  | **130** |
 
 ## By Topic
 
 | Topic | Solved |
 |-------|--------|
 | Arrays | 65 |
+| Math | 16 |
 | Other | 16 |
-| Math | 15 |
 | Hashing | 14 |
 | Strings | 11 |
 | Two Pointers | 5 |
@@ -49,4 +49,4 @@ leetcode-solutions/
 └── Other/
 ```
 
-*Last updated: 19 Sept 2026*
+*Last updated: 20 Sept 2026*
