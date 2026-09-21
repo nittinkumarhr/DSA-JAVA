@@ -722,3 +722,97 @@ To validate a uniform property across elements (such as equal frequencies or cou
 
 =====================================================
 
+# 0778. Reorganize String
+
+> 🔗 [LeetCode](https://leetcode.com/problems/reorganize-string/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 21 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to rearrange the characters of a given string so that no two adjacent characters are identical. If it is impossible to do so, we must return an empty string.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- no two adjacent characters are the same → greedy placement using frequency counts
+- rearrange string with adjacency constraints → max frequency feasibility check and interleaved filling
+
+**Pattern(s) used:**
+
+- Greedy
+- Counting
+- Hash Table
+
+---
+
+## 🛠 Solution Approach
+
+- Count the frequency of each character in the string using a frequency array of size 26.
+- Identify the character with the maximum frequency.
+- Check if the maximum frequency exceeds (n + 1) / 2. If it does, return an empty string because it is mathematically impossible to avoid adjacent duplicates.
+- Initialize a result character array of size n and an index pointer at 0.
+- Place the most frequent character at alternate (even) indices (0, 2, 4, ...) first.
+- Iterate through the remaining characters and continue placing them at the remaining alternate indices, wrapping around to odd index 1 once the end of the array is reached.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We iterate through the string of length N to count frequencies and then fill the result array of size N, resulting in O(N) time. The auxiliary space is O(1) because the frequency array size is fixed at 26, and the output array is required for the result.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- String of length 1 — Handled correctly as max frequency (1) is not greater than (1+1)/2 (1).
+- Dominant character count exceeds limit — Handled by the early exit condition returning "".
+- All identical characters — Handled by the early exit condition returning "" for length > 1.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The most frequent character is the bottleneck. If we can successfully place the most frequent character at even indices without running out of bounds, all other less frequent characters can easily be interleaved around it without violating the adjacency constraint.
+
+### Common Mistakes
+
+- Failing to place the absolute most frequent character first, which can lead to placing it at adjacent odd/even boundaries later.
+- Incorrectly calculating the feasibility threshold, such as using n/2 instead of (n+1)/2, which fails for odd lengths.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To solve any rearrangement problem with adjacency constraints, first count frequencies and identify the most frequent element. If the highest frequency exceeds the maximum allowable slots (usually (N+1)/2 for adjacent constraints), return impossible immediately. Otherwise, greedily distribute the elements starting with the most frequent, either using interleaved index-filling (for distance = 2) or a Max-Heap with a temporary cooling queue (for distance > 2).
+
+**Similar Problems to Practice:**
+
+- Task Scheduler
+- Rearrange String k Distance Apart
+- Distant Barcodes
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
