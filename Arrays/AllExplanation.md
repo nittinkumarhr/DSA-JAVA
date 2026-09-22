@@ -6647,3 +6647,97 @@ When asked to find pairs or groups of numbers that satisfy a divisibility condit
 
 =====================================================
 
+# 0713. Subarray Product Less Than K
+
+> 🔗 [LeetCode](https://leetcode.com/problems/subarray-product-less-than-k/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 22 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks to find the total number of contiguous subarrays where the product of all elements is strictly less than a given integer k, using an efficient sliding window approach to avoid O(n^2) complexity.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- contiguous subarray → sliding window
+- product of elements → sliding window with division
+- count subarrays satisfying condition → sliding window (right - left + 1)
+
+**Pattern(s) used:**
+
+- Sliding Window
+- Two Pointers
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize left pointer at 0, product as 1, and count as 0.
+- Iterate with a right pointer through the array, multiplying the current element into the product.
+- While the product is greater than or equal to k and left <= right, divide the product by the element at the left pointer and increment left.
+- Add (right - left + 1) to the count, representing all valid subarrays ending at the current right pointer.
+- Return the total count.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(1)`
+
+> The right pointer traverses the array once, and the left pointer also traverses at most once, resulting in linear time; constant space is used for variables.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- k <= 1 — product of positive integers is at least 1, so no subarray can be less than 1.
+- Empty array — the loop will not execute, returning 0 correctly.
+- Elements >= k — the left pointer will move past the right pointer, resulting in 0 count for that step.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+For a fixed right boundary, if a subarray [left, right] is valid, then all subarrays [i, right] where left <= i <= right are also valid, allowing us to count them in constant time.
+
+### Common Mistakes
+
+- Forgetting to handle the k <= 1 case, which leads to infinite loops or incorrect results.
+- Using nested loops to check every subarray, leading to O(n^2) time complexity.
+- Incorrectly calculating the number of subarrays as (right - left) instead of (right - left + 1).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks for counts of contiguous subarrays satisfying a product or sum constraint, look for the 'sliding window' pattern. If the window property is monotonic (adding an element increases the product/sum, removing decreases it), use two pointers to maintain the window. Always check if the constraints allow for a single pass and ensure the window contraction logic correctly maintains the invariant.
+
+**Similar Problems to Practice:**
+
+- Subarray Sum Equals K
+- Maximum Size Subarray Sum Equals k
+- Minimum Size Subarray Sum
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
