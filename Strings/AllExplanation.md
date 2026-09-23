@@ -938,3 +938,99 @@ To solve problems requiring sequence completion or validation against a repeatin
 
 =====================================================
 
+# 0886. Score of Parentheses
+
+> 🔗 [LeetCode](https://leetcode.com/problems/score-of-parentheses/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 23 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to calculate the score of a balanced parentheses string based on three rules: '()' has a score of 1, 'AB' (concatenation) has a score of A + B, and '(A)' (nesting) has a score of 2 * A.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- balanced parentheses → Stack or recursion to track nesting levels
+- nested structures with score calculation → Stack to store intermediate scores of outer levels
+- score of (A) is 2 * A → Hierarchical/tree-like evaluation
+
+**Pattern(s) used:**
+
+- Stack
+- String
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a stack and push a starting score of 0 to represent the global outer context.
+- Iterate through each character of the string.
+- If the character is '(', push 0 onto the stack to start a new nested level.
+- If the character is ')', pop the top value representing the inner score.
+- Calculate the score of this closed pair: currentScore = Math.max(1, 2 * inner).
+- Pop the next top value representing the outer context's accumulated score, add currentScore to it, and push the sum back.
+- Return the final accumulated score at the top of the stack.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> We iterate through the string of length N exactly once, performing O(1) stack operations per character. The stack can grow up to O(N) in size for deeply nested structures like '(((())))'.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Minimal valid string '()' — Handled correctly as inner score is 0, yielding Math.max(1, 0) = 1.
+- Deeply nested parentheses '(((())))' — Handled by pushing multiple 0s and doubling sequentially upon popping.
+- Flat concatenated parentheses '()()()' — Handled by continuously adding scores to the base level accumulator.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+A stack can keep track of the accumulated score at each nesting depth. When we close a parenthesis, we resolve the current depth's score and merge it into the parent depth's score.
+
+### Common Mistakes
+
+- Confusing concatenation (+) with nesting (* 2) when updating scores.
+- Forgetting to initialize the stack with a base score of 0, leading to EmptyStackException on the first pop.
+- Using a simple counter instead of a stack, which fails to distinguish between nested and adjacent parentheses (e.g., '(())' vs '()()').
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When dealing with nested structures (like parentheses, HTML tags, or nested directories) where inner elements contribute to outer elements via specific operations, use a stack to defer computation. Push a default/accumulator value when entering a new nesting level, and pop/merge with the parent level when exiting.
+
+**Similar Problems to Practice:**
+
+- Decode String
+- Basic Calculator
+- Minimum Add to Make Parentheses Valid
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
