@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 10
+- **Total Problems** : 11
 - **Easy** : 6
-- **Medium** : 4
+- **Medium** : 5
 - **Hard** : 0
 
 **Last Updated**
 
-18 Sept 2026
+23 Sept 2026
 
 ---
 
@@ -18,6 +18,7 @@
 | ID | Platform | Problem | Difficulty | Language | Runtime | Memory | Date | Solution |
 |----|----------|---------|------------|----------|---------|--------|------|----------|
 | 657 | LeetCode | [Robot Return to Origin](https://leetcode.com/problems/robot-return-to-origin/) | Easy | Java | 4 ms | 46 MB | 30 Jul 2026 | `Strings/0657_Robot_Return_to_Origin.java` |
+| 886 | LeetCode | [Score of Parentheses](https://leetcode.com/problems/score-of-parentheses/) | Medium | Java | 0 ms | 42.6 MB | 23 Sept 2026 | `Strings/0886_Score_of_Parentheses.java` |
 | 1283 | LeetCode | [Reformat Date](https://leetcode.com/problems/reformat-date/) | Easy | Java | 2 ms | 43 MB | 18 Aug 2026 | `Strings/1283_Reformat_Date.java` |
 | 1320 | LeetCode | [Remove All Adjacent Duplicates in String II](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/) | Medium | Java | 26 ms | 47 MB | 29 Jul 2026 | `Strings/1320_Remove_All_Adjacent_Duplicates_in_String_II.java` |
 | 1520 | LeetCode | [Number of Steps to Reduce a Number in Binary Representation to One](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one/) | Medium | Java | 0 ms | 42.4 MB | 14 Sept 2026 | `Strings/1520_Number_of_Steps_to_Reduce_a_Number_in_Binary_Representation_to_One.java` |
