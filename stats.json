@@ -8,11 +8,12 @@
     "Stack": 1,
     "Strings": 12,
     "Trees": 1,
-    "Two_Pointers": 5
+    "Two_Pointers": 5,
+    "Linked_List": 1
   },
-  "easy": 70,
+  "easy": 71,
   "hard": 0,
-  "lastSynced": "2026-09-23T14:10:35.663Z",
+  "lastSynced": "2026-09-24T14:01:58.319Z",
   "medium": 54,
-  "total": 133
+  "total": 134
 }
