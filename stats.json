@@ -2,18 +2,18 @@
   "byTopic": {
     "Arrays": 66,
     "Hashing": 15,
-    "Math": 16,
+    "Linked_List": 1,
+    "Math": 17,
     "Other": 16,
     "Sorting": 1,
     "Stack": 1,
     "Strings": 12,
     "Trees": 1,
-    "Two_Pointers": 5,
-    "Linked_List": 1
+    "Two_Pointers": 5
   },
-  "easy": 71,
+  "easy": 72,
   "hard": 0,
-  "lastSynced": "2026-09-24T14:01:58.319Z",
+  "lastSynced": "2026-09-25T16:44:22.578Z",
   "medium": 54,
-  "total": 134
+  "total": 135
 }
