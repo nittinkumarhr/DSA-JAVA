@@ -6,25 +6,25 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 
 | Difficulty | Count |
 |------------|-------|
-| 🟢 Easy    | 71 |
+| 🟢 Easy    | 72 |
 | 🟡 Medium  | 54 |
 | 🔴 Hard    | 0 |
-| **Total**  | **134** |
+| **Total**  | **135** |
 
 ## By Topic
 
 | Topic | Solved |
 |-------|--------|
 | Arrays | 66 |
-| Math | 16 |
+| Math | 17 |
 | Other | 16 |
 | Hashing | 15 |
 | Strings | 12 |
 | Two Pointers | 5 |
+| Linked List | 1 |
 | Sorting | 1 |
 | Stack | 1 |
 | Trees | 1 |
-| Linked List | 1 |
 
 ## Structure
 
@@ -50,4 +50,4 @@ leetcode-solutions/
 └── Other/
 ```
 
-*Last updated: 24 Sept 2026*
+*Last updated: 25 Sept 2026*
