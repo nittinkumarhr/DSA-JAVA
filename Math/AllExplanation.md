@@ -1340,3 +1340,99 @@ When asked to maximize or minimize a number by changing a limited number of digi
 
 =====================================================
 
+# 0009. Palindrome Number
+
+> 🔗 [LeetCode](https://leetcode.com/problems/palindrome-number/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 25 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks to determine if a given integer reads the same forwards and backwards without converting the number into a string, requiring a mathematical approach to reverse the digits.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- integer input → mathematical digit manipulation
+- reads same forwards and backwards → palindrome check
+- without converting to string → modulo/division arithmetic
+
+**Pattern(s) used:**
+
+- Math
+- Digit Manipulation
+
+---
+
+## 🛠 Solution Approach
+
+- Handle negative numbers immediately as they cannot be palindromes due to the '-' sign.
+- Store the original number in a variable to compare later.
+- Use a loop to extract the last digit of the number using modulo (x % 10).
+- Build the reversed number by multiplying the current reverse by 10 and adding the extracted digit.
+- Divide the original number by 10 in each iteration to shift digits.
+- Compare the fully reversed number with the original stored value.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(log10(n))`
+
+### Space Complexity
+
+`O(1)`
+
+> The time complexity is logarithmic because the number of digits in an integer is proportional to log10(n), and space is constant as we only use a few integer variables.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Negative numbers — returns false immediately as they contain a sign character.
+- Zero — returns true as it is a single-digit palindrome.
+- Multiples of 10 — returns false because the leading digit cannot be zero unless the number is zero.
+- Integer overflow — handled by checking bounds before multiplying by 10.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+A palindrome's reverse is identical to itself; by mathematically constructing the reverse, we avoid the memory overhead of string conversion.
+
+### Common Mistakes
+
+- Converting the integer to a string to simplify the check, violating the spirit of the math-based constraint.
+- Failing to account for integer overflow when reversing large numbers.
+- Forgetting that negative numbers are never palindromes.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When faced with digit-based problems, look for constraints that forbid string conversion. Use the modulo operator (%) to isolate the last digit and integer division (/) to reduce the number. Always consider the sign of the number and potential overflow if the reversed value exceeds the maximum integer limit.
+
+**Similar Problems to Practice:**
+
+- Reverse Integer
+- Palindrome Linked List
+- Valid Palindrome
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
