@@ -816,3 +816,97 @@ To solve any rearrangement problem with adjacency constraints, first count frequ
 
 =====================================================
 
+# 1632. Number of Good Ways to Split a String
+
+> 🔗 [LeetCode](https://leetcode.com/problems/number-of-good-ways-to-split-a-string/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 26 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks to find the number of ways to split a string into two non-empty parts such that the number of unique characters in the left part equals the number of unique characters in the right part.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- split string into two parts → prefix/suffix processing
+- count unique characters → frequency array or hash set
+- compare properties of two partitions → prefix/suffix state tracking
+
+**Pattern(s) used:**
+
+- Prefix Sum
+- Frequency Array
+- Two-Pass Processing
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two frequency arrays (lc and rc) of size 26 to track character counts.
+- First pass: Populate rc with all characters in the string and count total unique characters.
+- Second pass: Iterate through the string, moving one character at a time from the right partition to the left.
+- Update lc and rc counts; increment/decrement unique character counters when a frequency transitions between 0 and 1.
+- Compare the unique character counts (l and r) at each split point and increment the result if they are equal.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm performs two linear passes over the string of length N, and the frequency arrays use constant space (size 26).
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- String length 2 — minimum possible length to have two non-empty partitions.
+- All identical characters — unique count will always be 1 on both sides, resulting in N-1 splits.
+- All unique characters — unique counts will only match at the exact middle split point.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+By pre-calculating the total unique characters in the right partition, we can update the counts of both partitions in O(1) time as we iterate, avoiding re-scanning the string.
+
+### Common Mistakes
+
+- Re-calculating unique characters using a Set inside the loop, leading to O(N^2) complexity.
+- Forgetting to handle the 'non-empty' constraint by splitting at indices that result in empty partitions.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem requires evaluating properties across all possible split points of an array or string, use a two-pass approach. First, compute the global state (e.g., total frequency). Then, iterate through the structure, updating the 'left' state and 'right' state incrementally. This transforms an O(N^2) brute-force search into an O(N) linear scan.
+
+**Similar Problems to Practice:**
+
+- Number of Ways to Split a Array
+- Find the Middle Index in Array
+- Partition Array Into Three Parts With Equal Sum
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
