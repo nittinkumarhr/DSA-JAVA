@@ -910,3 +910,98 @@ When a problem requires evaluating properties across all possible split points o
 
 =====================================================
 
+# 2427. First Letter to Appear Twice
+
+> 🔗 [LeetCode](https://leetcode.com/problems/first-letter-to-appear-twice/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 27 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks to identify the first character in a string that appears for the second time as we traverse the string from left to right. This requires keeping track of characters already encountered and returning the first one that triggers a repeat.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- first character to appear twice → frequency tracking or set membership
+- traverse string → linear scan
+- check if seen before → hash set or boolean array
+
+**Pattern(s) used:**
+
+- Hash Table
+- Frequency Counting
+- Set
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a boolean array of size 26 (or a HashSet) to track seen characters.
+- Iterate through the string character by character.
+- For each character, check if it is already in the tracking structure.
+- If it is present, return this character immediately as it is the first to repeat.
+- If not, add the character to the tracking structure and continue.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We traverse the string once (O(N)), and the space is constant (O(1)) because the alphabet size is fixed at 26 characters regardless of input length.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- String with no repeats — problem constraints usually guarantee a repeat exists
+- String with all same characters — the second character will be returned immediately
+- String with only two characters — the second character will be returned
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The 'first' character to appear twice is determined by the order of the second occurrence, not the first. By checking for existence during a single left-to-right pass, the first time we encounter a character already in our set, we have found the answer.
+
+### Common Mistakes
+
+- Using a HashMap to store counts when a simple boolean array or HashSet suffices
+- Continuing the loop after finding the first duplicate instead of returning immediately
+- Misinterpreting 'first to appear twice' as the character with the earliest first occurrence
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+Whenever a problem asks for the 'first' element that satisfies a condition related to previous occurrences, think 'seen' state. Use a HashSet or a boolean array to store visited items as you iterate. The moment you encounter an item already in your 'seen' collection, you have found your result. This pattern is applicable to any problem involving duplicates, cycles, or finding the first point of intersection.
+
+**Similar Problems to Practice:**
+
+- 217. Contains Duplicate
+- 387. First Unique Character in a String
+- 1. Two Sum
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
