@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 10
-- **Easy** : 4
+- **Total Problems** : 11
+- **Easy** : 5
 - **Medium** : 6
 - **Hard** : 0
 
 **Last Updated**
 
-26 Sept 2026
+27 Sept 2026
 
 ---
 
@@ -27,3 +27,4 @@
 | 1632 | LeetCode | [Number of Good Ways to Split a String](https://leetcode.com/problems/number-of-good-ways-to-split-a-string/) | Medium | Java | 5 ms | 46.3 MB | 26 Sept 2026 | `Hashing/1632_Number_of_Good_Ways_to_Split_a_String.java` |
 | 1915 | LeetCode | [Check if One String Swap Can Make Strings Equal](https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/) | Easy | Java | 0 ms | 42.9 MB | 27 Aug 2026 | `Hashing/1915_Check_if_One_String_Swap_Can_Make_Strings_Equal.java` |
 | 2053 | LeetCode | [Check if All Characters Have Equal Number of Occurrences](https://leetcode.com/problems/check-if-all-characters-have-equal-number-of-occurrences/) | Easy | Java | 2 ms | 42.9 MB | 06 Sept 2026 | `Hashing/2053_Check_if_All_Characters_Have_Equal_Number_of_Occurrences.java` |
+| 2427 | LeetCode | [First Letter to Appear Twice](https://leetcode.com/problems/first-letter-to-appear-twice/) | Easy | Java | 0 ms | 42.9 MB | 27 Sept 2026 | `Hashing/2427_First_Letter_to_Appear_Twice.java` |
