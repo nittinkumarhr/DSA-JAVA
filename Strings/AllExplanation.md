@@ -1034,3 +1034,83 @@ When dealing with nested structures (like parentheses, HTML tags, or nested dire
 
 =====================================================
 
+# 0071. Simplify Path
+
+> 🔗 [LeetCode](https://leetcode.com/problems/simplify-path/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 28 Sept 2026
+
+---
+
+## 📝 Problem Summary
+
+Problem #71 — Simplify Path. Difficulty: Medium.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- _Add the clues in the problem statement that hint at this pattern._
+
+**Pattern(s) used:**
+
+- string
+- stack
+
+---
+
+## 🛠 Solution Approach
+
+- Review the solution code and add your explanation here.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(?)`
+
+### Space Complexity
+
+`O(?)`
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- _Add edge cases to watch for: empty input, single element, duplicates, negatives, overflow, etc._
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+_Add your key insight here._
+
+### Common Mistakes
+
+- N/A
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+_Add notes on how to recognize and approach this pattern the next time you see it._
+
+**Similar Problems to Practice:**
+
+- N/A
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
