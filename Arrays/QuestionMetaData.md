@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 76
+- **Total Problems** : 77
 - **Easy** : 40
 - **Medium** : 34
-- **Hard** : 1
+- **Hard** : 2
 
 **Last Updated**
 
-22 Sept 2026
+29 Sept 2026
 
 ---
 
@@ -33,6 +33,7 @@
 | 287 | LeetCode | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Medium | Java | 38 ms | 79.4 MB | 07 Sept 2026 | `Arrays/0287_Find_the_Duplicate_Number.java` |
 | 324 | LeetCode | [Wiggle Sort II](https://leetcode.com/problems/wiggle-sort-ii/) | Medium | Java | 9 ms | 49 MB | 19 Jul 2026 | `Arrays/0324_Wiggle_Sort_II.java` |
 | 347 | LeetCode | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium | Java | 16 ms | 47.5 MB | 10 Jul 2026 | `Arrays/0347_Top_K_Frequent_Elements.java` |
+| 410 | LeetCode | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | Hard | Java | 0 ms | 43 MB | 29 Sept 2026 | `Arrays/0410_Split_Array_Largest_Sum.java` |
 | 442 | LeetCode | [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | Medium | Java | 6 ms | 60.6 MB | 02 Aug 2026 | `Arrays/0442_Find_All_Duplicates_in_an_Array.java` |
 | 454 | LeetCode | [4Sum II](https://leetcode.com/problems/4sum-ii/) | Medium | Java | 127 ms | 46.8 MB | 15 Jul 2026 | `Arrays/0454_4Sum_II.java` |
 | 496 | LeetCode | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) | Easy | Java | 3 ms | 45.4 MB | 15 Sept 2026 | `Arrays/0496_Next_Greater_Element_I.java` |
