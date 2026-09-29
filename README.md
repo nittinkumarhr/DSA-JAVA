@@ -8,14 +8,14 @@ Auto-synced from LeetCode using [LeetCode GitHub Sync](https://github.com/yourus
 |------------|-------|
 | 🟢 Easy    | 73 |
 | 🟡 Medium  | 56 |
-| 🔴 Hard    | 0 |
-| **Total**  | **138** |
+| 🔴 Hard    | 1 |
+| **Total**  | **139** |
 
 ## By Topic
 
 | Topic | Solved |
 |-------|--------|
-| Arrays | 66 |
+| Arrays | 67 |
 | Hashing | 17 |
 | Math | 17 |
 | Other | 16 |
@@ -50,4 +50,4 @@ leetcode-solutions/
 └── Other/
 ```
 
-*Last updated: 28 Sept 2026*
+*Last updated: 29 Sept 2026*
