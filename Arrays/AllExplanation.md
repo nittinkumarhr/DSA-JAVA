@@ -6824,3 +6824,99 @@ _Add notes on how to recognize and approach this pattern the next time you see i
 
 =====================================================
 
+# 2188. Minimized Maximum of Products Distributed to Any Store
+
+> 🔗 [LeetCode](https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 01 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to distribute $m$ different product types into $n$ retail stores such that each store receives at most one product type (and possibly 0). We need to find a distribution strategy that minimizes the maximum number of products given to any single store.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- minimize the maximum... -> Binary Search on Answer
+- each store can be given at most one type of product -> Greedy allocation per product type
+- monotonicity (if max load X is possible, any load Y > X is also possible) -> Binary Search on Answer
+
+**Pattern(s) used:**
+
+- Binary Search on Answer
+- Greedy
+
+---
+
+## 🛠 Solution Approach
+
+- Identify the search space for the minimized maximum: the minimum possible value is 1 (low) and the maximum possible value is the maximum element in the quantities array (high).
+- Perform binary search on this range [low, high].
+- For each midpoint 'mid', determine if it is possible to distribute all products such that no store receives more than 'mid' items of any product.
+- To check feasibility, iterate through the quantities and calculate the number of stores needed for each product type using ceiling division: (quantity + mid - 1) / mid.
+- Sum the required stores. If the total stores needed is less than or equal to n, then 'mid' is a feasible maximum; try to find a smaller maximum by setting high = mid.
+- If the stores needed exceed n, then 'mid' is too small; increase the allowed maximum by setting low = mid + 1.
+- Return 'low' as the optimal minimized maximum.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(M * log(max(Q)))`
+
+### Space Complexity
+
+`O(1)`
+
+> The binary search takes O(log(max(Q))) steps, where max(Q) is the maximum quantity of any product. In each step, we iterate through the quantities array of size M to check feasibility, resulting in O(M * log(max(Q))) time complexity. Only a constant amount of extra space is used.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- n == quantities.length — Each store gets exactly one product type, and the answer is simply the maximum value in quantities.
+- Large quantities — Ceiling division (quantity + mid - 1) / mid must not cause integer overflow; since mid >= 1, standard integer operations are safe.
+- n is extremely large — The feasibility check correctly handles this by assigning products to fewer stores than available, returning true.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The problem exhibits monotonicity: if we can successfully distribute the products such that no store gets more than X items, we can also do so for any limit greater than X. This allows us to binary search the answer space directly rather than trying to construct the distribution.
+
+### Common Mistakes
+
+- Using standard integer division (quantity / mid) instead of ceiling division, which incorrectly rounds down the number of stores needed.
+- Setting the upper bound 'high' to the sum of all quantities, which is correct but unnecessarily increases the binary search range and can cause overflow.
+- Incorrectly handling the binary search boundaries, leading to infinite loops (e.g., not using low = mid + 1).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To recognize 'Binary Search on Answer', look for optimization keywords like 'minimize the maximum' or 'maximize the minimum' where a direct greedy or dynamic programming approach is too slow. Verify monotonicity: if a candidate answer X is feasible, does it guarantee that all values greater than X (or smaller than X) are also feasible? If yes, define your search space [low, high] and write a greedy helper function to validate whether a candidate value is achievable.
+
+**Similar Problems to Practice:**
+
+- Koko Eating Bananas
+- Capacity To Ship Packages Within D Days
+- Split Array Largest Sum
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
