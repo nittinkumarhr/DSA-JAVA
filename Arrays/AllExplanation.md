@@ -6920,3 +6920,98 @@ To recognize 'Binary Search on Answer', look for optimization keywords like 'min
 
 =====================================================
 
+# 1675. Magnetic Force Between Two Balls
+
+> 🔗 [LeetCode](https://leetcode.com/problems/magnetic-force-between-two-balls/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 02 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks to place m balls into n given positions such that the minimum distance between any two balls is maximized. This is a classic optimization problem that can be transformed into a decision problem: 'Can we place m balls such that the minimum distance is at least X?'
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- maximize the minimum value → binary search on answer
+- distribute items with constraints → greedy verification
+- sorted array → binary search applicability
+
+**Pattern(s) used:**
+
+- Binary Search on Answer
+- Greedy
+- Sorting
+
+---
+
+## 🛠 Solution Approach
+
+- Sort the position array to allow for linear greedy placement.
+- Define the search space for the minimum distance: low = 1, high = max(position) - min(position).
+- Perform binary search on the distance value.
+- In the check function, greedily place balls: place the first ball at the first position, then place subsequent balls only if the distance from the last placed ball is >= mid.
+- If the number of placed balls is >= m, try a larger distance; otherwise, try a smaller distance.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N + N log D)`
+
+### Space Complexity
+
+`O(1)`
+
+> Sorting takes O(N log N), and the binary search runs for log D iterations (where D is the range of positions), each performing an O(N) linear scan.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- m = 2 — the answer is simply the distance between the first and last element.
+- m = n — the answer is the minimum gap between adjacent sorted positions.
+- Large coordinates — the range D can be up to 10^9, making binary search necessary over linear search.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The feasibility function is monotonic: if a minimum distance X is possible, any distance less than X is also possible, which allows us to binary search for the largest valid X.
+
+### Common Mistakes
+
+- Forgetting to sort the input array, which breaks the greedy placement logic.
+- Incorrectly setting the binary search bounds (e.g., using 0 instead of 1 for the lower bound).
+- Failing to realize that the 'check' function must be greedy to be efficient.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks to 'maximize the minimum' or 'minimize the maximum' of a value, consider binary search on the answer. First, define the range of possible answers. Then, design a boolean 'check(mid)' function that determines if a specific value is achievable using a greedy approach. If the check function is monotonic, binary search is the optimal strategy.
+
+**Similar Problems to Practice:**
+
+- Aggressive Cows
+- Split Array Largest Sum
+- Capacity To Ship Packages Within D Days
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
