@@ -7015,3 +7015,101 @@ When a problem asks to 'maximize the minimum' or 'minimize the maximum' of a val
 
 =====================================================
 
+# 0735. Asteroid Collision
+
+> 🔗 [LeetCode](https://leetcode.com/problems/asteroid-collision/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 03 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to simulate the collision of asteroids moving in a 1D line. Each asteroid has a size (absolute value) and a direction (positive for right, negative for left). When two asteroids meet, the smaller one explodes; if they are of equal size, both explode. Asteroids moving in the same direction or away from each other never collide. We need to return the final state of the asteroids after all collisions are resolved.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- sequential elimination based on adjacent interactions → Stack
+- elements moving in opposite directions colliding → Stack-based simulation
+- cascading cancellations/explosions → Monotonic-like Stack resolution
+
+**Pattern(s) used:**
+
+- Stack
+- Simulation
+
+---
+
+## 🛠 Solution Approach
+
+- Iterate through the asteroids from left to right.
+- If the current asteroid is moving right (positive), push it onto the stack because it cannot collide with any processed asteroids to its left.
+- If the current asteroid is moving left (negative), it may collide with positive asteroids on top of the stack.
+- While the stack is not empty, the top element is positive, and its size is strictly less than the absolute value of the current negative asteroid, pop the top element (it explodes).
+- If the stack top is positive and has the same size as the current asteroid, pop it (both explode) and mark the current asteroid as destroyed.
+- If the stack top is positive and larger than the current asteroid, the current asteroid is destroyed (do not push it).
+- If the current asteroid survives all potential collisions (i.e., stack is empty or top is negative), push it onto the stack.
+- Convert the stack elements back to an array, preserving the original order, and return it.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Each asteroid is pushed onto and popped from the stack at most once, resulting in O(N) time complexity. The space complexity is O(N) to store the stack elements in the worst case where no collisions occur.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- All asteroids moving in the same direction — No collisions occur, stack should return the original array.
+- Negative asteroids followed by positive asteroids — They move away from each other (e.g., [-2, 2]), so no collisions occur.
+- Equal size collisions — Both asteroids must be destroyed (e.g., [5, -5] results in []).
+- Empty input — Handled naturally, returning an empty array.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Collisions only occur when a right-moving asteroid (positive) is to the left of a left-moving asteroid (negative). This localized, sequential interaction is perfectly modeled by a stack where we only resolve collisions at the boundary (the top of the stack).
+
+### Common Mistakes
+
+- Colliding negative asteroids on the stack with an incoming positive asteroid (collisions only happen when stack top is positive and incoming is negative).
+- Forgetting to destroy both asteroids when they are of equal size.
+- Reversing the final array incorrectly when reconstructing it from the stack.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To recognize and approach stack-simulation problems, look for scenarios where elements interact with their immediate neighbors, and those interactions can trigger chain reactions (like cascading explosions, cancellations, or reductions). Use a stack to represent the 'stable state' of processed elements. For each new element, compare it with the top of the stack and repeatedly resolve conflicts until a stable state is reached, then push the new element if it survived.
+
+**Similar Problems to Practice:**
+
+- Robot Collisions
+- Backspace String Compare
+- Removing Stars From a String
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
