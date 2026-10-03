@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 79
+- **Total Problems** : 80
 - **Easy** : 40
-- **Medium** : 36
+- **Medium** : 37
 - **Hard** : 2
 
 **Last Updated**
 
-02 Oct 2026
+03 Oct 2026
 
 ---
 
@@ -45,6 +45,7 @@
 | 645 | LeetCode | [Set Mismatch](https://leetcode.com/problems/set-mismatch/) | Easy | Java | 15 ms | 48.4 MB | 07 Sept 2026 | `Arrays/0645_Set_Mismatch.java` |
 | 682 | LeetCode | [Baseball Game](https://leetcode.com/problems/baseball-game/) | Easy | Java | 2 ms | 43.5 MB | 30 Jul 2026 | `Arrays/0682_Baseball_Game.java` |
 | 713 | LeetCode | [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) | Medium | Java | 3 ms | 48.9 MB | 22 Sept 2026 | `Arrays/0713_Subarray_Product_Less_Than_K.java` |
+| 735 | LeetCode | [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) | Medium | Java | 5 ms | 47.2 MB | 03 Oct 2026 | `Arrays/0735_Asteroid_Collision.java` |
 | 739 | LeetCode | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium | Java | 60 ms | 107.8 MB | 21 Jul 2026 | `Arrays/0739_Daily_Temperatures.java` |
 | 822 | LeetCode | [Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/) | Easy | Java | 2 ms | 43.5 MB | 20 Aug 2026 | `Arrays/0822_Unique_Morse_Code_Words.java` |
 | 940 | LeetCode | [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/) | Medium | Java | 54 ms | 70.8 MB | 09 Jul 2026 | `Arrays/0940_Fruit_Into_Baskets.java` |
