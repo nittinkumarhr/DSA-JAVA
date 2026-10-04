@@ -1114,3 +1114,98 @@ _Add notes on how to recognize and approach this pattern the next time you see i
 
 =====================================================
 
+# 0402. Remove K Digits
+
+> 🔗 [LeetCode](https://leetcode.com/problems/remove-k-digits/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 04 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find the smallest possible integer represented as a string after removing exactly k digits from a given non-negative integer string 'num'.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- minimize/maximize a sequence by removing k elements → greedy with monotonic stack
+- lexicographically/numerically smallest sequence after k deletions → monotonic stack
+
+**Pattern(s) used:**
+
+- Monotonic Stack
+- Greedy
+
+---
+
+## 🛠 Solution Approach
+
+- Iterate through each digit of the string 'num' from left to right.
+- Maintain a monotonic increasing stack of digits. While k > 0, the stack is not empty, and the current digit is smaller than the top of the stack, pop from the stack and decrement k.
+- Push the current digit onto the stack.
+- If the loop finishes and k is still greater than 0, pop the remaining k elements from the top of the stack (since the stack is already in non-decreasing order, the largest elements are at the top).
+- Construct the resulting string from the stack, reverse it, and strip any leading zeros.
+- If the final string is empty, return '0'.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Each digit is pushed onto and popped from the stack at most once, leading to linear time complexity. The space complexity is O(N) to store the digits in the stack/StringBuilder.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- k equals the length of num — handled by returning '0' when the stack/string becomes empty.
+- Leading zeros in the result (e.g., '10200' with k=1) — handled by explicitly stripping leading '0' characters from the constructed string.
+- Identical digits (e.g., '1111' with k=2) — handled by popping remaining k elements from the end of the monotonic stack.
+- Already sorted digits (e.g., '1234' with k=2) — handled by popping from the end of the stack since no inversion triggers the inner loop.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+To minimize a number, we must minimize its most significant digits (the leftmost digits). A digit at index i should be removed if it is greater than the digit at index i+1, as keeping the smaller digit in the higher place value yields a smaller number.
+
+### Common Mistakes
+
+- Using a nested loop or sorting approach that results in O(N^2) or O(N log N) time complexity, which TLEs.
+- Forgetting to handle remaining k > 0 after the main loop finishes (e.g., for input '12345' with k=2).
+- Failing to correctly strip leading zeros or returning an empty string instead of '0' when all digits are removed.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to find the lexicographically smallest or largest sequence by deleting k elements, think of a Monotonic Stack. Iterate through the elements, and greedily discard elements from the stack that violate the desired monotonic order (increasing for smallest, decreasing for largest) as long as you still have deletions (k > 0) remaining.
+
+**Similar Problems to Practice:**
+
+- Create Maximum Number
+- Find the Most Competitive Subsequence
+- Smallest Subsequence of Distinct Characters
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
