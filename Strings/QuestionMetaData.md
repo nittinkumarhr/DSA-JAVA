@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 12
+- **Total Problems** : 13
 - **Easy** : 6
-- **Medium** : 6
+- **Medium** : 7
 - **Hard** : 0
 
 **Last Updated**
 
-28 Sept 2026
+04 Oct 2026
 
 ---
 
@@ -18,6 +18,7 @@
 | ID | Platform | Problem | Difficulty | Language | Runtime | Memory | Date | Solution |
 |----|----------|---------|------------|----------|---------|--------|------|----------|
 | 71 | LeetCode | [Simplify Path](https://leetcode.com/problems/simplify-path/) | Medium | Java | 4 ms | 44.9 MB | 28 Sept 2026 | `Strings/0071_Simplify_Path.java` |
+| 402 | LeetCode | [Remove K Digits](https://leetcode.com/problems/remove-k-digits/) | Medium | Java | 19 ms | 47.9 MB | 04 Oct 2026 | `Strings/0402_Remove_K_Digits.java` |
 | 657 | LeetCode | [Robot Return to Origin](https://leetcode.com/problems/robot-return-to-origin/) | Easy | Java | 4 ms | 46 MB | 30 Jul 2026 | `Strings/0657_Robot_Return_to_Origin.java` |
 | 886 | LeetCode | [Score of Parentheses](https://leetcode.com/problems/score-of-parentheses/) | Medium | Java | 0 ms | 42.6 MB | 23 Sept 2026 | `Strings/0886_Score_of_Parentheses.java` |
 | 1283 | LeetCode | [Reformat Date](https://leetcode.com/problems/reformat-date/) | Easy | Java | 2 ms | 43 MB | 18 Aug 2026 | `Strings/1283_Reformat_Date.java` |
