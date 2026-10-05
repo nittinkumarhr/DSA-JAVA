@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 80
+- **Total Problems** : 81
 - **Easy** : 40
-- **Medium** : 37
+- **Medium** : 38
 - **Hard** : 2
 
 **Last Updated**
 
-03 Oct 2026
+05 Oct 2026
 
 ---
 
@@ -36,6 +36,7 @@
 | 410 | LeetCode | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | Hard | Java | 0 ms | 43 MB | 29 Sept 2026 | `Arrays/0410_Split_Array_Largest_Sum.java` |
 | 442 | LeetCode | [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | Medium | Java | 6 ms | 60.6 MB | 02 Aug 2026 | `Arrays/0442_Find_All_Duplicates_in_an_Array.java` |
 | 454 | LeetCode | [4Sum II](https://leetcode.com/problems/4sum-ii/) | Medium | Java | 127 ms | 46.8 MB | 15 Jul 2026 | `Arrays/0454_4Sum_II.java` |
+| 456 | LeetCode | [132 Pattern](https://leetcode.com/problems/132-pattern/) | Medium | Java | 40 ms | 99.1 MB | 05 Oct 2026 | `Arrays/0456_132_Pattern.java` |
 | 496 | LeetCode | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) | Easy | Java | 3 ms | 45.4 MB | 15 Sept 2026 | `Arrays/0496_Next_Greater_Element_I.java` |
 | 503 | LeetCode | [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/) | Medium | Java | 90 ms | 47.8 MB | 15 Sept 2026 | `Arrays/0503_Next_Greater_Element_II.java` |
 | 506 | LeetCode | [Relative Ranks](https://leetcode.com/problems/relative-ranks/) | Easy | Java | 10 ms | 47.8 MB | 28 Aug 2026 | `Arrays/0506_Relative_Ranks.java` |
