@@ -7113,3 +7113,97 @@ To recognize and approach stack-simulation problems, look for scenarios where el
 
 =====================================================
 
+# 0456. 132 Pattern
+
+> 🔗 [LeetCode](https://leetcode.com/problems/132-pattern/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 05 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+Determine if there exists a subsequence of three indices i < j < k such that nums[i] < nums[k] < nums[j] (a 1-3-2 pattern) in a given array of integers.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- subsequence of 3 elements with relative order and value constraints → Monotonic Stack / Next Greater Element variation
+- finding elements satisfying i < j < k and nums[i] < nums[k] < nums[j] → Right-to-left traversal with a monotonic stack to track the '2' and '3' elements
+
+**Pattern(s) used:**
+
+- Monotonic Stack
+- Array
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a variable 'second' to negative infinity to represent the '2' in the '132' pattern.
+- Iterate through the array from right to left (from nums.length - 1 down to 0).
+- At each element nums[i], check if it is smaller than 'second'. If so, we have found a valid '1' (since 'second' is already smaller than some '3' to its right), so return true.
+- Otherwise, while the stack is not empty and the current element nums[i] is strictly greater than the top of the stack, pop from the stack and update 'second' to the popped value. This maximizes the value of '2' while ensuring it is smaller than our potential '3' (nums[i]).
+- Push the current element nums[i] onto the stack as a potential '3'.
+- If the loop finishes without finding a valid pattern, return false.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Each element is pushed and popped from the stack at most once, leading to linear time complexity. The stack can store up to N elements in the worst case.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array length less than 3 — Cannot form a 132 pattern, handled implicitly by returning false.
+- Strictly increasing or decreasing array — No 132 pattern exists, stack operations will safely complete without finding a valid '1'.
+- Duplicate elements — Handled correctly because the strict inequality nums[i] < second prevents duplicates from falsely triggering a match.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+By traversing backwards, we can use a monotonic stack to keep track of the largest possible '2' (stored in 'second') that has a valid '3' to its left. Any element smaller than 'second' encountered further to the left immediately completes the '132' pattern.
+
+### Common Mistakes
+
+- Traversing from left to right without keeping track of the minimum prefix, which makes finding the optimal '2' and '3' difficult.
+- Using a non-strict inequality for the comparison, which fails on duplicate elements.
+- Not updating the 'second' variable to the maximum possible popped value, which can miss valid patterns.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem requires finding a triplet or subsequence with specific relative order and value constraints (like a-b-c where a < c < b), consider traversing backwards. Use a monotonic stack to maintain candidates for the larger elements ('b' and 'c') and keep track of the best 'c' (the second largest) found so far. This allows you to resolve the constraint for 'a' in a single pass.
+
+**Similar Problems to Practice:**
+
+- Next Greater Element I
+- Daily Temperatures
+- Create Maximum Number
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
