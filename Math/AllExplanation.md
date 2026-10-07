@@ -1436,3 +1436,95 @@ When faced with digit-based problems, look for constraints that forbid string co
 
 =====================================================
 
+# 1146. Greatest Common Divisor of Strings
+
+> 🔗 [LeetCode](https://leetcode.com/problems/greatest-common-divisor-of-strings/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 07 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to find the largest string `x` that can divide both `str1` and `str2`. A string `x` is said to divide another string `s` if `s` can be formed by concatenating `x` multiple times.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- divides both strings → GCD of string lengths
+- string concatenation periodicity → commutative check (str1 + str2 == str2 + str1)
+
+**Pattern(s) used:**
+
+- Math
+- String Manipulation
+- Euclidean Algorithm
+
+---
+
+## 🛠 Solution Approach
+
+- Check if the concatenation of the two strings is commutative: `str1 + str2` must equal `str2 + str1`. If they are not equal, return an empty string.
+- If they are commutative, find the Greatest Common Divisor (GCD) of the lengths of `str1` and `str2` using the Euclidean algorithm.
+- Return the prefix of `str1` from index 0 to the calculated GCD length.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N + M)`
+
+### Space Complexity
+
+`O(N + M)`
+
+> String concatenation and comparison take O(N + M) time and space, where N and M are the lengths of str1 and str2. Finding the GCD of the lengths takes O(log(min(N, M))) time, which is dominated by the string operations.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- No common divisor — Handled by the commutative check which immediately returns an empty string if the periodicities do not align.
+- One string is a multiple of the other — Handled correctly because the GCD of their lengths will equal the length of the shorter string.
+- Coprime lengths with matching characters (e.g., 'A' and 'AA') — Handled correctly as the GCD of 1 and 2 is 1, returning 'A'.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+If two strings share a common divisor string, concatenating them in either order must produce the same result (i.e., `str1 + str2 == str2 + str1`). Under this condition, the length of the greatest common divisor string is exactly the greatest common divisor (GCD) of the lengths of the two strings.
+
+### Common Mistakes
+
+- Assuming the shorter string is always the GCD without checking if its length mathematically divides the longer string's length.
+- Forgetting to verify if the strings are actually compatible, leading to false positives like 'LEET' and 'CODE' having a GCD of length 4.
+- Using a naive nested substring matching loop instead of the mathematical GCD of lengths, which is much less efficient.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks for a repeating pattern or divisor within strings, look for mathematical properties of periodicity. First, establish a global compatibility condition (like `A + B == B + A` for divisibility). Once compatibility is proven, reduce the string problem to a number theory problem by working with the lengths of the strings (e.g., using GCD or LCM) to find the exact boundaries of the repeating unit.
+
+**Similar Problems to Practice:**
+
+- Repeated Substring Pattern
+- Rotated Digits
+- Find the Index of the First Occurrence in a String
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
