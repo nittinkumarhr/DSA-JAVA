@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 81
-- **Easy** : 40
+- **Total Problems** : 82
+- **Easy** : 41
 - **Medium** : 38
 - **Hard** : 2
 
 **Last Updated**
 
-05 Oct 2026
+07 Oct 2026
 
 ---
 
@@ -76,6 +76,7 @@
 | 1950 | LeetCode | [Sign of the Product of an Array](https://leetcode.com/problems/sign-of-the-product-of-an-array/) | Easy | Java | 0 ms | 45.3 MB | 26 Jul 2026 | `Arrays/1950_Sign_of_the_Product_of_an_Array.java` |
 | 2016 | LeetCode | [Reduction Operations to Make the Array Elements Equal](https://leetcode.com/problems/reduction-operations-to-make-the-array-elements-equal/) | Medium | Java | 38 ms | 71.6 MB | 27 Jul 2026 | `Arrays/2016_Reduction_Operations_to_Make_the_Array_Elements_Equal.java` |
 | 2102 | LeetCode | [Find the Middle Index in Array](https://leetcode.com/problems/find-the-middle-index-in-array/) | Easy | Java | 0 ms | 43.7 MB | 15 Aug 2026 | `Arrays/2102_Find_the_Middle_Index_in_Array.java` |
+| 2106 | LeetCode | [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | Easy | Java | 0 ms | 45.2 MB | 07 Oct 2026 | `Arrays/2106_Find_Greatest_Common_Divisor_of_Array.java` |
 | 2122 | LeetCode | [Count Special Quadruplets](https://leetcode.com/problems/count-special-quadruplets/) | Easy | Java | 9 ms | 45.1 MB | 09 Aug 2026 | `Arrays/2122_Count_Special_Quadruplets.java` |
 | 2137 | LeetCode | [Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/) | Easy | Java | 1 ms | 44.1 MB | 17 Sept 2026 | `Arrays/2137_Final_Value_of_Variable_After_Performing_Operations.java` |
 | 2188 | LeetCode | [Minimized Maximum of Products Distributed to Any Store](https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/) | Medium | Java | 22 ms | 81.1 MB | 01 Oct 2026 | `Arrays/2188_Minimized_Maximum_of_Products_Distributed_to_Any_Store.java` |
