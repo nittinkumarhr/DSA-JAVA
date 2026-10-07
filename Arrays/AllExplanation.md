@@ -7207,3 +7207,95 @@ When a problem requires finding a triplet or subsequence with specific relative 
 
 =====================================================
 
+# 2106. Find Greatest Common Divisor of Array
+
+> 🔗 [LeetCode](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 07 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an integer array, find the greatest common divisor (GCD) of the smallest and largest numbers present in the array.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- smallest number and the largest number -> Single-pass min/max tracking
+- greatest common divisor -> Euclidean Algorithm
+
+**Pattern(s) used:**
+
+- Math
+- Euclidean Algorithm
+- Array Traversal
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two variables to track the minimum and maximum values in the array.
+- Iterate through the array once to find the absolute minimum and maximum elements.
+- Compute the Greatest Common Divisor (GCD) of these two identified values using the Euclidean algorithm (repeated modulo operations).
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N + log(min(min_val, max_val)))`
+
+### Space Complexity
+
+`O(1)`
+
+> Finding the min and max elements takes O(N) time by traversing the array of size N once. Computing the GCD of these two numbers using the Euclidean algorithm takes logarithmic time proportional to the value of the smaller number. No extra space is used.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array of size 2 — The minimum size allowed; handled correctly as min and max are directly compared.
+- All elements are identical — The min and max will be equal, and their GCD is the number itself.
+- Min value is 1 — The GCD of 1 and any number is always 1; the algorithm handles this immediately.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The problem reduces a multi-element array problem to a simple two-number math problem by focusing exclusively on the absolute minimum and maximum elements. Once these two numbers are found, the classic Euclidean algorithm can compute the GCD in logarithmic time.
+
+### Common Mistakes
+
+- Attempting to find the GCD of the entire array instead of just the minimum and maximum elements.
+- Using a naive linear search for GCD (from 1 to min) which is inefficient for large numbers, instead of the logarithmic Euclidean algorithm.
+- Incorrectly initializing the min and max trackers (e.g., setting min to 0 when elements are strictly positive).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks for relationships (like GCD, LCM, or difference) between extreme elements of an array, decouple the problem into two phases: first, find the target elements (min/max) using a single-pass traversal; second, apply the specific mathematical utility (like the Euclidean algorithm for GCD) on those two numbers. Always prefer the Euclidean algorithm `gcd(a, b) = b == 0 ? a : gcd(b, a % b)` over linear scanning for optimal logarithmic time complexity.
+
+**Similar Problems to Practice:**
+
+- Greatest Common Divisor of Strings
+- Number of Common Factors
+- Three Divisors
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
