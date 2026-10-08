@@ -3,7 +3,7 @@
     "Arrays": 72,
     "Hashing": 17,
     "Linked_List": 1,
-    "Math": 18,
+    "Math": 19,
     "Other": 16,
     "Sorting": 1,
     "Stack": 1,
@@ -11,9 +11,9 @@
     "Trees": 1,
     "Two_Pointers": 5
   },
-  "easy": 75,
+  "easy": 76,
   "hard": 1,
-  "lastSynced": "2026-10-07T10:24:24.024Z",
+  "lastSynced": "2026-10-08T11:19:39.079Z",
   "medium": 61,
-  "total": 146
+  "total": 147
 }
