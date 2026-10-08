@@ -1528,3 +1528,93 @@ When a problem asks for a repeating pattern or divisor within strings, look for 
 
 =====================================================
 
+# 2491. Smallest Even Multiple
+
+> 🔗 [LeetCode](https://leetcode.com/problems/smallest-even-multiple/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 08 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+Given a positive integer n, the goal is to find the smallest positive integer that is a multiple of both 2 and n, which is equivalent to finding the Least Common Multiple (LCM) of 2 and n.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- smallest positive integer that is a multiple of both 2 and n -> Least Common Multiple (LCM) of 2 and n
+- multiple of 2 -> parity check (even vs odd) using modulo 2
+
+**Pattern(s) used:**
+
+- Math
+- Number Theory
+
+---
+
+## 🛠 Solution Approach
+
+- Check if the input integer n is even by evaluating if n % 2 == 0.
+- If n is even, it is already a multiple of 2, so return n.
+- If n is odd, the smallest common multiple with 2 is n * 2, so return n * 2.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(1)`
+
+### Space Complexity
+
+`O(1)`
+
+> The solution performs a single modulo operation and an optional multiplication, both of which execute in constant time and use no additional memory.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- n = 1 — The smallest positive odd integer, correctly returns 2.
+- n = 2 — The smallest positive even integer, correctly returns 2.
+- Large values of n — Though constraints are small (n <= 150), if n were extremely large, n * 2 could cause integer overflow. In Java, this is handled by using appropriate primitive types if n exceeds Integer.MAX_VALUE / 2.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The Least Common Multiple (LCM) of two numbers a and b is defined as (a * b) / GCD(a, b). Since one of our numbers is the prime number 2, their GCD is either 2 (if n is even) or 1 (if n is odd), simplifying the LCM to either n or 2n.
+
+### Common Mistakes
+
+- Using a loop to increment from 1 upwards to find the multiple, resulting in an unnecessary O(n) time complexity.
+- Unconditionally returning n * 2, forgetting that even numbers are already multiples of 2.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To find the Least Common Multiple (LCM) of a prime number p and any integer n, check if n is divisible by p. If n % p == 0, the LCM is n. Otherwise, because p is prime and shares no factors with n, the LCM is simply p * n. This avoids the overhead of a full Greatest Common Divisor (GCD) algorithm.
+
+**Similar Problems to Practice:**
+
+- Three Divisors
+- Find Greatest Common Divisor of Array
+- Ugly Number
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
