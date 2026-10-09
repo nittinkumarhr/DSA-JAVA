@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 11
-- **Easy** : 5
+- **Total Problems** : 12
+- **Easy** : 6
 - **Medium** : 6
 - **Hard** : 0
 
 **Last Updated**
 
-27 Sept 2026
+09 Oct 2026
 
 ---
 
@@ -17,6 +17,7 @@
 
 | ID | Platform | Problem | Difficulty | Language | Runtime | Memory | Date | Solution |
 |----|----------|---------|------------|----------|---------|--------|------|----------|
+| 13 | LeetCode | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | Java | 7 ms | 47.1 MB | 09 Oct 2026 | `Hashing/0013_Roman_to_Integer.java` |
 | 451 | LeetCode | [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/) | Medium | Java | 380 ms | 48.2 MB | 18 Jul 2026 | `Hashing/0451_Sort_Characters_By_Frequency.java` |
 | 768 | LeetCode | [Partition Labels](https://leetcode.com/problems/partition-labels/) | Medium | Java | 4 ms | 43.4 MB | 23 Jul 2026 | `Hashing/0768_Partition_Labels.java` |
 | 778 | LeetCode | [Reorganize String](https://leetcode.com/problems/reorganize-string/) | Medium | Java | 1 ms | 42.9 MB | 21 Sept 2026 | `Hashing/0778_Reorganize_String.java` |
