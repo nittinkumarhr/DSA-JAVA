@@ -1005,3 +1005,98 @@ Whenever a problem asks for the 'first' element that satisfies a condition relat
 
 =====================================================
 
+# 0013. Roman to Integer
+
+> 🔗 [LeetCode](https://leetcode.com/problems/roman-to-integer/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 09 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+Convert a given Roman numeral string into its corresponding integer representation by processing characters from left to right and handling subtractive combinations.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- Roman numeral conversion → Mapping characters to fixed values
+- Subtractive notation (smaller before larger) → Look-ahead comparison or conditional subtraction
+
+**Pattern(s) used:**
+
+- Hash Table
+- String Manipulation
+- Greedy / Look-Ahead
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a hash map storing the integer values of all seven Roman numeral characters (I, V, X, L, C, D, M).
+- Initialize a result variable to 0.
+- Iterate through the string from index 0 to length - 2.
+- For each character, compare its mapped value with the value of the next character.
+- If the current value is less than the next value, subtract the current value from the result (subtractive case).
+- Otherwise, add the current value to the result.
+- After the loop, add the value of the final character to the result and return it.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We iterate through the string of length N exactly once, performing O(1) lookups. The hash map size is constant (exactly 7 elements), requiring O(1) auxiliary space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single character string (e.g., 'I') — The loop does not run, and the last character is correctly added and returned.
+- Subtractive combinations at the end (e.g., 'IV') — The first character 'I' is subtracted because it is less than 'V', and 'V' is added at the end, yielding 4.
+- Repeated characters (e.g., 'III') — Each 'I' is equal to the next, so they are all added sequentially.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+If a Roman numeral character has a smaller value than the character immediately following it, it must be subtracted rather than added.
+
+### Common Mistakes
+
+- Out of bounds error when checking the next character if the loop condition is not carefully bounded.
+- Hardcoding all subtractive pairs (IV, IX, etc.) instead of using the general 'current < next' comparison rule, which leads to bloated code.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When processing a sequence where the relationship between adjacent elements determines the operation (like addition vs. subtraction, or opening vs. closing brackets), use a look-ahead or look-behind strategy. Map the symbols to their values using a hash map or array, and iterate through the sequence while comparing the current element to its neighbor to decide the state transition or arithmetic operation.
+
+**Similar Problems to Practice:**
+
+- Integer to Roman
+- Valid Parentheses
+- Decode String
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
