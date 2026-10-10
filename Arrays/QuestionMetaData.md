@@ -2,9 +2,9 @@
 
 ## Statistics
 
-- **Total Problems** : 83
+- **Total Problems** : 84
 - **Easy** : 41
-- **Medium** : 39
+- **Medium** : 40
 - **Hard** : 2
 
 **Last Updated**
@@ -85,6 +85,7 @@
 | 2240 | LeetCode | [Intervals Between Identical Elements](https://leetcode.com/problems/intervals-between-identical-elements/) | Medium | Java | 170 ms | 189.3 MB | 05 Jul 2026 | `Arrays/2240_Intervals_Between_Identical_Elements.java` |
 | 2283 | LeetCode | [Sort Even and Odd Indices Independently](https://leetcode.com/problems/sort-even-and-odd-indices-independently/) | Easy | Java | 1 ms | 46 MB | 02 Sept 2026 | `Arrays/2283_Sort_Even_and_Odd_Indices_Independently.java` |
 | 2392 | LeetCode | [Successful Pairs of Spells and Potions](https://leetcode.com/problems/successful-pairs-of-spells-and-potions/) | Medium | Java | 53 ms | 146.8 MB | 10 Aug 2026 | `Arrays/2392_Successful_Pairs_of_Spells_and_Potions.java` |
+| 2418 | LeetCode | [Minimum Sum of Squared Difference](https://leetcode.com/problems/minimum-sum-of-squared-difference/) | Medium | Java | 14 ms | 104.3 MB | 10 Oct 2026 | `Arrays/2418_Minimum_Sum_of_Squared_Difference.java` |
 | 2448 | LeetCode | [Count Number of Bad Pairs](https://leetcode.com/problems/count-number-of-bad-pairs/) | Medium | Java | 43 ms | 87.7 MB | 08 Sept 2026 | `Arrays/2448_Count_Number_of_Bad_Pairs.java` |
 | 2502 | LeetCode | [Sort the People](https://leetcode.com/problems/sort-the-people/) | Easy | Java | 9 ms | 47.5 MB | 30 Aug 2026 | `Arrays/2502_Sort_the_People.java` |
 | 2519 | LeetCode | [Find The Original Array of Prefix Xor](https://leetcode.com/problems/find-the-original-array-of-prefix-xor/) | Medium | Java | 2 ms | 108.8 MB | 16 Sept 2026 | `Arrays/2519_Find_The_Original_Array_of_Prefix_Xor.java` |
