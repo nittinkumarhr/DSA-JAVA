@@ -7394,3 +7394,96 @@ When a problem asks to perform an operation (like removal or modification) at ev
 
 =====================================================
 
+# 2418. Minimum Sum of Squared Difference
+
+> 🔗 [LeetCode](https://leetcode.com/problems/minimum-sum-of-squared-difference/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 10 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+Minimize the sum of squared differences between two integer arrays nums1 and nums2 by modifying elements up to k1 and k2 times respectively, giving a total budget of k = k1 + k2 decrement operations on the initial difference array.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- minimize sum of squared differences + budget of k operations → greedy reduction of largest values
+- cap all elements to a threshold value using at most k decrements → binary search on target max threshold
+
+**Pattern(s) used:**
+
+- Binary Search
+- Greedy
+
+---
+
+## 🛠 Solution Approach
+
+- Calculate the initial absolute difference array diff where diff[i] = |nums1[i] - nums2[i]| and total available operations k = k1 + k2.
+- Binary search for the optimal threshold 'level' in range [0, max(diff)], defined as the smallest value such that reducing all diff[i] > level down to level requires at most k operations.
+- Iterate through diff array, capped each difference at 'level', summing up operations used and accumulating (capped_diff)^2 to answer.
+- Distribute remaining operations (k - operationsUsed) by reducing as many differences as possible from 'level' to 'level - 1', subtracting (2 * level - 1) per reduction from answer.
+- Return the calculated minimum sum of squared differences.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log M)`
+
+### Space Complexity
+
+`O(N)`
+
+> Computing diffs takes O(N) space and time; binary searching over the maximum difference threshold takes O(N log M) time where M = max(diff).
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- k is greater than or equal to total sum of differences — handles completely reducing all differences to 0, resulting in 0.
+- All elements in diff are zero initially — no operations are used and result is 0.
+- Large values of squared differences — handled by casting calculations to 64-bit longs to prevent integer overflow.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Because f(x) = x^2 grows convexly, reducing a larger value by 1 decreases the sum of squares much more than reducing a smaller value by 1. Therefore, optimal strategy always levels down the largest differences first.
+
+### Common Mistakes
+
+- Using a priority queue / max-heap operation by operation, which leads to TLE when k is large (up to 10^9).
+- 32-bit integer overflow when calculating squared terms or intermediate sums.
+- Forgetting to distribute leftover operations after binary search to lower elements from level to level - 1.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks to minimize a sum of powers (like squares) subject to k total reductions, recognize that larger elements should be reduced first. Avoid simulation if k is large; instead, either binary search for the target maximum element ceiling or use a frequency array / counting sort structure to process decrements in bulk.
+
+**Similar Problems to Practice:**
+
+- Sell Diminishing-Valued Colored Balls
+- Minimum Difference Between Largest and Smallest Value in Three Moves
+- Maximum Element After Decreasing and Rearranging
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
