@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 82
+- **Total Problems** : 83
 - **Easy** : 41
-- **Medium** : 38
+- **Medium** : 39
 - **Hard** : 2
 
 **Last Updated**
 
-07 Oct 2026
+10 Oct 2026
 
 ---
 
@@ -98,4 +98,5 @@
 | 3226 | LeetCode | [Minimum Number Game](https://leetcode.com/problems/minimum-number-game/) | Easy | Java | 5 ms | 47.3 MB | 11 Jul 2026 | `Arrays/3226_Minimum_Number_Game.java` |
 | 3428 | LeetCode | [Find the XOR of Numbers Which Appear Twice](https://leetcode.com/problems/find-the-xor-of-numbers-which-appear-twice/) | Easy | Java | 5 ms | 44.6 MB | 16 Sept 2026 | `Arrays/3428_Find_the_XOR_of_Numbers_Which_Appear_Twice.java` |
 | 3515 | LeetCode | [Find if Digit Game Can Be Won](https://leetcode.com/problems/find-if-digit-game-can-be-won/) | Easy | Java | 1 ms | 45.3 MB | 06 Aug 2026 | `Arrays/3515_Find_if_Digit_Game_Can_Be_Won.java` |
+| 3593 | LeetCode | [Find the Maximum Factor Score of Array](https://leetcode.com/problems/find-the-maximum-factor-score-of-array/) | Medium | Java | 2 ms | 45 MB | 10 Oct 2026 | `Arrays/3593_Find_the_Maximum_Factor_Score_of_Array.java` |
 | 4316 | LeetCode | [Minimum Swaps to Move Zeros to End](https://leetcode.com/problems/minimum-swaps-to-move-zeros-to-end/) | Easy | Java | 1 ms | 46.4 MB | 15 Sept 2026 | `Arrays/4316_Minimum_Swaps_to_Move_Zeros_to_End.java` |
