@@ -7299,3 +7299,98 @@ When a problem asks for relationships (like GCD, LCM, or difference) between ext
 
 =====================================================
 
+# 3593. Find the Maximum Factor Score of Array
+
+> 🔗 [LeetCode](https://leetcode.com/problems/find-the-maximum-factor-score-of-array/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 10 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks to find the maximum 'factor score' of an array, defined as the product of the Greatest Common Divisor (GCD) and the Least Common Multiple (LCM) of all elements, after optionally removing exactly one element from the array.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- remove exactly one element → Prefix/Suffix arrays
+- GCD/LCM of a subset → Precomputed prefix/suffix aggregates
+- maximize a value after one modification → O(N) scan with precomputation
+
+**Pattern(s) used:**
+
+- Prefix/Suffix Sums (Generalization)
+- Number Theory
+- Precomputation
+
+---
+
+## 🛠 Solution Approach
+
+- Precompute prefix GCD and LCM arrays where prefix[i] stores the result for elements 0 to i-1.
+- Precompute suffix GCD and LCM arrays where suffix[i] stores the result for elements i to n-1.
+- Calculate the base score using the full array (no removal).
+- Iterate through each index i from 0 to n-1, treating it as the removed element.
+- For each i, compute the combined GCD and LCM using prefix[i] and suffix[i+1].
+- Update the maximum score found so far and return the result.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N * log(max(nums)))`
+
+### Space Complexity
+
+`O(N)`
+
+> We perform two linear passes to build prefix and suffix arrays, and one linear pass to evaluate removals, with each GCD/LCM operation taking logarithmic time relative to the values.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single element array — removing the only element leaves an empty set, requiring careful handling of identity values (GCD=0, LCM=1).
+- Integer overflow — the product of GCD and LCM can exceed 32-bit integer limits, requiring the use of long types.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Removing one element allows us to combine the prefix aggregate (before the element) and the suffix aggregate (after the element) in constant time using precomputed arrays.
+
+### Common Mistakes
+
+- Forgetting to use long for the product, leading to overflow.
+- Incorrectly initializing identity values for GCD (0) and LCM (1) when the array is empty.
+- Trying to recompute GCD/LCM from scratch for every removal, leading to O(N^2) complexity.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks to perform an operation (like removal or modification) at every possible position and compute an aggregate, look for prefix/suffix precomputation. If the operation is associative (like GCD, LCM, Sum, or Product), you can split the array into two parts at any index and combine the precomputed results in O(1) time. Always check if the identity element of your operation (e.g., 0 for GCD, 1 for LCM) is handled correctly for edge cases.
+
+**Similar Problems to Practice:**
+
+- Product of Array Except Self
+- Find the Pivot Index
+- Maximum Product After K Multiplications
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
