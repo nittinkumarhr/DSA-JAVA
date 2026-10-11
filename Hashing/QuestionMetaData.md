@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 12
+- **Total Problems** : 13
 - **Easy** : 6
-- **Medium** : 6
+- **Medium** : 7
 - **Hard** : 0
 
 **Last Updated**
 
-09 Oct 2026
+11 Oct 2026
 
 ---
 
@@ -18,6 +18,7 @@
 | ID | Platform | Problem | Difficulty | Language | Runtime | Memory | Date | Solution |
 |----|----------|---------|------------|----------|---------|--------|------|----------|
 | 13 | LeetCode | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | Java | 7 ms | 47.1 MB | 09 Oct 2026 | `Hashing/0013_Roman_to_Integer.java` |
+| 17 | LeetCode | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Medium | Java | 3 ms | 43.7 MB | 11 Oct 2026 | `Hashing/0017_Letter_Combinations_of_a_Phone_Number.java` |
 | 451 | LeetCode | [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/) | Medium | Java | 380 ms | 48.2 MB | 18 Jul 2026 | `Hashing/0451_Sort_Characters_By_Frequency.java` |
 | 768 | LeetCode | [Partition Labels](https://leetcode.com/problems/partition-labels/) | Medium | Java | 4 ms | 43.4 MB | 23 Jul 2026 | `Hashing/0768_Partition_Labels.java` |
 | 778 | LeetCode | [Reorganize String](https://leetcode.com/problems/reorganize-string/) | Medium | Java | 1 ms | 42.9 MB | 21 Sept 2026 | `Hashing/0778_Reorganize_String.java` |
