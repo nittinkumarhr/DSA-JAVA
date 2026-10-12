@@ -7487,3 +7487,99 @@ When a problem asks to minimize a sum of powers (like squares) subject to k tota
 
 =====================================================
 
+# 0040. Combination Sum II
+
+> 🔗 [LeetCode](https://leetcode.com/problems/combination-sum-ii/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 12 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+Given a collection of candidate numbers that may contain duplicates and a target sum, find all unique combinations where the candidate numbers sum to target. Each number in candidates may only be used once in each combination, and the solution set must not contain duplicate combinations.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- find all unique combinations → backtracking search space exploration
+- each element used at most once + input contains duplicates → sort input and skip identical adjacent elements at the same recursion depth
+- positive integers target sum → subset sum / backtracking with pruning
+
+**Pattern(s) used:**
+
+- Backtracking
+- Sorting
+
+---
+
+## 🛠 Solution Approach
+
+- Sort the candidates array in non-decreasing order to group duplicate elements together and enable early pruning.
+- Define a recursive function `findCombinations` taking the current start index, target, candidates, result list, and current path list.
+- Base Case: If target is 0, add a copy of the current path list to the result list and return.
+- Loop through candidate indices `i` starting from the current `ind` up to the array length.
+- Skip duplicate elements at the same tree depth by checking if `i > ind` and `arr[i] == arr[i - 1]`.
+- Prune the search path early if `arr[i] > target`, since all subsequent elements in the sorted array will also exceed target.
+- Include `arr[i]` in current path, recursively call with `i + 1` and `target - arr[i]`, then backtrack by removing the last element.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(2^N)`
+
+### Space Complexity
+
+`O(N)`
+
+> In the worst case where all subsets are explored, there are 2^N state calls, while recursive call stack depth and path dynamic list consume up to O(N) auxiliary space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- All elements greater than target — Handled immediately when `arr[0] > target`, resulting in an empty output.
+- Duplicate elements present (e.g., [1, 1, 2, 5, 6, 7, 10]) — Avoids duplicate combinations by skipping `arr[i] == arr[i - 1]` when `i > ind`.
+- Sum of all elements is less than target — Handled naturally as base case `target == 0` is never hit, returning an empty list.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Sorting the input allows identical numbers to sit adjacent to each other. By skipping duplicate elements at the same tree depth level (`i > ind && arr[i] == arr[i-1]`), we ensure that identical choices at the same decision level are only picked once, avoiding duplicate combination results without needing a global set.
+
+### Common Mistakes
+
+- Using `i > 0` instead of `i > ind` when skipping duplicates, which erroneously skips duplicate elements that are needed across deeper recursion levels.
+- Forgetting to sort the candidates array prior to calling the recursive helper function.
+- Using a hash set to deduplicate combinations after the fact, which increases memory overhead and leads to TLE instead of pruning directly during decision tree traversal.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to generate unique sub-lists/combinations from an input containing duplicate items, start by sorting the input array. Use a recursive decision tree pattern (backtracking), passing the next starting index `i + 1` to prevent element reuse. At each branch level, skip subsequent iterations if `arr[i] == arr[i - 1]` for `i > start_index` to guarantee duplicate-free branch outputs.
+
+**Similar Problems to Practice:**
+
+- Combination Sum
+- Subsets II
+- Permutations II
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
