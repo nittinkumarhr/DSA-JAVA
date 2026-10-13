@@ -7583,3 +7583,100 @@ When asked to generate unique sub-lists/combinations from an input containing du
 
 =====================================================
 
+# 0892. Shortest Subarray with Sum at Least K
+
+> 🔗 [LeetCode](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/) &nbsp;|&nbsp; 🏷 Hard &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 13 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+Find the length of the shortest contiguous subarray whose sum is at least K, given that the array contains both positive and negative integers, which prevents the use of a standard sliding window.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- subarray sum at least K → prefix sums
+- negative numbers in array → monotonic queue
+- shortest subarray length → sliding window or monotonic queue
+
+**Pattern(s) used:**
+
+- Prefix Sum
+- Monotonic Queue
+- Deque
+
+---
+
+## 🛠 Solution Approach
+
+- Compute the prefix sum array where prefix[i] is the sum of the first i elements.
+- Initialize a deque to store indices of the prefix sum array in increasing order of their values.
+- Iterate through the prefix sums; for each index i, check if the difference between current prefix[i] and the front of the deque is at least K.
+- If the condition is met, update the minimum length and remove the front index to find potentially shorter subarrays.
+- Maintain the monotonic property of the deque by removing indices from the back whose prefix sums are greater than or equal to the current prefix[i].
+- Add the current index to the back of the deque.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Each index is added and removed from the deque at most once, resulting in linear time, and the prefix sum array and deque take linear space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- K is very large — result remains -1 if no subarray satisfies the condition.
+- Negative numbers — standard sliding window fails because the window sum is not monotonic.
+- Single element array — handled by the loop logic correctly.
+- Integer overflow — prefix sums must be stored as long to prevent overflow.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+A monotonic queue allows us to discard 'useless' prefix sums: if prefix[j] >= prefix[i] and j < i, then any subarray ending at or after i starting at j will be longer and have a smaller or equal sum than one starting at i.
+
+### Common Mistakes
+
+- Trying to use a standard two-pointer sliding window when negative numbers are present.
+- Forgetting to use long for prefix sums, leading to integer overflow.
+- Incorrectly maintaining the monotonic property of the deque.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem involves finding a subarray with a sum constraint and the array contains negative numbers, standard sliding window is insufficient. Use prefix sums to transform the subarray sum into a difference of two prefix sums (prefix[j] - prefix[i] >= K). Then, use a monotonic deque to efficiently find the smallest j - i that satisfies the condition by keeping the prefix sums in the deque sorted.
+
+**Similar Problems to Practice:**
+
+- Shortest Subarray with Sum at Least K
+- Maximum Subarray Sum
+- Sliding Window Maximum
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
