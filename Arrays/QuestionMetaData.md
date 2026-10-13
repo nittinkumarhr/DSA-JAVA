@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 85
+- **Total Problems** : 86
 - **Easy** : 41
 - **Medium** : 41
-- **Hard** : 2
+- **Hard** : 3
 
 **Last Updated**
 
-12 Oct 2026
+13 Oct 2026
 
 ---
 
@@ -50,6 +50,7 @@
 | 735 | LeetCode | [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) | Medium | Java | 5 ms | 47.2 MB | 03 Oct 2026 | `Arrays/0735_Asteroid_Collision.java` |
 | 739 | LeetCode | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium | Java | 60 ms | 107.8 MB | 21 Jul 2026 | `Arrays/0739_Daily_Temperatures.java` |
 | 822 | LeetCode | [Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/) | Easy | Java | 2 ms | 43.5 MB | 20 Aug 2026 | `Arrays/0822_Unique_Morse_Code_Words.java` |
+| 892 | LeetCode | [Shortest Subarray with Sum at Least K](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/) | Hard | Java | 22 ms | 66.7 MB | 13 Oct 2026 | `Arrays/0892_Shortest_Subarray_with_Sum_at_Least_K.java` |
 | 940 | LeetCode | [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/) | Medium | Java | 54 ms | 70.8 MB | 09 Jul 2026 | `Arrays/0940_Fruit_Into_Baskets.java` |
 | 982 | LeetCode | [Minimum Increment to Make Array Unique](https://leetcode.com/problems/minimum-increment-to-make-array-unique/) | Medium | Java | 43 ms | 80.3 MB | 26 Jul 2026 | `Arrays/0982_Minimum_Increment_to_Make_Array_Unique.java` |
 | 985 | LeetCode | [Bag of Tokens](https://leetcode.com/problems/bag-of-tokens/) | Medium | Java | 6 ms | 45.1 MB | 24 Jul 2026 | `Arrays/0985_Bag_of_Tokens.java` |
