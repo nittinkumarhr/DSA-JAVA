@@ -7680,3 +7680,99 @@ When a problem involves finding a subarray with a sum constraint and the array c
 
 =====================================================
 
+# 0209. Minimum Size Subarray Sum
+
+> 🔗 [LeetCode](https://leetcode.com/problems/minimum-size-subarray-sum/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 14 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+Find the length of the smallest contiguous subarray whose sum is greater than or equal to a given target value, returning 0 if no such subarray exists.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- contiguous subarray → sliding window
+- sum greater than or equal to target → variable window size
+- array with positive numbers → sliding window efficiency
+
+**Pattern(s) used:**
+
+- Sliding Window
+- Two Pointers
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two pointers 'i' and 'j' at the start of the array.
+- Expand the window by moving 'j' and adding arr[j] to the running sum.
+- While the current sum is >= target, update the minimum length found so far.
+- Shrink the window from the left by subtracting arr[i] and incrementing 'i' to find the smallest valid window.
+- Continue until 'j' reaches the end of the array.
+- Return 0 if the minimum length remains at its initial infinity value.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(1)`
+
+> Each element is visited at most twice (once by 'j' and once by 'i'), resulting in linear time, and only a few integer variables are used for constant space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty array — should return 0 as no subarray exists.
+- Sum of all elements < target — should return 0 as no valid subarray exists.
+- Single element >= target — should return 1.
+- All elements equal to target — should return 1.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Since all elements are positive, increasing the window size always increases the sum, and decreasing it always decreases the sum, allowing us to maintain a valid window without backtracking.
+
+### Common Mistakes
+
+- Forgetting to handle the case where no valid subarray is found (returning MAX_VALUE instead of 0).
+- Incorrectly updating the minimum length inside the outer loop instead of the inner 'while' loop.
+- Failing to account for the window shrinking logic correctly.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+Look for problems involving 'contiguous subarrays' and 'optimization' (min/max length or sum). If the elements are non-negative, a sliding window is almost always the optimal approach. Use two pointers to define the window boundaries and expand/shrink based on the condition to maintain an O(n) complexity.
+
+**Similar Problems to Practice:**
+
+- Longest Substring Without Repeating Characters
+- Maximum Erasure Value
+- Subarray Product Less Than K
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
