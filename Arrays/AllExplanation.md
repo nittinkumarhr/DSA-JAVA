@@ -7776,3 +7776,98 @@ Look for problems involving 'contiguous subarrays' and 'optimization' (min/max l
 
 =====================================================
 
+# 0718. Maximum Length of Repeated Subarray
+
+> 🔗 [LeetCode](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 15 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks to find the length of the longest common subarray between two given integer arrays, where a subarray is defined as a contiguous sequence of elements within an array.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- contiguous sequence → sliding window or dynamic programming
+- two arrays comparison → dynamic programming or rolling hash
+- longest common structure → dynamic programming
+
+**Pattern(s) used:**
+
+- Dynamic Programming
+- Sliding Window
+- Brute Force
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a variable to track the maximum length found.
+- Iterate through every possible starting position (i) in nums1 and (j) in nums2.
+- For each pair of starting positions, compare elements one by one.
+- Increment a counter (k) as long as elements match and bounds are respected.
+- Update the global maximum length with the current match length (k).
+- Return the global maximum after all pairs are checked.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N * M * min(N, M))`
+
+### Space Complexity
+
+`O(1)`
+
+> The nested loops iterate through all pairs of starting positions, and the inner while loop compares elements up to the length of the shorter array.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty arrays — returns 0 as no common subarray exists.
+- No common elements — returns 0 as no match is found.
+- Identical arrays — returns the length of the arrays.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The longest common subarray must start at some index i in nums1 and j in nums2; by checking all possible (i, j) pairs, we guarantee finding the optimal length.
+
+### Common Mistakes
+
+- Confusing subarray (contiguous) with subsequence (non-contiguous).
+- Using an O(N*M) DP table when O(N+M) space is possible, or failing to optimize the brute force approach.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked for the longest common contiguous segment between two sequences, identify if the constraints allow for O(N*M) or O(N*M*K). If N and M are small, DP is standard; if they are large, look for binary search on the answer combined with rolling hashes to verify commonality in O(N+M) time.
+
+**Similar Problems to Practice:**
+
+- Longest Common Subsequence
+- Minimum Window Substring
+- Longest Repeating Substring
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
