@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 89
+- **Total Problems** : 90
 - **Easy** : 41
-- **Medium** : 44
+- **Medium** : 45
 - **Hard** : 3
 
 **Last Updated**
 
-16 Oct 2026
+17 Oct 2026
 
 ---
 
@@ -89,6 +89,7 @@
 | 2231 | LeetCode | [Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array/) | Easy | Java | 1 ms | 47.6 MB | 12 Jul 2026 | `Arrays/2231_Find_First_Palindromic_String_in_the_Array.java` |
 | 2240 | LeetCode | [Intervals Between Identical Elements](https://leetcode.com/problems/intervals-between-identical-elements/) | Medium | Java | 170 ms | 189.3 MB | 05 Jul 2026 | `Arrays/2240_Intervals_Between_Identical_Elements.java` |
 | 2283 | LeetCode | [Sort Even and Odd Indices Independently](https://leetcode.com/problems/sort-even-and-odd-indices-independently/) | Easy | Java | 1 ms | 46 MB | 02 Sept 2026 | `Arrays/2283_Sort_Even_and_Odd_Indices_Independently.java` |
+| 2329 | LeetCode | [Maximum Product After K Increments](https://leetcode.com/problems/maximum-product-after-k-increments/) | Medium | Java | 336 ms | 90.9 MB | 17 Oct 2026 | `Arrays/2329_Maximum_Product_After_K_Increments.java` |
 | 2392 | LeetCode | [Successful Pairs of Spells and Potions](https://leetcode.com/problems/successful-pairs-of-spells-and-potions/) | Medium | Java | 53 ms | 146.8 MB | 10 Aug 2026 | `Arrays/2392_Successful_Pairs_of_Spells_and_Potions.java` |
 | 2418 | LeetCode | [Minimum Sum of Squared Difference](https://leetcode.com/problems/minimum-sum-of-squared-difference/) | Medium | Java | 14 ms | 104.3 MB | 10 Oct 2026 | `Arrays/2418_Minimum_Sum_of_Squared_Difference.java` |
 | 2448 | LeetCode | [Count Number of Bad Pairs](https://leetcode.com/problems/count-number-of-bad-pairs/) | Medium | Java | 43 ms | 87.7 MB | 08 Sept 2026 | `Arrays/2448_Count_Number_of_Bad_Pairs.java` |
