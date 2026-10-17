@@ -7871,3 +7871,97 @@ When asked for the longest common contiguous segment between two sequences, iden
 
 =====================================================
 
+# 2329. Maximum Product After K Increments
+
+> 🔗 [LeetCode](https://leetcode.com/problems/maximum-product-after-k-increments/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 17 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an array of non-negative integers and an integer k, you are allowed to increment any element of the array by 1 up to k times. The goal is to maximize the product of all elements in the array after applying at most k increments, returning the result modulo 10^9 + 7.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- maximize product by distributing increments → greedily increase the smallest value
+- repeatedly find and modify the minimum element → min-heap / priority queue
+- large output with modulo constraint → perform modular multiplication at each step
+
+**Pattern(s) used:**
+
+- Greedy
+- Heap / Priority Queue
+
+---
+
+## 🛠 Solution Approach
+
+- Insert all elements of the input array into a Min-Heap (PriorityQueue).
+- Perform k iterations: in each step, extract the minimum element from the heap, increment it by 1, and insert it back into the min-heap.
+- After k operations, extract elements one by one from the heap and compute their product modulo 10^9 + 7.
+- Return the final computed product.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O((N + K) log N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Building the heap takes O(N) or O(N log N) time, and each of the K increment operations takes O(log N) time to remove and re-insert into the heap. Storing N elements in the heap requires O(N) extra space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Zeros present in array — incrementing 0s first provides the largest relative increase, naturally handled by min-heap.
+- k = 0 — no increments are applied, algorithm simply returns product modulo 10^9 + 7.
+- Large k value — handled efficiently in O(K log N) iterations without integer overflow during increments.
+- Large product — result must apply modulo 10^9 + 7 at every multiplication step to prevent 64-bit integer overflow.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+To maximize the product (a * b * ... * z), incrementing the smallest current element yields the largest proportional increase in the product (since (x + 1) / x is maximized when x is minimized).
+
+### Common Mistakes
+
+- Applying modulo at the end of the product instead of after each multiplication, leading to integer overflow.
+- Incrementing the largest element instead of the smallest element.
+- Forgetting that non-zero elements might become smaller than other elements after increments, requiring a dynamic structure like a Min-Heap rather than a static sort.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem requires maximizing a product or sum under a constraint of incremental distribution, evaluate the relative gain per unit increment. If the optimal choice dynamically changes at each step, use a Priority Queue to continuously select and update the globally optimal element in O(log N) time per operation.
+
+**Similar Problems to Practice:**
+
+- Minimum Operations to Make Array Equal
+- Maximum Performance of a Team
+- Task Scheduler
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
