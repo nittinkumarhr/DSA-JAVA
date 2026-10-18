@@ -7965,3 +7965,96 @@ When a problem requires maximizing a product or sum under a constraint of increm
 
 =====================================================
 
+# 3656. Minimum Number of Operations to Make Elements in Array Distinct
+
+> 🔗 [LeetCode](https://leetcode.com/problems/minimum-number-of-operations-to-make-elements-in-array-distinct/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 18 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an array of integers, you can repeatedly remove 3 elements from the front of the array until all remaining elements are distinct. The goal is to determine the minimum number of operations required to achieve an array containing only unique elements.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- Remove elements from front + require all remaining elements to be distinct → Identify longest distinct suffix via right-to-left traversal
+- Check for duplicates starting from the back → Hash set reverse lookup
+
+**Pattern(s) used:**
+
+- Hash Table
+- Reverse Traversal
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a HashSet to track elements seen so far.
+- Iterate through the array backwards from index n - 1 down to 0.
+- If the current element is already in the HashSet, it means a duplicate exists in the suffix starting from index i.
+- The elements from index 0 to index i (inclusive) must be removed, requiring ceil((i + 1) / 3) operations, which simplifies to (i / 3) + 1.
+- Return (i / 3) + 1 immediately upon finding the first duplicate from the right.
+- If the loop finishes without finding duplicates, return 0 because the entire array is already distinct.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Time complexity is O(N) as we traverse the array at most once with O(1) hash set operations. Space complexity is O(N) to store elements in the hash set.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- All elements unique — Hash set finds no duplicates and returns 0 operations.
+- Duplicate at index 0 — Handled correctly; (0 / 3) + 1 yields 1 operation.
+- Array length less than 3 — Handled correctly; if a duplicate exists, integer division gives 1 operation.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Since elements can only be removed from the front, the remaining array will always be a suffix. Finding the longest suffix of all unique elements determines the maximum prefix that must be deleted.
+
+### Common Mistakes
+
+- Simulating front-deletion operations step-by-step, resulting in O(N^2) or slower runtime.
+- Iterating from left to right instead of right to left, making it harder to establish the valid distinct suffix.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When operations modify an array from one end to satisfy a property on the remainder, reframe the problem around the preserved end. Scan from the untouched end backwards using a set or frequency map to find the longest valid suffix/prefix, then calculate the batch operations needed to drop the invalid prefix/suffix.
+
+**Similar Problems to Practice:**
+
+- Contains Duplicate
+- Minimum Operations to Collect Elements
+- Maximum Size Subarray Sum Equals k
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
