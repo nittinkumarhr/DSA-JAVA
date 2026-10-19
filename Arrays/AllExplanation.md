@@ -8058,3 +8058,98 @@ When operations modify an array from one end to satisfy a property on the remain
 
 =====================================================
 
+# 3163. Subarrays Distinct Element Sum of Squares I
+
+> 🔗 [LeetCode](https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 19 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks for the sum of the squares of the count of distinct elements for every possible contiguous subarray in an array of integers.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- small array size constraint (N <= 100) → O(N^2) brute-force nested loop is optimal and sufficient
+- count distinct elements in all subarrays → incremental tracking using a boolean array or set while expanding subarray end bound
+
+**Pattern(s) used:**
+
+- Brute Force
+- Hash Table / Fixed-size Array
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize an answer accumulator `ans` to 0.
+- Loop through each possible starting position `i` from 0 to `n - 1`.
+- For each starting position `i`, reset a unique element counter `dis = 0` and a lookup boolean array `see` to track distinct values.
+- Loop through each end position `j` from `i` to `n - 1` to process subarray `nums[i...j]`.
+- Check if `nums[j]` is seen; if not, mark it as seen and increment `dis`.
+- Square the current distinct count (`dis * dis`) and add it to `ans`.
+- Return `ans` after all subarrays are evaluated.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N^2)`
+
+### Space Complexity
+
+`O(1)`
+
+> The outer and inner loops iterate over all O(N^2) subarrays while maintaining distinct counts in O(1) time per extension; auxiliary space is O(1) due to a fixed boolean array of size 101.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single element array (N = 1) — Handled correctly as loops run once and add 1^2 = 1 to answer.
+- All elements identical — Handled efficiently as distinct count stays 1 for every subarray extension.
+- All elements unique — Handled correctly as distinct count increments on every subarray step.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Instead of recomputing the set of distinct elements for every subarray from scratch in O(N) time, expanding the right boundary `j` allows updating the distinct count incrementally in O(1) time.
+
+### Common Mistakes
+
+- Recomputing unique elements from scratch for every subarray (i, j), leading to unnecessary O(N^3) time complexity.
+- Forgetting to square the distinct count before adding it to the running sum.
+- Using a fixed boolean array with hardcoded size without verifying value constraints, which can lead to index out of bounds.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to aggregate a metric over all contiguous subarrays with small constraints (N <= 100), iterate through all subarrays by fixing a starting index and incrementally moving an ending index. Maintain state (e.g., unique element counts) in O(1) time per step rather than recomputing from scratch.
+
+**Similar Problems to Practice:**
+
+- Subarrays Distinct Element Sum of Squares II
+- Count Complete Subarrays in an Array
+- Count Number of Homogenous Substrings
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
