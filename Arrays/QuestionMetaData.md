@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 91
-- **Easy** : 42
+- **Total Problems** : 92
+- **Easy** : 43
 - **Medium** : 45
 - **Hard** : 3
 
 **Last Updated**
 
-18 Oct 2026
+19 Oct 2026
 
 ---
 
@@ -100,6 +100,7 @@
 | 2847 | LeetCode | [Find Maximum Number of String Pairs](https://leetcode.com/problems/find-maximum-number-of-string-pairs/) | Easy | Java | 3 ms | 45 MB | 16 Aug 2026 | `Arrays/2847_Find_Maximum_Number_of_String_Pairs.java` |
 | 2876 | LeetCode | [Number of Employees Who Met the Target](https://leetcode.com/problems/number-of-employees-who-met-the-target/) | Easy | Java | 1 ms | 43.8 MB | 12 Jul 2026 | `Arrays/2876_Number_of_Employees_Who_Met_the_Target.java` |
 | 2878 | LeetCode | [Apply Operations to Make All Array Elements Equal to Zero](https://leetcode.com/problems/apply-operations-to-make-all-array-elements-equal-to-zero/) | Medium | Java | 1 ms | 109.3 MB | 08 Jul 2026 | `Arrays/2878_Apply_Operations_to_Make_All_Array_Elements_Equal_to_Zero.java` |
+| 3163 | LeetCode | [Subarrays Distinct Element Sum of Squares I](https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/) | Easy | Java | 5 ms | 45 MB | 19 Oct 2026 | `Arrays/3163_Subarrays_Distinct_Element_Sum_of_Squares_I.java` |
 | 3176 | LeetCode | [Minimum Sum of Mountain Triplets I](https://leetcode.com/problems/minimum-sum-of-mountain-triplets-i/) | Easy | Java | 2 ms | 43.7 MB | 03 Aug 2026 | `Arrays/3176_Minimum_Sum_of_Mountain_Triplets_I.java` |
 | 3194 | LeetCode | [Find Words Containing Character](https://leetcode.com/problems/find-words-containing-character/) | Easy | Java | 1 ms | 46.6 MB | 20 Jul 2026 | `Arrays/3194_Find_Words_Containing_Character.java` |
 | 3226 | LeetCode | [Minimum Number Game](https://leetcode.com/problems/minimum-number-game/) | Easy | Java | 5 ms | 47.3 MB | 11 Jul 2026 | `Arrays/3226_Minimum_Number_Game.java` |
