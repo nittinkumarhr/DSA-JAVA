@@ -8153,3 +8153,96 @@ When asked to aggregate a metric over all contiguous subarrays with small constr
 
 =====================================================
 
+# 1256. Rank Transform of an Array
+
+> 🔗 [LeetCode](https://leetcode.com/problems/rank-transform-of-an-array/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 20 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an array of integers, replace each element with its corresponding rank based on its relative value in ascending order. Elements with equal values must receive the same rank, and ranks must start at 1 without skipping numbers when duplicates occur.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- replace elements with relative order/rank → Sorting + Hash Table / Coordinate Compression
+- equal elements share the same rank → Deduplication during ranking
+
+**Pattern(s) used:**
+
+- Sorting
+- Hash Table
+- Coordinate Compression
+
+---
+
+## 🛠 Solution Approach
+
+- Clone the original array to preserve original indices.
+- Sort the cloned array in non-decreasing order.
+- Iterate through the sorted array and assign 1-based incremental ranks to distinct numbers using a Hash Map.
+- Traverse the original array and replace each element with its mapped rank from the Hash Map.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Sorting the cloned array takes O(N log N) time, while storing ranks in a hash map and cloning/modifying the array requires O(N) auxiliary space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty array — Handled naturally as loops do not execute and an empty array is returned.
+- Array with all identical elements — Handled correctly since the Hash Map only assigns rank 1 to the unique value, transforming all elements to 1.
+- Array with negative numbers — Works seamlessly because standard integer sorting handles negative values correctly.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Sorting a copy of the array allows us to determine global order, while a Hash Map easily handles duplicate values by maintaining a single rank mapping per unique value.
+
+### Common Mistakes
+
+- Incrementing the rank on duplicate values instead of assigning identical values the same rank.
+- Modifying the array in-place while attempting to sort, losing the original element order required for the output.
+- Attempting to use a counting/bucket sort approach when input range is extremely large, leading to high memory overhead.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to transform array values into relative positions or ranks, consider Coordinate Compression. Duplicate the original data to preserve positions, sort the duplicate to establish global ordering, map each distinct value to its relative rank, and map the values back into the original array structure.
+
+**Similar Problems to Practice:**
+
+- Rank Transform of a Matrix
+- Relative Ranks
+- Array Rank Transform by Difference
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
