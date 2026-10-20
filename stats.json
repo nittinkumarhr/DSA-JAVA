@@ -1,6 +1,6 @@
 {
   "byTopic": {
-    "Arrays": 81,
+    "Arrays": 82,
     "Hashing": 19,
     "Linked_List": 1,
     "Math": 19,
@@ -11,9 +11,9 @@
     "Trees": 1,
     "Two_Pointers": 5
   },
-  "easy": 79,
+  "easy": 80,
   "hard": 2,
-  "lastSynced": "2026-10-19T11:16:11.653Z",
+  "lastSynced": "2026-10-20T11:21:21.167Z",
   "medium": 68,
-  "total": 158
+  "total": 159
 }
