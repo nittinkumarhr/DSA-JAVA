@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 92
-- **Easy** : 43
+- **Total Problems** : 93
+- **Easy** : 44
 - **Medium** : 45
 - **Hard** : 3
 
 **Last Updated**
 
-19 Oct 2026
+20 Oct 2026
 
 ---
 
@@ -58,6 +58,7 @@
 | 985 | LeetCode | [Bag of Tokens](https://leetcode.com/problems/bag-of-tokens/) | Medium | Java | 6 ms | 45.1 MB | 24 Jul 2026 | `Arrays/0985_Bag_of_Tokens.java` |
 | 987 | LeetCode | [Reveal Cards In Increasing Order](https://leetcode.com/problems/reveal-cards-in-increasing-order/) | Medium | Java | 6 ms | 45.2 MB | 28 Jul 2026 | `Arrays/0987_Reveal_Cards_In_Increasing_Order.java` |
 | 1044 | LeetCode | [Find Common Characters](https://leetcode.com/problems/find-common-characters/) | Easy | Java | 21 ms | 46.9 MB | 14 Aug 2026 | `Arrays/1044_Find_Common_Characters.java` |
+| 1256 | LeetCode | [Rank Transform of an Array](https://leetcode.com/problems/rank-transform-of-an-array/) | Easy | Java | 31 ms | 76.5 MB | 20 Oct 2026 | `Arrays/1256_Rank_Transform_of_an_Array.java` |
 | 1293 | LeetCode | [Three Consecutive Odds](https://leetcode.com/problems/three-consecutive-odds/) | Easy | Java | 0 ms | 44.4 MB | 25 Jul 2026 | `Arrays/1293_Three_Consecutive_Odds.java` |
 | 1445 | LeetCode | [Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold](https://leetcode.com/problems/number-of-subarrays-of-size-k-and-average-greater-than-or-equal-to-threshold/) | Medium | Java | 3 ms | 72 MB | 05 Sept 2026 | `Arrays/1445_Number_of_Subarrays_of_Size_K_and_Average_Greater_than_or_Equal_to_Threshold.java` |
 | 1458 | LeetCode | [Sort Integers by The Number of 1 Bits](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/) | Easy | Java | 9 ms | 46.6 MB | 31 Aug 2026 | `Arrays/1458_Sort_Integers_by_The_Number_of_1_Bits.java` |
