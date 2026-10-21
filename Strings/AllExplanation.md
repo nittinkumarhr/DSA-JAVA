@@ -1209,3 +1209,82 @@ When asked to find the lexicographically smallest or largest sequence by deletin
 
 =====================================================
 
+# 4220. Minimum Operations to Sort a String
+
+> 🔗 [LeetCode](https://leetcode.com/problems/minimum-operations-to-sort-a-string/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 21 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+Problem #4220 — Minimum Operations to Sort a String. Difficulty: Medium.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- _Add the clues in the problem statement that hint at this pattern._
+
+**Pattern(s) used:**
+
+- string
+
+---
+
+## 🛠 Solution Approach
+
+- Review the solution code and add your explanation here.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(?)`
+
+### Space Complexity
+
+`O(?)`
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- _Add edge cases to watch for: empty input, single element, duplicates, negatives, overflow, etc._
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+_Add your key insight here._
+
+### Common Mistakes
+
+- N/A
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+_Add notes on how to recognize and approach this pattern the next time you see it._
+
+**Similar Problems to Practice:**
+
+- N/A
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
