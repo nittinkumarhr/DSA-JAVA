@@ -8246,3 +8246,97 @@ When asked to transform array values into relative positions or ranks, consider 
 
 =====================================================
 
+# 0027. Remove Element
+
+> 🔗 [LeetCode](https://leetcode.com/problems/remove-element/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 22 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an integer array nums and an integer val, remove all occurrences of val in-place and return the number of elements in nums which are not equal to val. The order of the remaining elements can be changed, and elements beyond the returned length do not matter.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- Modify array in-place → Two Pointers / Read-Write Pointers
+- Remove target element in O(1) extra space → Fast-Slow Pointers where one pointer tracks the placement position
+
+**Pattern(s) used:**
+
+- Two Pointers
+- In-Place Array Modification
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a write pointer 'k' at index 0 to track the position where the next valid element should be placed.
+- Iterate through the array using a read pointer 'i' from index 0 to the end of the array.
+- For each element nums[i], check if it is not equal to 'val'.
+- If nums[i] != val, copy nums[i] to nums[k] and increment 'k'.
+- Return 'k' as the new length of the modified array.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> Time complexity is O(N) because we iterate through the array of length N exactly once; space complexity is O(1) because elements are modified in-place without allocating auxiliary memory.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty array (nums = []) — loop body does not execute, returns k = 0 correctly.
+- Array contains only target value (e.g., nums = [2, 2], val = 2) — no element is copied, returns k = 0 correctly.
+- Array contains no target value (e.g., nums = [1, 3], val = 2) — every element is copied to its own position, returns original length.
+- Single-element array — processed in one iteration without index out-of-bounds errors.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Instead of deleting elements and shifting remaining elements left (which takes O(N^2) time), we can maintain a write pointer and overwrite values that match target with valid values encountered later in the array.
+
+### Common Mistakes
+
+- Attempting to shift elements left manually upon finding 'val', leading to nested loops and O(N^2) time complexity.
+- Creating a new auxiliary array to collect non-val elements, violating the O(1) space constraint.
+- Incrementing the write pointer even when the current element equals 'val'.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem requires in-place element removal or reordering with O(1) auxiliary space, use a fast-slow (read-write) two-pointer pattern. The fast pointer scans the array to inspect each element, while the slow pointer points to the position where the next valid element should be written.
+
+**Similar Problems to Practice:**
+
+- Remove Duplicates from Sorted Array
+- Move Zeroes
+- Remove Duplicates from Sorted Array II
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
