@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 93
-- **Easy** : 44
+- **Total Problems** : 94
+- **Easy** : 45
 - **Medium** : 45
 - **Hard** : 3
 
 **Last Updated**
 
-20 Oct 2026
+22 Oct 2026
 
 ---
 
@@ -20,6 +20,7 @@
 | 15 | LeetCode | [3Sum](https://leetcode.com/problems/3sum/) | Medium | Java | 37 ms | 59.2 MB | 27 Jul 2026 | `Arrays/0015_3Sum.java` |
 | 18 | LeetCode | [4Sum](https://leetcode.com/problems/4sum/) | Medium | Java | 20 ms | 45.9 MB | 08 Aug 2026 | `Arrays/0018_4Sum.java` |
 | 26 | LeetCode | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | Java | 1 ms | 46.4 MB | 15 Jul 2026 | `Arrays/0026_Remove_Duplicates_from_Sorted_Array.java` |
+| 27 | LeetCode | [Remove Element](https://leetcode.com/problems/remove-element/) | Easy | Java | 0 ms | 42.5 MB | 22 Oct 2026 | `Arrays/0027_Remove_Element.java` |
 | 40 | LeetCode | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | Medium | Java | 7 ms | 45.6 MB | 12 Oct 2026 | `Arrays/0040_Combination_Sum_II.java` |
 | 45 | LeetCode | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | Medium | Java | 1 ms | 47.1 MB | 16 Jul 2026 | `Arrays/0045_Jump_Game_II.java` |
 | 55 | LeetCode | [Jump Game](https://leetcode.com/problems/jump-game/) | Medium | Java | 2 ms | 47.9 MB | 16 Jul 2026 | `Arrays/0055_Jump_Game.java` |
