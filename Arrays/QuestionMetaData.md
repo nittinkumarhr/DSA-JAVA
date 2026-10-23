@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 94
+- **Total Problems** : 95
 - **Easy** : 45
-- **Medium** : 45
+- **Medium** : 46
 - **Hard** : 3
 
 **Last Updated**
 
-22 Oct 2026
+23 Oct 2026
 
 ---
 
@@ -24,6 +24,7 @@
 | 40 | LeetCode | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | Medium | Java | 7 ms | 45.6 MB | 12 Oct 2026 | `Arrays/0040_Combination_Sum_II.java` |
 | 45 | LeetCode | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | Medium | Java | 1 ms | 47.1 MB | 16 Jul 2026 | `Arrays/0045_Jump_Game_II.java` |
 | 55 | LeetCode | [Jump Game](https://leetcode.com/problems/jump-game/) | Medium | Java | 2 ms | 47.9 MB | 16 Jul 2026 | `Arrays/0055_Jump_Game.java` |
+| 63 | LeetCode | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | Medium | Java | 0 ms | 43.2 MB | 23 Oct 2026 | `Arrays/0063_Unique_Paths_II.java` |
 | 119 | LeetCode | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) | Easy | Java | 1 ms | 42.9 MB | 06 Jul 2026 | `Arrays/0119_Pascals_Triangle_II.java` |
 | 128 | LeetCode | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium | Java | 30 ms | 95.7 MB | 14 Jul 2026 | `Arrays/0128_Longest_Consecutive_Sequence.java` |
 | 136 | LeetCode | [Single Number](https://leetcode.com/problems/single-number/) | Easy | Java | 1 ms | 46.6 MB | 02 Aug 2026 | `Arrays/0136_Single_Number.java` |
