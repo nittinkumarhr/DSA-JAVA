@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 13
+- **Total Problems** : 14
 - **Easy** : 6
-- **Medium** : 7
+- **Medium** : 8
 - **Hard** : 0
 
 **Last Updated**
 
-11 Oct 2026
+24 Oct 2026
 
 ---
 
@@ -17,6 +17,7 @@
 
 | ID | Platform | Problem | Difficulty | Language | Runtime | Memory | Date | Solution |
 |----|----------|---------|------------|----------|---------|--------|------|----------|
+| 12 | LeetCode | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | Medium | Java | 12 ms | 45.7 MB | 24 Oct 2026 | `Hashing/0012_Integer_to_Roman.java` |
 | 13 | LeetCode | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | Java | 7 ms | 47.1 MB | 09 Oct 2026 | `Hashing/0013_Roman_to_Integer.java` |
 | 17 | LeetCode | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Medium | Java | 3 ms | 43.7 MB | 11 Oct 2026 | `Hashing/0017_Letter_Combinations_of_a_Phone_Number.java` |
 | 451 | LeetCode | [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/) | Medium | Java | 380 ms | 48.2 MB | 18 Jul 2026 | `Hashing/0451_Sort_Characters_By_Frequency.java` |
