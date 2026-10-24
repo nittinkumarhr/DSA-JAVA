@@ -1100,3 +1100,96 @@ When processing a sequence where the relationship between adjacent elements dete
 
 =====================================================
 
+# 0012. Integer to Roman
+
+> 🔗 [LeetCode](https://leetcode.com/problems/integer-to-roman/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 24 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem requires converting an integer into its corresponding Roman numeral representation based on standard Roman numeral system rules, where values range from 1 to 3999.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- small fixed range of inputs (1 to 3999) → precalculated lookup table / hardcoded mappings
+- positional number system conversion → greedy subtraction or place-value mapping (thousands, hundreds, tens, units)
+
+**Pattern(s) used:**
+
+- Greedy
+- Lookup Table
+- Math / String Manipulation
+
+---
+
+## 🛠 Solution Approach
+
+- Define lookup arrays for thousands (M), hundreds (C), tens (X), and units (I) covering all digits 0-9 in Roman notation.
+- Extract each digit using division and modulo operators (e.g., thousands = num / 1000, hundreds = (num % 1000) / 100).
+- Index into each respective array using the extracted digit value.
+- Concatenate the four resulting Roman numeral string segments and return.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(1)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm executes a constant number of arithmetic operations and string lookups regardless of input, using a fixed amount of memory for static lookup arrays.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- num = 1 (minimum bound) — correctly extracts 0 for M, C, X and selects 'I' from units.
+- num = 3999 (maximum bound) — correctly maps to 'MMMCMXCIX' using max bounds of all arrays.
+- Multiples of 10, 100, or 1000 (e.g., 1000) — maps zero values to empty string '' segments without adding garbage characters.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Roman numerals follow positional decimal logic where each place value (thousands, hundreds, tens, units) operates independently and has a finite set of 10 possible representation strings (0-9).
+
+### Common Mistakes
+
+- Attempting complex dynamic programming or recursion when static array lookups or simple greedy loops suffice.
+- Forgetting subtraction rules for 4 and 9 (e.g., IV, IX, XL, XC, CD, CM) when attempting manual string construction.
+- Not taking advantage of bounded input size constraints (1 to 3999).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When dealing with base conversion problems with fixed place-value symbols and restricted bounds, break down the number place by place (thousands, hundreds, tens, ones). If the choice of symbols at each digit is small and deterministic, precompute lookup tables for each digit position or use a greedy matching loop from largest symbol value to smallest.
+
+**Similar Problems to Practice:**
+
+- Roman to Integer
+- Integer to English Words
+- Excel Sheet Column Title
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
