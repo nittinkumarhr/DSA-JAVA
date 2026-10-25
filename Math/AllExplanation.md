@@ -1618,3 +1618,98 @@ To find the Least Common Multiple (LCM) of a prime number p and any integer n, c
 
 =====================================================
 
+# 0273. Integer to English Words
+
+> 🔗 [LeetCode](https://leetcode.com/problems/integer-to-english-words/) &nbsp;|&nbsp; 🏷 Hard &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 25 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to convert a non-negative integer into its English word representation up to the maximum 32-bit signed integer value (2,147,483,647). Because English number names follow a standard 3-digit grouping pattern (Thousands, Millions, Billions), the integer can be broken down recursively into smaller 3-digit chunks, each formatted with units, tens, and hundreds.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- Convert number to English words / string representation → Recursive divide-and-conquer with lookup arrays
+- Process numbers in groups of 3 digits → Modular arithmetic (% 1000) and integer division (/ 1000)
+
+**Pattern(s) used:**
+
+- Recursion
+- Divide and Conquer
+- Math / Modular Arithmetic
+
+---
+
+## 🛠 Solution Approach
+
+- Handle the global edge case where input `num == 0` by returning 'Zero'.
+- Initialize lookup arrays for single digits (`belowTen`), teens (`belowTwenty`), and tens multiples (`belowHundred`).
+- Implement a recursive helper function that handles numbers based on magnitude thresholds: <10, <20, <100, <1000, <1000000, <1000000000, and >=1000000000.
+- For thresholds starting at 100, divide the number into quotient (`num / scale`) and remainder (`num % scale`), recursively process both, and insert the appropriate scale word ('Hundred', 'Thousand', 'Million', 'Billion').
+- Call `.trim()` on the result string at each recursive step to prevent unwanted extra spaces.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(1)`
+
+### Space Complexity
+
+`O(1)`
+
+> Time complexity is O(1) because a 32-bit integer has at most 10 digits, bounding the recursive depth to at most 4 calls. Space complexity is O(1) due to fixed lookup arrays and a maximum recursion stack depth of 4.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Zero input (`num = 0`) — Must be handled separately at the start to output 'Zero' rather than an empty string.
+- Internal zeroes in large numbers (e.g., 1,000,001) — Handled because remainder chunks evaluating to 0 return empty strings from base cases.
+- Teens numbers (10 to 19) — Require dedicated array lookup because their English names do not follow the standard 'tens + units' rule.
+- Upper boundary integer (2,147,483,647) — Fits within the >= 1,000,000,000 'Billion' branch without integer overflow.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+English numeric nomenclature is periodic every 3 powers of ten (thousands, millions, billions). Reducing any number into 3-digit sub-problems allows treating every thousand-group identically using a single recursive core.
+
+### Common Mistakes
+
+- Accumulating trailing or double spaces when remainders evaluate to zero.
+- Missing special handling for numbers between 11 and 19 (the 'teens'), treating them incorrectly as tens + units.
+- Forgetting to handle 0 explicitly at the top level, leading to an empty string return.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+To convert numeric formats into human-readable strings, identify periodic bases or scale boundaries (e.g., 1000s in numbers, 10s/100s in Roman numerals). Use modular division (`/` and `%`) to decompose the number into chunk sizes matching those boundaries, apply string lookup tables for irregular base cases, and assemble results using recursive sub-calls.
+
+**Similar Problems to Practice:**
+
+- Integer to Roman
+- Roman to Integer
+- String to Integer (atoi)
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
