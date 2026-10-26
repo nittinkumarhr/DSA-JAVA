@@ -1713,3 +1713,96 @@ To convert numeric formats into human-readable strings, identify periodic bases 
 
 =====================================================
 
+# 0070. Climbing Stairs
+
+> 🔗 [LeetCode](https://leetcode.com/problems/climbing-stairs/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 26 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks for the total number of distinct ways to reach the top of a staircase with n steps, where you can climb either 1 or 2 steps at a time.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- number of ways to reach a target → dynamic programming
+- choices at each step → recursion or DP
+- overlapping subproblems → memoization or iterative DP
+
+**Pattern(s) used:**
+
+- Dynamic Programming
+- Fibonacci Sequence
+
+---
+
+## 🛠 Solution Approach
+
+- Identify the base cases: 1 step has 1 way, 2 steps have 2 ways.
+- Define the recurrence relation: f(n) = f(n-1) + f(n-2) because you arrive at step n from either n-1 or n-2.
+- Initialize an array or two variables to store previous results.
+- Iterate from 3 to n, calculating the sum of the two preceding values.
+- Return the value at index n.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(n)`
+
+> The algorithm iterates through the steps once, and the array requires space proportional to the input size n.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- n=1 — base case handled by initial check
+- n=2 — base case handled by initial check
+- n=0 — technically invalid, but usually returns 0 or 1 depending on constraints
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The problem is a classic Fibonacci sequence hidden in a physical context; the number of ways to reach step n is the sum of ways to reach the two previous steps.
+
+### Common Mistakes
+
+- Attempting to use recursion without memoization, leading to exponential time complexity.
+- Off-by-one errors in array indexing or loop boundaries.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks for the 'number of ways' to reach a state and the current state depends on previous states, consider Dynamic Programming. Check if the current state can be reached from a limited set of previous states (e.g., n-1, n-2). If the recurrence relation is additive, it is likely a variation of the Fibonacci sequence, which can be optimized from O(n) space to O(1) space by only keeping track of the last two values.
+
+**Similar Problems to Practice:**
+
+- Min Cost Climbing Stairs
+- Fibonacci Number
+- Decode Ways
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
