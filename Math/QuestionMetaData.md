@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 20
-- **Easy** : 14
+- **Total Problems** : 21
+- **Easy** : 15
 - **Medium** : 4
 - **Hard** : 1
 
 **Last Updated**
 
-25 Oct 2026
+26 Oct 2026
 
 ---
 
@@ -21,6 +21,7 @@
 | 9 | LeetCode | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | Java | 5 ms | 45.9 MB | 25 Sept 2026 | `Math/0009_Palindrome_Number.java` |
 | 43 | LeetCode | [Multiply Strings](https://leetcode.com/problems/multiply-strings/) | Medium | Java | 12 ms | 46.8 MB | 31 Jul 2026 | `Math/0043_Multiply_Strings.java` |
 | 50 | LeetCode | [Pow(x, n)](https://leetcode.com/problems/powx-n/) | Medium | Java | 0 ms | 47.7 MB | 25 Jul 2026 | `Math/0050_Powx_n.java` |
+| 70 | LeetCode | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | Java | 0 ms | 41.6 MB | 26 Oct 2026 | `Math/0070_Climbing_Stairs.java` |
 | 258 | LeetCode | [Add Digits](https://leetcode.com/problems/add-digits/) | Easy | Java | 1 ms | 42.7 MB | 10 Jul 2026 | `Math/0258_Add_Digits.java` |
 | 273 | LeetCode | [Integer to English Words](https://leetcode.com/problems/integer-to-english-words/) | Hard | Java | 6 ms | 44 MB | 25 Oct 2026 | `Math/0273_Integer_to_English_Words.java` |
 | 1146 | LeetCode | [Greatest Common Divisor of Strings](https://leetcode.com/problems/greatest-common-divisor-of-strings/) | Easy | Java | 1 ms | 44.1 MB | 07 Oct 2026 | `Math/1146_Greatest_Common_Divisor_of_Strings.java` |
