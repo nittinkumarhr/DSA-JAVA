@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 21
+- **Total Problems** : 22
 - **Easy** : 15
-- **Medium** : 4
+- **Medium** : 5
 - **Hard** : 1
 
 **Last Updated**
 
-26 Oct 2026
+27 Oct 2026
 
 ---
 
@@ -19,6 +19,7 @@
 |----|----------|---------|------------|----------|---------|--------|------|----------|
 | 7 | LeetCode | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Medium | Java | 1 ms | 42.7 MB | 13 Jul 2026 | `Math/0007_Reverse_Integer.java` |
 | 9 | LeetCode | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | Java | 5 ms | 45.9 MB | 25 Sept 2026 | `Math/0009_Palindrome_Number.java` |
+| 29 | LeetCode | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) | Medium | Java | 2 ms | 42.4 MB | 27 Oct 2026 | `Math/0029_Divide_Two_Integers.java` |
 | 43 | LeetCode | [Multiply Strings](https://leetcode.com/problems/multiply-strings/) | Medium | Java | 12 ms | 46.8 MB | 31 Jul 2026 | `Math/0043_Multiply_Strings.java` |
 | 50 | LeetCode | [Pow(x, n)](https://leetcode.com/problems/powx-n/) | Medium | Java | 0 ms | 47.7 MB | 25 Jul 2026 | `Math/0050_Powx_n.java` |
 | 70 | LeetCode | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | Java | 0 ms | 41.6 MB | 26 Oct 2026 | `Math/0070_Climbing_Stairs.java` |
