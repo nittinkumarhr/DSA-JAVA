@@ -1806,3 +1806,97 @@ When a problem asks for the 'number of ways' to reach a state and the current st
 
 =====================================================
 
+# 0029. Divide Two Integers
+
+> 🔗 [LeetCode](https://leetcode.com/problems/divide-two-integers/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 27 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+Divide two integers without using multiplication, division, or modulo operators, returning the quotient truncated toward zero while adhering to 32-bit signed integer overflow rules.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- "without using multiplication, division, and mod operator" → Bitwise shifting / Exponential subtraction
+- "32-bit signed integer range" → Overflow handling with integer boundaries (e.g., Integer.MIN_VALUE / -1)
+
+**Pattern(s) used:**
+
+- Bit Manipulation
+- Exponential Search
+
+---
+
+## 🛠 Solution Approach
+
+- Handle the overflow edge case where dividend is Integer.MIN_VALUE and divisor is -1 by returning Integer.MAX_VALUE.
+- Determine the sign of the quotient using XOR logic between the signs of dividend and divisor.
+- Cast numbers to 64-bit integers (long) and take their absolute values to prevent overflow during bit shifts.
+- Iterate bit positions from 31 down to 0, checking if shifting the divisor left by i fits within the remaining dividend.
+- If it fits, subtract the shifted divisor from the dividend and set the i-th bit of the quotient.
+- Apply the determined sign to the quotient and return it as a 32-bit integer.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(1)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm loops a fixed maximum of 32 iterations (matching the 32 bits of an integer) and uses a constant amount of extra memory.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Integer.MIN_VALUE divided by -1 — Results in 2^31, which exceeds 32-bit signed integer capacity and must overflow-cap to Integer.MAX_VALUE.
+- Integer.MIN_VALUE as dividend — Taking Math.abs(Integer.MIN_VALUE) as a 32-bit int overflows, requiring explicit casting to a 64-bit long first.
+- Divisor is 1 or -1 — Can yield maximum magnitude results or edge-case overflow if dividend is Integer.MIN_VALUE.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Any positive integer dividend can be represented as a sum of terms in the form of divisor * 2^i, corresponding to the bit representation of the quotient.
+
+### Common Mistakes
+
+- Using linear repeated subtraction (dividend -= divisor), which results in Time Limit Exceeded when dividend is large and divisor is small.
+- Calling Math.abs(dividend) before casting to long, which still overflows when dividend is Integer.MIN_VALUE.
+- Forgetting to handle the unique overflow case where Integer.MIN_VALUE / -1 exceeds Integer.MAX_VALUE.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When restricted from using standard arithmetic operators like multiplication or division, reframe the operation into binary bitwise terms. Express operations as sums of power-of-two multiples using left/right bit shifts. Always cast to larger integer types before absolute conversion to safely handle boundary overflow.
+
+**Similar Problems to Practice:**
+
+- Pow(x, n)
+- Multiply Strings
+- Subsets
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
