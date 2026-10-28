@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 95
+- **Total Problems** : 96
 - **Easy** : 45
-- **Medium** : 46
+- **Medium** : 47
 - **Hard** : 3
 
 **Last Updated**
 
-23 Oct 2026
+28 Oct 2026
 
 ---
 
@@ -27,6 +27,7 @@
 | 63 | LeetCode | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | Medium | Java | 0 ms | 43.2 MB | 23 Oct 2026 | `Arrays/0063_Unique_Paths_II.java` |
 | 119 | LeetCode | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) | Easy | Java | 1 ms | 42.9 MB | 06 Jul 2026 | `Arrays/0119_Pascals_Triangle_II.java` |
 | 128 | LeetCode | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium | Java | 30 ms | 95.7 MB | 14 Jul 2026 | `Arrays/0128_Longest_Consecutive_Sequence.java` |
+| 134 | LeetCode | [Gas Station](https://leetcode.com/problems/gas-station/) | Medium | Java | 2 ms | 118.7 MB | 28 Oct 2026 | `Arrays/0134_Gas_Station.java` |
 | 136 | LeetCode | [Single Number](https://leetcode.com/problems/single-number/) | Easy | Java | 1 ms | 46.6 MB | 02 Aug 2026 | `Arrays/0136_Single_Number.java` |
 | 150 | LeetCode | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | Medium | Java | 6 ms | 45.2 MB | 11 Sept 2026 | `Arrays/0150_Evaluate_Reverse_Polish_Notation.java` |
 | 179 | LeetCode | [Largest Number](https://leetcode.com/problems/largest-number/) | Medium | Java | 6 ms | 45.1 MB | 17 Jul 2026 | `Arrays/0179_Largest_Number.java` |
