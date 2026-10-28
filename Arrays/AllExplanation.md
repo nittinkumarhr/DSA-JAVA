@@ -8340,3 +8340,96 @@ When a problem requires in-place element removal or reordering with O(1) auxilia
 
 =====================================================
 
+# 0134. Gas Station
+
+> 🔗 [LeetCode](https://leetcode.com/problems/gas-station/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 28 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+Determine if a car can complete a circular circuit of gas stations starting from some station with an empty tank, given the amount of gas available at each station and the cost to travel from that station to the next.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- Circular array traversal with net cost/gain → Greedy starting point elimination
+- Global sum vs total requirement constraint → Single-pass greedy decision
+
+**Pattern(s) used:**
+
+- Greedy
+
+---
+
+## 🛠 Solution Approach
+
+- Traverse the stations to compute total gas and total cost, verifying if total gas >= total cost.
+- If total gas is less than total cost, return -1 as completing the circle is mathematically impossible.
+- Maintain a running balance (`curTank`) of fuel while iterating through stations from index 0 to N-1.
+- Add `gas[i] - cost[i]` to `curTank` at each station.
+- If `curTank` drops below 0, reset `curTank` to 0 and advance the candidate starting station index to `i + 1`.
+- Return the candidate starting station index after the loop completes.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> The solution iterates through the array of gas stations in a single pass of size N using constant auxiliary space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Total gas is less than total cost — handled by returning -1 since no valid circuit can exist.
+- Single gas station (N = 1) — handled correctly by returning 0 if gas[0] >= cost[0], else -1.
+- Multiple negative gas deltas in a row — handled by resetting the candidate starting index to i + 1 whenever curTank drops below 0.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+If a trip starting at station A fails at or before station B, no station between A and B can reach station B either; thus, the next potential starting point must be B + 1.
+
+### Common Mistakes
+
+- Simulating the circular journey from every starting position, leading to an inefficient O(N^2) time complexity.
+- Forgetting to verify if the overall sum of gas is sufficient to cover the total cost.
+- Resetting the candidate start index to i instead of i + 1 upon encountering a negative tank balance.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When looking for a single starting node in a circular sequence that requires maintaining a non-negative accumulated balance, check global feasibility first with total sums. If cumulative balance drops below zero during a journey from A to B, eliminate all nodes between A and B as start candidates and greedily resume testing from B + 1.
+
+**Similar Problems to Practice:**
+
+- Jump Game
+- Jump Game II
+- Minimum Number of Refueling Stops
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
