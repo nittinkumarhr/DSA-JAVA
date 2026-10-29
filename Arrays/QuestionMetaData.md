@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 96
+- **Total Problems** : 97
 - **Easy** : 45
-- **Medium** : 47
+- **Medium** : 48
 - **Hard** : 3
 
 **Last Updated**
 
-28 Oct 2026
+29 Oct 2026
 
 ---
 
@@ -63,6 +63,7 @@
 | 1044 | LeetCode | [Find Common Characters](https://leetcode.com/problems/find-common-characters/) | Easy | Java | 21 ms | 46.9 MB | 14 Aug 2026 | `Arrays/1044_Find_Common_Characters.java` |
 | 1256 | LeetCode | [Rank Transform of an Array](https://leetcode.com/problems/rank-transform-of-an-array/) | Easy | Java | 31 ms | 76.5 MB | 20 Oct 2026 | `Arrays/1256_Rank_Transform_of_an_Array.java` |
 | 1293 | LeetCode | [Three Consecutive Odds](https://leetcode.com/problems/three-consecutive-odds/) | Easy | Java | 0 ms | 44.4 MB | 25 Jul 2026 | `Arrays/1293_Three_Consecutive_Odds.java` |
+| 1346 | LeetCode | [Maximize the Topmost Element After K Moves](https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/) | Medium | Java | 1 ms | 78.3 MB | 29 Oct 2026 | `Arrays/1346_Maximize_the_Topmost_Element_After_K_Moves.java` |
 | 1445 | LeetCode | [Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold](https://leetcode.com/problems/number-of-subarrays-of-size-k-and-average-greater-than-or-equal-to-threshold/) | Medium | Java | 3 ms | 72 MB | 05 Sept 2026 | `Arrays/1445_Number_of_Subarrays_of_Size_K_and_Average_Greater_than_or_Equal_to_Threshold.java` |
 | 1458 | LeetCode | [Sort Integers by The Number of 1 Bits](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/) | Easy | Java | 9 ms | 46.6 MB | 31 Aug 2026 | `Arrays/1458_Sort_Integers_by_The_Number_of_1_Bits.java` |
 | 1519 | LeetCode | [Minimum Subsequence in Non-Increasing Order](https://leetcode.com/problems/minimum-subsequence-in-nonincreasing-order/) | Easy | Java | 9 ms | 52.2 MB | 04 Sept 2026 | `Arrays/1519_Minimum_Subsequence_in_NonIncreasing_Order.java` |
