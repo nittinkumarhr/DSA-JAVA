@@ -8433,3 +8433,96 @@ When looking for a single starting node in a circular sequence that requires mai
 
 =====================================================
 
+# 1346. Maximize the Topmost Element After K Moves
+
+> 🔗 [LeetCode](https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 29 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+Given a 0-indexed integer array `nums` representing a pile of elements where `nums[0]` is the top, and an integer `k`, you can make `k` moves. In each move, you can either pop the topmost element or place a previously popped element back onto the pile. The goal is to return the maximum possible value of the topmost element after exactly `k` moves, or -1 if it is impossible for the pile to be non-empty.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- Maximize value after K operations → Greedy reachable state analysis
+- Pop or push back previously removed elements → Choice analysis at step K
+
+**Pattern(s) used:**
+
+- Greedy
+- Case Analysis
+
+---
+
+## 🛠 Solution Approach
+
+- Handle the single-element array edge case ($n = 1$): if $k$ is odd, the pile ends up empty (return -1); if $k$ is even, we can alternate popping and replacing, leaving `nums[0]` at the top.
+- Identify candidate elements that can end up at the top after $k$ moves.
+- Candidate 1: The element `nums[k]` (if $k < n$), reached by popping $k$ elements continuously without pushing anything back.
+- Candidate 2: The maximum element among `nums[0]` to `nums[k-2]` (i.e., first $k-1$ elements), reached by popping $k-1$ elements and pushing the largest popped element back on the $k$-th move.
+- Iterate through the eligible range up to $\min(k-1, n)$ to find the maximum value among candidate elements and return it.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(min(N, K))`
+
+### Space Complexity
+
+`O(1)`
+
+> Time complexity is O(min(N, K)) because we iterate through at most min(N, K) elements to find the maximum. Space complexity is O(1) as we only use a few scalar variables.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single element array (n = 1) — An odd k leaves the array empty (-1), while an even k leaves nums[0].
+- k = n — We can pop all n elements, but nums[n] does not exist, so the top element can only be the maximum of the first k-1 elements.
+- k > n — We can pop all n elements and place any of them back on top, making the answer the maximum of the entire array.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+At move K, the topmost element can either be `nums[k]` (by using all K moves to pop) or the maximum element among the first K-1 elements (by popping K-1 elements and using the K-th move to push the max element back).
+
+### Common Mistakes
+
+- Incorrectly including `nums[k-1]` as a push-back candidate: popping `nums[k-1]` requires k moves, leaving 0 moves to push it back.
+- Failing to handle $n = 1$ correctly for odd vs. even values of $k$.
+- Index out of bounds error when $k \ge n$ if trying to directly access `nums[k]`.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+For bounded operation problems on sequences, determine the exact subset of reachable states after K steps. Express the final state as a function of discrete operational choices (e.g., pop k vs pop k-1 and push back) and take the optimal greedy choice among all valid options. Always perform explicit boundary case analysis when K is near or exceeds the sequence size N.
+
+**Similar Problems to Practice:**
+
+- Gas Station
+- Task Scheduler
+- Break a Palindrome
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
