@@ -8526,3 +8526,97 @@ For bounded operation problems on sequences, determine the exact subset of reach
 
 =====================================================
 
+# 0080. Remove Duplicates from Sorted Array II
+
+> 🔗 [LeetCode](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 30 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem requires modifying a sorted array in-place such that each unique element appears at most twice, maintaining the relative order of elements and returning the new length of the modified array.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- sorted array → two pointers
+- in-place modification → two pointers
+- remove elements/duplicates → two pointers
+
+**Pattern(s) used:**
+
+- Two Pointers
+- In-place Array Manipulation
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a write pointer 'index' at 1 and a counter 'occurrence' at 1.
+- Iterate through the array starting from index 1.
+- If the current element equals the previous, increment 'occurrence'; otherwise, reset 'occurrence' to 1.
+- If 'occurrence' is less than or equal to 2, copy the current element to the 'index' position and increment 'index'.
+- Return the final 'index' as the new length.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm performs a single pass over the array (O(n)) and uses only a constant amount of extra space for pointers and counters (O(1)).
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty array — the loop won't execute, but the initial index logic needs handling (though constraints usually specify length >= 1).
+- Single element — the loop is skipped, returning 1 correctly.
+- All duplicates — the occurrence counter correctly limits the write pointer to keep only two instances.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Since the array is sorted, all identical elements are adjacent; we can track the frequency of the current element relative to its predecessor to decide whether to keep it.
+
+### Common Mistakes
+
+- Forgetting to reset the occurrence counter when a new element is encountered.
+- Trying to delete elements by shifting the array (O(n^2)) instead of using a write pointer.
+- Off-by-one errors in the loop bounds or pointer initialization.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to modify an array in-place based on specific criteria (like removing duplicates or filtering), use two pointers: one to iterate through the original data and one to track the position of the next valid element. Always check if the input is sorted, as this allows you to make decisions based on local comparisons (current vs. previous) without needing extra data structures like HashMaps.
+
+**Similar Problems to Practice:**
+
+- Remove Duplicates from Sorted Array
+- Remove Element
+- Move Zeroes
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
