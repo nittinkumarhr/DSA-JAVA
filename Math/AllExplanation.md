@@ -1900,3 +1900,93 @@ When restricted from using standard arithmetic operators like multiplication or 
 
 =====================================================
 
+# 0089. Gray Code
+
+> 🔗 [LeetCode](https://leetcode.com/problems/gray-code/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 31 Oct 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an integer n representing the number of bits, generate an n-bit Gray code sequence starting with 0. A Gray code sequence is a cyclic binary sequence of length 2^n where every pair of adjacent numbers differs by exactly one bit.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- differ by exactly one bit → Bit Manipulation / Gray Code property
+- sequence of 2^n binary representations → Bitwise XOR formula or Reflection generation
+
+**Pattern(s) used:**
+
+- Bit Manipulation
+- Math
+
+---
+
+## 🛠 Solution Approach
+
+- Calculate the total number of sequence elements as total = 1 << n (2^n).
+- Iterate index i from 0 up to total - 1.
+- Apply the standard binary-to-Gray code conversion formula: gray = i ^ (i >> 1).
+- Append each generated integer to the sequence list and return the result.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(2^n)`
+
+### Space Complexity
+
+`O(1)`
+
+> Generating 2^n elements requires O(2^n) loop iterations with O(1) work per element, using O(1) auxiliary space excluding the output storage.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- n = 1 — minimal valid constraint yielding [0, 1], handled correctly as 1 << 1 = 2 elements.
+- n = 16 — upper constraint limit, total elements 2^16 = 65536 fits easily in memory without integer overflow.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The bitwise formula `i ^ (i >> 1)` maps the standard binary representation of `i` directly to its corresponding Gray code, guaranteeing adjacent values `G(i)` and `G(i+1)` differ by only one bit.
+
+### Common Mistakes
+
+- Attempting a complex backtracking/DFS search instead of leveraging the O(1) bitwise formula for each term.
+- Mistakenly assuming Gray code requires string manipulation instead of direct integer operations.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to sequence binary numbers such that consecutive elements differ by a single bit, check if the standard Gray code formula `i ^ (i >> 1)` or recursive mirror-and-prefix method applies. This avoids costly graph traversal or backtracking.
+
+**Similar Problems to Practice:**
+
+- Circular Permutation in Binary Representation
+- Subsets
+- Minimum Flips to Make a OR b Equal to c
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
