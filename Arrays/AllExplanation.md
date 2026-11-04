@@ -8620,3 +8620,97 @@ When asked to modify an array in-place based on specific criteria (like removing
 
 =====================================================
 
+# 2670. Make K-Subarray Sums Equal
+
+> 🔗 [LeetCode](https://leetcode.com/problems/make-k-subarray-sums-equal/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 04 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+Given a circular array of integers `arr` and a length `k`, the task is to find the minimum number of operations (incrementing or decrementing an element by 1) required to make the sum of every contiguous subarray of length `k` equal.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- circular array + fixed subarray sum equality -> periodic index equivalence groups arr[i] == arr[(i + k) % n]
+- minimum operations to make elements equal -> median minimization (L1 norm minimization)
+
+**Pattern(s) used:**
+
+- Math & Number Theory (Cycle Decomposition / GCD)
+- Greedy (Median Minimization)
+- Sorting
+
+---
+
+## 🛠 Solution Approach
+
+- Observe that equal sums of adjacent length-k subarrays in a circular array imply arr[i] = arr[(i + k) % n] for all i.
+- Form disjoint index cycles by stepping through the array using index transition `(j + k) % n` until returning to an already visited element.
+- For each cycle, collect all constituent array values and mark them as visited (e.g., set to 0).
+- Sort the collected values of each cycle and locate the median element.
+- Calculate the sum of absolute differences between each element in the cycle and its median, adding this cost to the total result.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Traversing indices into cycles visits each element once in O(N) time, and sorting cycles of combined size N takes O(N log N) time; storing cycle values requires O(N) auxiliary space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- gcd(N, K) = 1 — All elements belong to a single giant cycle of length N.
+- K divides N — There are K independent cycles, each of length N/K.
+- Large values — Operation counts can exceed 32-bit signed integers, so a 64-bit integer (`long`) must be used for the cumulative result.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Enforcing equal sums for overlapping circular windows of length k reduces to the point-wise constraint arr[i] == arr[(i + k) % n]. Indices decouple into independent cycles, and setting all elements in a cycle to their median minimizes total absolute deviation.
+
+### Common Mistakes
+
+- Using the mean instead of the median to minimize absolute difference operations.
+- Ignoring the circular nature of the array and missing wraparound cycle constraints.
+- Failing to accumulate answer in a 64-bit integer, causing integer overflow.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+Translate sliding window equality constraints into point-wise index equivalences across the array. Group equivalent indices using cycle traversal or modulo arithmetic (often governed by GCD(N, K)). For each independent group, use median-based greedy optimization to minimize absolute deviation costs.
+
+**Similar Problems to Practice:**
+
+- Minimum Moves to Equal Array Elements II
+- Best Meeting Point
+- Rotate Array
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
