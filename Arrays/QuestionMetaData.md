@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 99
-- **Easy** : 45
+- **Total Problems** : 100
+- **Easy** : 46
 - **Medium** : 50
 - **Hard** : 3
 
 **Last Updated**
 
-04 Nov 2026
+05 Nov 2026
 
 ---
 
@@ -67,6 +67,7 @@
 | 1346 | LeetCode | [Maximize the Topmost Element After K Moves](https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/) | Medium | Java | 1 ms | 78.3 MB | 29 Oct 2026 | `Arrays/1346_Maximize_the_Topmost_Element_After_K_Moves.java` |
 | 1445 | LeetCode | [Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold](https://leetcode.com/problems/number-of-subarrays-of-size-k-and-average-greater-than-or-equal-to-threshold/) | Medium | Java | 3 ms | 72 MB | 05 Sept 2026 | `Arrays/1445_Number_of_Subarrays_of_Size_K_and_Average_Greater_than_or_Equal_to_Threshold.java` |
 | 1458 | LeetCode | [Sort Integers by The Number of 1 Bits](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/) | Easy | Java | 9 ms | 46.6 MB | 31 Aug 2026 | `Arrays/1458_Sort_Integers_by_The_Number_of_1_Bits.java` |
+| 1486 | LeetCode | [Find the Distance Value Between Two Arrays](https://leetcode.com/problems/find-the-distance-value-between-two-arrays/) | Easy | Java | 21 ms | 45.7 MB | 05 Nov 2026 | `Arrays/1486_Find_the_Distance_Value_Between_Two_Arrays.java` |
 | 1519 | LeetCode | [Minimum Subsequence in Non-Increasing Order](https://leetcode.com/problems/minimum-subsequence-in-nonincreasing-order/) | Easy | Java | 9 ms | 52.2 MB | 04 Sept 2026 | `Arrays/1519_Minimum_Subsequence_in_NonIncreasing_Order.java` |
 | 1538 | LeetCode | [Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/) | Medium | Java | 1 ms | 62 MB | 09 Jul 2026 | `Arrays/1538_Maximum_Points_You_Can_Obtain_from_Cards.java` |
 | 1570 | LeetCode | [Final Prices With a Special Discount in a Shop](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/) | Easy | Java | 2 ms | 45.1 MB | 12 Sept 2026 | `Arrays/1570_Final_Prices_With_a_Special_Discount_in_a_Shop.java` |
@@ -103,7 +104,7 @@
 | 2519 | LeetCode | [Find The Original Array of Prefix Xor](https://leetcode.com/problems/find-the-original-array-of-prefix-xor/) | Medium | Java | 2 ms | 108.8 MB | 16 Sept 2026 | `Arrays/2519_Find_The_Original_Array_of_Prefix_Xor.java` |
 | 2552 | LeetCode | [Maximum Sum of Distinct Subarrays With Length K](https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/) | Medium | Java | 60 ms | 99 MB | 12 Jul 2026 | `Arrays/2552_Maximum_Sum_of_Distinct_Subarrays_With_Length_K.java` |
 | 2624 | LeetCode | [Difference Between Element Sum and Digit Sum of an Array](https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/) | Easy | Java | 2 ms | 46.4 MB | 12 Jul 2026 | `Arrays/2624_Difference_Between_Element_Sum_and_Digit_Sum_of_an_Array.java` |
-| 2670 | LeetCode | [Make K-Subarray Sums Equal](https://leetcode.com/problems/make-k-subarray-sums-equal/) | Medium | Java | 115 ms | 100.3 MB | 04 Nov 2026 | `Arrays/2670_Make_KSubarray_Sums_Equal.java` |
+| 2670 | LeetCode | [Make K-Subarray Sums Equal](https://leetcode.com/problems/make-ksubarray-sums-equal/) | Medium | Java | 115 ms | 100.3 MB | 04 Nov 2026 | `Arrays/2670_Make_KSubarray_Sums_Equal.java` |
 | 2847 | LeetCode | [Find Maximum Number of String Pairs](https://leetcode.com/problems/find-maximum-number-of-string-pairs/) | Easy | Java | 3 ms | 45 MB | 16 Aug 2026 | `Arrays/2847_Find_Maximum_Number_of_String_Pairs.java` |
 | 2876 | LeetCode | [Number of Employees Who Met the Target](https://leetcode.com/problems/number-of-employees-who-met-the-target/) | Easy | Java | 1 ms | 43.8 MB | 12 Jul 2026 | `Arrays/2876_Number_of_Employees_Who_Met_the_Target.java` |
 | 2878 | LeetCode | [Apply Operations to Make All Array Elements Equal to Zero](https://leetcode.com/problems/apply-operations-to-make-all-array-elements-equal-to-zero/) | Medium | Java | 1 ms | 109.3 MB | 08 Jul 2026 | `Arrays/2878_Apply_Operations_to_Make_All_Array_Elements_Equal_to_Zero.java` |
