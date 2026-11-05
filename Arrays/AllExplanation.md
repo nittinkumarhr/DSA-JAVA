@@ -8714,3 +8714,97 @@ Translate sliding window equality constraints into point-wise index equivalences
 
 =====================================================
 
+# 1486. Find the Distance Value Between Two Arrays
+
+> 🔗 [LeetCode](https://leetcode.com/problems/find-the-distance-value-between-two-arrays/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 05 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to count how many elements in a first array `arr1` do not have any element in a second array `arr2` within a distance of `d`. An element `a` from `arr1` contributes to the count if for all `b` in `arr2`, `|a - b| > d` holds true.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- check distance condition across two arrays → sort the target array and binary search for closest value
+- no element in range [a - d, a + d] → range check using lower_bound / binary search
+
+**Pattern(s) used:**
+
+- Binary Search
+- Sorting
+- Two Pointers
+
+---
+
+## 🛠 Solution Approach
+
+- Sort the second array `arr2` in ascending order.
+- Iterate through each element `a` in `arr1`.
+- Use binary search (or Java's `Arrays.binarySearch`) on `arr2` to check if there exists any element `b` such that `a - d <= b <= a + d`.
+- If no such element exists in `arr2`, increment the valid distance count.
+- Return the total count of valid elements from `arr1`.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O((N + M) log M)`
+
+### Space Complexity
+
+`O(1)`
+
+> Sorting `arr2` takes O(M log M) time where M is arr2's length. For each of the N elements in `arr1`, binary searching `arr2` takes O(log M) time. Space complexity is O(1) auxiliary space (excluding space used by sorting algorithm).
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- d = 0 — requires exact equality check (a == b) to invalidate an element.
+- Negative numbers in arrays — handled naturally by absolute value / range checks without standard unsigned integer pitfalls.
+- All elements in arr2 within distance d — result should be 0; handled properly as binary search finds elements in range every time.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Instead of checking every element in `arr2` for every element in `arr1` in O(N * M) time, sorting `arr2` allows us to check if any value falls within the invalid range `[a - d, a + d]` in O(log M) time via binary search.
+
+### Common Mistakes
+
+- Using a brute-force nested loop leading to O(N * M) time complexity when N and M are large.
+- Incorrectly handling edge cases of binary search when finding inserting positions (e.g., checking boundary indices out of bounds).
+- Forgetting to sort `arr2` before performing binary search.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to evaluate a condition between all elements of one array against another, check if sorting one array enables binary search. Searching for any element in a target range `[val - limit, val + limit]` on a sorted array efficiently converts O(N * M) linear searches into O(N log M) logarithmic checks.
+
+**Similar Problems to Practice:**
+
+- Find K Closest Elements
+- Heaters
+- Count Pairs in Two Arrays
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
