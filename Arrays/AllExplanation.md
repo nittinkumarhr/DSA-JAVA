@@ -8808,3 +8808,100 @@ When asked to evaluate a condition between all elements of one array against ano
 
 =====================================================
 
+# 4216. Weighted Word Mapping
+
+> 🔗 [LeetCode](https://leetcode.com/problems/weighted-word-mapping/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 06 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to map an array of strings to a single result string. For each string in the input array, we compute a total weight by summing the given weights of all its characters, compute the remainder modulo 26, map this remainder to a character by offset from 'z', and concatenate the mapped character to the final result.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- Fixed alphabet size (a-z) → Index mapping via char subtraction (`ch - 'a'`)
+- Wrap-around alphabet ranges → Modular arithmetic (`% 26`)
+- Transform array of strings element by element → Simulation with nested loops
+
+**Pattern(s) used:**
+
+- Array / Hash Lookup
+- String Simulation
+- Modular Arithmetic
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize an empty result string `res`.
+- Loop through each string `s` in the array `str`.
+- For each character in `s`, get its 0-25 index using `s.charAt(j) - 'a'` and add its weight from array `w` to a running `sum`.
+- Calculate `sum % 26` to bring the total weight within the range [0, 25].
+- Convert this remainder to a character by performing `(char)('z' - sum)` and append it to `res`.
+- Return the constructed result string after iterating through all words.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N * L)`
+
+### Space Complexity
+
+`O(1)`
+
+> We iterate through all N words of average length L once, spending O(1) auxiliary space beyond the output string of length N.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty string in `str` — `sum` stays 0, which maps cleanly to 'z'.
+- Single-character words — The outer loop handles 1-length strings seamlessly, directly indexing `w`.
+- Large weight sums — Total `sum` may exceed 26, but the modulo operator `% 26` ensures it safely wraps around.
+- All weights in `w` are zero — Sum remains 0 for every word, mapping each word to 'z'.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Using `char - 'a'` converts lowercase letters directly to array indices [0, 25] in O(1) time, while modulo arithmetic guarantees cyclic alphabet mapping without index out-of-bound errors.
+
+### Common Mistakes
+
+- Forgetting the `% 26` step, leading to ASCII underflow when subtracting from 'z'.
+- Using incorrect character offset arithmetic (e.g., subtracting from 'a' instead of 'z').
+- Using string concatenation `+` repeatedly in large input scenarios instead of `StringBuilder`.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When dealing with character-to-value or value-to-character transformations over lowercase English letters, map characters to integer indices using `ch - 'a'`. Whenever cyclic shifts or alphabet wrap-arounds are mentioned, apply modulo arithmetic (`% 26`) to keep indices bound within [0, 25].
+
+**Similar Problems to Practice:**
+
+- Shifting Letters
+- Decrypt String from Alphabet to Integer Mapping
+- Replace All ?'s to Avoid Consecutive Repeating Characters
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
