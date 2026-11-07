@@ -1288,3 +1288,99 @@ _Add notes on how to recognize and approach this pattern the next time you see i
 
 =====================================================
 
+# 3931. Process String with Special Operations I
+
+> 🔗 [LeetCode](https://leetcode.com/problems/process-string-with-special-operations-i/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 07 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem requires processing a string of characters sequentially according to special operation rules. Depending on whether a character is a regular letter or a special command symbol (such as '#', '%', or '*'), the current built string is either appended with the character, duplicated, reversed, or has its last character removed.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- sequential stream of command characters → String Simulation / Stack
+- modify building string based on current character → Dynamic String Buffer (StringBuilder / Stack)
+
+**Pattern(s) used:**
+
+- Simulation
+- String Manipulation
+- Stack
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a `StringBuilder` or dynamic string buffer to store the result string.
+- Iterate through each character `ch` of the input string `s` from left to right.
+- If `ch` is '#', duplicate the current contents of the builder by appending its string representation.
+- If `ch` is '%', reverse the current contents of the builder.
+- If `ch` is '*', remove the last character of the builder if it is non-empty.
+- Otherwise, append `ch` directly to the builder.
+- Return the final string representation of the builder after processing all characters.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(L)`
+
+### Space Complexity
+
+`O(L)`
+
+> Time complexity depends on total characters copied, reversed, and appended, bounded by O(L) where L is the cumulative length of string operations. Space complexity is O(L) to store the generated string in memory.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty input string — handled gracefully returning an empty string.
+- '*' operation on an empty result buffer — must check buffer length before deleting to avoid out-of-bounds errors.
+- String composed entirely of special characters — should yield empty or valid intermediate states without throwing exceptions.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Using a mutable data structure like `StringBuilder` allows performing dynamic operations (append, reverse, delete) in-place during a single pass through the instruction set.
+
+### Common Mistakes
+
+- Attempting to delete a character when the string buffer is empty, causing an index out of bounds error.
+- Using immutable string concatenation inside the loop, leading to severe O(N^2) memory and time overhead.
+- Misinterpreting character evaluation order when performing operations that modify the buffer size or order.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks you to construct a string by interpreting a sequence of operational instructions or characters, use a dynamic buffer like a `StringBuilder` or `Stack`. Process elements sequentially and perform structural modifications (reversal, deletion, duplication) directly on the buffer while maintaining bounds safety.
+
+**Similar Problems to Practice:**
+
+- Backspace String Compare
+- Removing Stars From a String
+- Decode String
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
