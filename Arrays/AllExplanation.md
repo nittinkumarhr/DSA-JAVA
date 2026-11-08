@@ -8905,3 +8905,97 @@ When dealing with character-to-value or value-to-character transformations over 
 
 =====================================================
 
+# 1961. Maximum Ice Cream Bars
+
+> 🔗 [LeetCode](https://leetcode.com/problems/maximum-ice-cream-bars/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 08 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an array of costs for ice cream bars and a total amount of coins, the goal is to determine the maximum number of ice cream bars you can purchase. To maximize the quantity of items bought, you should greedily pick the cheapest available ice cream bars first.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- maximize number of items + total capacity/budget constraint → Greedy (pick smallest elements first)
+- element values bounded by small constant (e.g. cost <= 10^5) → Counting Sort / Frequency Array optimization
+
+**Pattern(s) used:**
+
+- Greedy
+- Counting Sort
+
+---
+
+## 🛠 Solution Approach
+
+- Populate a frequency array (count) where count[i] stores the number of ice creams with price i.
+- Iterate through all possible prices i from 1 up to the maximum cost bound.
+- If count[i] > 0, calculate the total cost for all ice creams of price i as (long) i * count[i].
+- If the remaining coins are enough to buy all ice creams of price i, subtract the total cost from coins and add count[i] to the result.
+- Otherwise, calculate how many can be bought with remaining coins using integer division (coins / i), add that to the result, and break.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N + M)`
+
+### Space Complexity
+
+`O(M)`
+
+> N is the length of the costs array and M is the maximum cost value (100,000); filling the count array takes O(N) time and traversing prices up to M takes O(M) time using O(M) extra space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- coins < min(costs) — insufficient coins to buy any bar; code correctly returns 0.
+- coins > sum(costs) — budget exceeds total price of all bars; code buys all bars without error.
+- Multiple duplicate costs — counting sort groups duplicate prices together, processing them in O(1) arithmetic steps per price.
+- Integer overflow — computing total price of count[i] bars at price i requires casting to long to prevent 32-bit overflow.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+To maximize item count given a fixed budget, always greedily pick the smallest costs first; since cost values are bounded, counting sort achieves linear runtime without comparison sorting.
+
+### Common Mistakes
+
+- Using standard O(N log N) sorting when counting sort O(N + M) is faster and easy to implement given small array bounds.
+- Iterating through duplicates one-by-one instead of using division/multiplication to process all bars of a single price simultaneously.
+- Forgetting to cast `i * count[i]` to `long` before comparison/subtraction, causing integer overflow.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to maximize the number of items selectible under a budget constraint, immediately think Greedy: pick the smallest values first. If value ranges are small and bounded (e.g., <= 10^5), reach for Counting Sort to optimize the solution from O(N log N) down to O(N + M) time.
+
+**Similar Problems to Practice:**
+
+- Maximum Units on a Truck
+- Bag of Tokens
+- Reduce Array Size to The Half
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
