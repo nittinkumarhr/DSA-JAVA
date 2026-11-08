@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 101
+- **Total Problems** : 102
 - **Easy** : 47
-- **Medium** : 50
+- **Medium** : 51
 - **Hard** : 3
 
 **Last Updated**
 
-06 Nov 2026
+08 Nov 2026
 
 ---
 
@@ -86,6 +86,7 @@
 | 1899 | LeetCode | [Count Items Matching a Rule](https://leetcode.com/problems/count-items-matching-a-rule/) | Easy | Java | 8 ms | 50 MB | 22 Aug 2026 | `Arrays/1899_Count_Items_Matching_a_Rule.java` |
 | 1938 | LeetCode | [Minimum Operations to Make the Array Increasing](https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing/) | Easy | Java | 2 ms | 47.2 MB | 11 Aug 2026 | `Arrays/1938_Minimum_Operations_to_Make_the_Array_Increasing.java` |
 | 1950 | LeetCode | [Sign of the Product of an Array](https://leetcode.com/problems/sign-of-the-product-of-an-array/) | Easy | Java | 0 ms | 45.3 MB | 26 Jul 2026 | `Arrays/1950_Sign_of_the_Product_of_an_Array.java` |
+| 1961 | LeetCode | [Maximum Ice Cream Bars](https://leetcode.com/problems/maximum-ice-cream-bars/) | Medium | Java | 5 ms | 81.5 MB | 08 Nov 2026 | `Arrays/1961_Maximum_Ice_Cream_Bars.java` |
 | 2016 | LeetCode | [Reduction Operations to Make the Array Elements Equal](https://leetcode.com/problems/reduction-operations-to-make-the-array-elements-equal/) | Medium | Java | 38 ms | 71.6 MB | 27 Jul 2026 | `Arrays/2016_Reduction_Operations_to_Make_the_Array_Elements_Equal.java` |
 | 2102 | LeetCode | [Find the Middle Index in Array](https://leetcode.com/problems/find-the-middle-index-in-array/) | Easy | Java | 0 ms | 43.7 MB | 15 Aug 2026 | `Arrays/2102_Find_the_Middle_Index_in_Array.java` |
 | 2106 | LeetCode | [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | Easy | Java | 0 ms | 45.2 MB | 07 Oct 2026 | `Arrays/2106_Find_Greatest_Common_Divisor_of_Array.java` |
