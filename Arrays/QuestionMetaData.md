@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 102
+- **Total Problems** : 103
 - **Easy** : 47
-- **Medium** : 51
+- **Medium** : 52
 - **Hard** : 3
 
 **Last Updated**
 
-08 Nov 2026
+09 Nov 2026
 
 ---
 
@@ -117,5 +117,6 @@
 | 3515 | LeetCode | [Find if Digit Game Can Be Won](https://leetcode.com/problems/find-if-digit-game-can-be-won/) | Easy | Java | 1 ms | 45.3 MB | 06 Aug 2026 | `Arrays/3515_Find_if_Digit_Game_Can_Be_Won.java` |
 | 3593 | LeetCode | [Find the Maximum Factor Score of Array](https://leetcode.com/problems/find-the-maximum-factor-score-of-array/) | Medium | Java | 2 ms | 45 MB | 10 Oct 2026 | `Arrays/3593_Find_the_Maximum_Factor_Score_of_Array.java` |
 | 3656 | LeetCode | [Minimum Number of Operations to Make Elements in Array Distinct](https://leetcode.com/problems/minimum-number-of-operations-to-make-elements-in-array-distinct/) | Easy | Java | 2 ms | 45.8 MB | 18 Oct 2026 | `Arrays/3656_Minimum_Number_of_Operations_to_Make_Elements_in_Array_Distinct.java` |
+| 4074 | LeetCode | [Count Subarrays With Majority Element I](https://leetcode.com/problems/count-subarrays-with-majority-element-i/) | Medium | Java | 50 ms | 46.5 MB | 09 Nov 2026 | `Arrays/4074_Count_Subarrays_With_Majority_Element_I.java` |
 | 4216 | LeetCode | [Weighted Word Mapping](https://leetcode.com/problems/weighted-word-mapping/) | Easy | Java | 8 ms | 46.1 MB | 06 Nov 2026 | `Arrays/4216_Weighted_Word_Mapping.java` |
 | 4316 | LeetCode | [Minimum Swaps to Move Zeros to End](https://leetcode.com/problems/minimum-swaps-to-move-zeros-to-end/) | Easy | Java | 1 ms | 46.4 MB | 15 Sept 2026 | `Arrays/4316_Minimum_Swaps_to_Move_Zeros_to_End.java` |
