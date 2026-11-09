@@ -8999,3 +8999,98 @@ When asked to maximize the number of items selectible under a budget constraint,
 
 =====================================================
 
+# 4074. Count Subarrays With Majority Element I
+
+> 🔗 [LeetCode](https://leetcode.com/problems/count-subarrays-with-majority-element-i/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 09 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an array of integers `nums` and an integer `target`, the problem asks us to count the total number of contiguous subarrays in which `target` acts as a majority element—meaning `target` appears strictly more than `length / 2` times in that subarray.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- count contiguous subarrays with condition → iterate all bounds O(N^2) or transform to prefix sum O(N log N) / O(N)
+- element appears strictly more than half the time → map target to +1 and non-target to -1 to check positive total sum
+
+**Pattern(s) used:**
+
+- Brute Force Subarray Enumeration
+- Counting / Frequency Tracking
+
+---
+
+## 🛠 Solution Approach
+
+- Iterate through each possible starting index `i` of the subarray from `0` to `n - 1`.
+- Initialize a counter `count` to 0 to track occurrences of `target` starting from `i`.
+- Iterate through each possible ending index `j` from `i` to `n - 1`.
+- If `nums[j] == target`, increment `count` by 1.
+- Compute the current subarray length `currentLength = j - i + 1`.
+- If `count > currentLength / 2`, increment the `validSubarrays` answer counter.
+- Return the total `validSubarrays` count after evaluating all pairs `(i, j)`.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N^2)`
+
+### Space Complexity
+
+`O(1)`
+
+> The nested loops inspect all N*(N+1)/2 contiguous subarrays in O(N^2) time using O(1) auxiliary memory.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single-element array matching target — handled correctly, length 1, count 1 > 1/2 (0), yielding 1 valid subarray.
+- Target does not exist in array — handled correctly, count remains 0, strictly greater condition never triggers, yielding 0.
+- All elements equal target — handled correctly, count equals current length for every window, yielding N*(N+1)/2 valid subarrays.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Checking if `target` is a majority element in a subarray is equivalent to verifying whether its count exceeds `length / 2`, which can be incrementally updated as we expand the right boundary of the subarray.
+
+### Common Mistakes
+
+- Using non-strict inequality (e.g., `count >= length / 2`), which incorrectly counts even-length subarrays where target is tied.
+- Re-counting target elements from scratch in the inner loop instead of maintaining an incremental `count` variable.
+- Confusing this specific target majority problem with general majority element finding (Boyer-Moore), which is unnecessary when the target value is already given.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to count subarrays where a specific target element dominates (appears > 50% of the time), transform the array into binary values: +1 if `element == target` and -1 otherwise. A subarray is valid if its transformed sum is strictly positive. For small constraints (N <= 1000), an O(N^2) expanding window works. For larger N, compute prefix sums of the transformed array and count pairs where `prefix[j] > prefix[i]`, which can be solved in O(N log N) using a Fenwick Tree or Merge Sort.
+
+**Similar Problems to Practice:**
+
+- Majority Element
+- Majority Element II
+- Count Subarrays With Median K
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
