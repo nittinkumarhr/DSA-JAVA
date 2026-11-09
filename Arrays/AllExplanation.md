@@ -9094,3 +9094,96 @@ When asked to count subarrays where a specific target element dominates (appears
 
 =====================================================
 
+# 2099. Number of Strings That Appear as Substrings in Word
+
+> 🔗 [LeetCode](https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-word/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 09 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an array of strings `patterns` and a target string `word`, count how many individual pattern strings exist as a contiguous substring inside `word`.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- appear as substrings in word → Substring matching / string containment
+- small input constraints (length <= 100) → Standard built-in substring search per pattern
+
+**Pattern(s) used:**
+
+- String Matching
+- Brute Force Iteration
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a counter `c` to 0.
+- Iterate through each pattern `p` in the `patterns` array.
+- Use built-in string containment (`word.contains(p)`) to check if `p` is a substring of `word`.
+- If it is a substring, increment `c` by 1.
+- Return the total count `c` after processing all patterns.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N * M)`
+
+### Space Complexity
+
+`O(1)`
+
+> Time complexity is O(N * M) where N is the total number of characters across all strings in `patterns` and M is the length of `word`, because substring search takes O(|p| * M) per pattern; auxiliary space is O(1) as no extra memory is allocated.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Duplicate strings in `patterns` — Each instance must be evaluated and counted separately according to problem rules.
+- Pattern longer than `word` — Containment check safely returns false without causing out-of-bounds errors.
+- Pattern equals `word` — Correctly evaluated as true since a string is a substring of itself.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Given the small constraint limits (pattern lengths and word length ≤ 100), simple built-in string matching methods like `String.contains()` are sufficient and pass comfortably without requiring complex multi-pattern matching data structures like Tries or Aho-Corasick.
+
+### Common Mistakes
+
+- Using `word.equals(p)` instead of `word.contains(p)`, which checks for equality rather than substring inclusion.
+- Removing duplicates from `patterns` when duplicate occurrences are meant to be counted.
+- Mishandling loop body scope and placement of the return statement (as seen in the broken snippet).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks to check for substring occurrences of multiple query patterns inside a reference text, always check the problem constraints first. For small limits, iterating over each query and using native string search methods (`indexOf` or `contains`) is optimal and straightforward. If constraints are very large (thousands of patterns and long texts), consider advanced multi-pattern matching techniques like Aho-Corasick or building a Suffix Automaton / Trie.
+
+**Similar Problems to Practice:**
+
+- String Matching in an Array
+- Check If String Is a Prefix of Array
+- Find Resultant Array After Removing Anagrams
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
