@@ -2,8 +2,8 @@
 
 ## Statistics
 
-- **Total Problems** : 103
-- **Easy** : 47
+- **Total Problems** : 104
+- **Easy** : 48
 - **Medium** : 52
 - **Hard** : 3
 
@@ -88,6 +88,7 @@
 | 1950 | LeetCode | [Sign of the Product of an Array](https://leetcode.com/problems/sign-of-the-product-of-an-array/) | Easy | Java | 0 ms | 45.3 MB | 26 Jul 2026 | `Arrays/1950_Sign_of_the_Product_of_an_Array.java` |
 | 1961 | LeetCode | [Maximum Ice Cream Bars](https://leetcode.com/problems/maximum-ice-cream-bars/) | Medium | Java | 5 ms | 81.5 MB | 08 Nov 2026 | `Arrays/1961_Maximum_Ice_Cream_Bars.java` |
 | 2016 | LeetCode | [Reduction Operations to Make the Array Elements Equal](https://leetcode.com/problems/reduction-operations-to-make-the-array-elements-equal/) | Medium | Java | 38 ms | 71.6 MB | 27 Jul 2026 | `Arrays/2016_Reduction_Operations_to_Make_the_Array_Elements_Equal.java` |
+| 2099 | LeetCode | [Number of Strings That Appear as Substrings in Word](https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-word/) | Easy | Java | 1 ms | 43.2 MB | 09 Nov 2026 | `Arrays/2099_Number_of_Strings_That_Appear_as_Substrings_in_Word.java` |
 | 2102 | LeetCode | [Find the Middle Index in Array](https://leetcode.com/problems/find-the-middle-index-in-array/) | Easy | Java | 0 ms | 43.7 MB | 15 Aug 2026 | `Arrays/2102_Find_the_Middle_Index_in_Array.java` |
 | 2106 | LeetCode | [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | Easy | Java | 0 ms | 45.2 MB | 07 Oct 2026 | `Arrays/2106_Find_Greatest_Common_Divisor_of_Array.java` |
 | 2122 | LeetCode | [Count Special Quadruplets](https://leetcode.com/problems/count-special-quadruplets/) | Easy | Java | 9 ms | 45.1 MB | 09 Aug 2026 | `Arrays/2122_Count_Special_Quadruplets.java` |
