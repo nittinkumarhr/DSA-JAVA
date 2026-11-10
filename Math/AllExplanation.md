@@ -1998,7 +1998,7 @@ When asked to sequence binary numbers such that consecutive elements differ by a
 
 ## 📝 Problem Summary
 
-The problem asks us to take an integer n, remove all zero digits to form a new integer composed of the remaining non-zero digits in their original relative order, compute the sum of these non-zero digits, and return the product of the concatenated non-zero integer and the sum.
+Given an integer n, filter out all zero digits to form a new number containing only non-zero digits in their original relative order, compute the sum of these non-zero digits, and return the product of the formed number and the sum.
 
 ---
 
@@ -2006,23 +2006,22 @@ The problem asks us to take an integer n, remove all zero digits to form a new i
 
 **How to spot this pattern in the problem statement:**
 
-- Process digits of an integer → Use modulo 10 (% 10) and integer division (/ 10) in a loop
-- Reconstruct integer from filtered digits → Build positional value from right to left using a power-of-10 multiplier
+- digit manipulation / extract digits → Digit extraction via modulo and division (% 10, / 10)
+- reconstruct number with filtered digits → Positional digit building using base-10 positional multiplier
 
 **Pattern(s) used:**
 
-- Math
-- Digit Manipulation
+- Digit Extraction
+- Math / Simulation
 
 ---
 
 ## 🛠 Solution Approach
 
-- Initialize variables `res = 0` (for the reconstructed integer), `sum = 0` (for the digit sum), and `pow = 1` (to place non-zero digits in their correct positional place).
-- Loop while `n != 0` to extract the last digit using `rem = n % 10`.
-- If `rem != 0`, append `rem` to `res` using `res += rem * pow`, scale `pow *= 10`, and add `rem` to `sum`.
-- Divide `n` by 10 (`n = n / 10`) to proceed to the next higher digit.
-- After the loop finishes, return `res * sum`.
+- Initialize scalar variables `pow = 1` for positional placement, `res = 0` for the reconstructed number, and `sum = 0` for the digit sum.
+- Loop while `n != 0`, extracting the least significant digit using `rem = n % 10` and shrinking `n` via `n / 10`.
+- If `rem != 0`, add `rem * pow` to `res` to place it in the correct position, multiply `pow` by 10 for the next non-zero digit, and add `rem` to `sum`.
+- Return `res * sum` as a 64-bit integer.
 
 ---
 
@@ -2036,15 +2035,15 @@ The problem asks us to take an integer n, remove all zero digits to form a new i
 
 `O(1)`
 
-> The algorithm processes each digit of n once, running in time logarithmic with respect to n in base 10, while using O(1) auxiliary space.
+> Processing each digit of n takes O(log10 n) iterations, and only O(1) auxiliary variables are used.
 
 ---
 
 ## ⚠️ Edge Cases to Consider
 
-- n contains only zeros (e.g., n = 0) — Loop terminates immediately or skips additions, returning 0 * 0 = 0.
-- n has intermediate or trailing zeros (e.g., n = 1020) — The condition `rem != 0` correctly filters out zero digits without advancing `pow` for zero digits.
-- Large values of n causing overflow — Using `long` variables for `res`, `sum`, `pow`, and the return type avoids 32-bit integer overflow.
+- Single-digit number (e.g., n = 5) — Handled cleanly in one iteration, returning 5 * 5 = 25.
+- Number with zeros (e.g., n = 102) — Zeros are skipped without advancing `pow`, correctly producing res = 12.
+- Large input values — Avoids overflow by computing `res`, `sum`, and the product using 64-bit `long` integers.
 
 ---
 
@@ -2052,25 +2051,25 @@ The problem asks us to take an integer n, remove all zero digits to form a new i
 
 ### Key Observation
 
-By iterating through digits from right to left, non-zero digits can be placed in their correct positional order in the result number using a multiplier (`pow`) that only scales when a non-zero digit is encountered.
+Processing digits right-to-left allows non-zero digits to be correctly placed in the filtered number by multiplying each non-zero digit by a power of 10 that only increments when a non-zero digit is encountered.
 
 ### Common Mistakes
 
-- Scaling the multiplier `pow *= 10` on every iteration instead of only when encountering non-zero digits, which incorrectly retains zero placeholders.
-- Converting the number to a string, which adds unnecessary memory allocation overhead compared to direct arithmetic.
-- Using 32-bit integers (`int`) for intermediate calculations, leading to potential overflow during multiplication.
+- Advancing the `pow` multiplier on zero digits, which incorrectly leaves zeros in the reconstructed number.
+- Using 32-bit integers (`int`), causing integer overflow during multiplication or power accumulation.
+- Constructing the number in reverse order by doing `res = res * 10 + rem` without realizing digits are being read right-to-left.
 
 ---
 
 ## 🔁 How to Approach Similar Problems
 
-For problems requiring extraction, filtering, or reassembly of integer digits, prefer arithmetic extraction (`n % 10` and `n / 10`). Reconstruct numbers from right to left by keeping a power-of-10 variable that increments its exponent only when a valid digit is appended.
+For problems involving digit extraction and filtering, extract digits right-to-left using `% 10` and `/ 10`. To reconstruct the number in original order while filtering, maintain a positional multiplier (`pow`) that starts at 1 and multiplies by 10 only when a valid digit is appended. Always check for potential integer overflow when multiplying digit sums or powers of 10.
 
 **Similar Problems to Practice:**
 
 - Subtract the Product and Sum of Digits of an Integer
-- Reverse Integer
-- Base 7
+- Sum of Digits of String After Convert
+- Add Digits
 
 ---
 
@@ -2082,4 +2081,5 @@ For problems requiring extraction, filtering, or reassembly of integer digits, p
 - **Revision notes:**
 
 =====================================================
+
 
