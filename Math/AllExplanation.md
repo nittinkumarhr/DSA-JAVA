@@ -1990,3 +1990,96 @@ When asked to sequence binary numbers such that consecutive elements differ by a
 
 =====================================================
 
+# 4135. Concatenate Non-Zero Digits and Multiply by Sum I
+
+> 🔗 [LeetCode](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 10 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to take an integer n, remove all zero digits to form a new integer composed of the remaining non-zero digits in their original relative order, compute the sum of these non-zero digits, and return the product of the concatenated non-zero integer and the sum.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- Process digits of an integer → Use modulo 10 (% 10) and integer division (/ 10) in a loop
+- Reconstruct integer from filtered digits → Build positional value from right to left using a power-of-10 multiplier
+
+**Pattern(s) used:**
+
+- Math
+- Digit Manipulation
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize variables `res = 0` (for the reconstructed integer), `sum = 0` (for the digit sum), and `pow = 1` (to place non-zero digits in their correct positional place).
+- Loop while `n != 0` to extract the last digit using `rem = n % 10`.
+- If `rem != 0`, append `rem` to `res` using `res += rem * pow`, scale `pow *= 10`, and add `rem` to `sum`.
+- Divide `n` by 10 (`n = n / 10`) to proceed to the next higher digit.
+- After the loop finishes, return `res * sum`.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(log10 n)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm processes each digit of n once, running in time logarithmic with respect to n in base 10, while using O(1) auxiliary space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- n contains only zeros (e.g., n = 0) — Loop terminates immediately or skips additions, returning 0 * 0 = 0.
+- n has intermediate or trailing zeros (e.g., n = 1020) — The condition `rem != 0` correctly filters out zero digits without advancing `pow` for zero digits.
+- Large values of n causing overflow — Using `long` variables for `res`, `sum`, `pow`, and the return type avoids 32-bit integer overflow.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+By iterating through digits from right to left, non-zero digits can be placed in their correct positional order in the result number using a multiplier (`pow`) that only scales when a non-zero digit is encountered.
+
+### Common Mistakes
+
+- Scaling the multiplier `pow *= 10` on every iteration instead of only when encountering non-zero digits, which incorrectly retains zero placeholders.
+- Converting the number to a string, which adds unnecessary memory allocation overhead compared to direct arithmetic.
+- Using 32-bit integers (`int`) for intermediate calculations, leading to potential overflow during multiplication.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+For problems requiring extraction, filtering, or reassembly of integer digits, prefer arithmetic extraction (`n % 10` and `n / 10`). Reconstruct numbers from right to left by keeping a power-of-10 variable that increments its exponent only when a valid digit is appended.
+
+**Similar Problems to Practice:**
+
+- Subtract the Product and Sum of Digits of an Integer
+- Reverse Integer
+- Base 7
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
