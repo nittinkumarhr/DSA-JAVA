@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 23
-- **Easy** : 15
+- **Total Problems** : 24
+- **Easy** : 16
 - **Medium** : 6
 - **Hard** : 1
 
 **Last Updated**
 
-31 Oct 2026
+10 Nov 2026
 
 ---
 
@@ -39,4 +39,5 @@
 | 2752 | LeetCode | [Sum Multiples](https://leetcode.com/problems/sum-multiples/) | Easy | Java | 3 ms | 42.9 MB | 13 Jul 2026 | `Math/2752_Sum_Multiples.java` |
 | 2812 | LeetCode | [Find the Maximum Achievable Number](https://leetcode.com/problems/find-the-maximum-achievable-number/) | Easy | Java | 1 ms | 43.2 MB | 22 Jul 2026 | `Math/2812_Find_the_Maximum_Achievable_Number.java` |
 | 3172 | LeetCode | [Divisible and Non-divisible Sums Difference](https://leetcode.com/problems/divisible-and-nondivisible-sums-difference/) | Easy | Java | 1 ms | 42.5 MB | 15 Jul 2026 | `Math/3172_Divisible_and_Nondivisible_Sums_Difference.java` |
+| 4135 | LeetCode | [Concatenate Non-Zero Digits and Multiply by Sum I](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i/) | Easy | Java | 2 ms | 42.2 MB | 10 Nov 2026 | `Math/4135_Concatenate_NonZero_Digits_and_Multiply_by_Sum_I.java` |
 | 861125 | HackerRank | [Constructing a Number](https://www.hackerrank.com/challenges/constructing-a-number/problem) | Authorqoo2p5difficultyeasymax score15submitted by15658 | Unknown | N/A | N/A | 25 Jul 2026 | `Math/861125_Constructing_a_Number.txt` |
