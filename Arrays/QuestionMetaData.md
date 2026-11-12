@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 104
-- **Easy** : 48
+- **Total Problems** : 105
+- **Easy** : 49
 - **Medium** : 52
 - **Hard** : 3
 
 **Last Updated**
 
-09 Nov 2026
+12 Nov 2026
 
 ---
 
@@ -114,6 +114,7 @@
 | 3176 | LeetCode | [Minimum Sum of Mountain Triplets I](https://leetcode.com/problems/minimum-sum-of-mountain-triplets-i/) | Easy | Java | 2 ms | 43.7 MB | 03 Aug 2026 | `Arrays/3176_Minimum_Sum_of_Mountain_Triplets_I.java` |
 | 3194 | LeetCode | [Find Words Containing Character](https://leetcode.com/problems/find-words-containing-character/) | Easy | Java | 1 ms | 46.6 MB | 20 Jul 2026 | `Arrays/3194_Find_Words_Containing_Character.java` |
 | 3226 | LeetCode | [Minimum Number Game](https://leetcode.com/problems/minimum-number-game/) | Easy | Java | 5 ms | 47.3 MB | 11 Jul 2026 | `Arrays/3226_Minimum_Number_Game.java` |
+| 3372 | LeetCode | [Longest Strictly Increasing or Strictly Decreasing Subarray](https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/) | Easy | Java | 1 ms | 43.8 MB | 12 Nov 2026 | `Arrays/3372_Longest_Strictly_Increasing_or_Strictly_Decreasing_Subarray.java` |
 | 3428 | LeetCode | [Find the XOR of Numbers Which Appear Twice](https://leetcode.com/problems/find-the-xor-of-numbers-which-appear-twice/) | Easy | Java | 5 ms | 44.6 MB | 16 Sept 2026 | `Arrays/3428_Find_the_XOR_of_Numbers_Which_Appear_Twice.java` |
 | 3515 | LeetCode | [Find if Digit Game Can Be Won](https://leetcode.com/problems/find-if-digit-game-can-be-won/) | Easy | Java | 1 ms | 45.3 MB | 06 Aug 2026 | `Arrays/3515_Find_if_Digit_Game_Can_Be_Won.java` |
 | 3593 | LeetCode | [Find the Maximum Factor Score of Array](https://leetcode.com/problems/find-the-maximum-factor-score-of-array/) | Medium | Java | 2 ms | 45 MB | 10 Oct 2026 | `Arrays/3593_Find_the_Maximum_Factor_Score_of_Array.java` |
