@@ -9187,3 +9187,98 @@ When a problem asks to check for substring occurrences of multiple query pattern
 
 =====================================================
 
+# 3372. Longest Strictly Increasing or Strictly Decreasing Subarray
+
+> 🔗 [LeetCode](https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 12 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an array of integers nums, find the length of the longest contiguous subarray that is either strictly increasing or strictly decreasing.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- contiguous subarray + local transition condition → single-pass state tracking / dynamic programming
+- strictly increasing or strictly decreasing → dual counter tracking with state resets
+
+**Pattern(s) used:**
+
+- Single-Pass Iteration
+- Dynamic Programming (State Reduction)
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize maxLen, inc, and dec counters all to 1.
+- Traverse the array starting from index 1, comparing nums[i] with nums[i - 1].
+- If nums[i] > nums[i - 1], increment inc by 1 and reset dec to 1.
+- If nums[i] < nums[i - 1], increment dec by 1 and reset inc to 1.
+- If nums[i] == nums[i - 1], reset both inc and dec to 1 since strict monotonicity requires unequal elements.
+- Update maxLen with the maximum of maxLen, inc, and dec at each step.
+- Return maxLen after completing the loop.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> The solution iterates through the array of length N once using constant auxiliary space for tracking lengths.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single element array (N = 1) — The loop condition i < n fails immediately, correctly returning the default maxLen of 1.
+- All equal elements — Equal adjacent values trigger the reset logic (inc = 1, dec = 1), yielding a result of 1.
+- Entire array strictly monotonic — Counters increment continuously to N without resetting, returning N.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Strict monotonicity in contiguous subarrays is local: if the condition breaks at index i, a new valid subarray can only start at index i - 1 or i, allowing single-pass O(1) state updates without backtracking.
+
+### Common Mistakes
+
+- Confusing contiguous subarrays with non-contiguous subsequences (e.g., trying to use LIS O(N log N) or O(N^2) DP).
+- Resetting counters to 0 instead of 1 when monotonicity breaks (a single element forms a subarray of length 1).
+- Failing to handle equal adjacent elements properly by not resetting both counters.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+For problems requiring the maximum length of a contiguous subarray satisfying a pairwise relation, use local state tracking in a single pass. Maintain active counters for current validity, reset them to baseline when the condition breaks, and update the global maximum at each step.
+
+**Similar Problems to Practice:**
+
+- Longest Continuous Increasing Subsequence
+- Longest Mountain in Array
+- Maximum Subarray
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
