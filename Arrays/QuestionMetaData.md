@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 105
-- **Easy** : 49
+- **Total Problems** : 106
+- **Easy** : 50
 - **Medium** : 52
 - **Hard** : 3
 
 **Last Updated**
 
-12 Nov 2026
+13 Nov 2026
 
 ---
 
@@ -71,6 +71,7 @@
 | 1519 | LeetCode | [Minimum Subsequence in Non-Increasing Order](https://leetcode.com/problems/minimum-subsequence-in-nonincreasing-order/) | Easy | Java | 9 ms | 52.2 MB | 04 Sept 2026 | `Arrays/1519_Minimum_Subsequence_in_NonIncreasing_Order.java` |
 | 1538 | LeetCode | [Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/) | Medium | Java | 1 ms | 62 MB | 09 Jul 2026 | `Arrays/1538_Maximum_Points_You_Can_Obtain_from_Cards.java` |
 | 1570 | LeetCode | [Final Prices With a Special Discount in a Shop](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/) | Easy | Java | 2 ms | 45.1 MB | 12 Sept 2026 | `Arrays/1570_Final_Prices_With_a_Special_Discount_in_a_Shop.java` |
+| 1574 | LeetCode | [Maximum Product of Two Elements in an Array](https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/) | Easy | Java | 1 ms | 44.1 MB | 13 Nov 2026 | `Arrays/1574_Maximum_Product_of_Two_Elements_in_an_Array.java` |
 | 1605 | LeetCode | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Medium | Java | 19 ms | 82.5 MB | 07 Aug 2026 | `Arrays/1605_Minimum_Number_of_Days_to_Make_m_Bouquets.java` |
 | 1620 | LeetCode | [Check If Array Pairs Are Divisible by k](https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k/) | Medium | Java | 4 ms | 84.5 MB | 19 Sept 2026 | `Arrays/1620_Check_If_Array_Pairs_Are_Divisible_by_k.java` |
 | 1635 | LeetCode | [Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/) | Easy | Java | 1 ms | 42.7 MB | 12 Aug 2026 | `Arrays/1635_Number_of_Good_Pairs.java` |
