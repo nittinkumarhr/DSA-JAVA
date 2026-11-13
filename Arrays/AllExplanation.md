@@ -9282,3 +9282,97 @@ For problems requiring the maximum length of a contiguous subarray satisfying a 
 
 =====================================================
 
+# 1574. Maximum Product of Two Elements in an Array
+
+> 🔗 [LeetCode](https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 13 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an array of positive integers, the task is to select two distinct indices i and j such that the product (nums[i] - 1) * (nums[j] - 1) is maximized.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- maximum product of two elements → find the two largest elements in the array
+- positive elements only → largest product comes directly from the largest two numbers
+
+**Pattern(s) used:**
+
+- Greedy
+- Single Pass
+- Sorting
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two variables, max1 and max2, to zero (or minimum integer value) to track the largest and second-largest elements.
+- Iterate through each number in the array.
+- If the current number is greater than max1, update max2 to be max1 and set max1 to the current number.
+- Otherwise, if the current number is greater than max2, update max2 to be the current number.
+- After the loop, return (max1 - 1) * (max2 - 1).
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> We traverse the array of N elements exactly once to find the top two maximums, requiring O(1) auxiliary space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array with exactly two elements — max1 and max2 take both values directly.
+- Duplicate maximum elements (e.g., [5, 5, 2]) — handled correctly as max1=5 and max2=5.
+- Elements with minimum constraint value (e.g., 1) — subtracting 1 yields 0, which correctly evaluates to 0 in product calculation.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Because all elements in the array are positive integers (nums[i] >= 1), the maximum value of (nums[i] - 1) * (nums[j] - 1) is always achieved by choosing the two largest numbers in the array.
+
+### Common Mistakes
+
+- Sorting the entire array in O(N log N) time instead of using a single O(N) pass to track top two elements.
+- Failing to handle duplicate maximum values correctly when finding the second largest element.
+- Forgetting to subtract 1 from the elements before multiplying.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks for the extreme value (max/min) of a function of K elements where K is a small constant (like 2 or 3), prefer a single pass tracking K variables or a min-heap over full sorting. Always verify if negative values exist, as two negative numbers can produce a positive maximum product.
+
+**Similar Problems to Practice:**
+
+- Maximum Product of Three Numbers
+- Third Maximum Number
+- Kth Largest Element in an Array
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
