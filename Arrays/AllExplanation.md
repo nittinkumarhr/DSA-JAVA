@@ -9376,3 +9376,96 @@ When a problem asks for the extreme value (max/min) of a function of K elements 
 
 =====================================================
 
+# 3644. Minimum Positive Sum Subarray 
+
+> 🔗 [LeetCode](https://leetcode.com/problems/minimum-positive-sum-subarray/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 14 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+Find the minimum positive sum among all contiguous subarrays of size between l and r inclusive. If no subarray of length between l and r has a sum strictly greater than zero, return -1.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- contiguous subarray sum → prefix sum array
+- subarray size constraint between l and r → fixed-length window iteration
+
+**Pattern(s) used:**
+
+- Prefix Sum
+- Sliding Window
+
+---
+
+## 🛠 Solution Approach
+
+- Build a prefix sum array 'pre' of length N + 1 where pre[i] represents the sum of the first i elements.
+- Iterate through every possible subarray length k from l to r inclusive.
+- For each length k, calculate the sum of all contiguous subarrays of length k using pre[i + k] - pre[i].
+- Filter out all sums that are less than or equal to zero.
+- Find and return the minimum sum among the positive sums, or -1 if no positive sum exists.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N * (r - l + 1))`
+
+### Space Complexity
+
+`O(N)`
+
+> Building the prefix sum array takes O(N) space and time; evaluating all window lengths from l to r checks at most O(N * (r - l + 1)) subarrays.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- No positive subarray sum exists — handled by filtering for positive sums and defaulting to -1
+- All elements are negative — results in no valid positive sum, returning -1
+- l equals r — limits iteration to exactly one window size of length l
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+A prefix sum array reduces any contiguous subarray sum calculation to an O(1) subtraction pre[i + k] - pre[i], allowing efficient evaluation across all valid window sizes.
+
+### Common Mistakes
+
+- Including zero or negative sums in the minimum result instead of strictly positive sums
+- Off-by-one errors when querying prefix sum bounds for a given window length k
+- Misinterpreting l and r as element value range constraints rather than subarray length constraints
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to analyze contiguous subarray properties over fixed or bounded lengths, compute a prefix sum array to enable O(1) subarray sum queries. Iterate through each required length, sliding a window across the prefix array to maintain optimal time complexity.
+
+**Similar Problems to Practice:**
+
+- Minimum Size Subarray Sum
+- Maximum Average Subarray I
+- Subarray Sum Equals K
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
