@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 107
+- **Total Problems** : 108
 - **Easy** : 51
-- **Medium** : 52
+- **Medium** : 53
 - **Hard** : 3
 
 **Last Updated**
 
-14 Nov 2026
+15 Nov 2026
 
 ---
 
@@ -74,6 +74,7 @@
 | 1574 | LeetCode | [Maximum Product of Two Elements in an Array](https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/) | Easy | Java | 1 ms | 44.1 MB | 13 Nov 2026 | `Arrays/1574_Maximum_Product_of_Two_Elements_in_an_Array.java` |
 | 1605 | LeetCode | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Medium | Java | 19 ms | 82.5 MB | 07 Aug 2026 | `Arrays/1605_Minimum_Number_of_Days_to_Make_m_Bouquets.java` |
 | 1620 | LeetCode | [Check If Array Pairs Are Divisible by k](https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k/) | Medium | Java | 4 ms | 84.5 MB | 19 Sept 2026 | `Arrays/1620_Check_If_Array_Pairs_Are_Divisible_by_k.java` |
+| 1631 | LeetCode | [Number of Sub-arrays With Odd Sum](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/) | Medium | Java | 19 ms | 80.1 MB | 15 Nov 2026 | `Arrays/1631_Number_of_Subarrays_With_Odd_Sum.java` |
 | 1635 | LeetCode | [Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/) | Easy | Java | 1 ms | 42.7 MB | 12 Aug 2026 | `Arrays/1635_Number_of_Good_Pairs.java` |
 | 1675 | LeetCode | [Magnetic Force Between Two Balls](https://leetcode.com/problems/magnetic-force-between-two-balls/) | Medium | Java | 46 ms | 79.4 MB | 02 Oct 2026 | `Arrays/1675_Magnetic_Force_Between_Two_Balls.java` |
 | 1720 | LeetCode | [Crawler Log Folder](https://leetcode.com/problems/crawler-log-folder/) | Easy | Java | 1 ms | 43.7 MB | 13 Sept 2026 | `Arrays/1720_Crawler_Log_Folder.java` |
@@ -119,7 +120,7 @@
 | 3428 | LeetCode | [Find the XOR of Numbers Which Appear Twice](https://leetcode.com/problems/find-the-xor-of-numbers-which-appear-twice/) | Easy | Java | 5 ms | 44.6 MB | 16 Sept 2026 | `Arrays/3428_Find_the_XOR_of_Numbers_Which_Appear_Twice.java` |
 | 3515 | LeetCode | [Find if Digit Game Can Be Won](https://leetcode.com/problems/find-if-digit-game-can-be-won/) | Easy | Java | 1 ms | 45.3 MB | 06 Aug 2026 | `Arrays/3515_Find_if_Digit_Game_Can_Be_Won.java` |
 | 3593 | LeetCode | [Find the Maximum Factor Score of Array](https://leetcode.com/problems/find-the-maximum-factor-score-of-array/) | Medium | Java | 2 ms | 45 MB | 10 Oct 2026 | `Arrays/3593_Find_the_Maximum_Factor_Score_of_Array.java` |
-| 3644 | LeetCode | [Minimum Positive Sum Subarray ](https://leetcode.com/problems/minimum-positive-sum-subarray/) | Easy | Java | 17 ms | 46.5 MB | 14 Nov 2026 | `Arrays/3644_Minimum_Positive_Sum_Subarray.java` |
+| 3644 | LeetCode | [Minimum Positive Sum Subarray](https://leetcode.com/problems/minimum-positive-sum-subarray/) | Easy | Java | 17 ms | 46.5 MB | 14 Nov 2026 | `Arrays/3644_Minimum_Positive_Sum_Subarray.java` |
 | 3656 | LeetCode | [Minimum Number of Operations to Make Elements in Array Distinct](https://leetcode.com/problems/minimum-number-of-operations-to-make-elements-in-array-distinct/) | Easy | Java | 2 ms | 45.8 MB | 18 Oct 2026 | `Arrays/3656_Minimum_Number_of_Operations_to_Make_Elements_in_Array_Distinct.java` |
 | 4074 | LeetCode | [Count Subarrays With Majority Element I](https://leetcode.com/problems/count-subarrays-with-majority-element-i/) | Medium | Java | 50 ms | 46.5 MB | 09 Nov 2026 | `Arrays/4074_Count_Subarrays_With_Majority_Element_I.java` |
 | 4216 | LeetCode | [Weighted Word Mapping](https://leetcode.com/problems/weighted-word-mapping/) | Easy | Java | 8 ms | 46.1 MB | 06 Nov 2026 | `Arrays/4216_Weighted_Word_Mapping.java` |
