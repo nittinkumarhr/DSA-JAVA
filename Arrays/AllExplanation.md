@@ -9469,3 +9469,96 @@ When asked to analyze contiguous subarray properties over fixed or bounded lengt
 
 =====================================================
 
+# 1631. Number of Sub-arrays With Odd Sum
+
+> 🔗 [LeetCode](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 15 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an array of integers, count the number of contiguous subarrays whose elements sum to an odd number. Return the result modulo 10^9 + 7.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- count of subarrays with specific sum property → Prefix Sum + Hash Map / Combinatorics
+- subarray sum parity (odd/even) → Parity of Prefix Sums
+
+**Pattern(s) used:**
+
+- Prefix Sum
+- Combinatorics
+- Math
+
+---
+
+## 🛠 Solution Approach
+
+- Recognize that the sum of a subarray arr[i..j] is equal to prefix[j] - prefix[i-1].
+- Observe that an odd subarray sum occurs if and only if one prefix sum is odd and the other is even.
+- Count the total number of odd prefix sums across the array (including or excluding the initial prefix sum of 0, which is even).
+- The initial empty prefix (sum = 0) counts as an even prefix sum, making total even prefixes = (N + 1) - odd_prefixes.
+- Multiply the count of odd prefix sums by the count of even prefix sums and return the product modulo 10^9 + 7.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> Computing the prefix parity count requires a single pass over the array of length N in O(N) time and O(1) auxiliary space when using simple counters.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array contains only even numbers — returns 0 because there are zero odd prefix sums to form odd subarrays.
+- Single element array — correctly returns 1 if odd, or 0 if even.
+- Large array size resulting in up to N*(N+1)/2 total subarrays — requires long multiplication before applying modulo 10^9 + 7 to prevent 32-bit integer overflow.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+A subarray sum (prefix[j] - prefix[i-1]) is odd if and only if prefix[j] and prefix[i-1] have opposite parities (one even, one odd). Therefore, every odd prefix paired with every even prefix forms a unique odd-sum subarray.
+
+### Common Mistakes
+
+- Forgetting to count the empty prefix sum (index -1 with sum 0) as an even prefix sum.
+- Multiplying counts using 32-bit signed integers, causing overflow before the modulo operation.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When tasked with counting subarrays based on sum properties (parity, remainder modulo K, target sum), convert the problem to prefix sums. Rewrite the subarray condition as a relationship between two prefix sums (e.g., prefix[r] % K == prefix[l-1] % K). Track the frequencies of prefix states as you iterate to count valid pairs efficiently.
+
+**Similar Problems to Practice:**
+
+- Subarray Sum Equals K
+- Continuous Subarray Sum
+- Make Sum Divisible by P
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
