@@ -1384,3 +1384,97 @@ When a problem asks you to construct a string by interpreting a sequence of oper
 
 =====================================================
 
+# 2361. Calculate Digit Sum of a String
+
+> 🔗 [LeetCode](https://leetcode.com/problems/calculate-digit-sum-of-a-string/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 16 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+Given a string of digits `s` and an integer `k`, repeatedly divide `s` into consecutive groups of size `k` (with the last group possibly being shorter), replace each group with the string representation of the sum of its digits, and concatenate these sums into a new string. Repeat this process until the length of the string is less than or equal to `k`.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- repeat until length <= k → Simulation / Loop until termination condition
+- divide string into groups of size k → Fixed-step String Chunking / Sliding Window
+- replace group with sum of digits → Digit Parsing and Aggregation
+
+**Pattern(s) used:**
+
+- Simulation
+- String Processing
+
+---
+
+## 🛠 Solution Approach
+
+- Check if the length of string `s` is greater than `k`; if so, enter a outer loop.
+- Initialize a `StringBuilder` to build the transformed string for the current round.
+- Iterate through `s` in steps of size `k` using index `i`.
+- For each chunk starting at `i`, sum up the numerical values of its characters up to `i + k` (or the end of string `s`).
+- Append the calculated sum to the `StringBuilder`.
+- Update `s` with the newly formed string and repeat until `s.length() <= k`.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N * log_k(N))`
+
+### Space Complexity
+
+`O(N)`
+
+> Each round reduces the length of string `s` by a factor of roughly `k` (since sums of `k` digits produce much shorter digit strings), leading to logarithmic rounds where each round processes at most `O(N)` characters total, requiring `O(N)` space for the temporary `StringBuilder`.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- String length initially <= k — loop condition `s.length() > k` fails immediately and returns original `s`.
+- Last group has size < k — handled naturally by `Math.min(i + k, s.length())` bounds check.
+- String consists entirely of zeros ('0000') — sums evaluate to 0 and get appended as '0', steadily shrinking the string size.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The reduction step is guaranteed to make the string shorter in each iteration when `k >= 2` because the sum of `k` single-digit numbers requires fewer digits to represent than `k` unless `k=1` or values are small, but here shrinking is guaranteed because groups of `k` characters condense into single number strings.
+
+### Common Mistakes
+
+- Array index out of bounds on the final group if not bounding the inner loop with `Math.min(i + k, s.length())`.
+- Converting string chunks directly to integers (`Integer.parseInt`), which can overflow if `k` is large, instead of summing digit-by-digit (`s.charAt(j) - '0'`).
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem specifies a multi-round state transformation with dynamic length reduction until a stopping threshold is met, use a straightforward simulation with standard loops. Always build new states using mutable string helpers (`StringBuilder`) and perform bounds checking when processing contiguous chunks of elements.
+
+**Similar Problems to Practice:**
+
+- Add Digits
+- Base 7
+- Find the Array Concatenation Value
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
