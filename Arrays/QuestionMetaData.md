@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 108
-- **Easy** : 51
+- **Total Problems** : 109
+- **Easy** : 52
 - **Medium** : 53
 - **Hard** : 3
 
 **Last Updated**
 
-15 Nov 2026
+17 Nov 2026
 
 ---
 
@@ -74,7 +74,7 @@
 | 1574 | LeetCode | [Maximum Product of Two Elements in an Array](https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/) | Easy | Java | 1 ms | 44.1 MB | 13 Nov 2026 | `Arrays/1574_Maximum_Product_of_Two_Elements_in_an_Array.java` |
 | 1605 | LeetCode | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Medium | Java | 19 ms | 82.5 MB | 07 Aug 2026 | `Arrays/1605_Minimum_Number_of_Days_to_Make_m_Bouquets.java` |
 | 1620 | LeetCode | [Check If Array Pairs Are Divisible by k](https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k/) | Medium | Java | 4 ms | 84.5 MB | 19 Sept 2026 | `Arrays/1620_Check_If_Array_Pairs_Are_Divisible_by_k.java` |
-| 1631 | LeetCode | [Number of Sub-arrays With Odd Sum](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/) | Medium | Java | 19 ms | 80.1 MB | 15 Nov 2026 | `Arrays/1631_Number_of_Subarrays_With_Odd_Sum.java` |
+| 1631 | LeetCode | [Number of Sub-arrays With Odd Sum](https://leetcode.com/problems/number-of-subarrays-with-odd-sum/) | Medium | Java | 19 ms | 80.1 MB | 15 Nov 2026 | `Arrays/1631_Number_of_Subarrays_With_Odd_Sum.java` |
 | 1635 | LeetCode | [Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/) | Easy | Java | 1 ms | 42.7 MB | 12 Aug 2026 | `Arrays/1635_Number_of_Good_Pairs.java` |
 | 1675 | LeetCode | [Magnetic Force Between Two Balls](https://leetcode.com/problems/magnetic-force-between-two-balls/) | Medium | Java | 46 ms | 79.4 MB | 02 Oct 2026 | `Arrays/1675_Magnetic_Force_Between_Two_Balls.java` |
 | 1720 | LeetCode | [Crawler Log Folder](https://leetcode.com/problems/crawler-log-folder/) | Easy | Java | 1 ms | 43.7 MB | 13 Sept 2026 | `Arrays/1720_Crawler_Log_Folder.java` |
@@ -109,6 +109,7 @@
 | 2552 | LeetCode | [Maximum Sum of Distinct Subarrays With Length K](https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/) | Medium | Java | 60 ms | 99 MB | 12 Jul 2026 | `Arrays/2552_Maximum_Sum_of_Distinct_Subarrays_With_Length_K.java` |
 | 2624 | LeetCode | [Difference Between Element Sum and Digit Sum of an Array](https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/) | Easy | Java | 2 ms | 46.4 MB | 12 Jul 2026 | `Arrays/2624_Difference_Between_Element_Sum_and_Digit_Sum_of_an_Array.java` |
 | 2670 | LeetCode | [Make K-Subarray Sums Equal](https://leetcode.com/problems/make-ksubarray-sums-equal/) | Medium | Java | 115 ms | 100.3 MB | 04 Nov 2026 | `Arrays/2670_Make_KSubarray_Sums_Equal.java` |
+| 2844 | LeetCode | [Sum of Squares of Special Elements ](https://leetcode.com/problems/sum-of-squares-of-special-elements/) | Easy | Java | 2 ms | 45.7 MB | 17 Nov 2026 | `Arrays/2844_Sum_of_Squares_of_Special_Elements.java` |
 | 2847 | LeetCode | [Find Maximum Number of String Pairs](https://leetcode.com/problems/find-maximum-number-of-string-pairs/) | Easy | Java | 3 ms | 45 MB | 16 Aug 2026 | `Arrays/2847_Find_Maximum_Number_of_String_Pairs.java` |
 | 2876 | LeetCode | [Number of Employees Who Met the Target](https://leetcode.com/problems/number-of-employees-who-met-the-target/) | Easy | Java | 1 ms | 43.8 MB | 12 Jul 2026 | `Arrays/2876_Number_of_Employees_Who_Met_the_Target.java` |
 | 2878 | LeetCode | [Apply Operations to Make All Array Elements Equal to Zero](https://leetcode.com/problems/apply-operations-to-make-all-array-elements-equal-to-zero/) | Medium | Java | 1 ms | 109.3 MB | 08 Jul 2026 | `Arrays/2878_Apply_Operations_to_Make_All_Array_Elements_Equal_to_Zero.java` |
