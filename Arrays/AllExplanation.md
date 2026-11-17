@@ -9562,3 +9562,95 @@ When tasked with counting subarrays based on sum properties (parity, remainder m
 
 =====================================================
 
+# 2844. Sum of Squares of Special Elements 
+
+> 🔗 [LeetCode](https://leetcode.com/problems/sum-of-squares-of-special-elements/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 17 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks to calculate the sum of squares of elements at indices i (1-indexed) such that the length of the array n is divisible by i.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- indices i such that n % i == 0 → Divisibility check for index selection
+- sum of squares of specific elements → Iterative accumulation with conditional logic
+
+**Pattern(s) used:**
+
+- Enumeration
+- Array Traversal
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a sum variable to 0.
+- Iterate through index i from 1 to n (where n is the array length).
+- Check if n is divisible by i using the modulo operator (n % i == 0).
+- If true, add the square of the element at index i-1 to the sum.
+- Return the final sum.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(1)`
+
+> The algorithm performs a single pass over the array of size n, and uses a constant amount of extra space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- n = 1 — The loop runs once, correctly identifying index 1 as a divisor.
+- All elements are 0 — The sum remains 0, which is correct.
+- Large values — Potential integer overflow if the sum of squares exceeds the 32-bit integer limit.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+The condition 'n % i == 0' identifies the divisors of n, which are the only indices that satisfy the 'special' criteria.
+
+### Common Mistakes
+
+- Confusing 0-based indexing with the 1-based index requirement in the problem statement.
+- Forgetting to square the element before adding it to the total sum.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem defines a subset of elements based on index properties (like divisibility, parity, or prime status), treat it as a filtering problem. First, identify the mathematical condition defining the indices, then iterate through the range and apply the condition to perform the required aggregation. Always clarify if the problem uses 0-based or 1-based indexing to avoid off-by-one errors.
+
+**Similar Problems to Practice:**
+
+- Count Divisors
+- Sum of Multiples
+- Find All Factors of a Number
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
