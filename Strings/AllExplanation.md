@@ -1478,3 +1478,95 @@ When a problem specifies a multi-round state transformation with dynamic length 
 
 =====================================================
 
+# 3174. Minimum Number of Changes to Make Binary String Beautiful
+
+> 🔗 [LeetCode](https://leetcode.com/problems/minimum-number-of-changes-to-make-binary-string-beautiful/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 18 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+Given a binary string s of even length, calculate the minimum number of character changes required to make s 'beautiful'. A binary string is beautiful if it can be partitioned into one or more substrings of even length, where each substring consists entirely of '0's or entirely of '1's.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- partition into even-length uniform blocks → chunking into independent pairs of size 2
+- minimum changes / operations on string pairs → greedy local choice
+
+**Pattern(s) used:**
+
+- Greedy
+- Pairwise Chunking
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize a counter `changes` to 0.
+- Iterate through the string with a step size of 2 (`i = 0, 2, 4, ...`).
+- For each adjacent pair `(s[i], s[i + 1])`, check if the characters are different.
+- If `s[i] != s[i + 1]`, increment `changes` by 1 to make them identical.
+- Return `changes` after processing all pairs.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(1)`
+
+> The solution iterates through the string of length n once in steps of 2 using O(1) extra space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Minimum valid length string (n = 2) — handled directly by performing a single pair comparison.
+- Already beautiful string (e.g., '001100') — no pairs differ, returning 0 changes.
+- Worst-case alternating string (e.g., '010101') — every pair differs, returning n / 2 changes.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Any valid partition into even-length uniform substrings can be decomposed into disjoint pairs of size 2. Thus, forcing each non-overlapping pair (s[2i], s[2i+1]) to be identical is both necessary and sufficient to make the entire string beautiful.
+
+### Common Mistakes
+
+- Using dynamic programming or complex backtracking when a greedy pairwise scan is sufficient.
+- Iterating with step size 1 instead of step size 2, which improperly checks across pair boundaries and causes overcounting.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When a problem asks to satisfy a condition over even-length uniform blocks, reduce the problem to the minimal valid block unit (size 2). Check non-overlapping chunks independently and apply greedy modifications locally.
+
+**Similar Problems to Practice:**
+
+- Minimum Changes To Make Alternate Binary String
+- Maximum Score After Splitting a String
+- Flip String to Monotone Increasing
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
