@@ -9654,3 +9654,96 @@ When a problem defines a subset of elements based on index properties (like divi
 
 =====================================================
 
+# 2706. Minimum Score by Changing Two Elements
+
+> 🔗 [LeetCode](https://leetcode.com/problems/minimum-score-by-changing-two-elements/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 19 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks us to minimize the score of an integer array after changing the values of at most two elements. The score is defined as the sum of the low score (minimum difference between any pair of distinct indices) and high score (maximum difference between any pair). Since setting changed elements equal to an existing element guarantees a low score of 0, the problem reduces to minimizing the high score (max - min) after removing at most two extreme elements.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- change at most k elements → greedy extreme value elimination
+- minimize range (max - min) → sorting and boundary selection
+
+**Pattern(s) used:**
+
+- Greedy
+- Sorting
+
+---
+
+## 🛠 Solution Approach
+
+- Sort the array in non-decreasing order to bring extreme values to the boundaries.
+- Observe that by setting changed elements to match unchanged ones, the low score is guaranteed to be 0, leaving only the high score (max - min) to minimize.
+- Changing 2 elements corresponds to dropping 2 elements from the extremes of the sorted array.
+- Evaluate the 3 boundary choices for remaining elements: remove top 2 (range: nums[n-3] - nums[0]), remove top 1 and bottom 1 (range: nums[n-2] - nums[1]), or remove bottom 2 (range: nums[n-1] - nums[2]).
+- Return the minimum value among these three range options.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N)`
+
+### Space Complexity
+
+`O(1)`
+
+> Sorting the array of size N takes O(N log N) time and O(1) or O(log N) auxiliary space depending on the primitive sort implementation; the subsequent min evaluation takes O(1) time.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Array of length 3 — changing 2 elements allows all elements to be identical, resulting in a score of 0.
+- Array with all duplicate values — initial range is already 0, so result is 0 without needing modifications.
+- Negative numbers in array — sorting natively orders negative numbers correctly, maintaining valid non-negative range differences.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+We can always reduce the low score to 0 by duplicating an existing element, so the problem simplifies to choosing which 2 elements out of the largest and smallest to exclude to minimize the remaining subarray's span.
+
+### Common Mistakes
+
+- Overcomplicating the low score calculation instead of recognizing it can easily be forced to 0.
+- Missing the middle case (removing 1 smallest and 1 largest element) and only checking removing 2 from one side.
+- Attempting to use full Dynamic Programming or Search when sorting and checking 3 cases is sufficient.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When asked to minimize a range (max - min) by changing or removing up to K elements, sort the array first. Changing K elements is equivalent to selecting a contiguous subsegment of length N - K. Evaluate all K + 1 possible windows of size N - K at the array boundaries to find the minimum span.
+
+**Similar Problems to Practice:**
+
+- Minimum Difference Between Largest and Smallest Value in Three Moves
+- Maximize Sum Of Array After K Negations
+- Array Partition
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
