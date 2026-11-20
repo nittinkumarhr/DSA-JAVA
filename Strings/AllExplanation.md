@@ -1570,3 +1570,96 @@ When a problem asks to satisfy a condition over even-length uniform blocks, redu
 
 =====================================================
 
+# 1737. Maximum Nesting Depth of the Parentheses
+
+> 🔗 [LeetCode](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 20 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem asks for the maximum nesting depth of parentheses in a given valid parentheses string (VPS). A string's depth is defined by how deeply nested any character is within matching pairs of open '(' and close ')' parentheses.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- nesting depth of parentheses → track depth using a counter/balance variable
+- valid parentheses string → balance will never drop below zero, eliminating stack validation requirements
+
+**Pattern(s) used:**
+
+- Counter / State Machine
+- String Iteration
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two integer variables: `currentDepth = 0` to track current open parentheses count and `maxDepth = 0` to track the peak depth seen so far.
+- Iterate through each character in the string.
+- If the character is '(', increment `currentDepth` and update `maxDepth = max(maxDepth, currentDepth)`.
+- If the character is ')', decrement `currentDepth`.
+- Ignore non-parentheses characters (digits, operators, etc.).
+- Return `maxDepth` at the end of the iteration.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(n)`
+
+### Space Complexity
+
+`O(1)`
+
+> We perform a single linear pass over the string of length n, using O(1) auxiliary space as only two integer counters are maintained.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Empty string or string without parentheses (e.g., '1+1') — handled properly, returning depth 0.
+- Flat, non-nested parentheses (e.g., '()()()') — handled properly, max depth remains 1.
+- Deeply nested parentheses (e.g., '(((())))') — correctly increments max depth to 4.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Since the string is guaranteed to be a valid parentheses string (VPS), we do not need a stack to match brackets; a simple counter incremented at '(' and decremented at ')' perfectly tracks the current nesting level.
+
+### Common Mistakes
+
+- Using an explicit Stack<Character> when a single integer counter suffices, introducing unnecessary space overhead.
+- Updating max depth when encountering ')' instead of immediately upon incrementing counter at '('.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When dealing with balanced bracket problems where only one bracket type is present, replace stack operations with a counter variable. Increment the counter on open brackets, decrement on close brackets, and maintain running statistics (e.g., max value or zero-transitions) based on the specific problem requirement.
+
+**Similar Problems to Practice:**
+
+- Valid Parentheses
+- Minimum Remove to Make Valid Parentheses
+- Score of Parentheses
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
