@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 110
+- **Total Problems** : 111
 - **Easy** : 52
-- **Medium** : 54
+- **Medium** : 55
 - **Hard** : 3
 
 **Last Updated**
 
-19 Nov 2026
+21 Nov 2026
 
 ---
 
@@ -125,5 +125,6 @@
 | 3644 | LeetCode | [Minimum Positive Sum Subarray](https://leetcode.com/problems/minimum-positive-sum-subarray/) | Easy | Java | 17 ms | 46.5 MB | 14 Nov 2026 | `Arrays/3644_Minimum_Positive_Sum_Subarray.java` |
 | 3656 | LeetCode | [Minimum Number of Operations to Make Elements in Array Distinct](https://leetcode.com/problems/minimum-number-of-operations-to-make-elements-in-array-distinct/) | Easy | Java | 2 ms | 45.8 MB | 18 Oct 2026 | `Arrays/3656_Minimum_Number_of_Operations_to_Make_Elements_in_Array_Distinct.java` |
 | 4074 | LeetCode | [Count Subarrays With Majority Element I](https://leetcode.com/problems/count-subarrays-with-majority-element-i/) | Medium | Java | 50 ms | 46.5 MB | 09 Nov 2026 | `Arrays/4074_Count_Subarrays_With_Majority_Element_I.java` |
+| 4078 | LeetCode | [Maximum Alternating Sum of Squares](https://leetcode.com/problems/maximum-alternating-sum-of-squares/) | Medium | Java | 34 ms | 135.2 MB | 21 Nov 2026 | `Arrays/4078_Maximum_Alternating_Sum_of_Squares.java` |
 | 4216 | LeetCode | [Weighted Word Mapping](https://leetcode.com/problems/weighted-word-mapping/) | Easy | Java | 8 ms | 46.1 MB | 06 Nov 2026 | `Arrays/4216_Weighted_Word_Mapping.java` |
 | 4316 | LeetCode | [Minimum Swaps to Move Zeros to End](https://leetcode.com/problems/minimum-swaps-to-move-zeros-to-end/) | Easy | Java | 1 ms | 46.4 MB | 15 Sept 2026 | `Arrays/4316_Minimum_Swaps_to_Move_Zeros_to_End.java` |
