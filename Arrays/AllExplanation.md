@@ -9747,3 +9747,97 @@ When asked to minimize a range (max - min) by changing or removing up to K eleme
 
 =====================================================
 
+# 4078. Maximum Alternating Sum of Squares
+
+> 🔗 [LeetCode](https://leetcode.com/problems/maximum-alternating-sum-of-squares/) &nbsp;|&nbsp; 🏷 Medium &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 21 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+Given an integer array, calculate the maximum possible alternating sum of the squares of its elements after reordering them. In an alternating sum (+, -, +, -, ...), elements at even positions are added while elements at odd positions are subtracted.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- reorder array to maximize sum → Sorting + Greedy
+- alternating sum (+/- pattern) → Count positive vs negative slots and assign values greedily
+- squares of elements → Transform values first, then sort by magnitude
+
+**Pattern(s) used:**
+
+- Greedy
+- Sorting
+
+---
+
+## 🛠 Solution Approach
+
+- Square each element in `nums` and cast to 64-bit integer (`long`) to avoid overflow.
+- Sort the array of squared values in ascending order.
+- Calculate the number of positive coefficients available, which is `(n + 1) / 2` (ceiling of n / 2).
+- Iterate through the sorted squared array, adding the largest `(n + 1) / 2` values to the total and subtracting the remaining smaller values.
+- Return the accumulated maximum alternating sum.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N log N)`
+
+### Space Complexity
+
+`O(N)`
+
+> Sorting the array of size N dominates the time complexity at O(N log N), while allocating an array of size N for squared values requires O(N) extra space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Single element (N = 1) — The only element receives a positive sign and is returned correctly.
+- Negative numbers — Squaring turns negative numbers into positive values; sorting by squared value ensures magnitude dictates assignment rather than original sign.
+- 32-bit integer overflow — Squaring numbers near 10^5 or higher can exceed Integer.MAX_VALUE, which is prevented by casting to `long` before multiplication.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Any rearrangement of N elements into an alternating sum yields exactly ceil(N / 2) positive terms and floor(N / 2) negative terms. To maximize the sum, greedily assign positive signs to the largest squared values and negative signs to the smallest squared values.
+
+### Common Mistakes
+
+- Forgetting to cast elements to `long` before squaring, causing 32-bit integer overflow.
+- Sorting the original `nums` array instead of the squared values, misordering large negative numbers.
+- Using `n / 2` instead of `(n + 1) / 2` for positive slots, miscounting positive terms when N is odd.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When optimizing a formula involving rearranged elements and fixed coefficients (like alternating signs), count the number of positive and negative multiplier slots. Transform the input as required by the problem (e.g., squaring), sort the transformed values, and greedily match larger values to larger positive coefficients.
+
+**Similar Problems to Practice:**
+
+- Maximum Alternating Subarray Sum
+- Array Partition
+- Minimize Sum of Array Product
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
