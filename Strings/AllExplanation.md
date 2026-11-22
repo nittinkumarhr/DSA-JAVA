@@ -1663,3 +1663,93 @@ When dealing with balanced bracket problems where only one bracket type is prese
 
 =====================================================
 
+# 2243. Check if All A's Appears Before All B's
+
+> 🔗 [LeetCode](https://leetcode.com/problems/check-if-all-as-appears-before-all-bs/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 22 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+The problem requires checking whether every occurrence of the character 'a' in a string `s` appears before any occurrence of the character 'b'. The string `s` consists solely of characters 'a' and 'b'.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- "all X appear before all Y" → check for forbidden inverted pairs (e.g., 'ba') or non-decreasing sequence
+- "string with only two unique characters" → simplify state checking using direct pattern search or state tracking
+
+**Pattern(s) used:**
+
+- String Matching
+- Linear Scan
+
+---
+
+## 🛠 Solution Approach
+
+- Check if the string `s` contains the substring "ba".
+- If "ba" exists, at least one 'a' comes after a 'b', so return false.
+- If "ba" is not found, all 'a's precede all 'b's, so return true.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> Searching for the two-character substring 'ba' takes O(N) time where N is the length of the string, using constant O(1) extra space.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- String contains only 'a's — 'ba' will not be found, correctly returning true.
+- String contains only 'b's — 'ba' will not be found, correctly returning true.
+- Single character string — Cannot contain a 2-character substring, correctly returning true.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+A string composed only of 'a's and 'b's is valid if and only if it is in sorted non-decreasing order, meaning the invalid pattern 'ba' never occurs as a substring.
+
+### Common Mistakes
+
+- Overcomplicating the solution using nested loops or tracking indices of all 'a's and 'b's.
+- Incorrectly assuming both 'a' and 'b' must be present in the string.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When verifying strict relative ordering between binary states or two characters, look for the minimal illegal transition pattern (e.g., 'ba'). If an illegal transition cannot exist without an immediate adjacent occurrence, a local substring check or single linear scan suffices.
+
+**Similar Problems to Practice:**
+
+- Check if Array Is Sorted and Rotated
+- First Bad Version
+- Valid Palindrome
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
