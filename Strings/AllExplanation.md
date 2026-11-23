@@ -1753,3 +1753,97 @@ When verifying strict relative ordering between binary states or two characters,
 
 =====================================================
 
+# 2168. Check if Numbers Are Ascending in a Sentence
+
+> 🔗 [LeetCode](https://leetcode.com/problems/check-if-numbers-are-ascending-in-a-sentence/) &nbsp;|&nbsp; 🏷 Easy &nbsp;|&nbsp; 💻 Java &nbsp;|&nbsp; 📅 23 Nov 2026
+
+---
+
+## 📝 Problem Summary
+
+Determine whether all numbers appearing in a given sentence appear in a strictly increasing order from left to right. The sentence consists of lowercase English letters, spaces, and multi-digit positive integers.
+
+---
+
+## 🧭 Pattern Recognition
+
+**How to spot this pattern in the problem statement:**
+
+- extract tokens/numbers from string → String parsing / Single-pass pointer traversal
+- strictly increasing sequence → State tracking with strict inequality comparison (prev < curr)
+
+**Pattern(s) used:**
+
+- String Parsing
+- State Tracking
+
+---
+
+## 🛠 Solution Approach
+
+- Initialize two variables `prev` (to track the last parsed number) and `curr` to 0.
+- Iterate through the string character by character.
+- When a digit character is found, convert it and loop through any adjacent following digits to build the full integer `curr`.
+- Check if `curr <= prev`; if true, return `false` because the sequence is not strictly ascending.
+- Update `prev = curr` and continue scanning the remaining characters.
+- If the end of the string is reached without any violations, return `true`.
+
+---
+
+## ⏱ Complexity Analysis
+
+### Time Complexity
+
+`O(N)`
+
+### Space Complexity
+
+`O(1)`
+
+> Each character of the string of length N is visited at most twice during the single pass traversal, using constant extra space for pointer and accumulator variables.
+
+---
+
+## ⚠️ Edge Cases to Consider
+
+- Multi-digit numbers — handled correctly by the inner while-loop accumulating digit values via `(curr * 10) + digit`.
+- Equal consecutive numbers — correctly returns `false` because `curr <= prev` checks for strict inequality.
+- Number at the very end of sentence — handled safely with bounds checking (`i + 1 < s.length()`) in the inner loop.
+
+---
+
+## 💡 Key Insights
+
+### Key Observation
+
+Consecutive digit characters form a single integer; parsing them completely in-place before comparing against the previously seen integer avoids string allocation overhead while ensuring strict monotonicity.
+
+### Common Mistakes
+
+- Treating multi-digit numbers as individual single-digit numbers.
+- Allowing equal numbers when the problem requires strictly ascending order (using `<` instead of `<=`).
+- Allocating unnecessary memory by splitting the entire string into an array of words instead of parsing in-place.
+
+---
+
+## 🔁 How to Approach Similar Problems
+
+When validating sequence properties of embedded tokens within a string, perform in-place character iteration with a inner loop to consume entire multi-character tokens. Maintain state of the previously evaluated token to perform comparisons on the fly without extra memory allocations.
+
+**Similar Problems to Practice:**
+
+- String to Integer (atoi)
+- Check if All A's Appears Before All B's
+- Maximum Value of a String in an Array
+
+---
+
+## ✍️ Personal Notes
+
+- **My observation:**
+- **Mistakes I made:**
+- **Better approach:**
+- **Revision notes:**
+
+=====================================================
+
