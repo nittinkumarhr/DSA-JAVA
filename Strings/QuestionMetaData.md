@@ -2,14 +2,14 @@
 
 ## Statistics
 
-- **Total Problems** : 19
-- **Easy** : 9
+- **Total Problems** : 20
+- **Easy** : 10
 - **Medium** : 10
 - **Hard** : 0
 
 **Last Updated**
 
-22 Nov 2026
+23 Nov 2026
 
 ---
 
@@ -27,6 +27,7 @@
 | 1666 | LeetCode | [Make The String Great](https://leetcode.com/problems/make-the-string-great/) | Easy | Java | 3 ms | 44 MB | 10 Sept 2026 | `Strings/1666_Make_The_String_Great.java` |
 | 1737 | LeetCode | [Maximum Nesting Depth of the Parentheses](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/) | Easy | Java | 0 ms | 41.4 MB | 20 Nov 2026 | `Strings/1737_Maximum_Nesting_Depth_of_the_Parentheses.java` |
 | 1970 | LeetCode | [Sorting the Sentence](https://leetcode.com/problems/sorting-the-sentence/) | Easy | Java | 0 ms | 43 MB | 24 Aug 2026 | `Strings/1970_Sorting_the_Sentence.java` |
+| 2168 | LeetCode | [Check if Numbers Are Ascending in a Sentence](https://leetcode.com/problems/check-if-numbers-are-ascending-in-a-sentence/) | Easy | Java | 1 ms | 41.9 MB | 23 Nov 2026 | `Strings/2168_Check_if_Numbers_Are_Ascending_in_a_Sentence.java` |
 | 2243 | LeetCode | [Check if All A's Appears Before All B's](https://leetcode.com/problems/check-if-all-as-appears-before-all-bs/) | Easy | Java | 1 ms | 42.1 MB | 22 Nov 2026 | `Strings/2243_Check_if_All_As_Appears_Before_All_Bs.java` |
 | 2361 | LeetCode | [Calculate Digit Sum of a String](https://leetcode.com/problems/calculate-digit-sum-of-a-string/) | Easy | Java | 1 ms | 42.3 MB | 16 Nov 2026 | `Strings/2361_Calculate_Digit_Sum_of_a_String.java` |
 | 2401 | LeetCode | [Count Asterisks](https://leetcode.com/problems/count-asterisks/) | Easy | Java | 3 ms | 43.2 MB | 26 Aug 2026 | `Strings/2401_Count_Asterisks.java` |
